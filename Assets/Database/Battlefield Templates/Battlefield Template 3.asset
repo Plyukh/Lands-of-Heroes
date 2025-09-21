@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f0e932573eb052439a7def58638fdf0, type: 3}
   m_Name: Battlefield Template 3
   m_EditorClassIdentifier: 
-  templateName: Battlefield Template 2
+  templateName: Battlefield Template 3
   obstacleCells:
-  - row: 0
-    column: 0
+  - row: 2
+    column: 5
+  - row: 5
+    column: 5
+  - row: 8
+    column: 11

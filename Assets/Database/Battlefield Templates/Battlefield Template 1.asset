@@ -14,5 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   templateName: Battlefield Template 1
   obstacleCells:
-  - row: 0
-    column: 0
+  - row: 2
+    column: 5
+  - row: 5
+    column: 5
+  - row: 8
+    column: 11

@@ -21,11 +21,27 @@ public class BattlefieldManager : MonoBehaviour
     public List<HexCell> decorativeCells = new List<HexCell>(); // Можно заполнить вручную или через gridParent
     public List<GameObject> factionDecorations = new List<GameObject>();
 
-    private void Start()
+    public void Start()
     {
+        SetRandomFaction();
         ApplyFactionMaterial();
+        SetRandomTemplate();
         PlaceFactionObstaclesFromTemplate();
         ActivateFactionDecor();
+    }
+
+    public void SetRandomFaction()
+    {
+        if (factionObstacles.Count == 0 || currentFaction != Faction.None)
+        {
+            Debug.LogWarning("Нет доступных фракций.");
+            return;
+        }
+
+        int randomIndex = Random.Range(0, factionObstacles.Count);
+        currentFaction = factionObstacles[randomIndex].faction;
+
+        Debug.Log($"Выбрана фракция: {currentFaction}");
     }
 
     public void ApplyFactionMaterial()
@@ -51,6 +67,18 @@ public class BattlefieldManager : MonoBehaviour
         }
     }
 
+    public void SetRandomTemplate()
+    {
+        if (templates.Count == 0)
+        {
+            Debug.LogWarning("Нет доступных шаблонов.");
+            return;
+        }
+
+        currentTemplate = templates[Random.Range(0, templates.Count)];
+        Debug.Log($"Выбран шаблон: {currentTemplate.templateName}");
+    }
+
     public void PlaceFactionObstaclesFromTemplate()
     {
         if (currentTemplate == null)
@@ -72,13 +100,12 @@ public class BattlefieldManager : MonoBehaviour
             if (cell != null)
             {
                 GameObject prefab = obstaclesData.obstaclePrefabs[Random.Range(0, obstaclesData.obstaclePrefabs.Count)];
-                GameObject obstacle = Instantiate(prefab, cell.transform.position, Quaternion.identity, gridParent);
+                GameObject obstacle = Instantiate(prefab, cell.transform, false);
 
                 cell.SetCellObject(obstacle, CellObjectType.Obstacle);
             }
         }
     }
-
 
     public void ActivateFactionDecor()
     {
