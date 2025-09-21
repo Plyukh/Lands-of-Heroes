@@ -114,10 +114,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6364933764407964993}
     m_Modifications:
-    - target: {fileID: 1134578265577552322, guid: 0860427e5e2c9ff4eb5fb0df4532c4d1, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: b1ee486a51d9e6340a2735db049969b8, type: 2}
     - target: {fileID: 1494676776529385495, guid: 0860427e5e2c9ff4eb5fb0df4532c4d1, type: 3}
       propertyPath: m_Name
       value: AshStump
@@ -195,10 +191,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 190417732515826010}
     m_Modifications:
-    - target: {fileID: 1134578265577552322, guid: 0860427e5e2c9ff4eb5fb0df4532c4d1, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: b1ee486a51d9e6340a2735db049969b8, type: 2}
     - target: {fileID: 1494676776529385495, guid: 0860427e5e2c9ff4eb5fb0df4532c4d1, type: 3}
       propertyPath: m_Name
       value: AshStump (1)
