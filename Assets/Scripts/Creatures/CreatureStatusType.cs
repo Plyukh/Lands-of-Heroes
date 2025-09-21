@@ -1,0 +1,18 @@
+public enum CreatureStatusType
+{
+    Attack,
+    Defense,
+    MinDamage,
+    MaxDamage,
+    Health,
+    Speed,
+    Bravery,
+    Luck,
+    StackSize,
+    SpellReflection,
+    DamageReflection,
+    SpellLevelImmunity,
+    SpellRedirection,
+    Counterattack,
+    None
+}

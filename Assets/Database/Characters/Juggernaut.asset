@@ -1,0 +1,183 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 117dfb1c6f28f0d47b0e3651e6b254ba, type: 3}
+  m_Name: Juggernaut
+  m_EditorClassIdentifier: 
+  id: 45
+  creatureName: Juggernaut
+  rarity: 5
+  faction: 3
+  kind: 2
+  attackType: 0
+  movementType: 0
+  prefab: {fileID: 1543268438074428410, guid: 4e1dfb37695b085478d1f3fb6942621d, type: 3}
+  statsPerLevel:
+  - level: 1
+    attack: 15
+    defense: 15
+    minDamage: 30
+    maxDamage: 50
+    health: 200
+    speed: 7
+    stackSize: 1
+    shots: 0
+    projectilePrefab: {fileID: 0}
+    texture: {fileID: 2800000, guid: 487e8e7eaafe3cd468fb629fe6dc575a, type: 3}
+    visualizations:
+    - type: 0
+      index: 0
+    - type: 1
+      index: 0
+  - level: 2
+    attack: 15
+    defense: 15
+    minDamage: 30
+    maxDamage: 50
+    health: 225
+    speed: 7
+    stackSize: 1
+    shots: 0
+    projectilePrefab: {fileID: 0}
+    texture: {fileID: 2800000, guid: a6caca410fd96fc4f846f4bb151a592f, type: 3}
+    visualizations:
+    - type: 0
+      index: 0
+    - type: 1
+      index: 0
+  - level: 3
+    attack: 17
+    defense: 15
+    minDamage: 30
+    maxDamage: 50
+    health: 225
+    speed: 7
+    stackSize: 1
+    shots: 0
+    projectilePrefab: {fileID: 0}
+    texture: {fileID: 2800000, guid: a6caca410fd96fc4f846f4bb151a592f, type: 3}
+    visualizations:
+    - type: 0
+      index: 1
+    - type: 1
+      index: 0
+  - level: 4
+    attack: 17
+    defense: 15
+    minDamage: 30
+    maxDamage: 50
+    health: 250
+    speed: 7
+    stackSize: 1
+    shots: 0
+    projectilePrefab: {fileID: 0}
+    texture: {fileID: 2800000, guid: c0988ed9ac6d4ea42a29da46f051f739, type: 3}
+    visualizations:
+    - type: 0
+      index: 1
+    - type: 1
+      index: 0
+  - level: 5
+    attack: 17
+    defense: 17
+    minDamage: 30
+    maxDamage: 50
+    health: 250
+    speed: 7
+    stackSize: 1
+    shots: 0
+    projectilePrefab: {fileID: 0}
+    texture: {fileID: 2800000, guid: c0988ed9ac6d4ea42a29da46f051f739, type: 3}
+    visualizations:
+    - type: 0
+      index: 1
+    - type: 1
+      index: 1
+  - level: 6
+    attack: 17
+    defense: 17
+    minDamage: 30
+    maxDamage: 50
+    health: 275
+    speed: 7
+    stackSize: 1
+    shots: 0
+    projectilePrefab: {fileID: 0}
+    texture: {fileID: 2800000, guid: c8392d1b036996d4c9cd895b792f73af, type: 3}
+    visualizations:
+    - type: 0
+      index: 1
+    - type: 1
+      index: 1
+  - level: 7
+    attack: 19
+    defense: 17
+    minDamage: 30
+    maxDamage: 50
+    health: 275
+    speed: 7
+    stackSize: 1
+    shots: 0
+    projectilePrefab: {fileID: 0}
+    texture: {fileID: 2800000, guid: c8392d1b036996d4c9cd895b792f73af, type: 3}
+    visualizations:
+    - type: 0
+      index: 2
+    - type: 1
+      index: 1
+  - level: 8
+    attack: 19
+    defense: 17
+    minDamage: 30
+    maxDamage: 50
+    health: 275
+    speed: 9
+    stackSize: 1
+    shots: 0
+    projectilePrefab: {fileID: 0}
+    texture: {fileID: 2800000, guid: 673009a745d2405428e5b2f69469364d, type: 3}
+    visualizations:
+    - type: 0
+      index: 2
+    - type: 1
+      index: 1
+  - level: 9
+    attack: 19
+    defense: 17
+    minDamage: 30
+    maxDamage: 50
+    health: 300
+    speed: 9
+    stackSize: 1
+    shots: 0
+    projectilePrefab: {fileID: 0}
+    texture: {fileID: 2800000, guid: bb73564e25c837a4588bce6f9fdd459d, type: 3}
+    visualizations:
+    - type: 0
+      index: 2
+    - type: 1
+      index: 1
+  - level: 10
+    attack: 19
+    defense: 19
+    minDamage: 30
+    maxDamage: 50
+    health: 300
+    speed: 9
+    stackSize: 1
+    shots: 0
+    projectilePrefab: {fileID: 0}
+    texture: {fileID: 2800000, guid: bb73564e25c837a4588bce6f9fdd459d, type: 3}
+    visualizations:
+    - type: 0
+      index: 2
+    - type: 1
+      index: 2

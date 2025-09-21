@@ -1,0 +1,203 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 117dfb1c6f28f0d47b0e3651e6b254ba, type: 3}
+  m_Name: Gin
+  m_EditorClassIdentifier: 
+  id: 35
+  creatureName: Gin
+  rarity: 5
+  faction: 2
+  kind: 0
+  attackType: 0
+  movementType: 1
+  prefab: {fileID: 5122999089994383532, guid: 094e8b857dc29084db04ce8846583f7e, type: 3}
+  statsPerLevel:
+  - level: 1
+    attack: 16
+    defense: 16
+    minDamage: 20
+    maxDamage: 30
+    health: 125
+    speed: 10
+    stackSize: 1
+    shots: 0
+    projectilePrefab: {fileID: 0}
+    texture: {fileID: 2800000, guid: c5e7cefe530150d4facb38b1c7a30d0e, type: 3}
+    visualizations:
+    - type: 0
+      index: 0
+    - type: 1
+      index: 0
+    - type: 2
+      index: 0
+  - level: 2
+    attack: 16
+    defense: 16
+    minDamage: 20
+    maxDamage: 30
+    health: 150
+    speed: 10
+    stackSize: 1
+    shots: 0
+    projectilePrefab: {fileID: 0}
+    texture: {fileID: 2800000, guid: 99301eee18046724aad3fdf19a6fff2f, type: 3}
+    visualizations:
+    - type: 0
+      index: 0
+    - type: 1
+      index: 0
+    - type: 2
+      index: 0
+  - level: 3
+    attack: 18
+    defense: 16
+    minDamage: 20
+    maxDamage: 30
+    health: 150
+    speed: 10
+    stackSize: 1
+    shots: 0
+    projectilePrefab: {fileID: 0}
+    texture: {fileID: 2800000, guid: 99301eee18046724aad3fdf19a6fff2f, type: 3}
+    visualizations:
+    - type: 0
+      index: 1
+    - type: 1
+      index: 0
+    - type: 2
+      index: 0
+  - level: 4
+    attack: 18
+    defense: 16
+    minDamage: 20
+    maxDamage: 30
+    health: 150
+    speed: 12
+    stackSize: 1
+    shots: 0
+    projectilePrefab: {fileID: 0}
+    texture: {fileID: 2800000, guid: 99301eee18046724aad3fdf19a6fff2f, type: 3}
+    visualizations:
+    - type: 0
+      index: 1
+    - type: 1
+      index: 0
+    - type: 2
+      index: 1
+  - level: 5
+    attack: 18
+    defense: 16
+    minDamage: 20
+    maxDamage: 30
+    health: 175
+    speed: 12
+    stackSize: 1
+    shots: 0
+    projectilePrefab: {fileID: 0}
+    texture: {fileID: 2800000, guid: ce33878df57f241499db5e98ea5572fe, type: 3}
+    visualizations:
+    - type: 0
+      index: 1
+    - type: 1
+      index: 0
+    - type: 2
+      index: 1
+  - level: 6
+    attack: 18
+    defense: 18
+    minDamage: 20
+    maxDamage: 30
+    health: 175
+    speed: 12
+    stackSize: 1
+    shots: 0
+    projectilePrefab: {fileID: 0}
+    texture: {fileID: 2800000, guid: ce33878df57f241499db5e98ea5572fe, type: 3}
+    visualizations:
+    - type: 0
+      index: 1
+    - type: 1
+      index: 1
+    - type: 2
+      index: 1
+  - level: 7
+    attack: 18
+    defense: 18
+    minDamage: 20
+    maxDamage: 30
+    health: 200
+    speed: 12
+    stackSize: 1
+    shots: 0
+    projectilePrefab: {fileID: 0}
+    texture: {fileID: 2800000, guid: 8aeb22fe0d408e549ae3164fe5b122e5, type: 3}
+    visualizations:
+    - type: 0
+      index: 1
+    - type: 1
+      index: 1
+    - type: 2
+      index: 1
+  - level: 8
+    attack: 18
+    defense: 20
+    minDamage: 20
+    maxDamage: 30
+    health: 200
+    speed: 12
+    stackSize: 1
+    shots: 0
+    projectilePrefab: {fileID: 0}
+    texture: {fileID: 2800000, guid: 8aeb22fe0d408e549ae3164fe5b122e5, type: 3}
+    visualizations:
+    - type: 0
+      index: 1
+    - type: 1
+      index: 2
+    - type: 2
+      index: 1
+  - level: 9
+    attack: 20
+    defense: 20
+    minDamage: 20
+    maxDamage: 30
+    health: 200
+    speed: 12
+    stackSize: 1
+    shots: 0
+    projectilePrefab: {fileID: 0}
+    texture: {fileID: 2800000, guid: 8aeb22fe0d408e549ae3164fe5b122e5, type: 3}
+    visualizations:
+    - type: 0
+      index: 2
+    - type: 1
+      index: 2
+    - type: 2
+      index: 1
+  - level: 10
+    attack: 20
+    defense: 20
+    minDamage: 20
+    maxDamage: 30
+    health: 200
+    speed: 15
+    stackSize: 1
+    shots: 0
+    projectilePrefab: {fileID: 0}
+    texture: {fileID: 2800000, guid: 8aeb22fe0d408e549ae3164fe5b122e5, type: 3}
+    visualizations:
+    - type: 0
+      index: 2
+    - type: 1
+      index: 2
+    - type: 2
+      index: 2

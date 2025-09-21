@@ -1,0 +1,138 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5caabe10b79a933449c9d03731aaf720, type: 3}
+  m_Name: Chain Lightning
+  m_EditorClassIdentifier: 
+  id: 
+  spellName: Chain Lightning
+  rarity: 4
+  faction: 3
+  element: 3
+  spellType: 0
+  targetKind: 3
+  prefab: {fileID: 0}
+  statsPerLevel:
+  - level: 1
+    manaCost: 24
+    targetSide: 0
+    targetType: 1
+    targetCount: 2
+    areaRadius: 0
+    power: 40
+    damage: 25
+    summonSettings:
+      creatureData: {fileID: 0}
+      creatureLevel: 0
+    cloneSettings:
+      maxCloneTargetLevel: 0
+    zoneSettings:
+      cellObjectType: 0
+      objectCount: 0
+      isRandomPlacement: 0
+      isBlockingCell: 0
+      disappearOnTrigger: 0
+      skipTurnOnTrigger: 0
+    clearanceSettings:
+      removableTypes: 
+    statusEffects: []
+  - level: 2
+    manaCost: 24
+    targetSide: 0
+    targetType: 1
+    targetCount: 2
+    areaRadius: 0
+    power: 40
+    damage: 50
+    summonSettings:
+      creatureData: {fileID: 0}
+      creatureLevel: 0
+    cloneSettings:
+      maxCloneTargetLevel: 0
+    zoneSettings:
+      cellObjectType: 0
+      objectCount: 0
+      isRandomPlacement: 0
+      isBlockingCell: 0
+      disappearOnTrigger: 0
+      skipTurnOnTrigger: 0
+    clearanceSettings:
+      removableTypes: 
+    statusEffects: []
+  - level: 3
+    manaCost: 20
+    targetSide: 0
+    targetType: 1
+    targetCount: 3
+    areaRadius: 0
+    power: 40
+    damage: 75
+    summonSettings:
+      creatureData: {fileID: 0}
+      creatureLevel: 0
+    cloneSettings:
+      maxCloneTargetLevel: 0
+    zoneSettings:
+      cellObjectType: 0
+      objectCount: 0
+      isRandomPlacement: 0
+      isBlockingCell: 0
+      disappearOnTrigger: 0
+      skipTurnOnTrigger: 0
+    clearanceSettings:
+      removableTypes: 
+    statusEffects: []
+  - level: 4
+    manaCost: 20
+    targetSide: 0
+    targetType: 1
+    targetCount: 3
+    areaRadius: 0
+    power: 40
+    damage: 100
+    summonSettings:
+      creatureData: {fileID: 0}
+      creatureLevel: 0
+    cloneSettings:
+      maxCloneTargetLevel: 0
+    zoneSettings:
+      cellObjectType: 0
+      objectCount: 0
+      isRandomPlacement: 0
+      isBlockingCell: 0
+      disappearOnTrigger: 0
+      skipTurnOnTrigger: 0
+    clearanceSettings:
+      removableTypes: 
+    statusEffects: []
+  - level: 4
+    manaCost: 20
+    targetSide: 0
+    targetType: 1
+    targetCount: 4
+    areaRadius: 0
+    power: 40
+    damage: 125
+    summonSettings:
+      creatureData: {fileID: 0}
+      creatureLevel: 0
+    cloneSettings:
+      maxCloneTargetLevel: 0
+    zoneSettings:
+      cellObjectType: 0
+      objectCount: 0
+      isRandomPlacement: 0
+      isBlockingCell: 0
+      disappearOnTrigger: 0
+      skipTurnOnTrigger: 0
+    clearanceSettings:
+      removableTypes: 
+    statusEffects: []

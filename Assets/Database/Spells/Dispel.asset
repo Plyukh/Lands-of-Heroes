@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5caabe10b79a933449c9d03731aaf720, type: 3}
+  m_Name: Dispel
+  m_EditorClassIdentifier: 
+  id: 
+  spellName: Dispel
+  rarity: 1
+  faction: 2
+  element: 1
+  spellType: 3
+  targetKind: 3
+  prefab: {fileID: 0}
+  statsPerLevel:
+  - level: 1
+    manaCost: 5
+    targetSide: 1
+    targetType: 0
+    targetCount: 0
+    areaRadius: 0
+    power: 0
+    damage: 0
+    statusEffects: []
+  - level: 2
+    manaCost: 5
+    targetSide: 2
+    targetType: 0
+    targetCount: 0
+    areaRadius: 0
+    power: 0
+    damage: 0
+    statusEffects: []
+  - level: 3
+    manaCost: 4
+    targetSide: 1
+    targetType: 2
+    targetCount: 0
+    areaRadius: 0
+    power: 0
+    damage: 0
+    statusEffects: []
+  - level: 4
+    manaCost: 4
+    targetSide: 0
+    targetType: 2
+    targetCount: 0
+    areaRadius: 0
+    power: 0
+    damage: 0
+    statusEffects: []
+  - level: 5
+    manaCost: 4
+    targetSide: 2
+    targetType: 2
+    targetCount: 0
+    areaRadius: 0
+    power: 0
+    damage: 0
+    statusEffects: []

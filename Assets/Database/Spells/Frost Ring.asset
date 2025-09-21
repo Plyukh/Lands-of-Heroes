@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5caabe10b79a933449c9d03731aaf720, type: 3}
+  m_Name: Frost Ring
+  m_EditorClassIdentifier: 
+  id: 
+  spellName: Frost Ring
+  rarity: 3
+  faction: 1
+  element: 1
+  spellType: 0
+  targetKind: 3
+  prefab: {fileID: 0}
+  statsPerLevel:
+  - level: 1
+    manaCost: 12
+    targetSide: 0
+    targetType: 4
+    targetCount: 0
+    areaRadius: 1
+    power: 10
+    damage: 15
+    statusEffects: []
+  - level: 2
+    manaCost: 12
+    targetSide: 0
+    targetType: 4
+    targetCount: 0
+    areaRadius: 1
+    power: 10
+    damage: 30
+    statusEffects: []
+  - level: 3
+    manaCost: 9
+    targetSide: 0
+    targetType: 4
+    targetCount: 0
+    areaRadius: 1
+    power: 10
+    damage: 45
+    statusEffects: []
+  - level: 4
+    manaCost: 9
+    targetSide: 0
+    targetType: 4
+    targetCount: 0
+    areaRadius: 1
+    power: 10
+    damage: 60
+    statusEffects: []
+  - level: 4
+    manaCost: 9
+    targetSide: 0
+    targetType: 4
+    targetCount: 0
+    areaRadius: 1
+    power: 10
+    damage: 75
+    statusEffects: []

@@ -1,0 +1,183 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 117dfb1c6f28f0d47b0e3651e6b254ba, type: 3}
+  m_Name: Bear
+  m_EditorClassIdentifier: 
+  id: 54
+  creatureName: Bear
+  rarity: 4
+  faction: 4
+  kind: 0
+  attackType: 0
+  movementType: 0
+  prefab: {fileID: 4265295091810051079, guid: f5c43a04f142a2d498ccb029fc7b42c9, type: 3}
+  statsPerLevel:
+  - level: 1
+    attack: 9
+    defense: 13
+    minDamage: 12
+    maxDamage: 16
+    health: 55
+    speed: 5
+    stackSize: 3
+    shots: 0
+    projectilePrefab: {fileID: 0}
+    texture: {fileID: 2800000, guid: 5585de2ed1c81d34f879189c3985d3ce, type: 3}
+    visualizations:
+    - type: 0
+      index: 0
+    - type: 2
+      index: 0
+  - level: 2
+    attack: 9
+    defense: 13
+    minDamage: 12
+    maxDamage: 16
+    health: 60
+    speed: 5
+    stackSize: 3
+    shots: 0
+    projectilePrefab: {fileID: 0}
+    texture: {fileID: 2800000, guid: 403b8c2167ff13244bc6a3afeaa91575, type: 3}
+    visualizations:
+    - type: 0
+      index: 0
+    - type: 2
+      index: 0
+  - level: 3
+    attack: 9
+    defense: 14
+    minDamage: 12
+    maxDamage: 16
+    health: 60
+    speed: 5
+    stackSize: 3
+    shots: 0
+    projectilePrefab: {fileID: 0}
+    texture: {fileID: 2800000, guid: 12a561da7d1d4614f88f9f72b4c9d26b, type: 3}
+    visualizations:
+    - type: 0
+      index: 0
+    - type: 2
+      index: 0
+  - level: 4
+    attack: 9
+    defense: 14
+    minDamage: 12
+    maxDamage: 16
+    health: 65
+    speed: 5
+    stackSize: 3
+    shots: 0
+    projectilePrefab: {fileID: 0}
+    texture: {fileID: 2800000, guid: 7c662262da7c1314992caf49552d5214, type: 3}
+    visualizations:
+    - type: 0
+      index: 0
+    - type: 2
+      index: 0
+  - level: 5
+    attack: 10
+    defense: 14
+    minDamage: 12
+    maxDamage: 16
+    health: 65
+    speed: 5
+    stackSize: 3
+    shots: 0
+    projectilePrefab: {fileID: 0}
+    texture: {fileID: 2800000, guid: 69a089d21d6aad242a9b8a37c16aa17a, type: 3}
+    visualizations:
+    - type: 0
+      index: 1
+    - type: 2
+      index: 0
+  - level: 6
+    attack: 10
+    defense: 15
+    minDamage: 12
+    maxDamage: 16
+    health: 65
+    speed: 5
+    stackSize: 3
+    shots: 0
+    projectilePrefab: {fileID: 0}
+    texture: {fileID: 2800000, guid: cec970b1cb0c389438c2b46d52747045, type: 3}
+    visualizations:
+    - type: 0
+      index: 1
+    - type: 2
+      index: 0
+  - level: 7
+    attack: 10
+    defense: 15
+    minDamage: 12
+    maxDamage: 16
+    health: 65
+    speed: 6
+    stackSize: 3
+    shots: 0
+    projectilePrefab: {fileID: 0}
+    texture: {fileID: 2800000, guid: cec970b1cb0c389438c2b46d52747045, type: 3}
+    visualizations:
+    - type: 0
+      index: 1
+    - type: 2
+      index: 1
+  - level: 8
+    attack: 10
+    defense: 15
+    minDamage: 12
+    maxDamage: 16
+    health: 70
+    speed: 6
+    stackSize: 3
+    shots: 0
+    projectilePrefab: {fileID: 0}
+    texture: {fileID: 2800000, guid: dcfb31ac8e9085c41a5b5232526db148, type: 3}
+    visualizations:
+    - type: 0
+      index: 1
+    - type: 2
+      index: 1
+  - level: 9
+    attack: 10
+    defense: 16
+    minDamage: 12
+    maxDamage: 16
+    health: 70
+    speed: 6
+    stackSize: 3
+    shots: 0
+    projectilePrefab: {fileID: 0}
+    texture: {fileID: 2800000, guid: 6a66168df3124a0409991a95cf19dbd5, type: 3}
+    visualizations:
+    - type: 0
+      index: 1
+    - type: 2
+      index: 1
+  - level: 10
+    attack: 11
+    defense: 16
+    minDamage: 12
+    maxDamage: 16
+    health: 70
+    speed: 6
+    stackSize: 3
+    shots: 0
+    projectilePrefab: {fileID: 0}
+    texture: {fileID: 2800000, guid: 466cfdff13d72b64fbaef1bbb4cd8626, type: 3}
+    visualizations:
+    - type: 0
+      index: 2
+    - type: 2
+      index: 1

@@ -1,0 +1,138 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5caabe10b79a933449c9d03731aaf720, type: 3}
+  m_Name: Summon Elemental
+  m_EditorClassIdentifier: 
+  id: 
+  spellName: Summon Elemental
+  rarity: 5
+  faction: 6
+  element: 4
+  spellType: 6
+  targetKind: 3
+  prefab: {fileID: 0}
+  statsPerLevel:
+  - level: 1
+    manaCost: 25
+    targetSide: 2
+    targetType: 6
+    targetCount: 0
+    areaRadius: 0
+    power: 0
+    damage: 0
+    summonSettings:
+      creatureData: {fileID: 11400000, guid: 6242f008b58625246beacf464a305dbc, type: 2}
+      creatureLevel: 1
+    cloneSettings:
+      maxCloneTargetLevel: 0
+    zoneSettings:
+      cellObjectType: 0
+      objectCount: 0
+      isRandomPlacement: 0
+      isBlockingCell: 0
+      disappearOnTrigger: 0
+      skipTurnOnTrigger: 0
+    clearanceSettings:
+      removableTypes: 
+    statusEffects: []
+  - level: 2
+    manaCost: 25
+    targetSide: 2
+    targetType: 6
+    targetCount: 0
+    areaRadius: 0
+    power: 0
+    damage: 0
+    summonSettings:
+      creatureData: {fileID: 11400000, guid: 6242f008b58625246beacf464a305dbc, type: 2}
+      creatureLevel: 2
+    cloneSettings:
+      maxCloneTargetLevel: 0
+    zoneSettings:
+      cellObjectType: 0
+      objectCount: 0
+      isRandomPlacement: 0
+      isBlockingCell: 0
+      disappearOnTrigger: 0
+      skipTurnOnTrigger: 0
+    clearanceSettings:
+      removableTypes: 
+    statusEffects: []
+  - level: 3
+    manaCost: 20
+    targetSide: 2
+    targetType: 6
+    targetCount: 0
+    areaRadius: 0
+    power: 0
+    damage: 0
+    summonSettings:
+      creatureData: {fileID: 11400000, guid: 6242f008b58625246beacf464a305dbc, type: 2}
+      creatureLevel: 3
+    cloneSettings:
+      maxCloneTargetLevel: 0
+    zoneSettings:
+      cellObjectType: 0
+      objectCount: 0
+      isRandomPlacement: 0
+      isBlockingCell: 0
+      disappearOnTrigger: 0
+      skipTurnOnTrigger: 0
+    clearanceSettings:
+      removableTypes: 
+    statusEffects: []
+  - level: 4
+    manaCost: 20
+    targetSide: 2
+    targetType: 6
+    targetCount: 0
+    areaRadius: 0
+    power: 0
+    damage: 0
+    summonSettings:
+      creatureData: {fileID: 11400000, guid: 6242f008b58625246beacf464a305dbc, type: 2}
+      creatureLevel: 4
+    cloneSettings:
+      maxCloneTargetLevel: 0
+    zoneSettings:
+      cellObjectType: 0
+      objectCount: 0
+      isRandomPlacement: 0
+      isBlockingCell: 0
+      disappearOnTrigger: 0
+      skipTurnOnTrigger: 0
+    clearanceSettings:
+      removableTypes: 
+    statusEffects: []
+  - level: 5
+    manaCost: 20
+    targetSide: 2
+    targetType: 6
+    targetCount: 0
+    areaRadius: 0
+    power: 0
+    damage: 0
+    summonSettings:
+      creatureData: {fileID: 11400000, guid: 6242f008b58625246beacf464a305dbc, type: 2}
+      creatureLevel: 4
+    cloneSettings:
+      maxCloneTargetLevel: 0
+    zoneSettings:
+      cellObjectType: 0
+      objectCount: 0
+      isRandomPlacement: 0
+      isBlockingCell: 0
+      disappearOnTrigger: 0
+      skipTurnOnTrigger: 0
+    clearanceSettings:
+      removableTypes: 
+    statusEffects: []

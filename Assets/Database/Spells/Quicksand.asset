@@ -1,0 +1,153 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5caabe10b79a933449c9d03731aaf720, type: 3}
+  m_Name: Quicksand
+  m_EditorClassIdentifier: 
+  id: 
+  spellName: Quicksand
+  rarity: 1
+  faction: 4
+  element: 2
+  spellType: 8
+  targetKind: 3
+  prefab: {fileID: 0}
+  statsPerLevel:
+  - level: 1
+    manaCost: 8
+    targetSide: 0
+    targetType: 3
+    targetCount: 0
+    areaRadius: 4
+    power: 0
+    damage: 0
+    cloneSettings:
+      maxCloneTargetLevel: 0
+    zoneSettings:
+      cellObjectType: 3
+      objectCount: 4
+      isRandomPlacement: 1
+      isBlockingCell: 0
+      disappearOnTrigger: 0
+      skipTurnOnTrigger: 1
+    cellObjectType: 3
+    objectCount: 4
+    isRandomPlacement: 1
+    isBlockingCell: 0
+    disappearOnTrigger: 0
+    skipTurnOnTrigger: 1
+    clearanceSettings:
+      removableTypes: 
+    statusEffects: []
+  - level: 2
+    manaCost: 8
+    targetSide: 0
+    targetType: 3
+    targetCount: 0
+    areaRadius: 4
+    power: 0
+    damage: 0
+    cloneSettings:
+      maxCloneTargetLevel: 0
+    zoneSettings:
+      cellObjectType: 3
+      objectCount: 5
+      isRandomPlacement: 1
+      isBlockingCell: 0
+      disappearOnTrigger: 0
+      skipTurnOnTrigger: 1
+    cellObjectType: 3
+    objectCount: 5
+    isRandomPlacement: 1
+    isBlockingCell: 0
+    disappearOnTrigger: 0
+    skipTurnOnTrigger: 1
+    clearanceSettings:
+      removableTypes: 
+    statusEffects: []
+  - level: 3
+    manaCost: 6
+    targetSide: 0
+    targetType: 3
+    targetCount: 0
+    areaRadius: 3
+    power: 0
+    damage: 0
+    cloneSettings:
+      maxCloneTargetLevel: 0
+    zoneSettings:
+      cellObjectType: 3
+      objectCount: 6
+      isRandomPlacement: 1
+      isBlockingCell: 0
+      disappearOnTrigger: 0
+      skipTurnOnTrigger: 1
+    cellObjectType: 3
+    objectCount: 6
+    isRandomPlacement: 1
+    isBlockingCell: 0
+    disappearOnTrigger: 0
+    skipTurnOnTrigger: 1
+    clearanceSettings:
+      removableTypes: 
+    statusEffects: []
+  - level: 4
+    manaCost: 6
+    targetSide: 0
+    targetType: 3
+    targetCount: 0
+    areaRadius: 3
+    power: 0
+    damage: 0
+    cloneSettings:
+      maxCloneTargetLevel: 0
+    zoneSettings:
+      cellObjectType: 3
+      objectCount: 7
+      isRandomPlacement: 1
+      isBlockingCell: 0
+      disappearOnTrigger: 0
+      skipTurnOnTrigger: 1
+    cellObjectType: 3
+    objectCount: 7
+    isRandomPlacement: 1
+    isBlockingCell: 0
+    disappearOnTrigger: 0
+    skipTurnOnTrigger: 1
+    clearanceSettings:
+      removableTypes: 
+    statusEffects: []
+  - level: 5
+    manaCost: 6
+    targetSide: 0
+    targetType: 3
+    targetCount: 0
+    areaRadius: 2
+    power: 0
+    damage: 0
+    cloneSettings:
+      maxCloneTargetLevel: 0
+    zoneSettings:
+      cellObjectType: 3
+      objectCount: 8
+      isRandomPlacement: 1
+      isBlockingCell: 0
+      disappearOnTrigger: 0
+      skipTurnOnTrigger: 1
+    cellObjectType: 3
+    objectCount: 8
+    isRandomPlacement: 1
+    isBlockingCell: 0
+    disappearOnTrigger: 0
+    skipTurnOnTrigger: 1
+    clearanceSettings:
+      removableTypes: 
+    statusEffects: []

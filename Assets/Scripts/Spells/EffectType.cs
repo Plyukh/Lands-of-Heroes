@@ -1,0 +1,17 @@
+public enum EffectType
+{
+    Buff,
+    Regeneration,
+    Vampirism,
+    DoubleShot,
+    DoubleBlow,
+    Debuff,
+    DamageOverTime,
+    Stun,
+    Root,
+    Madness,
+    Petrify,
+    Forgetfulness,
+    Hypnosis,
+    Bloodlust
+}
