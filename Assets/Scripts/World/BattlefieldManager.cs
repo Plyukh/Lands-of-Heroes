@@ -102,6 +102,9 @@ public class BattlefieldManager : MonoBehaviour
                 GameObject prefab = obstaclesData.obstaclePrefabs[Random.Range(0, obstaclesData.obstaclePrefabs.Count)];
                 GameObject obstacle = Instantiate(prefab, cell.transform, false);
 
+                float randomZRotation = Random.Range(0f, 360f);
+                obstacle.transform.localRotation = Quaternion.Euler(0f, 0f, randomZRotation);
+
                 cell.SetCellObject(obstacle, CellObjectType.Obstacle);
             }
         }
