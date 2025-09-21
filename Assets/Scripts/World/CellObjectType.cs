@@ -1,6 +1,8 @@
-public enum CellEffectType
+public enum CellObjectType
 {
     None,
+    Obstacle,
+    Creature,
     FireWall,
     Quicksand,
     Mine,

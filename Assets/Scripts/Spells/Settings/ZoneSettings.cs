@@ -3,7 +3,7 @@ using UnityEngine;
 [System.Serializable]
 public class ZoneSettings
 {
-    public CellEffectType cellObjectType;
+    public CellObjectType cellObjectType;
     public int objectCount;
     public bool isRandomPlacement;
     public bool isBlockingCell;

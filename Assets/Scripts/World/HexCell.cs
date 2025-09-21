@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class HexCell : MonoBehaviour
@@ -5,13 +6,10 @@ public class HexCell : MonoBehaviour
     [Header("Main")]
     public int row;
     public int column;
+    public bool isWalkable;
 
-    [Header("Cell State")]
-    public CellOccupantType occupantType = CellOccupantType.None;
-    public GameObject occupantObject;
-
-    [Header("Spell Effect")]
-    public CellEffectType activeEffect = CellEffectType.None;
+    [Header("Occupants")]
+    public List<CellOccupant> occupants = new List<CellOccupant>();
 
     [Header("Highlight")]
     [SerializeField] private GameObject highlightObject;
@@ -19,38 +17,28 @@ public class HexCell : MonoBehaviour
     [Header("Visuals")]
     [SerializeField] private Renderer cellRenderer;
 
-    public void SetOccupant(CellOccupantType type, GameObject obj = null)
+    private void UpdateWalkability()
     {
-        occupantType = type;
-        occupantObject = obj;
+        // Типы, которые делают клетку непроходимой
+        var blockingTypes = new HashSet<CellObjectType>
+        {
+             CellObjectType.Obstacle,
+             CellObjectType.ForceField,
+             CellObjectType.Creature
+        };
+
+        isWalkable = true;
+
+        foreach (var occupant in occupants)
+        {
+            if (blockingTypes.Contains(occupant.type))
+            {
+                isWalkable = false;
+                break;
+            }
+        }
     }
 
-    public void ClearOccupant()
-    {
-        occupantType = CellOccupantType.None;
-        occupantObject = null;
-    }
-
-    public void SetEffect(CellEffectType effect)
-    {
-        activeEffect = effect;
-    }
-
-    public void ClearEffect()
-    {
-        activeEffect = CellEffectType.None;
-    }
-
-    public bool HasEffect(CellEffectType effect)
-    {
-        return activeEffect == effect;
-    }
-
-    public void ToggleHighlight(bool isActive)
-    {
-        if (highlightObject != null)
-            highlightObject.SetActive(isActive);
-    }
 
     public void SetMaterial(Material mat)
     {
@@ -58,5 +46,31 @@ public class HexCell : MonoBehaviour
         {
             cellRenderer.material = mat;
         }
+    }
+
+    public void SetCellObject(GameObject obj, CellObjectType type)
+    {
+        if (obj == null || type == CellObjectType.None)
+        {
+            Debug.LogWarning("Попытка добавить пустой объект или тип None в клетку.");
+            return;
+        }
+
+        // Создаём нового носителя
+        var occupant = new CellOccupant
+        {
+            type = type,
+            instance = obj
+        };
+
+        // Привязываем объект к клетке
+        obj.transform.position = transform.position;
+        obj.transform.SetParent(transform);
+
+        // Добавляем в список
+        occupants.Add(occupant);
+
+        // Обновляем проходимость
+        UpdateWalkability();
     }
 }

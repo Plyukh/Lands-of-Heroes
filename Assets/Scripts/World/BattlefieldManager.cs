@@ -6,7 +6,10 @@ public class BattlefieldManager : MonoBehaviour
     [Header("Main")]
     public Transform gridParent; // Родитель всех HexCell
     public List<HexCell> cells = new List<HexCell>(); // Можно заполнить вручную или через gridParent
+
+    [Header("Templates")]
     public BattlefieldTemplate currentTemplate;
+    public List<BattlefieldTemplate> templates = new List<BattlefieldTemplate>();
 
     [Header("Faction Materials & Obstacles")]
     public Faction currentFaction = Faction.None;
@@ -66,14 +69,16 @@ public class BattlefieldManager : MonoBehaviour
         foreach (var cellData in currentTemplate.obstacleCells)
         {
             HexCell cell = cells.Find(c => c.row == cellData.row && c.column == cellData.column);
-            if (cell != null && cell.occupantType == CellOccupantType.None)
+            if (cell != null)
             {
                 GameObject prefab = obstaclesData.obstaclePrefabs[Random.Range(0, obstaclesData.obstaclePrefabs.Count)];
                 GameObject obstacle = Instantiate(prefab, cell.transform.position, Quaternion.identity, gridParent);
-                cell.SetOccupant(CellOccupantType.Obstacle, obstacle);
+
+                cell.SetCellObject(obstacle, CellObjectType.Obstacle);
             }
         }
     }
+
 
     public void ActivateFactionDecor()
     {

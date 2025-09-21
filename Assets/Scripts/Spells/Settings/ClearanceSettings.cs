@@ -4,5 +4,5 @@ using UnityEngine;
 [System.Serializable]
 public class ClearanceSettings
 {
-    public List<CellEffectType> removableTypes;
+    public List<CellObjectType> removableTypes;
 }
