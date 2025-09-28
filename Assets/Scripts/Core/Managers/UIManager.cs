@@ -7,14 +7,7 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
-        if (!PlayerPrefs.HasKey("HasLaunchedBefore"))
-        {
-            ShowRegisterPanel();
-        }
-        else
-        {
-            ShowLoginPanel();
-        }
+        ShowLoginPanel();
     }
 
     public void ShowLoginPanel()
@@ -31,7 +24,17 @@ public class UIManager : MonoBehaviour
 
     public void OnSuccessfulAuth()
     {
-        PlayerPrefs.SetInt("HasLaunchedBefore", 1);
-        PlayerPrefs.Save();
+        loginPanel.SetActive(false);
+        registerPanel.SetActive(false);
+    }
+
+    public void OnCreateAccountButtonPressed()
+    {
+        ShowRegisterPanel();
+    }
+
+    public void OnBackToLoginButtonPressed()
+    {
+        ShowLoginPanel();
     }
 }

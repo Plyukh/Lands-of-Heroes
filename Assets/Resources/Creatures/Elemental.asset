@@ -20,6 +20,7 @@ MonoBehaviour:
   attackType: 0
   movementType: 0
   prefab: {fileID: 0}
+  persistInPlayerData: 0
   statsPerLevel:
   - level: 1
     attack: 0

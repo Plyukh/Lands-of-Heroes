@@ -14,6 +14,9 @@ public class CreatureData : ScriptableObject
     public MovementType movementType;
     public GameObject prefab;
 
+    [Header("Persistence")]
+    public bool persistInPlayerData = true;
+
     [Header("Characteristics by Levels")]
     public List<CreatureStatsPerLevel> statsPerLevel;
 }
