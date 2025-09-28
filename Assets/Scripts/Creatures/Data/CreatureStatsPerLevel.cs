@@ -26,4 +26,20 @@ public class CreatureStatsPerLevel
     [Header("Visualization")]
     public Texture texture;
     public List<Visualization> visualizations;
+
+    public int GetStat(CreatureStatusType type)
+    {
+        switch (type)
+        {
+            case CreatureStatusType.Attack: return attack;
+            case CreatureStatusType.Defense: return defense;
+            case CreatureStatusType.MinDamage: return minDamage;
+            case CreatureStatusType.MaxDamage: return maxDamage;
+            case CreatureStatusType.Health: return health;
+            case CreatureStatusType.Speed: return speed;
+            case CreatureStatusType.StackSize: return stackSize;
+            case CreatureStatusType.Shots: return shots;
+            default: return 0;
+        }
+    }
 }

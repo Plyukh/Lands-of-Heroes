@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class Creature : MonoBehaviour
 {
+    [Header("Mover")]
+    [SerializeField] CreatureMover creatureMover;
+
     [Header("Animator")]
     [SerializeField] CreatureAnimatorController animatorController;
 
@@ -10,22 +13,34 @@ public class Creature : MonoBehaviour
     [SerializeField] List<Renderer> materials;
     [SerializeField] private List<VisualizationGroup> visualGroups;
 
+    [Header("Stats")]
+    [SerializeField] CreatureData CreatureData;
     private CreatureStatsPerLevel currentStats;
+    [SerializeField]int lvl;
 
-    public CreatureData CreatureData;
-    public int index;
+    public CreatureMover Mover => creatureMover;
+    public MovementType MovementType => CreatureData.movementType;
+
 
     private void Start()
     {
-        Initialize(CreatureData.statsPerLevel[index]);
+        var stats = CreatureData.statsPerLevel[lvl];
+        Initialize(stats);
     }
 
     public void Initialize(CreatureStatsPerLevel stats)
     {
         currentStats = stats;
-
         ApplyTexture(stats.texture);
         ApplyVisuals(stats.visualizations);
+    }
+
+    // Ќовый метод дл€ получени€ любого статуса
+    public int GetStat(CreatureStatusType type)
+    {
+        return currentStats != null
+            ? currentStats.GetStat(type)
+            : 0;
     }
 
     private void ApplyTexture(Texture texture)

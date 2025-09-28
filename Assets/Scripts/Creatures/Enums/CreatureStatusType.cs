@@ -14,5 +14,6 @@ public enum CreatureStatusType
     SpellLevelImmunity,
     SpellRedirection,
     Counterattack,
+    Shots,
     None
 }

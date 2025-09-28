@@ -1,0 +1,64 @@
+// Утилита для JSON
+function parse(str) {
+    try { return JSON.parse(str); }
+    catch (e) { return null; }
+}
+
+// Инициализация боя
+handlers.CreateBattle = function(args, context) {
+    var groupId  = args.BattleId;
+    var initialQ = args.InitialQueue;      // ["c1","c2",...]
+    var owners   = args.CreatureOwners;    // {"c1":"pA",...}
+
+    server.CreateSharedGroup({ SharedGroupId: groupId });
+    server.UpdateSharedGroupData({
+        SharedGroupId: groupId,
+        Data: {
+            turnQueue:      JSON.stringify(initialQ),
+            creatureOwners: JSON.stringify(owners)
+        }
+    });
+
+    return { success: true };
+};
+
+// Запрос хода
+handlers.RequestTurn = function(args, context) {
+    var groupId = args.BattleId;
+    var dataRes = server.GetSharedGroupData({
+        SharedGroupId: groupId,
+        GetMembers: false
+    });
+
+    var queue  = parse(dataRes.Data.turnQueue.Value)      || [];
+    var owners = parse(dataRes.Data.creatureOwners.Value) || {};
+    var toMove = queue.length > 0 ? queue[0] : null;
+    var player = toMove && owners[toMove] ? owners[toMove] : null;
+
+    return { CreatureId: toMove, PlayerId: player };
+};
+
+// Завершение хода
+handlers.EndTurn = function(args, context) {
+    var groupId = args.BattleId;
+    var dataRes = server.GetSharedGroupData({
+        SharedGroupId: groupId,
+        GetMembers: false
+    });
+
+    var queue = parse(dataRes.Data.turnQueue.Value) || [];
+    if (queue.length === 0)
+        return { success: false, message: "Empty queue" };
+
+    var finished = queue.shift();
+    queue.push(finished);
+
+    server.UpdateSharedGroupData({
+        SharedGroupId: groupId,
+        Data: {
+            turnQueue: JSON.stringify(queue)
+        }
+    });
+
+    return { success: true };
+};
