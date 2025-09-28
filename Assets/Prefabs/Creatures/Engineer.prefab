@@ -20233,7 +20233,7 @@ GameObject:
   - component: {fileID: 9165442444137726622}
   - component: {fileID: 1744186325634545672}
   - component: {fileID: 2471720244621181416}
-  - component: {fileID: -697121578522369183}
+  - component: {fileID: 1613585796213863261}
   m_Layer: 0
   m_Name: Engineer
   m_TagString: Untagged
@@ -20292,7 +20292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e0cd1440066a54bba9607dfb7b57e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mover: {fileID: -697121578522369183}
+  creatureMover: {fileID: 1613585796213863261}
   animatorController: {fileID: 2471720244621181416}
   materials:
   - {fileID: 7222466410435952551}
@@ -20305,7 +20305,7 @@ MonoBehaviour:
       - {fileID: 3665567832711068546}
       - {fileID: 8200860470544958432}
   CreatureData: {fileID: 11400000, guid: 617cccd29ec201542b9ef0618904e72c, type: 2}
-  index: 0
+  lvl: 0
 --- !u!114 &2471720244621181416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20319,7 +20319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 9165442444137726622}
---- !u!114 &-697121578522369183
+--- !u!114 &1613585796213863261
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20328,11 +20328,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3789000096346864500}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 140bda1d4e7e7dd41a7cf75c8b1ef7ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 7685c31ca14ae344bb8f943b9bedc848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultMoveSpeed: 2
+  moveSpeed: 2
   stopThreshold: 0.01
+  currentCell: {fileID: 0}
 --- !u!1 &3806657990039525317
 GameObject:
   m_ObjectHideFlags: 0

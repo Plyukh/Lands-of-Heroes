@@ -298,7 +298,7 @@ GameObject:
   - component: {fileID: 3391042493919581368}
   - component: {fileID: 1244670176303975975}
   - component: {fileID: 3001999009996880821}
-  - component: {fileID: 3197735042760179020}
+  - component: {fileID: -1811419393468301219}
   m_Layer: 0
   m_Name: Spider
   m_TagString: Untagged
@@ -365,13 +365,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e0cd1440066a54bba9607dfb7b57e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mover: {fileID: 3197735042760179020}
+  creatureMover: {fileID: -1811419393468301219}
   animatorController: {fileID: 3001999009996880821}
   materials:
   - {fileID: 3033609737711451101}
   visualGroups: []
   CreatureData: {fileID: 11400000, guid: 3d55dfd4a775a4f4e9894752d2ab62d1, type: 2}
-  index: 0
+  lvl: 0
 --- !u!114 &3001999009996880821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -385,7 +385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 3391042493919581368}
---- !u!114 &3197735042760179020
+--- !u!114 &-1811419393468301219
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -394,11 +394,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 829898805368708769}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 140bda1d4e7e7dd41a7cf75c8b1ef7ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 7685c31ca14ae344bb8f943b9bedc848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultMoveSpeed: 2
+  moveSpeed: 2
   stopThreshold: 0.01
+  currentCell: {fileID: 0}
 --- !u!1 &913181911072639259
 GameObject:
   m_ObjectHideFlags: 0

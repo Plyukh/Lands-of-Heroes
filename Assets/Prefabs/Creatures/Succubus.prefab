@@ -35600,7 +35600,7 @@ GameObject:
   - component: {fileID: 9091583481286864744}
   - component: {fileID: 7250878706012271437}
   - component: {fileID: -5758374902273499761}
-  - component: {fileID: 1832697741805751095}
+  - component: {fileID: -7919776535840865676}
   m_Layer: 0
   m_Name: Succubus
   m_TagString: Untagged
@@ -35660,7 +35660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e0cd1440066a54bba9607dfb7b57e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mover: {fileID: 1832697741805751095}
+  creatureMover: {fileID: -7919776535840865676}
   animatorController: {fileID: -5758374902273499761}
   materials:
   - {fileID: 1306438815464698830}
@@ -35677,7 +35677,7 @@ MonoBehaviour:
       - {fileID: 5479730328923104196}
       - {fileID: 2453944385483935169}
   CreatureData: {fileID: 11400000, guid: 50c4d1c76b4b0924f8f86e966034486f, type: 2}
-  index: 0
+  lvl: 0
 --- !u!114 &-5758374902273499761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35691,7 +35691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 9091583481286864744}
---- !u!114 &1832697741805751095
+--- !u!114 &-7919776535840865676
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -35700,11 +35700,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8932558488307953852}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 140bda1d4e7e7dd41a7cf75c8b1ef7ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 7685c31ca14ae344bb8f943b9bedc848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultMoveSpeed: 2
+  moveSpeed: 2
   stopThreshold: 0.01
+  currentCell: {fileID: 0}
 --- !u!1 &8932756109554252668
 GameObject:
   m_ObjectHideFlags: 0

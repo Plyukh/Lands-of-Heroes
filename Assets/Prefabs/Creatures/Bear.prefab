@@ -20844,7 +20844,7 @@ GameObject:
   - component: {fileID: 2736714421097865981}
   - component: {fileID: 2339720532597203439}
   - component: {fileID: 7701711953134961189}
-  - component: {fileID: -2978011399737964235}
+  - component: {fileID: 6096288628032370276}
   m_Layer: 0
   m_Name: Bear
   m_TagString: Untagged
@@ -20880,7 +20880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e0cd1440066a54bba9607dfb7b57e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mover: {fileID: -2978011399737964235}
+  creatureMover: {fileID: 6096288628032370276}
   animatorController: {fileID: 7701711953134961189}
   materials:
   - {fileID: 643850031063254368}
@@ -20906,7 +20906,7 @@ MonoBehaviour:
       - {fileID: 877837462910170628}
       - {fileID: 7955747464640571695}
   CreatureData: {fileID: 11400000, guid: c8da6eafcbe11524e8a34373b65b89b4, type: 2}
-  index: 0
+  lvl: 0
 --- !u!114 &7701711953134961189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20920,7 +20920,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 7224732860552565823}
---- !u!114 &-2978011399737964235
+--- !u!114 &6096288628032370276
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20929,11 +20929,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4265295091810051079}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 140bda1d4e7e7dd41a7cf75c8b1ef7ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 7685c31ca14ae344bb8f943b9bedc848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultMoveSpeed: 2
+  moveSpeed: 2
   stopThreshold: 0.01
+  currentCell: {fileID: 0}
 --- !u!1 &4789549997962289094
 GameObject:
   m_ObjectHideFlags: 0

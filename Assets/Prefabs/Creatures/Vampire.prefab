@@ -6946,7 +6946,7 @@ GameObject:
   - component: {fileID: 4708271834050131469}
   - component: {fileID: 3367180663819795819}
   - component: {fileID: 4814008575388961779}
-  - component: {fileID: 508275429157717205}
+  - component: {fileID: 8234638679476797877}
   m_Layer: 0
   m_Name: Vampire
   m_TagString: Untagged
@@ -7009,7 +7009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e0cd1440066a54bba9607dfb7b57e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mover: {fileID: 508275429157717205}
+  creatureMover: {fileID: 8234638679476797877}
   animatorController: {fileID: 4814008575388961779}
   materials:
   - {fileID: 740827276663177621}
@@ -7038,7 +7038,7 @@ MonoBehaviour:
       - {fileID: 406783133660265429}
       - {fileID: 8073715466653389992}
   CreatureData: {fileID: 11400000, guid: 3fe883cc096ad694abb43e071ec01fbc, type: 2}
-  index: 0
+  lvl: 0
 --- !u!114 &4814008575388961779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7052,7 +7052,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 4708271834050131469}
---- !u!114 &508275429157717205
+--- !u!114 &8234638679476797877
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7061,11 +7061,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2044828225184557604}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 140bda1d4e7e7dd41a7cf75c8b1ef7ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 7685c31ca14ae344bb8f943b9bedc848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultMoveSpeed: 2
+  moveSpeed: 2
   stopThreshold: 0.01
+  currentCell: {fileID: 0}
 --- !u!1 &2046514377089043124
 GameObject:
   m_ObjectHideFlags: 0

@@ -869,7 +869,7 @@ GameObject:
   - component: {fileID: 5320098550187045890}
   - component: {fileID: 4999541483680280524}
   - component: {fileID: 3348533398633750997}
-  - component: {fileID: 8421480879539261435}
+  - component: {fileID: 7352781945707595055}
   m_Layer: 0
   m_Name: Demon
   m_TagString: Untagged
@@ -928,7 +928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e0cd1440066a54bba9607dfb7b57e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mover: {fileID: 8421480879539261435}
+  creatureMover: {fileID: 7352781945707595055}
   animatorController: {fileID: 3348533398633750997}
   materials:
   - {fileID: 1017956198249671466}
@@ -941,7 +941,7 @@ MonoBehaviour:
       - {fileID: 8784106996526167332}
       - {fileID: 3452057749999930197}
   CreatureData: {fileID: 11400000, guid: af15b902f757a6d47a5f2adc80e776c3, type: 2}
-  index: 0
+  lvl: 0
 --- !u!114 &3348533398633750997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -955,7 +955,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 5320098550187045890}
---- !u!114 &8421480879539261435
+--- !u!114 &7352781945707595055
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -964,11 +964,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2563246363043108085}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 140bda1d4e7e7dd41a7cf75c8b1ef7ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 7685c31ca14ae344bb8f943b9bedc848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultMoveSpeed: 2
+  moveSpeed: 2
   stopThreshold: 0.01
+  currentCell: {fileID: 0}
 --- !u!1 &2814060620546953880
 GameObject:
   m_ObjectHideFlags: 0

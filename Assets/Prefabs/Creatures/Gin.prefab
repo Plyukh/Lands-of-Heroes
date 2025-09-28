@@ -31669,7 +31669,7 @@ GameObject:
   - component: {fileID: 705766650889897010}
   - component: {fileID: 4373501456918563722}
   - component: {fileID: 4912664606730468202}
-  - component: {fileID: -1221767796540808769}
+  - component: {fileID: 3250247219247652298}
   m_Layer: 0
   m_Name: Gin
   m_TagString: Untagged
@@ -31730,7 +31730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e0cd1440066a54bba9607dfb7b57e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mover: {fileID: -1221767796540808769}
+  creatureMover: {fileID: 3250247219247652298}
   animatorController: {fileID: 4912664606730468202}
   materials:
   - {fileID: 3065733362453928304}
@@ -31754,7 +31754,7 @@ MonoBehaviour:
       - {fileID: 2388988434210393951}
       - {fileID: 1604615018689473706}
   CreatureData: {fileID: 11400000, guid: 89f9c18b28eaab6438449b12297c9929, type: 2}
-  index: 0
+  lvl: 0
 --- !u!114 &4912664606730468202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31768,7 +31768,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 705766650889897010}
---- !u!114 &-1221767796540808769
+--- !u!114 &3250247219247652298
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -31777,11 +31777,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5122999089994383532}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 140bda1d4e7e7dd41a7cf75c8b1ef7ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 7685c31ca14ae344bb8f943b9bedc848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultMoveSpeed: 2
+  moveSpeed: 2
   stopThreshold: 0.01
+  currentCell: {fileID: 0}
 --- !u!1 &5230456623766478060
 GameObject:
   m_ObjectHideFlags: 0

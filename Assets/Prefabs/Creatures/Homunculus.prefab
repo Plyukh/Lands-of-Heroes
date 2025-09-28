@@ -522,7 +522,7 @@ GameObject:
   - component: {fileID: 5820336958156355982}
   - component: {fileID: 2221029021408196423}
   - component: {fileID: 3169550239644812196}
-  - component: {fileID: 2092697613676806910}
+  - component: {fileID: -4340851722488359529}
   m_Layer: 0
   m_Name: Homunculus
   m_TagString: Untagged
@@ -581,13 +581,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e0cd1440066a54bba9607dfb7b57e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mover: {fileID: 2092697613676806910}
+  creatureMover: {fileID: -4340851722488359529}
   animatorController: {fileID: 3169550239644812196}
   materials:
   - {fileID: 4817257764926986774}
   visualGroups: []
   CreatureData: {fileID: 11400000, guid: 815d3bfe3192500479211700b103a4b7, type: 2}
-  index: 0
+  lvl: 0
 --- !u!114 &3169550239644812196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -601,7 +601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 5820336958156355982}
---- !u!114 &2092697613676806910
+--- !u!114 &-4340851722488359529
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -610,11 +610,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1433910928622188734}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 140bda1d4e7e7dd41a7cf75c8b1ef7ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 7685c31ca14ae344bb8f943b9bedc848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultMoveSpeed: 2
+  moveSpeed: 2
   stopThreshold: 0.01
+  currentCell: {fileID: 0}
 --- !u!1 &1672247883225286688
 GameObject:
   m_ObjectHideFlags: 0

@@ -10294,7 +10294,7 @@ GameObject:
   - component: {fileID: 2020039817817544174}
   - component: {fileID: 4466322256223826450}
   - component: {fileID: -5948345637482762781}
-  - component: {fileID: -6829044636607703742}
+  - component: {fileID: 7124828325284335590}
   m_Layer: 0
   m_Name: Death Knight
   m_TagString: Untagged
@@ -10353,7 +10353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e0cd1440066a54bba9607dfb7b57e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mover: {fileID: -6829044636607703742}
+  creatureMover: {fileID: 7124828325284335590}
   animatorController: {fileID: -5948345637482762781}
   materials:
   - {fileID: 2764526075647674551}
@@ -10371,7 +10371,7 @@ MonoBehaviour:
       - {fileID: 5423168483138446164}
       - {fileID: 694255611336633378}
   CreatureData: {fileID: 11400000, guid: 98a433733591d1a48b08cc5686c96da2, type: 2}
-  index: 0
+  lvl: 0
 --- !u!114 &-5948345637482762781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10385,7 +10385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 2020039817817544174}
---- !u!114 &-6829044636607703742
+--- !u!114 &7124828325284335590
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10394,11 +10394,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2974613811405172981}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 140bda1d4e7e7dd41a7cf75c8b1ef7ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 7685c31ca14ae344bb8f943b9bedc848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultMoveSpeed: 2
+  moveSpeed: 2
   stopThreshold: 0.01
+  currentCell: {fileID: 0}
 --- !u!1 &2980234190418524078
 GameObject:
   m_ObjectHideFlags: 0

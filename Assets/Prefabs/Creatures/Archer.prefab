@@ -2304,7 +2304,7 @@ GameObject:
   - component: {fileID: 1145757429005022304}
   - component: {fileID: 6748038072404919785}
   - component: {fileID: 1743235735065322242}
-  - component: {fileID: -5373756833564322678}
+  - component: {fileID: 6422258852562617047}
   m_Layer: 0
   m_Name: Archer
   m_TagString: Untagged
@@ -2363,7 +2363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e0cd1440066a54bba9607dfb7b57e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mover: {fileID: -5373756833564322678}
+  creatureMover: {fileID: 6422258852562617047}
   animatorController: {fileID: 1743235735065322242}
   materials:
   - {fileID: 4877334763897360734}
@@ -2377,7 +2377,7 @@ MonoBehaviour:
       - {fileID: 3429016729896639148}
       - {fileID: 2379935226858401027}
   CreatureData: {fileID: 11400000, guid: bb2c85625a0a9f44d99d60d8cf7ff29f, type: 2}
-  index: 0
+  lvl: 0
 --- !u!114 &1743235735065322242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2391,7 +2391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1145757429005022304}
---- !u!114 &-5373756833564322678
+--- !u!114 &6422258852562617047
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2400,11 +2400,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6238185349841105266}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 140bda1d4e7e7dd41a7cf75c8b1ef7ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 7685c31ca14ae344bb8f943b9bedc848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultMoveSpeed: 2
+  moveSpeed: 2
   stopThreshold: 0.01
+  currentCell: {fileID: 0}
 --- !u!1 &6268739751887358961
 GameObject:
   m_ObjectHideFlags: 0

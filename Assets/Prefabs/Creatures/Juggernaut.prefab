@@ -14514,7 +14514,7 @@ GameObject:
   - component: {fileID: 350139899791509848}
   - component: {fileID: 8542141676434195287}
   - component: {fileID: 388319656119646446}
-  - component: {fileID: 6154467219536868085}
+  - component: {fileID: -5662173077852344858}
   m_Layer: 0
   m_Name: Juggernaut
   m_TagString: Untagged
@@ -14575,7 +14575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e0cd1440066a54bba9607dfb7b57e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mover: {fileID: 6154467219536868085}
+  creatureMover: {fileID: -5662173077852344858}
   animatorController: {fileID: 388319656119646446}
   materials:
   - {fileID: 3891132064027596932}
@@ -14600,7 +14600,7 @@ MonoBehaviour:
       - {fileID: 4009119847325783061}
       - {fileID: 8554593011106366417}
   CreatureData: {fileID: 11400000, guid: fe83dd7578d304a45bcf92ba2d68ef3b, type: 2}
-  index: 0
+  lvl: 0
 --- !u!114 &388319656119646446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14614,7 +14614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 350139899791509848}
---- !u!114 &6154467219536868085
+--- !u!114 &-5662173077852344858
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14623,11 +14623,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1543268438074428410}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 140bda1d4e7e7dd41a7cf75c8b1ef7ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 7685c31ca14ae344bb8f943b9bedc848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultMoveSpeed: 2
+  moveSpeed: 2
   stopThreshold: 0.01
+  currentCell: {fileID: 0}
 --- !u!1 &1890601381923782011
 GameObject:
   m_ObjectHideFlags: 0

@@ -17322,7 +17322,7 @@ GameObject:
   - component: {fileID: 5443000235736412233}
   - component: {fileID: 4214188637896251339}
   - component: {fileID: -5845362713565013096}
-  - component: {fileID: 8455138219616482620}
+  - component: {fileID: -6192137969496957206}
   m_Layer: 0
   m_Name: Vestal
   m_TagString: Untagged
@@ -17384,7 +17384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e0cd1440066a54bba9607dfb7b57e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mover: {fileID: 8455138219616482620}
+  creatureMover: {fileID: -6192137969496957206}
   animatorController: {fileID: -5845362713565013096}
   materials:
   - {fileID: 421006525277251480}
@@ -17404,7 +17404,7 @@ MonoBehaviour:
       - {fileID: 4838866243791908276}
       - {fileID: 5872907578112557656}
   CreatureData: {fileID: 11400000, guid: e56c250a29447cb448869608a484058a, type: 2}
-  index: 0
+  lvl: 0
 --- !u!114 &-5845362713565013096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17418,7 +17418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 5443000235736412233}
---- !u!114 &8455138219616482620
+--- !u!114 &-6192137969496957206
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -17427,11 +17427,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6601487982505579756}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 140bda1d4e7e7dd41a7cf75c8b1ef7ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 7685c31ca14ae344bb8f943b9bedc848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultMoveSpeed: 2
+  moveSpeed: 2
   stopThreshold: 0.01
+  currentCell: {fileID: 0}
 --- !u!1 &6620911477270408257
 GameObject:
   m_ObjectHideFlags: 0

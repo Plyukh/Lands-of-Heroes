@@ -20661,7 +20661,7 @@ GameObject:
   - component: {fileID: 8042756268985360675}
   - component: {fileID: 4108233779133102265}
   - component: {fileID: -7278720255297853579}
-  - component: {fileID: 8258690677723013976}
+  - component: {fileID: 2796559755307072531}
   m_Layer: 0
   m_Name: Paladin
   m_TagString: Untagged
@@ -20720,7 +20720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e0cd1440066a54bba9607dfb7b57e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mover: {fileID: 8258690677723013976}
+  creatureMover: {fileID: 2796559755307072531}
   animatorController: {fileID: -7278720255297853579}
   materials:
   - {fileID: 8568375053982124706}
@@ -20738,7 +20738,7 @@ MonoBehaviour:
       - {fileID: 8935261774322053141}
       - {fileID: 1290402967628761559}
   CreatureData: {fileID: 11400000, guid: 7412d81501864514da2483a50bd59afd, type: 2}
-  index: 0
+  lvl: 0
 --- !u!114 &-7278720255297853579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20752,7 +20752,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 8042756268985360675}
---- !u!114 &8258690677723013976
+--- !u!114 &2796559755307072531
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20761,11 +20761,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6929662776832082436}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 140bda1d4e7e7dd41a7cf75c8b1ef7ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 7685c31ca14ae344bb8f943b9bedc848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultMoveSpeed: 2
+  moveSpeed: 2
   stopThreshold: 0.01
+  currentCell: {fileID: 0}
 --- !u!1 &7277584339757384125
 GameObject:
   m_ObjectHideFlags: 0

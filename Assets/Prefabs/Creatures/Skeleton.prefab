@@ -2677,7 +2677,7 @@ GameObject:
   - component: {fileID: 6805197010439324472}
   - component: {fileID: 4157601237926541630}
   - component: {fileID: -700529817317733893}
-  - component: {fileID: 601324711547170499}
+  - component: {fileID: 3599489946252835688}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: Untagged
@@ -2736,7 +2736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e0cd1440066a54bba9607dfb7b57e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mover: {fileID: 601324711547170499}
+  creatureMover: {fileID: 3599489946252835688}
   animatorController: {fileID: -700529817317733893}
   materials:
   - {fileID: 7151477303493901261}
@@ -2756,7 +2756,7 @@ MonoBehaviour:
       - {fileID: 6808315832923069684}
       - {fileID: 803288024163044595}
   CreatureData: {fileID: 11400000, guid: c67132772003d3b48855e55806aa0f9a, type: 2}
-  index: 0
+  lvl: 0
 --- !u!114 &-700529817317733893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2770,7 +2770,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 6805197010439324472}
---- !u!114 &601324711547170499
+--- !u!114 &3599489946252835688
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2779,11 +2779,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6609313044460205106}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 140bda1d4e7e7dd41a7cf75c8b1ef7ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 7685c31ca14ae344bb8f943b9bedc848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultMoveSpeed: 2
+  moveSpeed: 2
   stopThreshold: 0.01
+  currentCell: {fileID: 0}
 --- !u!1 &6618081850452158793
 GameObject:
   m_ObjectHideFlags: 0

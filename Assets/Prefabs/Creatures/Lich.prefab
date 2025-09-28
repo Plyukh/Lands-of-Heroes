@@ -73922,7 +73922,7 @@ GameObject:
   - component: {fileID: 1395154307170049627}
   - component: {fileID: 6295851487209963046}
   - component: {fileID: 3109629008685655547}
-  - component: {fileID: -8432076457015398581}
+  - component: {fileID: -7385688486482704236}
   m_Layer: 0
   m_Name: Lich
   m_TagString: Untagged
@@ -73982,7 +73982,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e0cd1440066a54bba9607dfb7b57e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mover: {fileID: -8432076457015398581}
+  creatureMover: {fileID: -7385688486482704236}
   animatorController: {fileID: 3109629008685655547}
   materials:
   - {fileID: 5139234220062980179}
@@ -74014,7 +74014,7 @@ MonoBehaviour:
       - {fileID: 1041974938361443844}
       - {fileID: 5689651602247413365}
   CreatureData: {fileID: 11400000, guid: ef4d6988ff53fe54bbc5eed6aac1d9a7, type: 2}
-  index: 0
+  lvl: 0
 --- !u!114 &3109629008685655547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74028,7 +74028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1395154307170049627}
---- !u!114 &-8432076457015398581
+--- !u!114 &-7385688486482704236
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -74037,11 +74037,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6294460643649747306}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 140bda1d4e7e7dd41a7cf75c8b1ef7ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 7685c31ca14ae344bb8f943b9bedc848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultMoveSpeed: 2
+  moveSpeed: 2
   stopThreshold: 0.01
+  currentCell: {fileID: 0}
 --- !u!1 &6451320225240775653
 GameObject:
   m_ObjectHideFlags: 0

@@ -6287,7 +6287,7 @@ GameObject:
   - component: {fileID: 8415105628102079722}
   - component: {fileID: 4045382937057313898}
   - component: {fileID: 1578018793148914461}
-  - component: {fileID: 2721414706838387088}
+  - component: {fileID: 6438840999407033262}
   m_Layer: 0
   m_Name: Potions Master
   m_TagString: Untagged
@@ -6347,7 +6347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e0cd1440066a54bba9607dfb7b57e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mover: {fileID: 2721414706838387088}
+  creatureMover: {fileID: 6438840999407033262}
   animatorController: {fileID: 1578018793148914461}
   materials:
   - {fileID: 2603662069251370504}
@@ -6373,7 +6373,7 @@ MonoBehaviour:
       - {fileID: 1122429821571872669}
       - {fileID: 8514387661334034762}
   CreatureData: {fileID: 11400000, guid: c2173c8a30c8ae14bb66bfba43dbd140, type: 2}
-  index: 0
+  lvl: 0
 --- !u!114 &1578018793148914461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6387,7 +6387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 8415105628102079722}
---- !u!114 &2721414706838387088
+--- !u!114 &6438840999407033262
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6396,11 +6396,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2480826730947194847}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 140bda1d4e7e7dd41a7cf75c8b1ef7ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 7685c31ca14ae344bb8f943b9bedc848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultMoveSpeed: 2
+  moveSpeed: 2
   stopThreshold: 0.01
+  currentCell: {fileID: 0}
 --- !u!1 &2521705333477306379
 GameObject:
   m_ObjectHideFlags: 0

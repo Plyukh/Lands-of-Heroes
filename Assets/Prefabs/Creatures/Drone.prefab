@@ -9663,7 +9663,7 @@ GameObject:
   - component: {fileID: 7373290991190306809}
   - component: {fileID: 7286970559631672838}
   - component: {fileID: -8895855129655582656}
-  - component: {fileID: 7325186355085878663}
+  - component: {fileID: 5993834650901835155}
   m_Layer: 0
   m_Name: Drone
   m_TagString: Untagged
@@ -9725,7 +9725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e0cd1440066a54bba9607dfb7b57e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mover: {fileID: 7325186355085878663}
+  creatureMover: {fileID: 5993834650901835155}
   animatorController: {fileID: -8895855129655582656}
   materials:
   - {fileID: 8600910939006952639}
@@ -9744,7 +9744,7 @@ MonoBehaviour:
       - {fileID: 2231400243286646304}
       - {fileID: 4312385844460782163}
   CreatureData: {fileID: 11400000, guid: 848394b070773b047b78b3ba4496f5b1, type: 2}
-  index: 0
+  lvl: 0
 --- !u!114 &-8895855129655582656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9758,7 +9758,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 7373290991190306809}
---- !u!114 &7325186355085878663
+--- !u!114 &5993834650901835155
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9767,11 +9767,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2735890230616602876}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 140bda1d4e7e7dd41a7cf75c8b1ef7ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 7685c31ca14ae344bb8f943b9bedc848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultMoveSpeed: 2
+  moveSpeed: 2
   stopThreshold: 0.01
+  currentCell: {fileID: 0}
 --- !u!1 &2766044683457899041
 GameObject:
   m_ObjectHideFlags: 0
