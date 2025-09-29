@@ -49,6 +49,84 @@ public class BattlefieldManager : MonoBehaviour
         TryHighlightCreature();
     }
 
+    public async void OnCellClicked(HexCell targetCell)
+    {
+        // 1. Получаем текущее существо и его параметры
+        var creature = testCreature;
+        if (creature == null) return;
+
+        var mover = creature.Mover;
+        var start = mover.CurrentCell;
+        int speed = creature.GetStat(CreatureStatusType.Speed);
+        var moveType = creature.MovementType;
+
+        // 2. Проверяем, что целевая клетка подсвечена (доступна)
+        var reachable = GetReachableCells(start, speed, moveType);
+        if (!reachable.Contains(targetCell))
+        {
+            Debug.Log("BattlefieldManager: клетка недоступна для хода");
+            return;
+        }
+
+        // 3. Строим путь BFS с родительскими ссылками
+        List<HexCell> path = FindPath(start, targetCell, moveType);
+        if (path == null || path.Count == 0)
+        {
+            Debug.LogWarning("BattlefieldManager: не удалось построить путь");
+            return;
+        }
+
+        // 4. Запускаем анимацию движения
+        bool success = await mover.MoveAlongPath(path);
+        if (!success)
+            Debug.LogWarning("BattlefieldManager: существо не смогло дойти до цели");
+    }
+
+    private List<HexCell> FindPath(
+        HexCell start,
+        HexCell target,
+        MovementType moveType)
+    {
+        var queue = new Queue<HexCell>();
+        var parent = new Dictionary<HexCell, HexCell>();
+        var visited = new HashSet<HexCell> { start };
+
+        queue.Enqueue(start);
+
+        while (queue.Count > 0)
+        {
+            var cell = queue.Dequeue();
+            if (cell == target) break;
+
+            foreach (var nb in GetNeighbors(cell))
+            {
+                bool canTraverse = nb.isWalkable
+                                   || moveType == MovementType.Flying
+                                   || moveType == MovementType.Teleport;
+
+                if (canTraverse && visited.Add(nb))
+                {
+                    parent[nb] = cell;
+                    queue.Enqueue(nb);
+                }
+            }
+        }
+
+        if (!parent.ContainsKey(target))
+            return null;
+
+        // Восстанавливаем путь
+        var path = new List<HexCell>();
+        var cur = target;
+        while (cur != start)
+        {
+            path.Add(cur);
+            cur = parent[cur];
+        }
+        path.Reverse();
+        return path;
+    }
+
     public void SetRandomFaction()
     {
         if (factionObstacles.Count == 0 || currentFaction != Faction.None)
