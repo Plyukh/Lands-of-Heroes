@@ -14576,7 +14576,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   creatureMover: {fileID: -5662173077852344858}
-  animatorController: {fileID: 388319656119646446}
   materials:
   - {fileID: 3891132064027596932}
   - {fileID: 7102951066771813042}
@@ -14626,8 +14625,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7685c31ca14ae344bb8f943b9bedc848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animatorController: {fileID: 388319656119646446}
   moveSpeed: 2
-  stopThreshold: 0.01
+  stopThreshold: 0
+  rotationSpeed: 360
   currentCell: {fileID: 0}
 --- !u!1 &1890601381923782011
 GameObject:

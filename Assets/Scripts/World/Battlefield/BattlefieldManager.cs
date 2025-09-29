@@ -48,49 +48,53 @@ public class BattlefieldManager : MonoBehaviour
         UpdateAllWalkability();
         TryHighlightCreature();
     }
+    private bool isMoving;
 
     public async void OnCellClicked(HexCell targetCell)
     {
-        // 1. Получаем текущее существо и его параметры
-        var creature = testCreature;
-        if (creature == null) return;
+        if (testCreature == null || targetCell == null)
+            return;
 
-        var mover = creature.Mover;
+        var mover = testCreature.Mover;
         var start = mover.CurrentCell;
-        int speed = creature.GetStat(CreatureStatusType.Speed);
-        var moveType = creature.MovementType;
+        int speed = testCreature.GetStat(CreatureStatusType.Speed);
+        var moveType = testCreature.MovementType;
 
-        // 2. Проверяем, что целевая клетка подсвечена (доступна)
+        // 1) Проверяем, что клетка свободна и в пределах range
         var reachable = GetReachableCells(start, speed, moveType);
-        if (!reachable.Contains(targetCell))
+        if (!targetCell.isWalkable || !reachable.Contains(targetCell))
+            return;
+
+        // 2) Сразу указываем выбор — подсветка только цели
+        ClearAllHighlights();
+        targetCell.ShowHighlight(true);
+
+        // 3) Если это телепорт — выполняем его
+        if (moveType == MovementType.Teleport)
         {
-            Debug.Log("BattlefieldManager: клетка недоступна для хода");
+            bool ok = await mover.TeleportToCell(targetCell);
+            if (ok)
+                HighlightMovementRange(mover.CurrentCell, speed, moveType);
             return;
         }
 
-        // 3. Строим путь BFS с родительскими ссылками
+        // 4) Иначе — обычный путь по соседям
         List<HexCell> path = FindPath(start, targetCell, moveType);
-        if (path == null || path.Count == 0)
-        {
-            Debug.LogWarning("BattlefieldManager: не удалось построить путь");
-            return;
-        }
+        if (path == null || path.Count == 0) return;
 
-        // 4. Запускаем анимацию движения
-        bool success = await mover.MoveAlongPath(path);
-        if (!success)
-            Debug.LogWarning("BattlefieldManager: существо не смогло дойти до цели");
+        bool moved = await mover.MoveAlongPath(path);
+        if (moved)
+            HighlightMovementRange(mover.CurrentCell, speed, moveType);
     }
 
     private List<HexCell> FindPath(
-        HexCell start,
-        HexCell target,
-        MovementType moveType)
+    HexCell start,
+    HexCell target,
+    MovementType moveType)
     {
         var queue = new Queue<HexCell>();
         var parent = new Dictionary<HexCell, HexCell>();
         var visited = new HashSet<HexCell> { start };
-
         queue.Enqueue(start);
 
         while (queue.Count > 0)
@@ -100,11 +104,7 @@ public class BattlefieldManager : MonoBehaviour
 
             foreach (var nb in GetNeighbors(cell))
             {
-                bool canTraverse = nb.isWalkable
-                                   || moveType == MovementType.Flying
-                                   || moveType == MovementType.Teleport;
-
-                if (canTraverse && visited.Add(nb))
+                if (visited.Add(nb) && CanTraverse(nb, moveType))
                 {
                     parent[nb] = cell;
                     queue.Enqueue(nb);
@@ -115,14 +115,9 @@ public class BattlefieldManager : MonoBehaviour
         if (!parent.ContainsKey(target))
             return null;
 
-        // Восстанавливаем путь
         var path = new List<HexCell>();
-        var cur = target;
-        while (cur != start)
-        {
+        for (var cur = target; cur != start; cur = parent[cur])
             path.Add(cur);
-            cur = parent[cur];
-        }
         path.Reverse();
         return path;
     }
@@ -292,6 +287,16 @@ public class BattlefieldManager : MonoBehaviour
         }
     }
 
+    private bool CanTraverse(HexCell cell, MovementType moveType)
+    {
+        // Летающие могут пролётеть над любой клеткой
+        if (moveType == MovementType.Flying || moveType == MovementType.Teleport)
+            return true;
+
+        // Остальные — только по свободным
+        return cell.isWalkable;
+    }
+
     public void HighlightMovementRange(
         HexCell startCell,
         int speed,
@@ -300,9 +305,29 @@ public class BattlefieldManager : MonoBehaviour
         ClearAllHighlights();
         UpdateAllWalkability();
 
-        var reachable = GetReachableCells(startCell, speed, moveType);
+        var reachable = new List<HexCell>();
+        var visited = new HashSet<HexCell> { startCell };
+        var queue = new Queue<(HexCell cell, int step)>();
+        queue.Enqueue((startCell, 0));
+
+        while (queue.Count > 0)
+        {
+            var (cell, step) = queue.Dequeue();
+            reachable.Add(cell);
+
+            if (step >= speed)
+                continue;
+
+            foreach (var neigh in GetNeighbors(cell))
+            {
+                if (visited.Add(neigh) && CanTraverse(neigh, moveType))
+                    queue.Enqueue((neigh, step + 1));
+            }
+        }
+
+        // Показываем только клетки, на которые можно встать
         foreach (var cell in reachable)
-            if (cell != startCell)
+            if (cell != startCell && cell.isWalkable)
                 cell.ShowHighlight(true);
     }
 

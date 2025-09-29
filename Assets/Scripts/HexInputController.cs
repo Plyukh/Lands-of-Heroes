@@ -7,10 +7,6 @@ public class HexInputController : MonoBehaviour
 
     private void Update()
     {
-        // Ловим левый клик мыши или первый тап
-        if (Input.GetMouseButtonDown(0))
-            TryHandleClick(Input.mousePosition);
-
         // Для тачей на мобильных
         if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
             TryHandleClick(Input.touches[0].position);

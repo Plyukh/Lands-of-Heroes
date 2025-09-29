@@ -6,9 +6,6 @@ public class Creature : MonoBehaviour
     [Header("Mover")]
     [SerializeField] CreatureMover creatureMover;
 
-    [Header("Animator")]
-    [SerializeField] CreatureAnimatorController animatorController;
-
     [Header("Visualization")]
     [SerializeField] List<Renderer> materials;
     [SerializeField] private List<VisualizationGroup> visualGroups;
