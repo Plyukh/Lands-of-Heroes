@@ -102883,7 +102883,7 @@ GameObject:
   - component: {fileID: 8153014692792629197}
   - component: {fileID: 2343561024168714948}
   - component: {fileID: 2017764825405804150}
-  - component: {fileID: -1260549070411881781}
+  - component: {fileID: -487708106192246524}
   m_Layer: 0
   m_Name: Hound
   m_TagString: Untagged
@@ -102919,7 +102919,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e0cd1440066a54bba9607dfb7b57e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  creatureMover: {fileID: -1260549070411881781}
+  mover: {fileID: -487708106192246524}
   animatorController: {fileID: 2017764825405804150}
   materials:
   - {fileID: 2891866844663487144}
@@ -102960,7 +102960,7 @@ MonoBehaviour:
       - {fileID: 3614348247651035109}
       - {fileID: 6975232779109629479}
   CreatureData: {fileID: 11400000, guid: 94740604042bf0944bb818e92010f8b6, type: 2}
-  lvl: 0
+  index: 0
 --- !u!114 &2017764825405804150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102974,7 +102974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 6787589927881824805}
---- !u!114 &-1260549070411881781
+--- !u!114 &-487708106192246524
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -102983,12 +102983,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8176261053319612160}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7685c31ca14ae344bb8f943b9bedc848, type: 3}
+  m_Script: {fileID: 11500000, guid: 140bda1d4e7e7dd41a7cf75c8b1ef7ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
+  defaultMoveSpeed: 2
   stopThreshold: 0.01
-  currentCell: {fileID: 0}
 --- !u!1 &8198193295993826278
 GameObject:
   m_ObjectHideFlags: 0

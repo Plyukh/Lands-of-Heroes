@@ -21,8 +21,7 @@ public class Creature : MonoBehaviour
     public CreatureMover Mover => creatureMover;
     public MovementType MovementType => CreatureData.movementType;
 
-
-    private void Start()
+    private void Awake()
     {
         var stats = CreatureData.statsPerLevel[lvl];
         Initialize(stats);

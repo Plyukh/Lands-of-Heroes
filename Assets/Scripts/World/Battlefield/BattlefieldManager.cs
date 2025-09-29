@@ -46,17 +46,7 @@ public class BattlefieldManager : MonoBehaviour
         ActivateFactionDecor();
 
         UpdateAllWalkability();
-
-        // Прямой вызов HighlightMovementRange вместо тестового метода
-        if (testCreature != null)
-        {
-            var mover = testCreature.Mover;
-            var start = mover.CurrentCell;
-            int speed = testCreature.GetStat(CreatureStatusType.Speed);
-            var moveType = testCreature.MovementType;
-
-            HighlightMovementRange(start, speed, moveType);
-        }
+        TryHighlightCreature();
     }
 
     public void SetRandomFaction()
@@ -234,13 +224,29 @@ public class BattlefieldManager : MonoBehaviour
 
         var reachable = GetReachableCells(startCell, speed, moveType);
         foreach (var cell in reachable)
-        {
-            if (cell == startCell)
-                continue;
+            if (cell != startCell)
+                cell.ShowHighlight(true);
+    }
 
-            // ShowHighlight внутри сам проверяет isWalkable
-            cell.ShowHighlight(true);
+    private void TryHighlightCreature()
+    {
+        if (testCreature == null)
+        {
+            Debug.LogWarning("BattlefieldManager: не назначено testCreature");
+            return;
         }
+
+        HighlightCreatureMovement(testCreature);
+    }
+
+    private void HighlightCreatureMovement(Creature creature)
+    {
+        var mover = creature.Mover;
+        var start = mover.CurrentCell;
+        int speed = creature.GetStat(CreatureStatusType.Speed);
+        var moveType = creature.MovementType;
+
+        HighlightMovementRange(start, speed, moveType);
     }
 
     public void UpdateAllWalkability()
