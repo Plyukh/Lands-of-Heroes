@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9212591548721293090}
   - component: {fileID: 5562153724702234243}
   - component: {fileID: 6921012259021410735}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Active Hex Outline Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4721,7 +4721,7 @@ GameObject:
   - component: {fileID: 3422049973331850052}
   - component: {fileID: 6637574359341286894}
   - component: {fileID: 4621374360089583387}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HexCell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4799,7 +4799,7 @@ GameObject:
   - component: {fileID: 6710791088326656655}
   - component: {fileID: 8746281386852763696}
   - component: {fileID: 3544146931412758347}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Hex
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4885,7 +4885,7 @@ GameObject:
   - component: {fileID: 5393590212481062824}
   - component: {fileID: 1808279527478341982}
   - component: {fileID: 5522765515120102290}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Active Hex Outline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4969,7 +4969,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6164496743125314364}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Effects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5003,7 +5003,7 @@ GameObject:
   - component: {fileID: 2789988066099882870}
   - component: {fileID: 8317810166289686715}
   - component: {fileID: 2931866256776226664}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Inactive Hex Outline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5087,7 +5087,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9165610655558281274}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Outline
   m_TagString: Untagged
   m_Icon: {fileID: 0}

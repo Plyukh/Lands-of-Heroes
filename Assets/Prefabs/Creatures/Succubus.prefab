@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4038012003318931219}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap2.r_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4154947534212947134}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1777880527321396611}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap2.r_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3428633080426042485}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap2.l_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4813632242298123598}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 627020555763746340}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,7 +202,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3312177569580127295}
   - component: {fileID: 4444712553999094490}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Demon WIngs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -338,7 +338,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5182383154815450705}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap3.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -370,7 +370,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4821078312353509487}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap2.r_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -402,7 +402,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2413531278156727730}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftToe_End_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -433,7 +433,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7131272564818216845}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap3.l_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -465,7 +465,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4254736099554544750}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -497,7 +497,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3780456878433765370}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Demon Wings Death
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -530,7 +530,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 420298051390898249}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandIndex3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -562,7 +562,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8556234726646113173}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap1.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -594,7 +594,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3708928155458274777}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -626,7 +626,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5897323861990833271}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -659,7 +659,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7752970118344528351}
   - component: {fileID: 4013134221686153626}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Fireball Light 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -755,7 +755,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3967847429133858890}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap2.r_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -787,7 +787,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2741991284685930273}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -819,7 +819,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 147929468054499030}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA3.r_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -850,7 +850,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3125805852781386920}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA3.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -883,7 +883,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7066248716409556353}
   - component: {fileID: 3667181528142432050}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Demon Wings Idle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -938,7 +938,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1790498572094554109}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandIndex2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -970,7 +970,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8998951320879468201}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA2.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1002,7 +1002,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2854186749352316087}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA3.l_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1033,7 +1033,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 367902135693585573}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA1.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1065,7 +1065,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1460079369549775026}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Spine2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1100,7 +1100,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7782224960346723433}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap1.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1132,7 +1132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4471165606576110633}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1164,7 +1164,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5109364617522370469}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap2.r_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1196,7 +1196,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2968635157549768117}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap3.r_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1227,7 +1227,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2260307327559245468}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap2.r_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1259,7 +1259,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2184612592411729080}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Mid.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1293,7 +1293,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2325628214609160658}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Base.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1326,7 +1326,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7444575264850859990}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Demon Wings Rig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1358,7 +1358,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5032002796205667691}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1390,7 +1390,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1589717713774509648}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1423,7 +1423,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4070003431168645872}
   - component: {fileID: 1452750993034166470}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Fireball Light 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1519,7 +1519,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1356110561035841814}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap2.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1551,7 +1551,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7500062026311887637}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA3.l_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1582,7 +1582,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8645964975156878730}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1614,7 +1614,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8224116888425180081}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Base.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1647,7 +1647,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2868112283568531716}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1679,7 +1679,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8875447778249824020}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Base.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1712,7 +1712,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5662367205777588136}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap2.l_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1744,7 +1744,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1920916275043992723}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA3.l_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1775,7 +1775,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1575188407201449005}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1807,7 +1807,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7064443237561263400}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA3.l_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1839,7 +1839,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7432387242240427082}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftToeBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1871,7 +1871,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3053674265695117390}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1903,7 +1903,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5173457765167214485}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap1.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1935,7 +1935,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2782579123260242826}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA1.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1967,7 +1967,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3224944766031832192}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap3.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1999,7 +1999,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3580358412314995800}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap2.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2031,7 +2031,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1197782452901127145}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2064,7 +2064,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7329235892815055700}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2096,7 +2096,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3983287787563185859}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2128,7 +2128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6625589463283763368}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap2.r_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2160,7 +2160,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5069299237840174438}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA3.r_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2191,7 +2191,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8079330285718204755}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap2.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2223,7 +2223,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8056736527208752081}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Demon Wings Rig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2255,7 +2255,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5811769267784947710}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2287,7 +2287,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 677344099409812133}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap2.l_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2318,7 +2318,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7785737979354628830}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap1.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2350,7 +2350,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5148039093166808618}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2382,7 +2382,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3668808131824246208}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap2.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2414,7 +2414,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9034418053301672925}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap2.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2446,7 +2446,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2522483217597065746}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap2.l_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2478,7 +2478,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 757289642059340511}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap3.l_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2510,7 +2510,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3813549717780350597}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap2.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2542,7 +2542,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4403041277483422598}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap3.r_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2574,7 +2574,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3372718698982905879}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2606,7 +2606,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8517958239762062341}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA1.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2638,7 +2638,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 743214717818140974}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap2.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2670,7 +2670,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3824852628915883563}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap3.r_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2703,7 +2703,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9151380612874377021}
   - component: {fileID: 6227307897679001612}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Demon Wings Block Impact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2758,7 +2758,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3820661106392238734}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2790,7 +2790,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1559338074557993378}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap2.l_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2821,7 +2821,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8169804332002741835}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap2.l_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2853,7 +2853,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8685949356105256541}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap1.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2885,7 +2885,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4255465473644853690}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap3.l_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2917,7 +2917,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7392638885403452245}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap2.r_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2949,7 +2949,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2231754036763994757}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Demon Wings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2985,7 +2985,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 656823771617110522}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA3.l_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3017,7 +3017,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7610601712834458356}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap1.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3049,7 +3049,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1383561886587145651}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA3.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3083,7 +3083,7 @@ GameObject:
   - component: {fileID: 1558153391573473429}
   - component: {fileID: 8962173449539188382}
   - component: {fileID: 2570770459494815948}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Heart Fire Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7819,7 +7819,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 459058439917949547}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap3.r_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7851,7 +7851,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 47637147887493231}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap3.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7883,7 +7883,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1151474954373456909}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap2.l_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7915,7 +7915,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9199259758941514202}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap2.l_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7946,7 +7946,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4783350094828960821}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA2.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7978,7 +7978,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9129268192281777422}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap1.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8010,7 +8010,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7184769211742252413}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap2.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8042,7 +8042,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4284382304851645898}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Base.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8075,7 +8075,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8214001129943773000}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8107,7 +8107,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7143502026055102140}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA3.r_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8139,7 +8139,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1338853859332933847}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap3.r_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8171,7 +8171,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3635549362826343325}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA2.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8205,7 +8205,7 @@ GameObject:
   - component: {fileID: 2164968541298660253}
   - component: {fileID: 2672518380849863592}
   - component: {fileID: 581176941982136253}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Fireball 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12914,7 +12914,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4947840278756500976}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA2.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12946,7 +12946,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8020696363823002591}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Mid.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12980,7 +12980,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1194686215351276972}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA2.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13012,7 +13012,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7024083170644209893}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA3.l_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13044,7 +13044,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6313100914792191840}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13076,7 +13076,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1546238764990929921}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA3.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13108,7 +13108,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1398509360112564065}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap1.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13140,7 +13140,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1701408724728727573}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftToe_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13172,7 +13172,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2263207825235639413}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap2.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13204,7 +13204,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 492862027814274246}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap2.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13236,7 +13236,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4086619164805222595}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13268,7 +13268,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5448883805625165910}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13300,7 +13300,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9182476059663753357}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA3.r_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13332,7 +13332,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 506250761402870762}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap2.l_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13363,7 +13363,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2159825692616235528}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap2.r_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13395,7 +13395,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7718530305511523095}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap2.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13427,7 +13427,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4360860562783530565}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap1.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13459,7 +13459,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7798023415235551020}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap3.l_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13491,7 +13491,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2206926745493575127}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap1.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13523,7 +13523,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5629613616744853890}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap2.r_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13554,7 +13554,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1040515809052587901}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap3.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13586,7 +13586,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9125152046388144982}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA3.l_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13618,7 +13618,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3208637219402319438}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap3.l_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13650,7 +13650,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7147856484778872698}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap2.l_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13682,7 +13682,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4897789774825266372}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap3.r_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13714,7 +13714,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3225311739677016626}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap2.r_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13746,7 +13746,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9189567773880346926}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap2.l_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13777,7 +13777,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7885049666063664651}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13809,7 +13809,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4405875555420788858}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Fireball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13843,7 +13843,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8196033719147341714}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13876,7 +13876,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6336624317193400071}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap1.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13908,7 +13908,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7707488672586890508}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightToeBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13940,7 +13940,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3265218366665937998}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap1.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13972,7 +13972,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4385509803680798160}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap3.r_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14003,7 +14003,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2430832106791788874}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap2.r_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14035,7 +14035,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3294170351114117302}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap2.r_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14066,7 +14066,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2581754365556384730}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA3.l_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14098,7 +14098,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 582950182837920410}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA1.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14131,7 +14131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2168387022196936759}
   - component: {fileID: 3710958299733696269}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Demon Wings Walk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14186,7 +14186,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6501947433566989509}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap1.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14218,7 +14218,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3189340601877176979}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap2.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14250,7 +14250,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 701497826958445522}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandIndex3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14282,7 +14282,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9183095292092737806}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap2.r_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14314,7 +14314,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 945742403662467776}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14346,7 +14346,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3451299877219748573}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14379,7 +14379,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8918327702105760647}
   - component: {fileID: 3999303208073659217}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Fire Effect Light 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14475,7 +14475,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3387783283899044803}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Mid.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14509,7 +14509,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6934671448493834916}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap1.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14541,7 +14541,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7579599390334479687}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Demon Wings Rig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14573,7 +14573,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4791511480995887136}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA2.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14605,7 +14605,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3473135536723770851}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Base.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14638,7 +14638,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6890924531995298452}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap2.r_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14670,7 +14670,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4098037082023701227}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap3.r_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14701,7 +14701,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 582607204871581441}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap2.l_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14732,7 +14732,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3393577524034091373}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandIndex4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14766,7 +14766,7 @@ GameObject:
   - component: {fileID: 5911365783681748207}
   - component: {fileID: 8415518875977217867}
   - component: {fileID: 736885487009434734}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Fireball 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19475,7 +19475,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8234299577508881341}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Mid.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19510,7 +19510,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3146760433236559557}
   - component: {fileID: 245707317135453062}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Demon WIngs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19646,7 +19646,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7679697113911561114}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap2.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19679,7 +19679,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1430829229674806088}
   - component: {fileID: 1635779502952828201}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Heart Explosion Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19775,7 +19775,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4444526211778375949}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:HeadTop_End_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19806,7 +19806,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7551994289236951993}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap2.r_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19838,7 +19838,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8537563000681405121}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap1.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19870,7 +19870,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3790804748870089062}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap2.r_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19901,7 +19901,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9199984020000882823}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19933,7 +19933,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1401759082163998764}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandIndex4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19966,7 +19966,7 @@ GameObject:
   - component: {fileID: 1478739782895326517}
   - component: {fileID: 6004873537253516993}
   - component: {fileID: 419128245846964249}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Heart Explosion Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24675,7 +24675,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2056759403967166820}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap2.r_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24707,7 +24707,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7626850763948477666}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA3.r_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24738,7 +24738,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7219189854876098825}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24770,7 +24770,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4085143937217258732}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24802,7 +24802,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8582242667459822007}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap1.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24834,7 +24834,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 541151843159446290}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA3.r_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24865,7 +24865,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8149066112800868209}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap3.r_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24896,7 +24896,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8484862651112530756}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24928,7 +24928,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1699832954506109964}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap3.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24960,7 +24960,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2189287405012902301}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap2.r_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24992,7 +24992,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2729633282121437013}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25024,7 +25024,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4048477135289471926}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25056,7 +25056,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7117165009824516103}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandIndex4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25088,7 +25088,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8791845514020657594}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap3.l_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25120,7 +25120,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 199051311190348354}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA3.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25152,7 +25152,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 188548505109445417}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap2.r_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25184,7 +25184,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1443142777934505799}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA3.r_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25216,7 +25216,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8590033843873911389}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap3.l_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25247,7 +25247,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3132709316719606116}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA2.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25279,7 +25279,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8224354895843472228}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25311,7 +25311,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8274616834081932886}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap2.l_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25345,7 +25345,7 @@ GameObject:
   - component: {fileID: 3732672083990046569}
   - component: {fileID: 5650692674218584646}
   - component: {fileID: 3913210599330658497}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Fireball 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30054,7 +30054,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6896371915709533588}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap1.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30086,7 +30086,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8435968751330420381}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap1.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30118,7 +30118,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5301065299354157338}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap2.l_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30150,7 +30150,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6629663697607820722}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30183,7 +30183,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 51535678735725572}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA3.l_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30214,7 +30214,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8877625621859403919}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap3.l_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30246,7 +30246,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454497}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap1.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30278,7 +30278,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454499}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30310,7 +30310,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454501}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap2.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30342,7 +30342,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454503}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap1.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30374,7 +30374,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454505}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap2.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30406,7 +30406,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454507}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap2.l_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30438,7 +30438,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454509}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30470,7 +30470,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454511}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap2.r_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30502,7 +30502,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454513}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA1.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30534,7 +30534,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454515}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30566,7 +30566,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454517}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA2.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30598,7 +30598,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454519}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA1.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30630,7 +30630,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454521}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA3.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30662,7 +30662,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454523}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA2.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30694,7 +30694,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454525}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA3.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30726,7 +30726,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454527}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA3.l_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30758,7 +30758,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454401}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30791,7 +30791,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454403}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA3.r_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30823,7 +30823,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454405}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30855,7 +30855,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454407}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30887,7 +30887,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454409}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap1.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30919,7 +30919,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454411}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap1.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30951,7 +30951,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454413}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap2.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30983,7 +30983,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454415}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap2.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31015,7 +31015,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454417}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap3.l_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31047,7 +31047,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454419}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap3.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31079,7 +31079,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454421}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap3.r_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31111,7 +31111,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454423}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap3.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31143,7 +31143,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454465}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Base.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31176,7 +31176,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454467}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Base.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31209,7 +31209,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454469}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31241,7 +31241,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454471}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31273,7 +31273,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454473}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap1.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31305,7 +31305,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454475}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap1.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31337,7 +31337,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454477}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap2.l_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31369,7 +31369,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454479}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap2.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31401,7 +31401,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454481}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap2.r_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31433,7 +31433,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454483}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap2.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31466,7 +31466,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5767167659326454487}
   - component: {fileID: 5767167659331365859}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Demon WIngs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31602,7 +31602,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454489}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Mid.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31636,7 +31636,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454491}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Demon Wings Rig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31668,7 +31668,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454493}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31700,7 +31700,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767167659326454495}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Mid.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31734,7 +31734,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 257714520345667332}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA3.r_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31766,7 +31766,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2681045253310746145}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA3.l_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31798,7 +31798,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4080841836295897135}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandIndex4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31829,7 +31829,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6984740485091421929}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Base.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31862,7 +31862,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7449361325537469679}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA3.r_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31894,7 +31894,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1533446601846291238}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap2.l_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31926,7 +31926,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2886469202652718239}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap3.l_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31957,7 +31957,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4307271913522950487}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap2.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31989,7 +31989,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4349817810987329625}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA1.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32021,7 +32021,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1892473651518549177}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap2.l_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32053,7 +32053,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7150262635606990440}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA1.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32085,7 +32085,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3076891848384753100}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32117,7 +32117,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8814619316997155290}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap2.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32149,7 +32149,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8087604856892018585}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap3.l_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32181,7 +32181,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3280050322760169898}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap2.l_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32213,7 +32213,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8125175628437004672}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32247,7 +32247,7 @@ GameObject:
   - component: {fileID: 4961196654060188247}
   - component: {fileID: 3725464923624608706}
   - component: {fileID: 1887815887522023447}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Heart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32333,7 +32333,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1401006105559972034}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA3.l_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32365,7 +32365,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8282519724511001625}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap2.l_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32397,7 +32397,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5390310573142278339}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap1.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32429,7 +32429,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4859315604981268972}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap1.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32461,7 +32461,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4766209029636256210}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap2.l_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32493,7 +32493,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6672088260490358407}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap3.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32525,7 +32525,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8505075609028311253}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap2.l_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32556,7 +32556,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4692114149964899598}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Demon Wings Rig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32589,7 +32589,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1413379374619558192}
   - component: {fileID: 265622608596986270}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Demon WIngs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32725,7 +32725,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5826628777428159458}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap2.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32757,7 +32757,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8858297536656524186}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap2.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32789,7 +32789,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7654843676177435370}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA3.l_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32820,7 +32820,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9023709198971878659}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap2.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32852,7 +32852,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 347534451015205499}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA3.r_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32884,7 +32884,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8635322012055911162}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap2.r_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32915,7 +32915,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1221636789795683567}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandIndex2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32947,7 +32947,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3495853579157077895}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap1.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32979,7 +32979,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3636484469225151260}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap2.l_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33011,7 +33011,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6921550503614433050}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA1.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33043,7 +33043,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2778987217235489721}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap2.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33075,7 +33075,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8867932929880124775}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightToe_End_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33106,7 +33106,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8656187278368816061}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap2.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33138,7 +33138,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5678200105257725744}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap2.r_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33169,7 +33169,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1806646866911989694}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandIndex1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33201,7 +33201,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8454962364983960478}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33233,7 +33233,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8482877202845322943}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap2.l_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33265,7 +33265,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5140104778083576294}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA3.l_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33297,7 +33297,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5206680440042390845}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap3.l_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33328,7 +33328,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8471920666734154594}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap2.l_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33360,7 +33360,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5757457746089587806}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap2.r_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33392,7 +33392,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6498023535862174335}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap2.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33424,7 +33424,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 977986153569414169}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap1.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33456,7 +33456,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3605604524262705398}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA3.r_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33488,7 +33488,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4822112971071354188}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33520,7 +33520,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9179020573253374960}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap3.r_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33552,7 +33552,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2308721490485993632}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA2.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33584,7 +33584,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3491964574226771356}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap2.r_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33617,7 +33617,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1947723126659375530}
   - component: {fileID: 1306438815464698830}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: tripo_node_7512f259
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33737,7 +33737,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4733820545556432271}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:HeadTop_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33769,7 +33769,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2961590860605101764}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA3.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33801,7 +33801,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8706530592678885599}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap1.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33833,7 +33833,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2672409218743566511}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA1.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33865,7 +33865,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7509543892631445244}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA3.r_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33896,7 +33896,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4886537507592176737}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap2.r_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33927,7 +33927,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2021571439281353970}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33959,7 +33959,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3144401008435671022}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap2.r_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33990,7 +33990,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8356125493231566368}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap1.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34022,7 +34022,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8483950540247850342}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA3.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34054,7 +34054,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 980532025800183440}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Melee Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34087,7 +34087,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4513637714170192416}
   - component: {fileID: 5533780921336402952}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Fireball Light 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34183,7 +34183,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6731989972642010286}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap2.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34215,7 +34215,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5826784362514028269}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap3.r_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34247,7 +34247,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2557868922788652983}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34279,7 +34279,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 525113598776574276}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap3.l_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34311,7 +34311,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8729054299744699168}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Base.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34344,7 +34344,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3901093618949411459}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap3.l_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34376,7 +34376,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3057966325848440833}
   - component: {fileID: 5320011613104521422}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Demon WIngs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34512,7 +34512,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8017758759115701075}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34544,7 +34544,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8242453755180309642}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA3.r_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34576,7 +34576,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3887794632450040930}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap3.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34608,7 +34608,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5164895455899129549}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap2.l_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34639,7 +34639,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8148806376204539663}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap2.r_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34670,7 +34670,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5147895925879042928}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34702,7 +34702,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6990008107107029458}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34734,7 +34734,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2382023663306483927}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Mid.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34768,7 +34768,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6007848757117732056}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Mid.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34802,7 +34802,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7386862226547864168}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34834,7 +34834,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1394747576531471115}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap3.r_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34866,7 +34866,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2468677366707734569}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap2.l_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34898,7 +34898,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5294749288541578747}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap3.l_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34929,7 +34929,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7197946562352044364}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Mid.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34963,7 +34963,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4828367182014036921}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34997,7 +34997,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4074121011287742772}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35030,7 +35030,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3892504600996072819}
   - component: {fileID: 8072798827887476673}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Demon Wings Block Idle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35085,7 +35085,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8055120060599240992}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap2.l_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35116,7 +35116,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5425275080110155404}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA3.l_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35148,7 +35148,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1584782731768353210}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35181,7 +35181,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8870738935352291373}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap2.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35213,7 +35213,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5952113509403628431}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA3.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35245,7 +35245,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5722976491796789206}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandIndex1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35277,7 +35277,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1146685453535658054}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Mid.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35311,7 +35311,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4875912958114778090}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap3.r_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35342,7 +35342,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7782130172152779242}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA3.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35374,7 +35374,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6615473777098838785}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap3.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35406,7 +35406,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4994345767977641403}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightToe_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35438,7 +35438,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2185453884161362346}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap2.r_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35469,7 +35469,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5049245160769182396}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Base.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35502,7 +35502,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4086291169493672148}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap2.l_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35533,7 +35533,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6125123748511882331}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TopFlap3.r_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35565,7 +35565,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1593894066549158563}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Spine1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35601,7 +35601,8 @@ GameObject:
   - component: {fileID: 7250878706012271437}
   - component: {fileID: -5758374902273499761}
   - component: {fileID: -7919776535840865676}
-  m_Layer: 0
+  - component: {fileID: -5829227612894669597}
+  m_Layer: 15
   m_Name: Succubus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35690,6 +35691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 9091583481286864744}
+  projectileSpawnPoint: {fileID: 0}
 --- !u!114 &-7919776535840865676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35707,6 +35709,29 @@ MonoBehaviour:
   stopThreshold: 0
   rotationSpeed: 720
   currentCell: {fileID: 0}
+--- !u!136 &-5829227612894669597
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8932558488307953852}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.4
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8932756109554252668
 GameObject:
   m_ObjectHideFlags: 0
@@ -35716,7 +35741,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6252222073690045367}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35748,7 +35773,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8320732612379841649}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap2.l_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35780,7 +35805,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4908519960839108259}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35812,7 +35837,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7424410455796109849}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35844,7 +35869,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1406206809867003058}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BottomFlap2.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35876,7 +35901,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7188977298387697531}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlapA3.r_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35908,7 +35933,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8943731541754499384}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MidFlap.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5164411380515133093}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftToeBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4088058495991040350}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandMiddle4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2957488391540599771}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandThumb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2062925676786092805}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandThumb2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5032269427172826466}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandThumb4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7600152372967605589}
   - component: {fileID: 8077083721247440110}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Lich Attack Fog Light 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -264,7 +264,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3326937297986721595}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandThumb3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -296,7 +296,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7213258269172389012}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandIndex4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -327,7 +327,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 551125341330628037}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Lich Defence
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -362,7 +362,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 291083804869842904}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandIndex3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -394,7 +394,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3536505358346595892}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandIndex4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -428,7 +428,7 @@ GameObject:
   - component: {fileID: 3605668514441412493}
   - component: {fileID: 2826227900489285386}
   - component: {fileID: 5999305003470583471}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Lich Defence Fog 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5137,7 +5137,7 @@ GameObject:
   m_Component:
   - component: {fileID: 459893955630437612}
   - component: {fileID: 7217351768170908665}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Left Lich Attack Fog Light 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5235,7 +5235,7 @@ GameObject:
   - component: {fileID: 5546285322667030819}
   - component: {fileID: 3523931685450629564}
   - component: {fileID: 763910531084474885}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Lich Defence Fog 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9944,7 +9944,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2757580410571026558}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Lich Melee Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9978,7 +9978,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4883303599692147749}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10012,7 +10012,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8490611170624223404}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:HeadTop_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10045,7 +10045,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4527905758733867919}
   - component: {fileID: 8341846472559462731}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Lich Melee Attack Light 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10141,7 +10141,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2122571588793911760}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10175,7 +10175,7 @@ GameObject:
   - component: {fileID: 8425993838449229987}
   - component: {fileID: 927190211000037554}
   - component: {fileID: 1163211741199099093}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Lich Melee Attack 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14885,7 +14885,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5793696336370136534}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightToe_End_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14916,7 +14916,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7230016575441668786}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandPinky2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14948,7 +14948,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1037502236863380117}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandRing4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14980,7 +14980,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8451233134545625183}
   - component: {fileID: 7991621172611502572}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Lich Attack Fog Light 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15077,7 +15077,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8171304276333401967}
   - component: {fileID: 4300928568062312653}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Lich Attack Fog Light 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15173,7 +15173,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7569340507481870934}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15205,7 +15205,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5382692487059996014}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15237,7 +15237,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3685320524669397058}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftToe_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15269,7 +15269,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7120685993183972600}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandIndex1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15301,7 +15301,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2277415333424310093}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Spine1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15333,7 +15333,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 16548451682694409}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandIndex2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15367,7 +15367,7 @@ GameObject:
   - component: {fileID: 3482152671050544423}
   - component: {fileID: 6256589680262286128}
   - component: {fileID: 9054564935349979210}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Left Lich Defence Fog 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20075,7 +20075,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2489050926808754058}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Left Lich Defence
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20110,7 +20110,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8569441237467487192}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20148,7 +20148,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1198472099613721021}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20182,7 +20182,7 @@ GameObject:
   - component: {fileID: 963375588900999019}
   - component: {fileID: 3900525667974894531}
   - component: {fileID: 2670416635284667221}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Lich Melee Attack 3.1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24891,7 +24891,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6528253364484219877}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandThumb3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24923,7 +24923,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1962470116425866095}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandRing2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24955,7 +24955,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6930042708845519973}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24987,7 +24987,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5501151044558724182}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25019,7 +25019,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8105195796778422128}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandRing2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25051,7 +25051,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2547618330317343185}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandRing4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25083,7 +25083,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4067370573231931197}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandIndex4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25117,7 +25117,7 @@ GameObject:
   - component: {fileID: 7335096373144625869}
   - component: {fileID: 5321347307963218235}
   - component: {fileID: 8011874539505237651}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Left Lich Defence Fog 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29827,7 +29827,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5978036502691152047}
   - component: {fileID: 5211365676096627910}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Lich Attack Fog Light 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29924,7 +29924,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8584374071886746833}
   - component: {fileID: 3102707206832001730}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Eye 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30020,7 +30020,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7668789008917321290}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightToeBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30053,7 +30053,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2770193788259009954}
   - component: {fileID: 7206797143086885344}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Eye 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30151,7 +30151,7 @@ GameObject:
   - component: {fileID: 1480780651888645140}
   - component: {fileID: 3582313978742370630}
   - component: {fileID: 177233575807525905}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Left Lich Attack Fog 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34860,7 +34860,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7332441926172997380}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34892,7 +34892,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7614583933411674904}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34926,7 +34926,7 @@ GameObject:
   - component: {fileID: 554964993295532760}
   - component: {fileID: 2000262022503919394}
   - component: {fileID: 4010514132817973237}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Left Lich Attack Fog 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39637,7 +39637,7 @@ GameObject:
   - component: {fileID: 134467165015559493}
   - component: {fileID: 6640762617218086185}
   - component: {fileID: 7530836905042038515}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Left Lich Defence Fog 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44346,7 +44346,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5044084362051753839}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandPinky1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44378,7 +44378,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4168660163416347303}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandMiddle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44410,7 +44410,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2489319422024069477}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandPinky1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44442,7 +44442,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1766409316457071414}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightToe_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44474,7 +44474,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1350600089144363597}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandMiddle4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44505,7 +44505,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1720843061278295203}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44537,7 +44537,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3915174361717844724}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44572,7 +44572,7 @@ GameObject:
   - component: {fileID: 7796978514376338583}
   - component: {fileID: 4127086176573319585}
   - component: {fileID: 2818667720575274683}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Left Lich Attack Fog 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49280,7 +49280,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5782730262106071784}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49312,7 +49312,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7732213755831449119}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandThumb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49345,7 +49345,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8501780789854993226}
   - component: {fileID: 5181781392016860056}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Lich Melee Attack Light 1.1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49442,7 +49442,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5162827550873531135}
   - component: {fileID: 5129163428689056375}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Lich Melee Attack Light 3.1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49538,7 +49538,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5048770213557091200}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandPinky2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49570,7 +49570,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7846468289946542408}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Spine2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49604,7 +49604,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2212150521559792257}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftToe_End_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49636,7 +49636,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2733013687999579149}
   - component: {fileID: 5139234220062980179}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: tripo_node_617c273f
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49788,7 +49788,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4933087992963334865}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandPinky3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49820,7 +49820,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1734710160003453436}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandMiddle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49852,7 +49852,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8763271412833340580}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandThumb4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49884,7 +49884,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7581194767023768314}
   - component: {fileID: 6955971528128413664}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Left Lich Attack Fog Light 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49980,7 +49980,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5210402873605441056}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandIndex2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50013,7 +50013,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1175249287951379313}
   - component: {fileID: 2556358835337675789}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Left Lich Attack Fog Light 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50109,7 +50109,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8358378620734880967}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandMiddle4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50141,7 +50141,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3322010853551940927}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50173,7 +50173,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5200308244708993881}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandMiddle4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50207,7 +50207,7 @@ GameObject:
   - component: {fileID: 738522128451976959}
   - component: {fileID: 1430779572896438472}
   - component: {fileID: 1631645584825439214}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Lich Melee Attack 2.1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54917,7 +54917,7 @@ GameObject:
   - component: {fileID: 2841022084968583992}
   - component: {fileID: 4271815576848310547}
   - component: {fileID: 1842785942177167956}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Lich Attack Fog 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59625,7 +59625,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1585618899259145795}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandRing3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59659,7 +59659,7 @@ GameObject:
   - component: {fileID: 7805437746348307486}
   - component: {fileID: 1769073257324610659}
   - component: {fileID: 6032006440381257546}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Lich Defence Fog 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64368,7 +64368,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 152959311321352542}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64402,7 +64402,7 @@ GameObject:
   - component: {fileID: 204157556943002582}
   - component: {fileID: 7213010364125266696}
   - component: {fileID: 7681284490140599077}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Lich Melee Attack 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69111,7 +69111,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7124316110177090955}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandThumb2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69145,7 +69145,7 @@ GameObject:
   - component: {fileID: 8126566520052790209}
   - component: {fileID: 1101104069787248386}
   - component: {fileID: 433213534854702160}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Lich Attack Fog 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73854,7 +73854,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5907828611409360909}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandRing1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73886,7 +73886,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2996705848194658353}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73923,7 +73923,8 @@ GameObject:
   - component: {fileID: 6295851487209963046}
   - component: {fileID: 3109629008685655547}
   - component: {fileID: -7385688486482704236}
-  m_Layer: 0
+  - component: {fileID: 7905871121753073806}
+  m_Layer: 15
   m_Name: Lich
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74027,6 +74028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1395154307170049627}
+  projectileSpawnPoint: {fileID: 0}
 --- !u!114 &-7385688486482704236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74044,6 +74046,29 @@ MonoBehaviour:
   stopThreshold: 0
   rotationSpeed: 360
   currentCell: {fileID: 0}
+--- !u!136 &7905871121753073806
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6294460643649747306}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.4
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6451320225240775653
 GameObject:
   m_ObjectHideFlags: 0
@@ -74053,7 +74078,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2697307422553820822}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:HeadTop_End_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74084,7 +74109,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1659561163080662719}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74116,7 +74141,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5801114352698993892}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Lich Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74150,7 +74175,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7021906599172653698}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandPinky4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74182,7 +74207,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7688298011006706120}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandPinky4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74213,7 +74238,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3903726244284026554}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandRing1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74245,7 +74270,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4777434003659814146}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandIndex1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74278,7 +74303,7 @@ GameObject:
   m_Component:
   - component: {fileID: 28757489215971044}
   - component: {fileID: 4770262398180105888}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Lich Melee Attack Light 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74374,7 +74399,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6523999633520977340}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandThumb4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74406,7 +74431,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5780696066034695469}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandPinky4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74439,7 +74464,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6381884504112045540}
   - component: {fileID: 7383233424205590783}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Left Lich Attack Fog Light 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74537,7 +74562,7 @@ GameObject:
   - component: {fileID: 271018598503729757}
   - component: {fileID: 5308371500854472903}
   - component: {fileID: 6423537915190431976}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Left Lich Defence Fog 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79246,7 +79271,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1814141442422629244}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandRing4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79277,7 +79302,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2725482743942564}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandIndex4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79309,7 +79334,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3319083810280321623}
   - component: {fileID: 3224075680198793611}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Left Lich Attack Fog Light 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79405,7 +79430,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1098570347605954069}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandMiddle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79437,7 +79462,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2155088415444813547}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandPinky3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79469,7 +79494,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2584211533703844215}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandRing4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79501,7 +79526,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6468545873163462872}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79539,7 +79564,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3907516374762753911}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79573,7 +79598,7 @@ GameObject:
   - component: {fileID: 2739518320182905832}
   - component: {fileID: 9093448641284707692}
   - component: {fileID: 3189901455382716946}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Lich Melee Attack 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84283,7 +84308,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6911922586499370859}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandThumb4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84315,7 +84340,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 408302382410831452}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandMiddle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84347,7 +84372,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5940903939405776106}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandRing3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84379,7 +84404,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8869681297600349223}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandMiddle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84411,7 +84436,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4592942865336728700}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandPinky4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84444,7 +84469,7 @@ GameObject:
   - component: {fileID: 2062827819558958114}
   - component: {fileID: 4006216544848926127}
   - component: {fileID: 6353901867234774230}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Lich Attack Fog 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89153,7 +89178,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1825478126321737672}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandMiddle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89186,7 +89211,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8728902382701998929}
   - component: {fileID: 6152810646017808692}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Lich Attack Fog Light 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89282,7 +89307,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8991683203349315553}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Left Lich Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89316,7 +89341,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2741511450277990532}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandIndex3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89350,7 +89375,7 @@ GameObject:
   - component: {fileID: 6417622985741291659}
   - component: {fileID: 4054675464682890947}
   - component: {fileID: 1806950665645975087}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Lich Defence Fog 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94061,7 +94086,7 @@ GameObject:
   - component: {fileID: 2612620814410361819}
   - component: {fileID: 7602118469612263766}
   - component: {fileID: 4782856918397129442}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Lich Melee Attack 1.1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

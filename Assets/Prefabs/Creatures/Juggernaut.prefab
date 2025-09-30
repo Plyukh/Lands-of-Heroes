@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6645200403556441402}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 927702515867892246}
   - component: {fileID: 6142801557728393338}
   - component: {fileID: 8418397346667723086}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Flame 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4843,7 +4843,7 @@ GameObject:
   - component: {fileID: 171762898372114160}
   - component: {fileID: 2099848835811548373}
   - component: {fileID: 1705347606051291311}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Flame 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9552,7 +9552,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8212520328458403387}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9585,7 +9585,7 @@ GameObject:
   m_Component:
   - component: {fileID: 448452178716977014}
   - component: {fileID: 8775332700194151166}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Flame Point Light 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9681,7 +9681,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9221660927445489553}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Defense Flame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9717,7 +9717,7 @@ GameObject:
   - component: {fileID: 2873099154621301914}
   - component: {fileID: 7351405222204409340}
   - component: {fileID: 8652340412713114383}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Flame 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14515,7 +14515,8 @@ GameObject:
   - component: {fileID: 8542141676434195287}
   - component: {fileID: 388319656119646446}
   - component: {fileID: -5662173077852344858}
-  m_Layer: 0
+  - component: {fileID: 871772385165350243}
+  m_Layer: 15
   m_Name: Juggernaut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14613,6 +14614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 350139899791509848}
+  projectileSpawnPoint: {fileID: 0}
 --- !u!114 &-5662173077852344858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14626,10 +14628,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animatorController: {fileID: 388319656119646446}
-  moveSpeed: 2
+  moveSpeed: 1
   stopThreshold: 0
   rotationSpeed: 360
   currentCell: {fileID: 0}
+--- !u!136 &871772385165350243
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543268438074428410}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.3
+  m_Height: 0.8
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1890601381923782011
 GameObject:
   m_ObjectHideFlags: 0
@@ -14639,7 +14664,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2660301824275515765}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftToeBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14671,7 +14696,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8606733979897591253}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Flame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14707,7 +14732,7 @@ GameObject:
   - component: {fileID: 5213690805954933652}
   - component: {fileID: 4683917872960803472}
   - component: {fileID: 3470970157343976501}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Melat Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19361,7 +19386,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6235116874053531533}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHand_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19396,7 +19421,7 @@ GameObject:
   - component: {fileID: 3413337038290614025}
   - component: {fileID: 7351932782488944602}
   - component: {fileID: 258928611749732343}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Flame 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24190,7 +24215,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7729538729291029485}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24222,7 +24247,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1846606919298879309}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Spine1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24257,7 +24282,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4780284054161608549}
   - component: {fileID: 8357026783413098666}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Fireball Light 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24353,7 +24378,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1889748719881154279}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightToe_End_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24385,7 +24410,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9050573307892250919}
   - component: {fileID: 8202439149781651105}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Flame Point Light 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24483,7 +24508,7 @@ GameObject:
   - component: {fileID: 7189166065259516499}
   - component: {fileID: 4972104448683191906}
   - component: {fileID: 5948014515813647160}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Explosion Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29142,7 +29167,7 @@ GameObject:
   - component: {fileID: 4591467002007426065}
   - component: {fileID: 583200192226630580}
   - component: {fileID: 3455112167190916990}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Head Juggernaut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29226,7 +29251,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 334123366252470245}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29259,7 +29284,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5948072112502804536}
   - component: {fileID: 8655338892966305121}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Flame Point Light 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29357,7 +29382,7 @@ GameObject:
   - component: {fileID: 4852839965071875779}
   - component: {fileID: 3524477295135882649}
   - component: {fileID: 3376716713632864619}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Flame 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34066,7 +34091,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2042158599726264567}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34098,7 +34123,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6014374618377670498}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Death Objects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34134,7 +34159,7 @@ GameObject:
   - component: {fileID: 9201090712061734468}
   - component: {fileID: 5503582025480584080}
   - component: {fileID: 2093446607101710515}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Flame 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38928,7 +38953,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6924061258004138404}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38963,7 +38988,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8249498180116904727}
   - component: {fileID: 6288097488827769999}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Explosion Effect Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39059,7 +39084,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 501115711452523192}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightToe_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39091,7 +39116,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4192786519978570225}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39123,7 +39148,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2440554051340988494}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39155,7 +39180,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 820798692675075378}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftToe_End_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39188,7 +39213,7 @@ GameObject:
   - component: {fileID: 9058980334114552907}
   - component: {fileID: 6394174581769135364}
   - component: {fileID: 4679082616900508523}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Smoke 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43770,7 +43795,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8819396636245117657}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43802,7 +43827,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5539318122544074314}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Spine2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43838,7 +43863,7 @@ GameObject:
   - component: {fileID: 578472771063039139}
   - component: {fileID: 1284456086100538665}
   - component: {fileID: 8396161114418425315}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Smoke 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48421,7 +48446,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6090977829924083328}
   - component: {fileID: 3891132064027596932}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: tripo_node_83eaa14a
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48533,7 +48558,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4415972048842025926}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:HeadTop_End_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48564,7 +48589,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7329590396482875096}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48596,7 +48621,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7689803656000817315}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightToeBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48628,7 +48653,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5904452894865762107}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Explosion Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48661,7 +48686,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8232432580994474266}
   - component: {fileID: 7066138646286759766}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Flame Point Light 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48757,7 +48782,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 349108029957635956}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48789,7 +48814,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 61147966852732873}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48821,7 +48846,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7503471081352017720}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHand_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48854,7 +48879,7 @@ GameObject:
   - component: {fileID: 1221790377707404950}
   - component: {fileID: 6773631647125423098}
   - component: {fileID: 8313446420572033610}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Smoke 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53438,7 +53463,7 @@ GameObject:
   - component: {fileID: 7249859155087678687}
   - component: {fileID: 6942380330856900258}
   - component: {fileID: 7862370258759652047}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Smoke Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58020,7 +58045,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1970432627208285451}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58052,7 +58077,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1465572880832957906}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58084,7 +58109,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4190428036255894337}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58118,7 +58143,7 @@ GameObject:
   - component: {fileID: 1398090964654745600}
   - component: {fileID: 7876014663080463644}
   - component: {fileID: 4990860327859930182}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62700,7 +62725,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6209682221370204191}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62732,7 +62757,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3888797268347856534}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62766,7 +62791,7 @@ GameObject:
   - component: {fileID: 2209002564344173656}
   - component: {fileID: 8901436984544010314}
   - component: {fileID: 3414506241748126070}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Left Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67348,7 +67373,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7947077160067707132}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67381,7 +67406,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6290858970936405833}
   - component: {fileID: 1368647036752503376}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Flame Point Light 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67477,7 +67502,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5707106670993431696}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67511,7 +67536,7 @@ GameObject:
   - component: {fileID: 1787775747344197269}
   - component: {fileID: 6257679658717218029}
   - component: {fileID: 6561608868439058362}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Flame 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72307,7 +72332,7 @@ GameObject:
   - component: {fileID: 739814264968791835}
   - component: {fileID: 4275568966158277602}
   - component: {fileID: 5199893634825006644}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Flame 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77103,7 +77128,7 @@ GameObject:
   - component: {fileID: 1961900276552562168}
   - component: {fileID: 8663353487503292632}
   - component: {fileID: 8734883387764095171}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Smoke 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81685,7 +81710,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5120997711879984767}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftToe_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81717,7 +81742,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7086751725921562495}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81753,7 +81778,7 @@ GameObject:
   - component: {fileID: 6497970589350918197}
   - component: {fileID: 8472631485839283802}
   - component: {fileID: 8921385888352312750}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Flame 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86464,7 +86489,7 @@ GameObject:
   - component: {fileID: 1006790489433495156}
   - component: {fileID: 4705055899800549484}
   - component: {fileID: 6372831729931319997}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Smoke 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91047,7 +91072,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6660217666175184864}
   - component: {fileID: 7803445278871560103}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Fireball Light 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91144,7 +91169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9193303543858021269}
   - component: {fileID: 4395781937539144346}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Flame Point Light 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91241,7 +91266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4208647341783659759}
   - component: {fileID: 2119776325651817785}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Fireball Light 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91339,7 +91364,7 @@ GameObject:
   - component: {fileID: 8275905825239042525}
   - component: {fileID: 5005248600779425400}
   - component: {fileID: 7102951066771813042}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Juggernaut's Leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91425,7 +91450,7 @@ GameObject:
   - component: {fileID: 8180124285933498331}
   - component: {fileID: 5055985644595290238}
   - component: {fileID: 7047728169583072436}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Juggernaut's Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91509,7 +91534,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5498033738731739377}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91541,7 +91566,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5463383870434607954}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:HeadTop_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91573,7 +91598,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6505769844451232431}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Left Flame
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 766365185898297617}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3581590551561814925}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WingEnd.r_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 352349220748166685}
   - component: {fileID: 1888433882941035098}
   - component: {fileID: 7793357135479068401}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Angel Sword Effect 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4784,7 +4784,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3736494343915162500}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandIndex4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4816,7 +4816,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8059462280686236761}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WingEnd.r_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4847,7 +4847,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8713728987038645426}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandRing1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4879,7 +4879,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5410610044045079670}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandThumb4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4911,7 +4911,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2629075546653346022}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandIndex1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4943,7 +4943,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6701260409849739069}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Wings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4977,7 +4977,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8164841012635836328}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandPinky4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5009,7 +5009,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6183463857734296032}
   - component: {fileID: 4732437585021556228}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Angel Shield Light 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5105,7 +5105,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1287759313640976153}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandThumb2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5137,7 +5137,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7001694245074918562}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandMiddle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5169,7 +5169,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3036956130043209341}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WingEnd.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5201,7 +5201,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7341911851680707564}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandThumb3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5233,7 +5233,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1638936543336491262}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WingEnd.l_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5266,7 +5266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4616937807990525532}
   - component: {fileID: 8888862404546742667}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Angel Wings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5364,7 +5364,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 177211898542320802}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WingEnd.r_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5396,7 +5396,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2049266796011786224}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WingEnd.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5428,7 +5428,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5702619814048902430}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WingMid.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5460,7 +5460,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8632875761651548861}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:HeadTop_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5492,7 +5492,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7270708755185841859}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WingEnd.l_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5524,7 +5524,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2597522096843036066}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandMiddle4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5557,7 +5557,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2863423883844297202}
   - component: {fileID: 4646292919493039355}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Angel Wings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5655,7 +5655,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8955248968605592002}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WingMid.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5687,7 +5687,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7172277283993478011}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandMiddle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5719,7 +5719,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8283991587754565188}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandIndex4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5750,7 +5750,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8973662042940689530}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5782,7 +5782,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2296400465254959010}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandIndex4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5813,7 +5813,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8712447582072051530}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: AngelWIngs_Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5845,7 +5845,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2868949680246946505}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WingBase.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5877,7 +5877,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1780949832963693095}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandIndex3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5910,7 +5910,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3500645596087782137}
   - component: {fileID: 895869644726500691}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Angel Shield Light 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6006,7 +6006,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4567874426105983670}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WingEnd.r_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6037,7 +6037,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5952089334899423015}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandRing1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6069,7 +6069,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2959025218831219063}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandMiddle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6101,7 +6101,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2740036320602624433}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandThumb3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6133,7 +6133,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6881457001954657796}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandPinky3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6165,7 +6165,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9092262941095615655}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WingBase.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6197,7 +6197,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6401695246685330661}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandThumb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6229,7 +6229,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4813869829294982402}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandRing4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6260,7 +6260,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4723413117803972609}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandMiddle4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6291,7 +6291,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8351489091142985468}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandIndex2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6325,7 +6325,7 @@ GameObject:
   - component: {fileID: 935209555682496187}
   - component: {fileID: 6769314505647058803}
   - component: {fileID: 2963019970577687864}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Angel Sword 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6410,7 +6410,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7747691271540706107}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6443,7 +6443,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2269749420176524242}
   - component: {fileID: 4020619276319192491}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Angel Sword Light 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6539,7 +6539,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5710725570279416992}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandMiddle4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6573,7 +6573,7 @@ GameObject:
   - component: {fileID: 7720921416623836318}
   - component: {fileID: 2645873881542594316}
   - component: {fileID: 567659610573599286}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Wings Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11281,7 +11281,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1560398691877109794}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandPinky1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11313,7 +11313,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5632385484254398170}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WingEnd.r_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11345,7 +11345,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7592269499558498046}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11378,7 +11378,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7043620739780609239}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandRing2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11410,7 +11410,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3853662006840579731}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandThumb4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11441,7 +11441,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6390423834010587382}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandMiddle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11473,7 +11473,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3733840363300499411}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftToe_End_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11504,7 +11504,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1189016362965148963}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WingEnd.r_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11535,7 +11535,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 516557895068380529}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandRing3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11567,7 +11567,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1415215658011429275}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandPinky2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11599,7 +11599,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7497917858000264439}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WingEnd.l_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11632,7 +11632,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1034606706251938868}
   - component: {fileID: 5029419742192819369}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Angel Wings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11730,7 +11730,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5027794624038120572}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11762,7 +11762,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5899795617020542753}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11794,7 +11794,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1538108561484961660}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandPinky1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11828,7 +11828,7 @@ GameObject:
   - component: {fileID: 5474422206166313072}
   - component: {fileID: 6051486546129697194}
   - component: {fileID: 1875988464056319112}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Angel Shield 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11914,7 +11914,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4833007504735543160}
   - component: {fileID: 7738589401699229595}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Wings Idle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11970,7 +11970,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4755872421498147955}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12005,7 +12005,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2059499692972538685}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftToe_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12037,7 +12037,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5491726137595147547}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Angel Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12070,7 +12070,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5883968851812475087}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandIndex4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12102,7 +12102,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8238859175460380675}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12135,7 +12135,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2345494484150409630}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WingBase.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12169,7 +12169,7 @@ GameObject:
   - component: {fileID: 8715896060129424457}
   - component: {fileID: 5690114031866252810}
   - component: {fileID: 5824733240746108330}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Wings Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16877,7 +16877,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2859721775016301012}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandRing4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16909,7 +16909,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4879313640729610572}
   - component: {fileID: 5876473501621974122}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: tripo_node_534de7ac
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17061,7 +17061,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 981437417006013874}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17093,7 +17093,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3336316358333939326}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandIndex3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17126,7 +17126,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6144975820786977508}
   - component: {fileID: 2639079826766818745}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Eye 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17224,7 +17224,7 @@ GameObject:
   - component: {fileID: 9169305497240224318}
   - component: {fileID: 9066447484930088057}
   - component: {fileID: 1230728756525909734}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Angel Sword Effect 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21933,7 +21933,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6413729337289919292}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WingMid.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21965,7 +21965,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5692156364583971642}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandRing3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21997,7 +21997,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6379480417902634097}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WingEnd.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22029,7 +22029,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5461722797812124477}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WingMid.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22061,7 +22061,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4555395145970780790}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22093,7 +22093,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 95013213889450423}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandIndex2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22125,7 +22125,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8734375447958210933}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandIndex1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22157,7 +22157,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 777218326794271054}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22189,7 +22189,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1653653252599307841}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandMiddle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22221,7 +22221,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5522492503451723079}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WingEnd.r_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22254,7 +22254,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3659440583117875508}
   - component: {fileID: 8228992623419291943}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Eye 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22350,7 +22350,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6711766096289800712}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22383,7 +22383,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3498744844822613506}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WingEnd.r_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22415,7 +22415,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8351342993883123967}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: AngelWIngs_Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22447,7 +22447,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6831871205127487958}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandThumb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22479,7 +22479,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2229661491279030233}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:HeadTop_End_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22510,7 +22510,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 915342756564906631}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandThumb4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22541,7 +22541,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1814286684816295243}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22573,7 +22573,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5810911653241283801}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandThumb2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22605,7 +22605,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9057514481935512854}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WingEnd.l_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22637,7 +22637,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6753458364075321944}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22669,7 +22669,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7186009004171252437}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22706,7 +22706,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8839889933982456460}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WingBase.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22738,7 +22738,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7729015090941607737}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WingEnd.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22770,7 +22770,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1138254129724701459}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightToe_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22802,7 +22802,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8536068148860948007}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandThumb4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22834,7 +22834,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7266469525548161910}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandPinky4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22866,7 +22866,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4423178632895223486}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: AngelWIngs_Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22898,7 +22898,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1048303460456920968}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandRing2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22930,7 +22930,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1053525888181890890}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Angel Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22963,7 +22963,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 385661057146753142}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WingEnd.l_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22995,7 +22995,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4864034508441592459}
   - component: {fileID: 3404916823453529507}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Eye 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23092,7 +23092,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7008456062117087251}
   - component: {fileID: 8575782660541808265}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Eye 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23190,7 +23190,7 @@ GameObject:
   - component: {fileID: 4525788353662193832}
   - component: {fileID: 2643948772897553495}
   - component: {fileID: 6647850299473925200}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Angel Shield 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23279,7 +23279,8 @@ GameObject:
   - component: {fileID: 1652306375550737100}
   - component: {fileID: 5216118869910349626}
   - component: {fileID: 3644835808262933683}
-  m_Layer: 0
+  - component: {fileID: 4962709652370889428}
+  m_Layer: 15
   m_Name: Angel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23367,6 +23368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1015663374748692869}
+  projectileSpawnPoint: {fileID: 0}
 --- !u!114 &3644835808262933683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23384,6 +23386,29 @@ MonoBehaviour:
   stopThreshold: 0
   rotationSpeed: 720
   currentCell: {fileID: 0}
+--- !u!136 &4962709652370889428
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6353391766348116187}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.4
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6409314998427157444
 GameObject:
   m_ObjectHideFlags: 0
@@ -23393,7 +23418,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4207068622751094095}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23427,7 +23452,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5799673370628233826}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WingEnd.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23459,7 +23484,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8034295597099792015}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandMiddle4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23490,7 +23515,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9007032091755140866}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WingBase.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23522,7 +23547,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3732472000074367177}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Spine1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23556,7 +23581,7 @@ GameObject:
   - component: {fileID: 1361700866262314640}
   - component: {fileID: 5117519165505885151}
   - component: {fileID: 629412076653526491}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Angel Sword 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23641,7 +23666,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5590390891483682890}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandPinky4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23672,7 +23697,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1915876314101787782}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WingEnd.l_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23703,7 +23728,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3022546563135266300}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23736,7 +23761,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2552709064548832761}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandPinky3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23768,7 +23793,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2225108277798764312}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Wings Death
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23803,7 +23828,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2948548678038329451}
   - component: {fileID: 6341961473820748589}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Angel Sword Light 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23901,7 +23926,7 @@ GameObject:
   - component: {fileID: 8737832697624063959}
   - component: {fileID: 2062957945545174693}
   - component: {fileID: 3119899616843762882}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Wings Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28609,7 +28634,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1073566145940666681}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WingEnd.l_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28641,7 +28666,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 391235130222832642}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28673,7 +28698,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1514025665642547123}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandRing4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28705,7 +28730,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2086754377359473056}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WingBase.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28737,7 +28762,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5948789921089437258}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WingEnd.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28769,7 +28794,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 222313213004166982}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandRing4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28801,7 +28826,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4441233979909353727}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28833,7 +28858,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2567021957495093356}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Spine2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28868,7 +28893,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8795545810178784129}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WingEnd.l_end_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28899,7 +28924,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3754254094972167747}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandMiddle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28931,7 +28956,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3840685335570305337}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftToeBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28963,7 +28988,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3793437458779180595}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandPinky4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28995,7 +29020,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5596238109217028716}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightToe_End_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29026,7 +29051,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7388064412871681267}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WingEnd.l_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29058,7 +29083,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2910486692819043944}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29090,7 +29115,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6039678653558301248}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29127,7 +29152,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5973146236934715033}
   - component: {fileID: 1818571171381199813}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Wings Walk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29183,7 +29208,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5055671663823496779}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WingMid.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29215,7 +29240,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 119436145763451919}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightToeBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29247,7 +29272,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8046929251334663576}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WingEnd.r_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29279,7 +29304,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5085442403196953725}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WingMid.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29311,7 +29336,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1429596228169939207}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29343,7 +29368,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6408294224977550922}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandPinky2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -19,6 +19,8 @@ public class CreatureMover : MonoBehaviour
 
     [Header("Current Cell (assign manually)")]
     [SerializeField] private HexCell currentCell;
+
+    public CreatureAnimatorController AnimatorController => animatorController;
     public HexCell CurrentCell => currentCell;
 
     private TaskCompletionSource<bool> teleportTcs;
@@ -101,6 +103,23 @@ public class CreatureMover : MonoBehaviour
         }
 
         transform.rotation = targetRot;
+    }
+
+    public Task RotateTowardsAsync(Vector3 point)
+    {
+        var tcs = new TaskCompletionSource<bool>();
+        StartCoroutine(RotateTowardsSmoothCallback(point, tcs));
+        return tcs.Task;
+    }
+
+    // Корутинка использует ваш private RotateTowardsSmooth
+    private IEnumerator RotateTowardsSmoothCallback(
+        Vector3 targetPos,
+        TaskCompletionSource<bool> tcs)
+    {
+        // дождаться окончания плавного поворота
+        yield return RotateTowardsSmooth(targetPos);
+        tcs.SetResult(true);
     }
 
     public Task<bool> TeleportToCell(HexCell targetCell)

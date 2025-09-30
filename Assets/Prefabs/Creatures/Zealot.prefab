@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2338115952664018159}
   - component: {fileID: 1649953099233265721}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Zealot Defence Light 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6578451502256082919}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Zealot Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,7 +141,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1714284825581358062}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ GameObject:
   - component: {fileID: 8343051651469485697}
   - component: {fileID: 3864514245201099459}
   - component: {fileID: 3321319067350281845}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Zealot Defence 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4884,7 +4884,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 547934912939872070}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandThumb3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4916,7 +4916,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5207046278553238801}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandIndex3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4948,7 +4948,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7537049740182767105}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4981,7 +4981,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2988642958033318317}
   - component: {fileID: 534455721548101371}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: tripo_node_c6868f0a
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5146,7 +5146,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2364877721178168816}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightToeBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5178,7 +5178,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5320825107609942304}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5210,7 +5210,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5560285349165359298}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandPinky2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5242,7 +5242,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6615076688599436542}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandIndex4_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5273,7 +5273,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7681531816387496909}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandThumb4_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5304,7 +5304,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4149386755172513995}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5336,7 +5336,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3112650176485007467}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandThumb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5368,7 +5368,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2182179641900352107}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftToe_End_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5400,7 +5400,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5299856605267034545}
   - component: {fileID: 3602788321811076786}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Left Zealot Defence Light 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5496,7 +5496,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4606761893609433220}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5528,7 +5528,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3634930564401452106}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandMiddle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5561,7 +5561,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6655167566351804022}
   - component: {fileID: 7061660214700181298}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Left Zealot Defence Light 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5657,7 +5657,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6837630506982006202}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5689,7 +5689,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6439804679237171841}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Left Zealot Defence
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5722,7 +5722,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1003562919838454151}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandRing3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5756,7 +5756,7 @@ GameObject:
   - component: {fileID: 4087883023340375233}
   - component: {fileID: 1654631996019400825}
   - component: {fileID: 4935905156756257884}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Left Zealot Defence 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10466,7 +10466,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6414713492161047077}
   - component: {fileID: 336509529127809045}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Left Zealot Attack Light 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10562,7 +10562,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4901563543374445406}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:HeadTop_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10595,7 +10595,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5635021477613571901}
   - component: {fileID: 5185111075441909266}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Zealot Attack Light 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10691,7 +10691,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 832700613590731533}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandMiddle4_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10722,7 +10722,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6422724656398385952}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandThumb4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10754,7 +10754,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1686260120922308045}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10786,7 +10786,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4754046120364210145}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandIndex1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10818,7 +10818,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400230835805869770}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandPinky4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10850,7 +10850,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4098187536775465002}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandPinky4_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10881,7 +10881,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7944804149995348310}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10919,7 +10919,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 653317156167507987}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandPinky4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10951,7 +10951,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3645773988378399726}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandRing2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10983,7 +10983,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 388545221291226820}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandThumb4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11015,7 +11015,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2913452225063837401}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandPinky4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11047,7 +11047,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8372894030736983307}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11081,7 +11081,7 @@ GameObject:
   - component: {fileID: 1994183882159954848}
   - component: {fileID: 1648487436406132227}
   - component: {fileID: 2477692252184617230}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Zealot Defence 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15790,7 +15790,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3606855675803517173}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandRing1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15822,7 +15822,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6428922411096730654}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandRing4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15854,7 +15854,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8499070348427141542}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandMiddle4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15886,7 +15886,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 76406663504047262}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandIndex4_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15917,7 +15917,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1708663636161791854}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandIndex2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15949,7 +15949,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 198371527706044782}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandIndex4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15982,7 +15982,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2107439781389825849}
   - component: {fileID: 83406434560967906}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Left Zealot Attack Light 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16078,7 +16078,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8129991678746910628}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandThumb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16110,7 +16110,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6690755660926965907}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandThumb2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16142,7 +16142,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3211354114069527729}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandMiddle4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16174,7 +16174,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8975381976252907450}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16208,7 +16208,7 @@ GameObject:
   - component: {fileID: 7338129183071527960}
   - component: {fileID: 3837937815489992217}
   - component: {fileID: 3854119667420131577}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Zealot Attack 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20917,7 +20917,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3248822339906485972}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandMiddle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20949,7 +20949,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4138049978254805856}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandMiddle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20983,7 +20983,7 @@ GameObject:
   - component: {fileID: 9134557283280714654}
   - component: {fileID: 8289750066121110287}
   - component: {fileID: 4812642033058175010}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Left Zealot Attack 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25692,7 +25692,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 289817346355334137}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandPinky1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25724,7 +25724,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 405130685473469483}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandRing4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25758,7 +25758,7 @@ GameObject:
   - component: {fileID: 1177559520876053721}
   - component: {fileID: 8691472468516415491}
   - component: {fileID: 700479230937502532}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Left Zealot Attack 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30467,7 +30467,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8460989724265110227}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightToe_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30499,7 +30499,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5090543497946962838}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30533,7 +30533,7 @@ GameObject:
   - component: {fileID: 5093820179235817076}
   - component: {fileID: 6485031904474965531}
   - component: {fileID: 3327274841026399105}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Zealot Attack 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35242,7 +35242,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5000911669222271870}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandRing4_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35275,7 +35275,7 @@ GameObject:
   - component: {fileID: 149989832841929850}
   - component: {fileID: 14278200221780449}
   - component: {fileID: 2920529289608034804}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Left Zealot Attack 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39984,7 +39984,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2698260980653491340}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandRing1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40016,7 +40016,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 247058567520178991}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40048,7 +40048,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2361869461223336128}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandPinky3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40080,7 +40080,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2231394532520107633}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandRing4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40112,7 +40112,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2827385746896081961}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Left Zealot Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40147,7 +40147,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2087652998940828318}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40180,7 +40180,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5176366427047040475}
   - component: {fileID: 7308272896411640340}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Left Zealot Attack Light 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40276,7 +40276,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6747805368088967757}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandMiddle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40308,7 +40308,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5251961205370114609}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandMiddle4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40340,7 +40340,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6234567251195503653}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:HeadTop_End_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40371,7 +40371,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3913251438591742470}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40403,7 +40403,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4375802723448333383}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandIndex1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40437,7 +40437,7 @@ GameObject:
   - component: {fileID: 7835925561951146575}
   - component: {fileID: 7706928988922064650}
   - component: {fileID: 1125471053212569699}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Zealot Attack 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45147,7 +45147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6128250898078960583}
   - component: {fileID: 8584071416499869587}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Zealot Defence Light 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45243,7 +45243,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2507827419433995851}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandThumb4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45275,7 +45275,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3766500133278337156}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandIndex3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45307,7 +45307,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2436876816398369327}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftToeBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45339,7 +45339,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2420012147141597973}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandMiddle4_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45372,7 +45372,7 @@ GameObject:
   - component: {fileID: 3283572651993454234}
   - component: {fileID: 7730867929735195503}
   - component: {fileID: 3809096185938658763}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Zealot Attack 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50081,7 +50081,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 168300787394710351}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50113,7 +50113,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3729518009270710176}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandThumb4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50145,7 +50145,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3816090435681591130}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50183,7 +50183,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6219032992532020571}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Zealot Defence
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50217,7 +50217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8235341365976994398}
   - component: {fileID: 3261839794889174387}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Zealot Attack Light 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50313,7 +50313,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7633374763505493451}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightToe_End_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50345,7 +50345,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3717488796922677892}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandMiddle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50377,7 +50377,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4764744493808620402}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50409,7 +50409,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6077079600782584863}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandIndex4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50441,7 +50441,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8361029897864759842}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandRing4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50473,7 +50473,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 283938871050944046}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightToe_End_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50504,7 +50504,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1933423897169528973}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandThumb4_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50536,7 +50536,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4765387636359079207}
   - component: {fileID: 1256546924225527848}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Left Zealot Attack Light 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50632,7 +50632,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7023196981439890448}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandPinky4_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50665,7 +50665,7 @@ GameObject:
   - component: {fileID: 4634751283906644805}
   - component: {fileID: 8880418853615000109}
   - component: {fileID: 6157692604821273988}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Left Zealot Defence 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55374,7 +55374,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7126483193291145725}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:HeadTop_End_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55406,7 +55406,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1903207707385956109}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandThumb2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55438,7 +55438,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6173731586461367947}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftToe_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55470,7 +55470,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3948286952696280363}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandThumb3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55502,7 +55502,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1830590514117384246}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandMiddle4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55534,7 +55534,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 973573421553132678}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandRing2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55566,7 +55566,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5255973648471956861}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandPinky4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55598,7 +55598,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 256625354662070860}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandIndex2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55634,7 +55634,8 @@ GameObject:
   - component: {fileID: 1132069018733605298}
   - component: {fileID: 4553110648741228035}
   - component: {fileID: -5269844639786820792}
-  m_Layer: 0
+  - component: {fileID: 8510502227930829885}
+  m_Layer: 15
   m_Name: Zealot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55731,6 +55732,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 6700765001983372346}
+  projectileSpawnPoint: {fileID: 0}
 --- !u!114 &-5269844639786820792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55748,6 +55750,29 @@ MonoBehaviour:
   stopThreshold: 0
   rotationSpeed: 360
   currentCell: {fileID: 0}
+--- !u!136 &8510502227930829885
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8050200541716987125}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.4
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8111501440070081391
 GameObject:
   m_ObjectHideFlags: 0
@@ -55757,7 +55782,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5672439770982297162}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandIndex4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55789,7 +55814,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5779039652610503954}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandPinky1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55821,7 +55846,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8282203880926459972}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Spine2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55855,7 +55880,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7289675016707065588}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandMiddle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55887,7 +55912,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7369228400795972850}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Spine1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55921,7 +55946,7 @@ GameObject:
   - component: {fileID: 266951275039794523}
   - component: {fileID: 6963333985776802327}
   - component: {fileID: 4756727855874838702}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Left Zealot Attack 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60631,7 +60656,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9072437615464393062}
   - component: {fileID: 2711151621003912802}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Zealot Attack Light 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60727,7 +60752,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 862608321857836407}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandPinky2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60759,7 +60784,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1292518117968083806}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandRing4_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60790,7 +60815,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1727531250722283479}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftToe_End_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60823,7 +60848,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3262711854911412239}
   - component: {fileID: 7814844698265479471}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Zealot Attack Light 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60919,7 +60944,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4812579995919133469}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60953,7 +60978,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7934176221556237339}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandIndex4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60985,7 +61010,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6893019722443320530}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandRing3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61017,7 +61042,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 152682706278468077}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandPinky3
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1047302376818005372}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandMiddle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4591197347029684722}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandPinky4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 473894543845061329}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandThumb4_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6547666668574818513}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 542184653971071739}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Defence
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4955667576782473904}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandThumb4_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -201,7 +201,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6606929810618488352}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandIndex1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -233,7 +233,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3461738394624090979}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandMiddle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -265,7 +265,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7922401186548874319}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandPinky4_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -296,7 +296,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3634323057384467735}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandMiddle4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -328,7 +328,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1376253548289613954}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Teleport
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -360,7 +360,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3637375262314554448}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandRing3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -392,7 +392,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4050782046491647485}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandMiddle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -426,7 +426,7 @@ GameObject:
   - component: {fileID: 245898493036563380}
   - component: {fileID: 4096099019159755715}
   - component: {fileID: 6245068825308209736}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Spawn Peak Fog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5135,7 +5135,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2068973611268200744}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandMiddle4_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5166,7 +5166,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3946557051845414801}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandPinky4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5198,7 +5198,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4202788368503066732}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandThumb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5230,7 +5230,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 977338966625672150}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5262,7 +5262,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6541351492298939055}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandIndex3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5294,7 +5294,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6024862833155165259}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandThumb3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5326,7 +5326,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5799923521688745485}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandRing4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5359,7 +5359,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3816969596066055390}
   - component: {fileID: 5388084979002768012}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Teleport Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5455,7 +5455,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8494552631930376237}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Spine2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5489,7 +5489,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4923982413110467058}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5526,7 +5526,7 @@ GameObject:
   - component: {fileID: 4438728581489422226}
   - component: {fileID: 5564693445071557106}
   - component: {fileID: 8990892360098578562}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Fire Effect 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10264,7 +10264,7 @@ GameObject:
   - component: {fileID: 398634958904465216}
   - component: {fileID: 7078725585999150671}
   - component: {fileID: 3124923096127390019}
-  m_Layer: 1
+  m_Layer: 15
   m_Name: Speed Fog 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15216,7 +15216,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1981350772679506468}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15252,7 +15252,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 76336976160020453}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandPinky4_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15283,7 +15283,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3095794196876096668}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandThumb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15315,7 +15315,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7983889016895473722}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Peak
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15349,7 +15349,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8565294987963447945}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15381,7 +15381,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7449382694344247986}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandIndex3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15415,7 +15415,7 @@ GameObject:
   - component: {fileID: 9139215194229769600}
   - component: {fileID: 6437334801016210079}
   - component: {fileID: 8415378782503809654}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Peak 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15501,7 +15501,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5735215631761284882}
   - component: {fileID: 5063460482091242647}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Fire Effect Light 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15597,7 +15597,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3945190182019157236}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightToeBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15631,7 +15631,7 @@ GameObject:
   - component: {fileID: 5950428770697698721}
   - component: {fileID: 8370493563327344751}
   - component: {fileID: 9182159241540768055}
-  m_Layer: 1
+  m_Layer: 15
   m_Name: Speed Fog 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20584,7 +20584,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6708059829086974345}
   - component: {fileID: 5131251650497231539}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Fire Speed Effect Light 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20680,7 +20680,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4961434111588442557}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftToe_End_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20712,7 +20712,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2667724544001838099}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandMiddle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20746,7 +20746,7 @@ GameObject:
   - component: {fileID: 9126838873330605246}
   - component: {fileID: 8284153088743841401}
   - component: {fileID: 8163672429384171369}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Teleport Start-End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25457,7 +25457,7 @@ GameObject:
   - component: {fileID: 1890185573238731238}
   - component: {fileID: 460410359902440899}
   - component: {fileID: 3517354521300736496}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Peak 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25542,7 +25542,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4176361175828425641}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandRing1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25575,7 +25575,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5261743358148282877}
   - component: {fileID: 7082014483987037617}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Fire Effect Light 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25671,7 +25671,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5327728876356907713}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandRing4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25703,7 +25703,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1046814441534433052}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandIndex4_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25734,7 +25734,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2130359967229577386}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandMiddle4_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25765,7 +25765,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3784378835746039016}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandThumb4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25797,7 +25797,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8376080512675414015}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25829,7 +25829,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 340202448357771970}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandPinky4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25861,7 +25861,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8313892439899047519}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25893,7 +25893,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7106960191667160176}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandMiddle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25925,7 +25925,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8677204811757164504}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightToe_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25961,7 +25961,8 @@ GameObject:
   - component: {fileID: 8353847064971096004}
   - component: {fileID: -8972635256329523972}
   - component: {fileID: 1062503822758300741}
-  m_Layer: 0
+  - component: {fileID: 7343921145767211937}
+  m_Layer: 15
   m_Name: Lord
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26081,6 +26082,29 @@ MonoBehaviour:
   stopThreshold: 0
   rotationSpeed: 360
   currentCell: {fileID: 0}
+--- !u!136 &7343921145767211937
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3729834663124437788}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.4
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3754585810835364754
 GameObject:
   m_ObjectHideFlags: 0
@@ -26090,7 +26114,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4432419340769787563}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26122,7 +26146,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 60995646875997541}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandMiddle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26154,7 +26178,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5476828231393866496}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26186,7 +26210,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5569732646386195336}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftToe_End_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26218,7 +26242,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2184757995093126834}
   - component: {fileID: 7484067434428606192}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Peak Fog Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26315,7 +26339,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2986711052388649661}
   - component: {fileID: 6836878925573070428}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Fire Effect Light 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26412,7 +26436,7 @@ GameObject:
   m_Component:
   - component: {fileID: 129076573228561886}
   - component: {fileID: 1788785274977134672}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Fire Effect Light 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26510,7 +26534,7 @@ GameObject:
   - component: {fileID: 8973903380374234877}
   - component: {fileID: 5352300071985142653}
   - component: {fileID: 8713606301777393389}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Fire Effect 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31246,7 +31270,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4390720394206268745}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31279,7 +31303,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3661872463422085144}
   - component: {fileID: 2932842328725836022}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Fire Effect Light 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31375,7 +31399,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 195512538719171672}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Defense Idle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31411,7 +31435,7 @@ GameObject:
   - component: {fileID: 6154341398268767905}
   - component: {fileID: 4607775844811127061}
   - component: {fileID: 6019511796352928160}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Peak Fire Effect 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36147,7 +36171,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5009307682943019254}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandRing2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36179,7 +36203,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 413898140435707674}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandPinky2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36211,7 +36235,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 235156384415332719}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36243,7 +36267,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3279951425703398990}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightToe_End_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36275,7 +36299,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7887021518278544540}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36307,7 +36331,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7256137999311695419}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Spine1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36340,7 +36364,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2359000475044415292}
   - component: {fileID: 8547733792746370186}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Fire Effect Light 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36436,7 +36460,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3828823333620125960}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandRing4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36468,7 +36492,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3101841193445262779}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandRing4_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36499,7 +36523,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7045961466770733012}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandPinky1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36533,7 +36557,7 @@ GameObject:
   - component: {fileID: 3793359124516172676}
   - component: {fileID: 7396261494143931304}
   - component: {fileID: 4732356515431229263}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Hellish Helmet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36617,7 +36641,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3237573453562396768}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandRing1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36649,7 +36673,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7240412159882638200}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandThumb2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36683,7 +36707,7 @@ GameObject:
   - component: {fileID: 6990215706462358314}
   - component: {fileID: 4139855153932156215}
   - component: {fileID: 8043941218932508142}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Fire Effect 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41419,7 +41443,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5199634206572093722}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandThumb2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41451,7 +41475,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8479873803406030224}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandRing3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41485,7 +41509,7 @@ GameObject:
   - component: {fileID: 2829739092182100890}
   - component: {fileID: 1655527480338833561}
   - component: {fileID: 6355646083878632151}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Peak 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41570,7 +41594,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1471459070679542231}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandPinky3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41602,7 +41626,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2310472144975763703}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandRing4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41634,7 +41658,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1700408284737150609}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandPinky1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41667,7 +41691,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7967655066505811161}
   - component: {fileID: 7837118581205189371}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Fire Speed Effect Light 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41764,7 +41788,7 @@ GameObject:
   m_Component:
   - component: {fileID: 731902825831482208}
   - component: {fileID: 4502634377617186052}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Fire Effect Light 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41862,7 +41886,7 @@ GameObject:
   - component: {fileID: 3531552476634184241}
   - component: {fileID: 2999509076732468318}
   - component: {fileID: 6834137412564741597}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Peak Fire Effect 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46598,7 +46622,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2381871048397113999}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46630,7 +46654,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5727240126446184814}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandMiddle4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46662,7 +46686,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7771434007713886661}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46694,7 +46718,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6340395894434049114}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:HeadTop_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46726,7 +46750,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 764922674467505387}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:HeadTop_End_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46758,7 +46782,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1677442305056172843}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandRing2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46790,7 +46814,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 605050961821720077}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46822,7 +46846,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6031267213639268947}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandIndex2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46856,7 +46880,7 @@ GameObject:
   - component: {fileID: 953661155115633304}
   - component: {fileID: 6186730805573779924}
   - component: {fileID: 9137438895460676680}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Fire Effect 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51592,7 +51616,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 689886874964979935}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandPinky4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51626,7 +51650,7 @@ GameObject:
   - component: {fileID: 8984953321602362502}
   - component: {fileID: 5837288785353449241}
   - component: {fileID: 7903089316427112435}
-  m_Layer: 1
+  m_Layer: 15
   m_Name: Speed Fog 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56578,7 +56602,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 549033132503074898}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandMiddle4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56610,7 +56634,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6439030670562044623}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandIndex4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56642,7 +56666,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5496463252216815664}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandThumb4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56674,7 +56698,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8180668615080988720}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandPinky2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56708,7 +56732,7 @@ GameObject:
   - component: {fileID: 1384731779111013249}
   - component: {fileID: 6599808086283663554}
   - component: {fileID: 1682481307028773372}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Fire Effect 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61444,7 +61468,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1354709215890533288}
-  m_Layer: 1
+  m_Layer: 15
   m_Name: Speed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61478,7 +61502,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 840129344017135590}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61516,7 +61540,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4270683173239574695}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandThumb4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61549,7 +61573,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8656551781885436803}
   - component: {fileID: 5772733657195121475}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Fire Effect Light 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61646,7 +61670,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8101386719032936272}
   - component: {fileID: 445816257183068904}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: tripo_node_a0768477
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61811,7 +61835,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1186438731629384462}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandPinky3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61844,7 +61868,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8949622890117645825}
   - component: {fileID: 4004195720756063160}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Fire Speed Effect Light 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61942,7 +61966,7 @@ GameObject:
   - component: {fileID: 6273158505962293497}
   - component: {fileID: 4456303469187604507}
   - component: {fileID: 3317904034038012059}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Peak Fire Effect 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66678,7 +66702,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8161928321998268119}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandIndex2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66712,7 +66736,7 @@ GameObject:
   - component: {fileID: 6490186198656217366}
   - component: {fileID: 8881254999861870633}
   - component: {fileID: 5046153532869854064}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Fire Effect 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71448,7 +71472,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4006976905482622522}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71480,7 +71504,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1073532440666877477}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandIndex4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71512,7 +71536,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4243331894338587747}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandThumb4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71544,7 +71568,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7698701517002017406}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftToeBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71576,7 +71600,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4569295776123214358}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandIndex4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71608,7 +71632,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 806615309814066356}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandThumb3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71640,7 +71664,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6565255320142330366}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightToe_End_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71671,7 +71695,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1110940943156467727}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftToe_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71703,7 +71727,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7242700913448525372}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:HeadTop_End_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71734,7 +71758,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1544181291058244118}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandMiddle4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71767,7 +71791,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8188982542191165627}
   - component: {fileID: 7247618712609958271}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Fire Effect Light 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71863,7 +71887,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 388027165923166407}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandIndex4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71895,7 +71919,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 32931567621493198}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandIndex1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71927,7 +71951,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5033087787262230147}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71959,7 +71983,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7810747940842341381}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandRing4_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71990,7 +72014,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9160508511381946509}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandIndex4_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}

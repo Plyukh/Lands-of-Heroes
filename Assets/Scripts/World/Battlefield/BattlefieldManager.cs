@@ -1,6 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class BattlefieldManager : MonoBehaviour
 {
@@ -49,79 +52,6 @@ public class BattlefieldManager : MonoBehaviour
         TryHighlightCreature();
     }
     private bool isMoving;
-
-    public async void OnCellClicked(HexCell targetCell)
-    {
-        if (testCreature == null || targetCell == null)
-            return;
-
-        var mover = testCreature.Mover;
-        var start = mover.CurrentCell;
-        int speed = testCreature.GetStat(CreatureStatusType.Speed);
-        var moveType = testCreature.MovementType;
-
-        // 1) Проверяем, что клетка свободна и в пределах range
-        var reachable = GetReachableCells(start, speed, moveType);
-        if (!targetCell.isWalkable || !reachable.Contains(targetCell))
-            return;
-
-        // 2) Сразу указываем выбор — подсветка только цели
-        ClearAllHighlights();
-        targetCell.ShowHighlight(true);
-
-        // 3) Если это телепорт — выполняем его
-        if (moveType == MovementType.Teleport)
-        {
-            bool ok = await mover.TeleportToCell(targetCell);
-            if (ok)
-                HighlightMovementRange(mover.CurrentCell, speed, moveType);
-            return;
-        }
-
-        // 4) Иначе — обычный путь по соседям
-        List<HexCell> path = FindPath(start, targetCell, moveType);
-        if (path == null || path.Count == 0) return;
-
-        bool moved = await mover.MoveAlongPath(path);
-        if (moved)
-            HighlightMovementRange(mover.CurrentCell, speed, moveType);
-    }
-
-    private List<HexCell> FindPath(
-    HexCell start,
-    HexCell target,
-    MovementType moveType)
-    {
-        var queue = new Queue<HexCell>();
-        var parent = new Dictionary<HexCell, HexCell>();
-        var visited = new HashSet<HexCell> { start };
-        queue.Enqueue(start);
-
-        while (queue.Count > 0)
-        {
-            var cell = queue.Dequeue();
-            if (cell == target) break;
-
-            foreach (var nb in GetNeighbors(cell))
-            {
-                if (visited.Add(nb) && CanTraverse(nb, moveType))
-                {
-                    parent[nb] = cell;
-                    queue.Enqueue(nb);
-                }
-            }
-        }
-
-        if (!parent.ContainsKey(target))
-            return null;
-
-        var path = new List<HexCell>();
-        for (var cur = target; cur != start; cur = parent[cur])
-            path.Add(cur);
-        path.Reverse();
-        return path;
-    }
-
     public void SetRandomFaction()
     {
         if (factionObstacles.Count == 0 || currentFaction != Faction.None)
@@ -217,6 +147,187 @@ public class BattlefieldManager : MonoBehaviour
         {
             factionDecorations[factionIndex].SetActive(true);
         }
+    }
+    public async void OnCellClicked(HexCell targetCell)
+    {
+        if (testCreature == null || targetCell == null)
+            return;
+
+        var mover = testCreature.Mover;
+        var start = mover.CurrentCell;
+        int speed = testCreature.GetStat(CreatureStatusType.Speed);
+        var moveType = testCreature.MovementType;
+
+        // 1) Проверяем, что клетка свободна и в пределах range
+        var reachable = GetReachableCells(start, speed, moveType);
+        if (!targetCell.isWalkable || !reachable.Contains(targetCell))
+            return;
+
+        // 2) Сразу указываем выбор — подсветка только цели
+        ClearAllHighlights();
+        targetCell.ShowHighlight(true);
+
+        // 3) Если это телепорт — выполняем его
+        if (moveType == MovementType.Teleport)
+        {
+            bool ok = await mover.TeleportToCell(targetCell);
+            if (ok)
+                HighlightMovementRange(mover.CurrentCell, speed, moveType);
+            return;
+        }
+
+        // 4) Иначе — обычный путь по соседям
+        List<HexCell> path = FindPath(start, targetCell, moveType);
+        if (path == null || path.Count == 0) return;
+
+        bool moved = await mover.MoveAlongPath(path);
+        if (moved)
+            HighlightMovementRange(mover.CurrentCell, speed, moveType);
+    }
+    public async void OnCreatureClicked(Creature target)
+    {
+        var attacker = testCreature;
+        if (attacker == null || target == null || attacker == target)
+            return;
+
+        // Если это дальник — сразу стреляем, не пытаясь идти
+        if (attacker.AttackType == AttackType.Ranged)
+        {
+            await PlayAttackSequence(attacker, target);
+            return;
+        }
+
+        // Иначе — старая логика: ищем соседнюю клетку, ходим, потом бьём
+        var mover = attacker.Mover;
+        var start = mover.CurrentCell;
+        var targetCell = target.Mover.CurrentCell;
+        int speed = attacker.GetStat(CreatureStatusType.Speed);
+        var moveType = attacker.MovementType;
+
+        // 1) Соседние к цели
+        var neighborCells = GetNeighbors(targetCell)
+            .Where(c => c.isWalkable)
+            .ToList();
+
+        // 2) Если уже рядом — сразу удар
+        if (neighborCells.Contains(start))
+        {
+            await PlayAttackSequence(attacker, target);
+            return;
+        }
+
+        // 3) Ищем, куда можно подойти
+        var reachable = GetReachableCells(start, speed, moveType);
+        var candidates = neighborCells.Intersect(reachable).ToList();
+        if (candidates.Count == 0)
+        {
+            Debug.Log("Нет пути к цели для атаки");
+            return;
+        }
+
+        // 4) Выбираем ближайшую соседнюю клетку
+        HexCell attackPos = candidates
+            .OrderBy(c => Vector3.Distance(start.transform.position, c.transform.position))
+            .First();
+
+        // 5) Подсвечиваем и идём
+        ClearAllHighlights();
+        attackPos.ShowHighlight(true);
+
+        if (moveType == MovementType.Teleport)
+        {
+            if (!await mover.TeleportToCell(attackPos))
+                return;
+        }
+        else
+        {
+            var path = FindPath(start, attackPos, moveType);
+            if (path == null || path.Count == 0)
+                return;
+
+            if (!await mover.MoveAlongPath(path))
+                return;
+        }
+
+        // 6) Наконец бьём
+        await PlayAttackSequence(attacker, target);
+    }
+
+    private async Task PlayAttackSequence(Creature attacker, Creature target)
+    {
+        var mover = attacker.Mover;
+        var anim = mover.AnimatorController;
+        var type = attacker.AttackType;
+        var tcs = new TaskCompletionSource<bool>();
+
+        // Поворот
+        await mover.RotateTowardsAsync(target.transform.position);
+
+        // Сообщаем аниматору, кто бьёт и кого
+        anim.SetAttackTarget(target, attacker);
+
+        // Ждём кадра попадания
+        Action handler = null;
+        if (type == AttackType.Ranged)
+        {
+            handler = () =>
+            {
+                anim.OnAttackHit -= handler;
+                tcs.TrySetResult(true);
+            };
+            anim.OnAttackHit += handler;
+            anim.PlayAttack();
+        }
+        else
+        {
+            handler = () =>
+            {
+                anim.OnMeleeAttackHit -= handler;
+                tcs.TrySetResult(true);
+            };
+            anim.OnMeleeAttackHit += handler;
+            anim.PlayMeleeAttack();
+        }
+
+        await tcs.Task;
+    }
+
+    // дальше, если дальник — спавним projectile через SpawnProjectileEvent,
+    // но сам Impact уже проигран из HandleAttackHitEvent()
+
+    private List<HexCell> FindPath(
+    HexCell start,
+    HexCell target,
+    MovementType moveType)
+    {
+        var queue = new Queue<HexCell>();
+        var parent = new Dictionary<HexCell, HexCell>();
+        var visited = new HashSet<HexCell> { start };
+        queue.Enqueue(start);
+
+        while (queue.Count > 0)
+        {
+            var cell = queue.Dequeue();
+            if (cell == target) break;
+
+            foreach (var nb in GetNeighbors(cell))
+            {
+                if (visited.Add(nb) && CanTraverse(nb, moveType))
+                {
+                    parent[nb] = cell;
+                    queue.Enqueue(nb);
+                }
+            }
+        }
+
+        if (!parent.ContainsKey(target))
+            return null;
+
+        var path = new List<HexCell>();
+        for (var cur = target; cur != start; cur = parent[cur])
+            path.Add(cur);
+        path.Reverse();
+        return path;
     }
 
     // Очищает все outline

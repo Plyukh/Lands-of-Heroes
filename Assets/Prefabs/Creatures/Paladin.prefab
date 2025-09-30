@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8102989069328653852}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 835148365708129297}
   - component: {fileID: 3503192945773380895}
   - component: {fileID: 6595191804760867869}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Paladin Sword 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,7 +128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 878350877163154109}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandIndex4_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -159,7 +159,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6698119084760518144}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,7 +191,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7986770593460546901}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandIndex2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -225,7 +225,7 @@ GameObject:
   - component: {fileID: 7352908900433876416}
   - component: {fileID: 6261391934012113968}
   - component: {fileID: 1931676516921733698}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Defense Effect 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4934,7 +4934,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4797197321191494698}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4967,7 +4967,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4169051096108023292}
   - component: {fileID: 5719446629099121182}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Paladin Sword Light 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5063,7 +5063,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4523979124537682051}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandIndex2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5095,7 +5095,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7240017444928787180}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Spine1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5127,7 +5127,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1792378422035996758}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandIndex1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5160,7 +5160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7095341069702719428}
   - component: {fileID: 27337138703900137}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Paladin Sword Light 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5256,7 +5256,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6106683122386935198}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:HeadTop_End_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5288,7 +5288,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8362796281723283042}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5320,7 +5320,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8449574312197298271}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5354,7 +5354,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3929484704028660497}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5386,7 +5386,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7989319255781114515}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5420,7 +5420,7 @@ GameObject:
   - component: {fileID: 7081225387456546765}
   - component: {fileID: 1160296667146289614}
   - component: {fileID: 1828331209516206149}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Defense Effect 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10131,7 +10131,7 @@ GameObject:
   - component: {fileID: 5333077191451020066}
   - component: {fileID: 1468803960546854059}
   - component: {fileID: 6080213022559253554}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Paladin Sword Effect 3 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14841,7 +14841,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1781117160106812603}
   - component: {fileID: 8602853532487506353}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Crystal Point Light 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14937,7 +14937,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2390836384613948113}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandIndex4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14969,7 +14969,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4246047415439991648}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandIndex4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15003,7 +15003,7 @@ GameObject:
   - component: {fileID: 7426156955135329463}
   - component: {fileID: 9047616715116640772}
   - component: {fileID: 5758650731561956834}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Paladin Sword Effect 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19712,7 +19712,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2513529390461537170}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightToe_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19745,7 +19745,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4492311002989135844}
   - component: {fileID: 6231619045328730044}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Paladin Sword Light 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19841,7 +19841,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1229499896533749525}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightToe_End_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19872,7 +19872,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 675726839807980382}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19904,7 +19904,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3367238622847774183}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandIndex4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19936,7 +19936,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5348233604779114135}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandIndex1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19968,7 +19968,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 155669418480233742}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightToe_End_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20000,7 +20000,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3836658840105518729}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftToe_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20032,7 +20032,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7728853157703374308}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:HeadTop_End_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20064,7 +20064,7 @@ GameObject:
   m_Component:
   - component: {fileID: 735768081168911825}
   - component: {fileID: 5847349320912416764}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Crystal Point Light 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20160,7 +20160,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5703406930692862998}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandIndex3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20192,7 +20192,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3963460108207977990}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Spine2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20226,7 +20226,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1384845054918831434}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20258,7 +20258,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5451108174275965307}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Defense
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20294,7 +20294,7 @@ GameObject:
   - component: {fileID: 7957021962235618177}
   - component: {fileID: 6590517603723747683}
   - component: {fileID: 3001787977501070813}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Paladin Sword 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20378,7 +20378,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7563399486546716352}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20410,7 +20410,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7935523843937096787}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandIndex3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20444,7 +20444,7 @@ GameObject:
   - component: {fileID: 1497151910264788376}
   - component: {fileID: 3659958790991739468}
   - component: {fileID: 3375733114305519287}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Paladin Sword 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20531,7 +20531,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 883149953717044206}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHandIndex4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20563,7 +20563,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7497062560610142059}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftToe_End_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20595,7 +20595,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6479108666959026248}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftToe_End_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20626,7 +20626,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7389087506508527217}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20662,7 +20662,8 @@ GameObject:
   - component: {fileID: 4108233779133102265}
   - component: {fileID: -7278720255297853579}
   - component: {fileID: 2796559755307072531}
-  m_Layer: 0
+  - component: {fileID: -3389775111068661160}
+  m_Layer: 15
   m_Name: Paladin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20751,6 +20752,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 8042756268985360675}
+  projectileSpawnPoint: {fileID: 0}
 --- !u!114 &2796559755307072531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20768,6 +20770,29 @@ MonoBehaviour:
   stopThreshold: 0
   rotationSpeed: 360
   currentCell: {fileID: 0}
+--- !u!136 &-3389775111068661160
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6929662776832082436}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.4
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7277584339757384125
 GameObject:
   m_ObjectHideFlags: 0
@@ -20777,7 +20802,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1357391941807225097}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:HeadTop_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20809,7 +20834,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8262375890348750586}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20841,7 +20866,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8061075161838880448}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20873,7 +20898,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7147265900014913042}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHandIndex4_end_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20904,7 +20929,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3911790150877397398}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightToeBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20936,7 +20961,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1566662634180424100}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20969,7 +20994,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8041579261155123599}
   - component: {fileID: 5095807922130224391}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Paladin Sword Light 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21065,7 +21090,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8649703674943862253}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21098,7 +21123,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2229814190296140171}
   - component: {fileID: 4482868560692081326}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Paladin Sword Light 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21194,7 +21219,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3588276938511012862}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21228,7 +21253,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1077620713973776437}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Paladin Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21262,7 +21287,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1436016248990217528}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftToeBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21294,7 +21319,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 85189911078545213}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21326,7 +21351,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8458895768550647868}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21360,7 +21385,7 @@ GameObject:
   - component: {fileID: 6829438450550623987}
   - component: {fileID: 4854948425754163903}
   - component: {fileID: 4114615426763279464}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Defense Effect 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26070,7 +26095,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4929272001638294390}
   - component: {fileID: 8568375053982124706}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: tripo_node_4e3bc219
   m_TagString: Untagged
   m_Icon: {fileID: 0}

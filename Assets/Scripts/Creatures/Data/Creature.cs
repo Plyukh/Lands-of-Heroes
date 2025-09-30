@@ -17,6 +17,8 @@ public class Creature : MonoBehaviour
 
     public CreatureMover Mover => creatureMover;
     public MovementType MovementType => CreatureData.movementType;
+    public AttackType AttackType => CreatureData.attackType;
+    public GameObject Projectile => currentStats.projectilePrefab;
 
     private void Awake()
     {

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4697117803214915038}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Eye Socket R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 3977884140274727312}
   - component: {fileID: 4662821760609875250}
   - component: {fileID: 5870922695115957779}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Lich Attack Fog 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4754,7 +4754,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8097774361260591983}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Lip Upper 1 L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4785,7 +4785,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4262688050700462674}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Speed 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4821,7 +4821,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1589161191039224877}
   - component: {fileID: 7225267860090019795}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Lich Attack Fog Light 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4918,7 +4918,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5573994094567868246}
   - component: {fileID: 7075885800603219527}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Lich Attack Fog Light 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5014,7 +5014,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3000105230918929530}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Tongue03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5046,7 +5046,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4377123038323234771}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5077,7 +5077,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2948109805142120451}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Lip Upper 0 R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5108,7 +5108,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7666661069994975881}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: R UpperArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5141,7 +5141,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8771952938488384394}
   - component: {fileID: 2630960470183221813}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Lich Attack Fog Light 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5237,7 +5237,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3422106572628650863}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Speed 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5272,7 +5272,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4461189909173692869}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Tail01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5305,7 +5305,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6053361505405088873}
   - component: {fileID: 6837596401281524825}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Lich Attack Fog Light 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5401,7 +5401,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6575786922324612606}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Tongue01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5435,7 +5435,7 @@ GameObject:
   - component: {fileID: 1719320804637866394}
   - component: {fileID: 352131182146086592}
   - component: {fileID: 4577666734327837159}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Speed 2.2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10144,7 +10144,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1184278825639132679}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Tongue02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10176,7 +10176,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2253037984887491262}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: L UpperArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10208,7 +10208,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3639691446404244914}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Tail03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10242,7 +10242,7 @@ GameObject:
   - component: {fileID: 7643585292857445188}
   - component: {fileID: 5529272721723270686}
   - component: {fileID: 5598678297431299046}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Speed 1.4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14951,7 +14951,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2488930543063126434}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Lip Upper 2 R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14982,7 +14982,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5089681621915363240}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: L Forearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15014,7 +15014,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 271981684621059380}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Speed 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15049,7 +15049,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6256789947936830798}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: R Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15082,7 +15082,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6427014872230284355}
   - component: {fileID: 2652501686464094518}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Lich Attack Fog Light 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15180,7 +15180,7 @@ GameObject:
   - component: {fileID: 7672132627860505870}
   - component: {fileID: 2219444263454142551}
   - component: {fileID: 4916859573749447431}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Lich Attack Fog 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19891,7 +19891,7 @@ GameObject:
   - component: {fileID: 5401933324885794909}
   - component: {fileID: 4603102442795801090}
   - component: {fileID: 8772796708197978114}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Speed 3.4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24600,7 +24600,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8495161163572666809}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: R Thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24634,7 +24634,7 @@ GameObject:
   - component: {fileID: 7043806429370413352}
   - component: {fileID: 6233120817940687470}
   - component: {fileID: 7445311104831231987}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Fire Effect 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29369,7 +29369,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 129304902142176113}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: CG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29401,7 +29401,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7316351659439032448}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: R Forearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29433,7 +29433,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4984407830818648897}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Lip Lower0 R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29466,7 +29466,7 @@ GameObject:
   - component: {fileID: 3978414663045359640}
   - component: {fileID: 7161036809048426687}
   - component: {fileID: 8952085892780229575}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Speed 2.3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34174,7 +34174,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3952891424218422645}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Eye L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34205,7 +34205,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7418432591019914398}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: R Clavicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34237,7 +34237,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8670176483667318656}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34283,7 +34283,7 @@ GameObject:
   - component: {fileID: 6480169832945450336}
   - component: {fileID: 2658982099506444902}
   - component: {fileID: 1869973894527517818}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Speed 2.4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38994,7 +38994,7 @@ GameObject:
   - component: {fileID: 576479985281943298}
   - component: {fileID: 5329513051274780918}
   - component: {fileID: 2236539177669717564}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Speed 4.1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43703,7 +43703,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8730413637880413161}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: R HorseLink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43736,7 +43736,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2338594194312903652}
   - component: {fileID: 7249826610404261823}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Lich Attack Fog Light 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43834,7 +43834,7 @@ GameObject:
   - component: {fileID: 275666525106541795}
   - component: {fileID: 4092954685126317856}
   - component: {fileID: 5844011661320374632}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Speed 3.2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48543,7 +48543,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3774832225387420894}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Lip Lower1 L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48574,7 +48574,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1444795729086820314}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: R Finger0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48607,7 +48607,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3061765136688966879}
   - component: {fileID: 2157119667712614641}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Lich Attack Fog Light 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48703,7 +48703,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8742803304975163523}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Eye R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48734,7 +48734,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7298998627238826188}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: L HorseLink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48767,7 +48767,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5094434681014374178}
   - component: {fileID: 1793222070676440671}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Lich Attack Fog Light 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48863,7 +48863,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6169911021483210042}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Eye Lid Lower R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48894,7 +48894,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 580759006723504699}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48928,7 +48928,7 @@ GameObject:
   - component: {fileID: 4457375472039383866}
   - component: {fileID: 6644829533169078424}
   - component: {fileID: 5625684838569874422}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Speed 1.3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53638,7 +53638,7 @@ GameObject:
   - component: {fileID: 1811324192079457489}
   - component: {fileID: 8564859566973914068}
   - component: {fileID: 5321788090320647900}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Speed 4.3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58346,7 +58346,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5928639524721696921}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: L Calf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58379,7 +58379,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2323212258819404168}
   - component: {fileID: 5819025616240552384}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Lich Attack Fog Light 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58476,7 +58476,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4618302678392448189}
   - component: {fileID: 9114673883019864650}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Lich Attack Fog Light 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58573,7 +58573,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9123330085893734261}
   - component: {fileID: 5995844069944369625}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Fire Effect Light 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58669,7 +58669,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1143457857267874396}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Jaw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58708,7 +58708,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5370096551286299554}
   - component: {fileID: 7500440234418431582}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Lich Attack Fog Light 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58805,7 +58805,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5095623715684813143}
   - component: {fileID: 6809550496721746876}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Lich Attack Fog Light 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58901,7 +58901,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7586528299734490233}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: L Thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58933,7 +58933,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8130186656248605612}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Lip Lower0 L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58964,7 +58964,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6704219191523128430}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: L Finger0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58998,7 +58998,7 @@ GameObject:
   - component: {fileID: 3685988340552655313}
   - component: {fileID: 3957060708929940245}
   - component: {fileID: 6869162266792167805}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Speed 3.1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63707,7 +63707,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5379864471482852672}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Cheek R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63738,7 +63738,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6353417959472689296}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Spine2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63774,7 +63774,7 @@ GameObject:
   - component: {fileID: 577237568959754035}
   - component: {fileID: 5828526945320277727}
   - component: {fileID: 2707602342946030794}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Speed 1.1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68483,7 +68483,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4225974666201281687}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Pelvis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68518,7 +68518,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1290315164076320622}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Ear R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68549,7 +68549,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1269873651545057663}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Cheek L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68580,7 +68580,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2344146781296015527}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Speed 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68615,7 +68615,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3753146167845497039}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Eye Lid Lower L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68646,7 +68646,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1064112796798586137}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Lip Lower1 R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68677,7 +68677,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6523933743659513288}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Tail05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68708,7 +68708,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 274046784152629721}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Eye Socket L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68742,7 +68742,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7875854224030138121}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: R Calf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68774,7 +68774,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5763520389497803318}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: R Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68806,7 +68806,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3872047267155628865}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: L Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68840,7 +68840,7 @@ GameObject:
   - component: {fileID: 2577554901191041772}
   - component: {fileID: 837866746911547983}
   - component: {fileID: 8326694952165546030}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Fire Effect 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73576,7 +73576,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4726490592294132232}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Lip Upper 1 R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73607,7 +73607,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4298432007711270288}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Tail04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73639,7 +73639,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1034276966522381951}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Eye Lid Upper R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73670,7 +73670,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7101143544474523071}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Defence
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73704,7 +73704,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5097049831502682720}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73740,7 +73740,7 @@ GameObject:
   - component: {fileID: 1644953708757923603}
   - component: {fileID: 495877195139455187}
   - component: {fileID: 3604785781167603309}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Lich Attack Fog 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78451,7 +78451,7 @@ GameObject:
   - component: {fileID: 2459681417070091094}
   - component: {fileID: 449683283995734708}
   - component: {fileID: 5022204968963578372}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Speed 3.3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83161,7 +83161,7 @@ GameObject:
   - component: {fileID: 533884779236944583}
   - component: {fileID: 4695070382675722215}
   - component: {fileID: 8076862199128205943}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Speed 4.4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87870,7 +87870,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4249303765752217882}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Lip Lower2 R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87902,7 +87902,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4303918931659525200}
   - component: {fileID: 6153618713254785100}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Fire Effect Light 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87998,7 +87998,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2247182516458949673}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Spine1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88031,7 +88031,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1583671070564309201}
   - component: {fileID: 2898519316348143158}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Wolf PA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88175,7 +88175,7 @@ GameObject:
   - component: {fileID: 3912379199705353095}
   - component: {fileID: 3886610626854701150}
   - component: {fileID: 850818507675224225}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Speed 4.2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92886,7 +92886,7 @@ GameObject:
   - component: {fileID: 576005468030533096}
   - component: {fileID: 7883628005208090472}
   - component: {fileID: 3691323649753372671}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Fire Effect 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97622,7 +97622,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6852279009725669134}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Lip Upper 0 L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97654,7 +97654,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8676988440332120736}
   - component: {fileID: 6140542678195204041}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Lich Attack Fog Light 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97751,7 +97751,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6363733547696836265}
   - component: {fileID: 6787589927881824805}
-  m_Layer: 0
+  - component: {fileID: 1263289707685773640}
+  m_Layer: 15
   m_Name: Hound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97800,6 +97801,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1263289707685773640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7681160099661037118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1fa7b7f25abf6542a534accd1514055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7841723193991994186
 GameObject:
   m_ObjectHideFlags: 0
@@ -97809,7 +97822,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7191122809801915635}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Lip Upper 2 L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97841,7 +97854,7 @@ GameObject:
   m_Component:
   - component: {fileID: 439547527056264987}
   - component: {fileID: 2891866844663487144}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Magic PA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97980,7 +97993,7 @@ GameObject:
   - component: {fileID: 7338251032692845426}
   - component: {fileID: 9039047658221102984}
   - component: {fileID: 1746788798419810342}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Speed 2.1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102689,7 +102702,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1199491426622862832}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: L Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102721,7 +102734,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3151572810539528886}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Tail02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102753,7 +102766,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6669145765801005363}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Eye Lid Upper L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102785,7 +102798,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8482104991594487003}
   - component: {fileID: 7717897319729307299}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Lich Attack Fog Light 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102882,9 +102895,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8153014692792629197}
   - component: {fileID: 2343561024168714948}
-  - component: {fileID: 2017764825405804150}
+  - component: {fileID: 6527525861207268064}
   - component: {fileID: 3294828560338224440}
-  m_Layer: 0
+  - component: {fileID: -2738941207355527479}
+  m_Layer: 15
   m_Name: Hound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102919,7 +102933,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e0cd1440066a54bba9607dfb7b57e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  creatureMover: {fileID: 0}
+  creatureMover: {fileID: 3294828560338224440}
   materials:
   - {fileID: 2891866844663487144}
   - {fileID: 2898519316348143158}
@@ -102960,7 +102974,7 @@ MonoBehaviour:
       - {fileID: 6975232779109629479}
   CreatureData: {fileID: 11400000, guid: 94740604042bf0944bb818e92010f8b6, type: 2}
   lvl: 0
---- !u!114 &2017764825405804150
+--- !u!114 &6527525861207268064
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -102973,6 +102987,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 6787589927881824805}
+  projectileSpawnPoint: {fileID: 0}
 --- !u!114 &3294828560338224440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102985,11 +103000,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7685c31ca14ae344bb8f943b9bedc848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animatorController: {fileID: 2017764825405804150}
+  animatorController: {fileID: 6527525861207268064}
   moveSpeed: 2
   stopThreshold: 0
   rotationSpeed: 360
   currentCell: {fileID: 0}
+--- !u!136 &-2738941207355527479
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8176261053319612160}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1.25
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8198193295993826278
 GameObject:
   m_ObjectHideFlags: 0
@@ -102999,7 +103037,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7307629074908991717}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Ear L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103031,7 +103069,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1920992214039590281}
   - component: {fileID: 8174451593047883354}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Lich Attack Fog Light 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103127,7 +103165,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3372997598064759796}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Lip Lower2 L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103158,7 +103196,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8146603748757098970}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103192,7 +103230,7 @@ GameObject:
   - component: {fileID: 2044596483507494741}
   - component: {fileID: 1328203205343852679}
   - component: {fileID: 6259450602762941457}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Speed 1.2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107901,7 +107939,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6500650931720742962}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: L Clavicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

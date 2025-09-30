@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 851074591062164269}
   - component: {fileID: 4350552288479153288}
   - component: {fileID: 1982906584929466434}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Head Drone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1239208669455924160}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 4657819394862246101}
   - component: {fileID: 4842285869750055045}
   - component: {fileID: 1194690850380792056}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Explosion Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4790,7 +4790,7 @@ GameObject:
   - component: {fileID: 2659795988972744634}
   - component: {fileID: 1670037704472725749}
   - component: {fileID: 5147500181832607756}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Helicopter 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4874,7 +4874,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2148335515125051967}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4906,7 +4906,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6366189090201208222}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4940,7 +4940,7 @@ GameObject:
   - component: {fileID: 6694951573230730297}
   - component: {fileID: 2611217272662643199}
   - component: {fileID: 4999026169278552753}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Helicopter 2 Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9594,7 +9594,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5745623380798800269}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Helicopter Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9628,7 +9628,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4804158313036070631}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9664,7 +9664,8 @@ GameObject:
   - component: {fileID: 7286970559631672838}
   - component: {fileID: -8895855129655582656}
   - component: {fileID: 5993834650901835155}
-  m_Layer: 0
+  - component: {fileID: 2345297041185294624}
+  m_Layer: 15
   m_Name: Drone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9757,6 +9758,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 7373290991190306809}
+  projectileSpawnPoint: {fileID: 0}
 --- !u!114 &5993834650901835155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9774,6 +9776,29 @@ MonoBehaviour:
   stopThreshold: 0
   rotationSpeed: 720
   currentCell: {fileID: 0}
+--- !u!136 &2345297041185294624
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2735890230616602876}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.4
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2766044683457899041
 GameObject:
   m_ObjectHideFlags: 0
@@ -9783,7 +9808,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5473289427544208536}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:HeadTop_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9815,7 +9840,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 39716856878360481}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Explosion Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9847,7 +9872,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1083701386961112973}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9879,7 +9904,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 39782293907280519}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftToe_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9911,7 +9936,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7220646096578592540}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9943,7 +9968,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7568099813753153509}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9975,7 +10000,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8060162295775108071}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10009,7 +10034,7 @@ GameObject:
   - component: {fileID: 7299183928867530539}
   - component: {fileID: 7957736439694067015}
   - component: {fileID: 8258623523326868945}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Smoke 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14591,7 +14616,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4945296121301578227}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14624,7 +14649,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4702495039328176158}
   - component: {fileID: 8600910939006952639}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: tripo_node_88a678df
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14736,7 +14761,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5879553598859683095}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHand_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14767,7 +14792,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7148185696392305642}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Spine2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14801,7 +14826,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4445800092298492450}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Spine1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14833,7 +14858,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7175474395249850080}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightToe_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14867,7 +14892,7 @@ GameObject:
   - component: {fileID: 3530347815423679403}
   - component: {fileID: 527355701495370766}
   - component: {fileID: 2356926862820139204}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Drone's Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14953,7 +14978,7 @@ GameObject:
   - component: {fileID: 7757681050335919679}
   - component: {fileID: 5245485037277853449}
   - component: {fileID: 3177800511310720960}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Helicopter 3 Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19609,7 +19634,7 @@ GameObject:
   - component: {fileID: 5100410916247953776}
   - component: {fileID: 6160886947086645820}
   - component: {fileID: 6510499351464377072}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Helicopter 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19693,7 +19718,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3833177785135595271}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19726,7 +19751,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1198732901198860326}
   - component: {fileID: 2798841177865096483}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Helicopter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19782,7 +19807,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2192738744653268541}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftHand_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19813,7 +19838,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5649730065891869289}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightToeBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19846,7 +19871,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6565889850192004664}
   - component: {fileID: 8865608378975986301}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Explosion Effect Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19942,7 +19967,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8368515762357494038}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftToe_End_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19973,7 +19998,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5725637301083023869}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20005,7 +20030,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 82891782480701995}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20037,7 +20062,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7531181737234043103}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:HeadTop_End_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20068,7 +20093,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7784337574550153551}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20100,7 +20125,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3686581903737747505}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20132,7 +20157,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4716210421572109980}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightToe_End_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20163,7 +20188,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7454169605310633370}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Death Objects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20197,7 +20222,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8440811186027172666}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20231,7 +20256,7 @@ GameObject:
   - component: {fileID: 4955578579571287242}
   - component: {fileID: 7396950127300634673}
   - component: {fileID: 6711587023179051084}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Smoke Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24813,7 +24838,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1357637468106627059}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24847,7 +24872,7 @@ GameObject:
   - component: {fileID: 7391836156878945361}
   - component: {fileID: 5853210874980299764}
   - component: {fileID: 8565352873296627518}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Drone Pipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24931,7 +24956,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4952227772592882620}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftToeBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24965,7 +24990,7 @@ GameObject:
   - component: {fileID: 5758766201027488476}
   - component: {fileID: 1186839534391436123}
   - component: {fileID: 2507752293945106403}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Melat Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29621,7 +29646,7 @@ GameObject:
   - component: {fileID: 7252384699899669660}
   - component: {fileID: 5108333089282830378}
   - component: {fileID: 7229463709151083882}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Helicopter 1 Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34275,7 +34300,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7692821050197530565}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:LeftShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34307,7 +34332,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7455925679543474034}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34343,7 +34368,7 @@ GameObject:
   - component: {fileID: 119486800666667439}
   - component: {fileID: 1142884520935363542}
   - component: {fileID: 7227374835960930025}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Helicopter 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34427,7 +34452,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5033114318754774722}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: mixamorig:RightShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
