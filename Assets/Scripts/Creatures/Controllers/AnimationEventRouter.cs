@@ -2,27 +2,20 @@ using UnityEngine;
 
 public class AnimationEventRouter : MonoBehaviour
 {
-    private CreatureAnimatorController ctr;
+    [SerializeField] private CreatureAnimatorController creatureAnimatorController;
 
-    private void Awake()
-    {
-        // Ищем контроллер на родителе (или выше по иерархии)
-        ctr = GetComponentInParent<CreatureAnimatorController>();
-    }
-
-    // Проброс событий
     public void SpawnProjectileEvent()
     {
-        if (ctr != null) ctr.SpawnProjectileEvent();
+        if (creatureAnimatorController != null) creatureAnimatorController.SpawnProjectileEvent();
     }
 
     public void HandleAttackHitEvent()
     {
-        if (ctr != null) ctr.HandleAttackHitEvent();
+        if (creatureAnimatorController != null) creatureAnimatorController.HandleAttackHitEvent();
     }
 
     public void RotateToAttackerEvent()
     {
-        if (ctr != null) ctr.RotateToAttackerEvent();
+        if (creatureAnimatorController != null) creatureAnimatorController.RotateToAttackerEvent();
     }
 }

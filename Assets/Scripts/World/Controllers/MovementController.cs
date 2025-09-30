@@ -1,47 +1,47 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using UnityEngine;
 
+[DisallowMultipleComponent]
 public class MovementController : MonoBehaviour
 {
     [Header("Dependencies")]
+    [Tooltip("Менеджер поиска пути и зоны досягаемости")]
     [SerializeField] private PathfindingManager pathfindingManager;
+    [Tooltip("Контроллер подсветки доступных клеток")]
     [SerializeField] private HighlightController highlightController;
 
-    /// <summary>
-    /// Вызывается, когда существо успешно переместилось или телепортировалось.
-    /// </summary>
     public event Action<Creature> OnMovementComplete;
 
-    /// <summary>
-    /// Логика клика по клетке для перемещения.
-    /// </summary>
     public async void OnCellClicked(Creature creature, HexCell targetCell)
     {
         if (creature == null || targetCell == null)
             return;
 
+        // Это не ход этого существа?
+        if (!TurnOrderController.Instance.IsCurrentTurn(creature))
+            return;
+
         var mover = creature.Mover;
-        var startCell = mover.CurrentCell;
+        var oldCell = mover.CurrentCell;
         int speed = creature.GetStat(CreatureStatusType.Speed);
         var moveType = creature.MovementType;
 
-        // 1) Вычисляем зону доступных ходов
+        // 1) Вычисляем все reachable клетки
         List<HexCell> reachable = pathfindingManager
-            .GetReachableCells(startCell, speed, moveType);
+            .GetReachableCells(oldCell, speed, moveType);
 
-        // 2) Проверяем, свободна ли цель и в зоне ли она
-        if (!targetCell.isWalkable || !reachable.Contains(targetCell))
+        // 2) Целевой клетке должно быть доступно движение и она в зоне
+        if (!targetCell.IsWalkable || !reachable.Contains(targetCell))
             return;
 
-        // 3) Подсвечиваем все reachable и выбранную клетку
+        // 3) Подсвечиваем зону и выбранную клетку
         highlightController.ClearHighlights();
-        highlightController.HighlightReachable(reachable, startCell);
+        highlightController.HighlightReachable(reachable, oldCell);
         targetCell.ShowHighlight(true);
 
-        // 4) Двигаемся или телепортируем
+        // 4) Перемещаем или телепортируем
         bool moved = false;
         if (moveType == MovementType.Teleport)
         {
@@ -49,22 +49,26 @@ public class MovementController : MonoBehaviour
         }
         else
         {
-            List<HexCell> path = pathfindingManager
-                .FindPath(startCell, targetCell, moveType);
+            var path = pathfindingManager.FindPath(oldCell, targetCell, moveType);
             if (path != null && path.Count > 0)
                 moved = await mover.MoveAlongPath(path);
         }
 
-        // 5) Если переместились — обновляем подсветку и вызываем событие
-        if (moved)
-        {
-            var newReachable = pathfindingManager
-                .GetReachableCells(mover.CurrentCell, speed, moveType);
+        if (!moved)
+            return;
 
-            highlightController.ClearHighlights();
-            highlightController.HighlightReachable(newReachable, mover.CurrentCell);
+        // 5) Обновляем occupants в клетках
+        oldCell.RemoveOccupant(creature.gameObject);
+        targetCell.AddOccupant(creature.gameObject, CellObjectType.Creature);
 
-            OnMovementComplete?.Invoke(creature);
-        }
+        // 6) Пересчитываем и подсвечиваем новую зону
+        var newReachable = pathfindingManager
+            .GetReachableCells(targetCell, speed, moveType);
+
+        highlightController.ClearHighlights();
+        highlightController.HighlightReachable(newReachable, targetCell);
+
+        // 7) Уведомляем, что ход существо завершён 
+        OnMovementComplete?.Invoke(creature);
     }
 }

@@ -18,16 +18,24 @@ public class TurnOrderController : MonoBehaviour
     private readonly System.Random rng = new System.Random();
     private Queue<Creature> turnQueue;
     private Creature currentCreature;
+
+    /// <summary>Текущее активное существо.</summary>
     public Creature CurrentCreature { get; private set; }
 
+    /// <summary>Вызывается при начале хода нового существа.</summary>
     public event Action<Creature> OnTurnStarted;
+
     private void Awake()
     {
         // Синглтон
         if (Instance == null) Instance = this;
-        else Destroy(gameObject);
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
 
-        // Подписываемся на сигналы об окончании действия
+        // Подписываемся на события конца действия
         movementController.OnMovementComplete += OnCreatureActionComplete;
         combatController.OnCombatComplete += OnCreatureActionComplete;
     }
@@ -37,12 +45,15 @@ public class TurnOrderController : MonoBehaviour
         StartNewRound();
     }
 
+    /// <summary>
+    /// Формирует очередь на новый раунд и запускает первый ход.
+    /// </summary>
     private void StartNewRound()
     {
-        // Берём ВСЕХ существ на поле
-        List<Creature> all = creatureManager.GetBySide(TargetSide.Any);
+        // Все существа на поле (включая союзников и врагов)
+        var all = creatureManager.GetBySide(TargetSide.Any);
 
-        // Сортируем по убыванию скорости, при равенстве — рандом
+        // Сортируем по скорости (убывание), при равной — по рандому
         var ordered = all
             .OrderByDescending(c => c.GetStat(CreatureStatusType.Speed))
             .ThenBy(_ => rng.Next())
@@ -52,49 +63,59 @@ public class TurnOrderController : MonoBehaviour
         NextTurn();
     }
 
+    /// <summary>
+    /// Переходит к следующему существу в очереди.
+    /// </summary>
     private void NextTurn()
     {
+        // Если очередь пуста — новый раунд
         if (turnQueue.Count == 0)
         {
             StartNewRound();
             return;
         }
 
+        // Берём следующее существо и делаем его активным
         currentCreature = turnQueue.Dequeue();
         CurrentCreature = currentCreature;
         OnTurnStarted?.Invoke(currentCreature);
 
-        currentCreature = turnQueue.Dequeue();
-        HighlightCurrentCreature();
+        Debug.Log($"[TurnOrder] Ходит: {currentCreature.name}");
 
-        // Разрешаем инпут только для currentCreature
-        highlightController.ClearHighlights();
-        highlightController.HighlightReachable(
-            pathfindingManager.GetReachableCells(
-                    currentCreature.Mover.CurrentCell,
-                    currentCreature.GetStat(CreatureStatusType.Speed),
-                    currentCreature.MovementType),
-            currentCreature.Mover.CurrentCell);
+        // Подсвечиваем всю зону передвижения активного существа
+        HighlightActiveCreature();
     }
 
+    /// <summary>
+    /// Вызывается, когда текущее существо завершило своё действие.
+    /// </summary>
     private void OnCreatureActionComplete(Creature creature)
     {
-        // Игнорируем чужие сигналы
-        if (creature != currentCreature) return;
+        if (creature != currentCreature)
+            return;
 
         NextTurn();
     }
 
-    private void HighlightCurrentCreature()
+    /// <summary>
+    /// Подсвечивает reachable-клетки для currentCreature.
+    /// </summary>
+    private void HighlightActiveCreature()
     {
-        // Здесь вы можете, например, выделить модель или UI над головой
-        // simplest: вспомогательный метод в Creature
-        //currentCreature.ShowAsActive(true);
+        highlightController.ClearHighlights();
+
+        var startCell = currentCreature.Mover.CurrentCell;
+        int speed = currentCreature.GetStat(CreatureStatusType.Speed);
+        var moveType = currentCreature.MovementType;
+
+        var reachable = pathfindingManager
+            .GetReachableCells(startCell, speed, moveType);
+
+        highlightController.HighlightReachable(reachable, startCell);
     }
 
     /// <summary>
-    /// Позволяет другим контроллерам проверить,
-    /// чья сейчас очередь хода.
+    /// Проверить, чьё сейчас право хода.
     /// </summary>
     public bool IsCurrentTurn(Creature creature)
         => creature == currentCreature;

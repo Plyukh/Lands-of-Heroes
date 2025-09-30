@@ -101,6 +101,6 @@ public class PathfindingManager : MonoBehaviour
             return true;
         }
 
-        return cell.isWalkable;
+        return cell.IsWalkable;
     }
 }

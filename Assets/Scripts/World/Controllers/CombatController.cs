@@ -4,73 +4,84 @@ using System.Linq;
 using System.Threading.Tasks;
 using UnityEngine;
 
+[DisallowMultipleComponent]
 public class CombatController : MonoBehaviour
 {
     [Header("Dependencies")]
+    [Tooltip("Менеджер поиска пути и зоны досягаемости")]
     [SerializeField] private PathfindingManager pathfindingManager;
+    [Tooltip("Контроллер подсветки клеток")]
     [SerializeField] private HighlightController highlightController;
 
     /// <summary>
-    /// Вызывается, когда существо завершило атаку (и анимация попадания).
+    /// Событие, когда существо завершило атаку и момент попадания отработал.
     /// </summary>
     public event Action<Creature> OnCombatComplete;
 
     /// <summary>
-    /// Логика клика по цели для запуска атаки.
+    /// Вызывается при клике по существу-цели: совершает атаку или подход.
     /// </summary>
     public async void OnCreatureClicked(Creature attacker, Creature target)
     {
         if (attacker == null || target == null || attacker == target)
             return;
 
-        // 1) Дальняя атака
+        // Блокируем попытки атаковать вне своего хода
+        if (!TurnOrderController.Instance.IsCurrentTurn(attacker))
+            return;
+
+        var startCell = attacker.Mover.CurrentCell;
+        var targetCell = target.Mover.CurrentCell;
+        int speed = attacker.GetStat(CreatureStatusType.Speed);
+        var moveType = attacker.MovementType;
+
+        // 1) Дальний бой — сразу стреляем
         if (attacker.AttackType == AttackType.Ranged)
         {
             await PlayAttackSequence(attacker, target);
             return;
         }
 
-        // 2) Ближняя атака: ищем соседние к цели клетки
-        var startCell = attacker.Mover.CurrentCell;
-        var targetCell = target.Mover.CurrentCell;
-
-        List<HexCell> neighborCells = pathfindingManager
+        // 2) Для ближнего: находим все соседние к цели свободные клетки
+        var neighborCells = pathfindingManager
             .GetReachableCells(targetCell, 1, MovementType.Teleport)
-            .Where(c => c.isWalkable)
+            .Where(c => c.IsWalkable)
             .ToList();
 
-        // 3) Если уже в соседней — атакуем сразу
+        // 3) Если уже в одной из соседних — сразу атакуем
         if (neighborCells.Contains(startCell))
         {
             await PlayAttackSequence(attacker, target);
             return;
         }
 
-        // 4) Иначе движемся к ближайшей соседней клетке
-        int speed = attacker.GetStat(CreatureStatusType.Speed);
-        var moveType = attacker.MovementType;
-
-        List<HexCell> reachable = pathfindingManager
+        // 4) Ищем из reachable подходящие соседи
+        var reachable = pathfindingManager
             .GetReachableCells(startCell, speed, moveType);
 
         var candidates = neighborCells.Intersect(reachable).ToList();
         if (candidates.Count == 0)
         {
-            Debug.Log("CombatController: нет пути к цели для ближней атаки");
+            Debug.Log($"[CombatController] Нельзя подойти к {target.name} для ближней атаки");
             return;
         }
 
-        HexCell attackPos = candidates
+        // 5) Выбираем ближайшую соседнюю клетку
+        var attackPos = candidates
             .OrderBy(c => Vector3.Distance(startCell.transform.position, c.transform.position))
             .First();
 
+        // 6) Подсветка зоны хода и выбранной клетки
         highlightController.ClearHighlights();
         highlightController.HighlightReachable(reachable, startCell);
         attackPos.ShowHighlight(true);
 
+        // 7) Двигаемся или телепортируемся на attackPos
         bool moved = false;
         if (moveType == MovementType.Teleport)
+        {
             moved = await attacker.Mover.TeleportToCell(attackPos);
+        }
         else
         {
             var path = pathfindingManager.FindPath(startCell, attackPos, moveType);
@@ -81,33 +92,39 @@ public class CombatController : MonoBehaviour
         if (!moved)
             return;
 
-        // Обновляем подсветку после передвижения
+        // 8) Обновляем occupants клеток
+        startCell.RemoveOccupant(attacker.gameObject);
+        attackPos.AddOccupant(attacker.gameObject, CellObjectType.Creature);
+
+        // 9) Обновляем подсветку от новой позиции (опционально)
         var newReachable = pathfindingManager
-            .GetReachableCells(attacker.Mover.CurrentCell, speed, moveType);
-
+            .GetReachableCells(attackPos, speed, moveType);
         highlightController.ClearHighlights();
-        highlightController.HighlightReachable(newReachable, attacker.Mover.CurrentCell);
+        highlightController.HighlightReachable(newReachable, attackPos);
 
-        // 5) Запускаем анимацию атаки
+        // 10) Запускаем сама анимацию атаки
         await PlayAttackSequence(attacker, target);
     }
 
+    /// <summary>
+    /// Поворачивает, ждёт момент попадания в анимации и кидает событие.
+    /// </summary>
     private async Task PlayAttackSequence(Creature attacker, Creature target)
     {
         var mover = attacker.Mover;
         var anim = mover.AnimatorController;
-        var attackType = attacker.AttackType;
         var hitTcs = new TaskCompletionSource<bool>();
+        bool isRanged = attacker.AttackType == AttackType.Ranged;
 
         // A) Поворачиваем к цели
         await mover.RotateTowardsAsync(target.transform.position);
 
-        // B) Передаём цель и атакующего
+        // B) Готовим анимацию
         anim.SetAttackTarget(target, attacker);
 
-        // C) Ждём события “момент удара” в анимации
+        // C) Ждём события «ударил» или «выстрелил»
         Action onHit = null;
-        if (attackType == AttackType.Ranged)
+        if (isRanged)
         {
             onHit = () =>
             {

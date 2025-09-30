@@ -97813,6 +97813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1fa7b7f25abf6542a534accd1514055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  creatureAnimatorController: {fileID: 6527525861207268064}
 --- !u!1 &7841723193991994186
 GameObject:
   m_ObjectHideFlags: 0
@@ -102974,6 +102975,7 @@ MonoBehaviour:
       - {fileID: 6975232779109629479}
   CreatureData: {fileID: 11400000, guid: 94740604042bf0944bb818e92010f8b6, type: 2}
   lvl: 0
+  targetSide: 2
 --- !u!114 &6527525861207268064
 MonoBehaviour:
   m_ObjectHideFlags: 0

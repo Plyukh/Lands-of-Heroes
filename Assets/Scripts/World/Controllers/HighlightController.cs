@@ -1,33 +1,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[DisallowMultipleComponent]
 public class HighlightController : MonoBehaviour
 {
     [Header("Dependencies")]
-    [Tooltip("Ссылка на менеджер сетки для доступа ко всем HexCell")]
+    [Tooltip("Менеджер сетки для доступа ко всем клеткам")]
     [SerializeField] private HexGridManager gridManager;
 
-    /// <summary>
-    /// Убирает подсветку на всех клетках поля.
-    /// </summary>
+    private void Awake()
+    {
+        if (gridManager == null)
+            Debug.LogError("[HighlightController] HexGridManager is not assigned!");
+    }
+
     public void ClearHighlights()
     {
-        foreach (var cell in gridManager.cells)
+        foreach (var cell in gridManager.Cells)
         {
-            cell.ShowHighlight(false);
+            cell.ResetHighlight();
         }
     }
 
-    /// <summary>
-    /// Подсвечивает все достижимые клетки, кроме стартовой.
-    /// </summary>
-    /// <param name="reachable">Клетки, до которых можно дойти</param>
-    /// <param name="startCell">Клетка, на которой стоит существо (не подсвечивается)</param>
     public void HighlightReachable(IEnumerable<HexCell> reachable, HexCell startCell)
     {
         foreach (var cell in reachable)
         {
-            if (cell != startCell && cell.isWalkable)
+            if (cell != startCell && cell.IsWalkable)
             {
                 cell.ShowHighlight(true);
             }

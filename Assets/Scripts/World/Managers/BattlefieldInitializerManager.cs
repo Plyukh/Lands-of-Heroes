@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -23,11 +24,11 @@ public class BattlefieldInitializerManager : MonoBehaviour
     [SerializeField] private List<BattlefieldTemplate> templates = new List<BattlefieldTemplate>();
 
     [Header("Decorative Cells")]
-    [Tooltip("Клетки для декоративных элементов")]
+    [Tooltip("Клетки для декоративных элементов (лог, камень и т.п.)")]
     [SerializeField] private List<HexCell> decorativeCells = new List<HexCell>();
 
     [Header("Faction Decorations")]
-    [Tooltip("Игровые объекты декора для каждой фракции")]
+    [Tooltip("Игровые объекты декора (FX, баннеры) для каждой фракции")]
     [SerializeField] private List<GameObject> factionDecorations = new List<GameObject>();
 
     private Faction currentFaction = Faction.None;
@@ -35,7 +36,6 @@ public class BattlefieldInitializerManager : MonoBehaviour
 
     private void Awake()
     {
-        // Подпишемся на начало хода, чтобы подсвечивать активное существо
         var turnOrder = TurnOrderController.Instance;
         if (turnOrder != null)
             turnOrder.OnTurnStarted += OnTurnStarted;
@@ -43,7 +43,6 @@ public class BattlefieldInitializerManager : MonoBehaviour
 
     private void OnDestroy()
     {
-        // Отпишемся от события при уничтожении
         var turnOrder = TurnOrderController.Instance;
         if (turnOrder != null)
             turnOrder.OnTurnStarted -= OnTurnStarted;
@@ -54,9 +53,6 @@ public class BattlefieldInitializerManager : MonoBehaviour
         InitializeField();
     }
 
-    /// <summary>
-    /// Полная инициализация поля: фракция, материалы, шаблон, препятствия, декор, обновление проходимости.
-    /// </summary>
     public void InitializeField()
     {
         SetRandomFaction();
@@ -64,23 +60,9 @@ public class BattlefieldInitializerManager : MonoBehaviour
         SetRandomTemplate();
         PlaceFactionObstacles();
         ActivateFactionDecor();
+
+        // Пересчитываем проходимость после расстановки препятствий
         gridManager.UpdateAllWalkability();
-    }
-
-    private void OnTurnStarted(Creature active)
-    {
-        // Подсветить доступные ходы для нового активного существа
-        if (active == null) return;
-
-        var start = active.Mover.CurrentCell;
-        int speed = active.GetStat(CreatureStatusType.Speed);
-        var moveType = active.MovementType;
-
-        var reachable = pathfindingManager
-            .GetReachableCells(start, speed, moveType);
-
-        highlightController.ClearHighlights();
-        highlightController.HighlightReachable(reachable, start);
     }
 
     private void SetRandomFaction()
@@ -88,7 +70,7 @@ public class BattlefieldInitializerManager : MonoBehaviour
         if (factionObstacles.Count == 0 || currentFaction != Faction.None)
             return;
 
-        int idx = Random.Range(0, factionObstacles.Count);
+        int idx = UnityEngine.Random.Range(0, factionObstacles.Count);
         currentFaction = factionObstacles[idx].faction;
         Debug.Log($"[Initializer] Выбрана фракция: {currentFaction}");
     }
@@ -103,11 +85,11 @@ public class BattlefieldInitializerManager : MonoBehaviour
         }
 
         var mat = factionMaterials[idx];
-        foreach (var cell in gridManager.cells)
+        foreach (var cell in gridManager.Cells)
             cell?.SetMaterial(mat);
 
-        foreach (var deco in decorativeCells)
-            deco?.SetMaterial(mat);
+        foreach (var decoCell in decorativeCells)
+            decoCell?.SetMaterial(mat);
     }
 
     private void SetRandomTemplate()
@@ -118,7 +100,7 @@ public class BattlefieldInitializerManager : MonoBehaviour
             return;
         }
 
-        currentTemplate = templates[Random.Range(0, templates.Count)];
+        currentTemplate = templates[UnityEngine.Random.Range(0, templates.Count)];
         Debug.Log($"[Initializer] Выбран шаблон: {currentTemplate.templateName}");
     }
 
@@ -132,6 +114,7 @@ public class BattlefieldInitializerManager : MonoBehaviour
 
         var obstacleData = factionObstacles
             .Find(o => o.faction == currentFaction);
+
         if (obstacleData == null || obstacleData.obstaclePrefabs.Count == 0)
         {
             Debug.Log($"[Initializer] Нет препятствий для фракции {currentFaction}");
@@ -145,10 +128,12 @@ public class BattlefieldInitializerManager : MonoBehaviour
                 continue;
 
             var prefab = obstacleData.obstaclePrefabs[
-                Random.Range(0, obstacleData.obstaclePrefabs.Count)];
+                UnityEngine.Random.Range(0, obstacleData.obstaclePrefabs.Count)];
+
+            // Создаем препятствие и регистрируем его как Occupant
             var obstacle = Instantiate(prefab, cell.transform, false);
-            obstacle.transform.localRotation = Quaternion.Euler(0, 0, Random.Range(0, 360f));
-            cell.SetCellObject(obstacle, CellObjectType.Obstacle);
+            obstacle.transform.localRotation = Quaternion.Euler(0, 0, UnityEngine.Random.Range(0f, 360f));
+            cell.AddOccupant(obstacle, CellObjectType.Obstacle);
         }
     }
 
@@ -161,5 +146,20 @@ public class BattlefieldInitializerManager : MonoBehaviour
         int idx = (int)currentFaction;
         if (idx >= 0 && idx < factionDecorations.Count && factionDecorations[idx] != null)
             factionDecorations[idx].SetActive(true);
+    }
+    private void OnTurnStarted(Creature active)
+    {
+        if (active == null)
+            return;
+
+        var start = active.Mover.CurrentCell;
+        int speed = active.GetStat(CreatureStatusType.Speed);
+        var moveType = active.MovementType;
+
+        var reachable = pathfindingManager
+            .GetReachableCells(start, speed, moveType);
+
+        highlightController.ClearHighlights();
+        highlightController.HighlightReachable(reachable, start);
     }
 }

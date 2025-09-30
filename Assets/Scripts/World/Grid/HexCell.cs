@@ -1,25 +1,36 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
+[DisallowMultipleComponent]
 public class HexCell : MonoBehaviour
 {
-    [Header("Main")]
+    [Header("Grid Position")]
+    [Tooltip("Row index in the grid")]
     public int row;
+    [Tooltip("Column index in the grid")]
     public int column;
-    public bool isWalkable;
+
+    [Header("Cell State")]
+    [Tooltip("Можно ли ходить по этой клетке; обновляется автоматически при изменении occupants")]
+    [SerializeField] private bool isWalkable = true;
+    public bool IsWalkable => isWalkable;
 
     [Header("Occupants")]
-    public List<CellOccupant> occupants = new List<CellOccupant>();
+    [Tooltip("Список объектов, стоящих на этой клетке")]
+    [SerializeField] private List<CellOccupant> occupants = new List<CellOccupant>();
+    public IReadOnlyList<CellOccupant> Occupants => occupants;
 
     [Header("Outline Objects")]
-    [Tooltip("Обычный контур (неактивный)")]
+    [Tooltip("Статичный контур")]
     [SerializeField] private GameObject inactiveOutline;
-    [Tooltip("Подсветка (активный)")]
+    [Tooltip("Активная подсветка")]
     [SerializeField] private GameObject activeOutline;
-    [Tooltip("Подсветка (активный) еффект")]
+    [Tooltip("Эффект частицы для активной подсветки")]
     [SerializeField] private ParticleSystem activeOutlineEffect;
 
-    [Header("Visuals")]
+    [Header("Visual")]
+    [Tooltip("Renderer для изменения материала клетки")]
     [SerializeField] private Renderer cellRenderer;
 
     public string CellId => $"r{row}_c{column}";
@@ -27,37 +38,66 @@ public class HexCell : MonoBehaviour
     public void SetMaterial(Material mat)
     {
         if (cellRenderer != null && mat != null)
-        {
             cellRenderer.material = mat;
-        }
     }
 
-    public void SetCellObject(GameObject obj, CellObjectType type)
+    public void AddOccupant(GameObject instance, CellObjectType type)
     {
-        if (obj == null || type == CellObjectType.None)
-        {
-            Debug.LogWarning("Попытка добавить пустой объект или тип None в клетку.");
+        if (instance == null || type == CellObjectType.None)
             return;
-        }
 
-        // Создаём нового носителя
-        var occupant = new CellOccupant
+        // Проверяем дубли
+        if (occupants.Any(o => o.instance == instance))
+            return;
+
+        // Привязываем объект к этой клетке
+        instance.transform.SetParent(transform, false);
+        instance.transform.position = transform.position;
+
+        occupants.Add(new CellOccupant
         {
-            type = type,
-            instance = obj
+            instance = instance,
+            type = type
+        });
+
+        // Если это существо или препятствие — клетка становится непроходимой
+        if (type == CellObjectType.Creature || type == CellObjectType.Obstacle)
+            RefreshWalkable();
+    }
+
+    public void RemoveOccupant(GameObject instance)
+    {
+        var occ = occupants.FirstOrDefault(o => o.instance == instance);
+        if (occ == null)
+            return;
+
+        occupants.Remove(occ);
+        // Не уничтожаем сам объект — если нужно, делайте это извне
+
+        RefreshWalkable();
+    }
+
+    public void ClearAllOccupants()
+    {
+        occupants.Clear();
+        RefreshWalkable();
+    }
+
+    public void RefreshWalkable()
+    {
+        // Сюда добавьте другие типы, которые должны блокировать клетку
+        var blocking = new[]
+        {
+            CellObjectType.Creature,
+            CellObjectType.Obstacle,
+            CellObjectType.ForceField
         };
 
-        // Привязываем объект к клетке
-        obj.transform.position = transform.position;
-        obj.transform.SetParent(transform);
-
-        // Добавляем в список
-        occupants.Add(occupant);
+        isWalkable = !occupants.Any(o => blocking.Contains(o.type));
     }
 
     public void ShowHighlight(bool highlight)
     {
-        // Если пытаются подсветить непроходимую клетку — игнорируем
         if (highlight && !isWalkable)
             return;
 
@@ -72,7 +112,6 @@ public class HexCell : MonoBehaviour
             else activeOutlineEffect.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
         }
     }
-
 
     public void ResetHighlight()
     {
