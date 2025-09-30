@@ -15,9 +15,14 @@ public class Creature : MonoBehaviour
     private CreatureStatsPerLevel currentStats;
     [SerializeField]int lvl;
 
+    [Header("Battle Settings")]
+    [Tooltip("С какими целями может взаимодействовать это существо")]
+    public TargetSide targetSide = TargetSide.Any;
+
     public CreatureMover Mover => creatureMover;
     public MovementType MovementType => CreatureData.movementType;
     public AttackType AttackType => CreatureData.attackType;
+    public TargetSide Side => targetSide;
     public GameObject Projectile => currentStats.projectilePrefab;
 
     private void Awake()
