@@ -28,14 +28,15 @@ public class HexCell : MonoBehaviour
     [SerializeField] private GameObject inactiveOutline;
     [Tooltip("Активная подсветка")]
     [SerializeField] private GameObject activeOutline;
-    [Tooltip("Эффект частицы для активной подсветки")]
-    [SerializeField] private ParticleSystem activeOutlineEffect;
 
     [Header("Visual")]
     [Tooltip("Renderer для изменения материала клетки")]
     [SerializeField] private Renderer cellRenderer;
 
     public string CellId => $"r{row}_c{column}";
+
+    public GameObject InactiveOutline => inactiveOutline;
+    public GameObject ActiveOutline => activeOutline;
 
     private static readonly int EnableHash = Animator.StringToHash("Enable");
     private static readonly int DisableHash = Animator.StringToHash("Disable");
@@ -98,42 +99,20 @@ public class HexCell : MonoBehaviour
 
     public void ShowHighlight(bool highlight)
     {
-        // Если пытаются включить, но клетка не проходима — выходим
+        // Игнорируем попытку включить там, где не проходимо
         if (highlight && !IsWalkable)
             return;
 
+        // Сбрасываем противоположный триггер и ставим нужный
         if (highlight)
         {
-            // Включаем только активный контур
-            inactiveOutline?.SetActive(false);
-            isDisabling = false;
-            activeOutline?.SetActive(true);
-
             outlineAnimator.ResetTrigger(DisableHash);
             outlineAnimator.SetTrigger(EnableHash);
-
-            if (activeOutlineEffect != null)
-            {
-                var main = activeOutlineEffect.main;
-                main.loop = true;
-                activeOutlineEffect.Play(true);
-            }
         }
         else
         {
-            // Запускаем анимацию выключения
-            isDisabling = true;
             outlineAnimator.ResetTrigger(EnableHash);
             outlineAnimator.SetTrigger(DisableHash);
-
-            if (activeOutlineEffect != null)
-            {
-                var main = activeOutlineEffect.main;
-                main.loop = false;
-                activeOutlineEffect.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
-            }
-
-            StartCoroutine(DisableAfterAnimation());
         }
     }
 
@@ -156,12 +135,9 @@ public class HexCell : MonoBehaviour
 
     public void ResetHighlight()
     {
-        StopAllCoroutines();
         outlineAnimator.ResetTrigger(EnableHash);
         outlineAnimator.ResetTrigger(DisableHash);
-        activeOutline?.SetActive(false);
-        inactiveOutline?.SetActive(false);
-        if (activeOutlineEffect != null)
-            activeOutlineEffect.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+        // При помощи StateMachineBehaviour или AnimationEvent сразу спрячем
+        // activeOutline и inactiveOutline (ниже).
     }
 }

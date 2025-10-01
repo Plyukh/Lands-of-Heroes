@@ -41,7 +41,7 @@ public class MovementController : MonoBehaviour
         // 3) СРАЗУ ЖЕ прячем все outline (без анимации), 
         //    чтобы в момент старта перемещения на поле 
         //    ничего не горело
-        highlightController.ClearHighlightsImmediate();
+        highlightController.ClearHighlights();
 
         // 4) Двигаем/телепортируем
         bool moved = false;
@@ -64,7 +64,7 @@ public class MovementController : MonoBehaviour
         // 6) Перерисовываем подсветку после перемещения
         var newReachable = pathfindingManager
             .GetReachableCells(targetCell, speed, moveType);
-        highlightController.ClearHighlightsImmediate();
+        highlightController.ClearHighlights();
         highlightController.HighlightReachable(newReachable, targetCell);
 
         OnMovementComplete?.Invoke(creature);

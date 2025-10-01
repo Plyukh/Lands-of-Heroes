@@ -30,7 +30,7 @@ public class CombatController : MonoBehaviour
         // Дальний бой
         if (attacker.AttackType == AttackType.Ranged)
         {
-            highlightController.ClearHighlightsImmediate();
+            highlightController.ClearHighlights();
             await PlayAttackSequence(attacker, target);
             return;
         }
@@ -44,7 +44,7 @@ public class CombatController : MonoBehaviour
         // Если уже рядом
         if (neighborCells.Contains(startCell))
         {
-            highlightController.ClearHighlightsImmediate();
+            highlightController.ClearHighlights();
             await PlayAttackSequence(attacker, target);
             return;
         }
@@ -70,7 +70,7 @@ public class CombatController : MonoBehaviour
         attackPos.ShowHighlight(true);
 
         // Убираем сразу
-        highlightController.ClearHighlightsImmediate();
+        highlightController.ClearHighlights();
 
         // Двигаемся
         bool moved = false;
@@ -93,7 +93,7 @@ public class CombatController : MonoBehaviour
         // Перерисовываем новую зону (опционально)
         var newReachable = pathfindingManager
             .GetReachableCells(attackPos, speed, moveType);
-        highlightController.ClearHighlightsImmediate();
+        highlightController.ClearHighlights();
         highlightController.HighlightReachable(newReachable, attackPos);
 
         // Атакуем
