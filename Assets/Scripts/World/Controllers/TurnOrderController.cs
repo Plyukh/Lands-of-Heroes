@@ -45,9 +45,6 @@ public class TurnOrderController : MonoBehaviour
         StartNewRound();
     }
 
-    /// <summary>
-    /// Формирует очередь на новый раунд и запускает первый ход.
-    /// </summary>
     private void StartNewRound()
     {
         // Все существа на поле (включая союзников и врагов)
@@ -63,43 +60,57 @@ public class TurnOrderController : MonoBehaviour
         NextTurn();
     }
 
-    /// <summary>
-    /// Переходит к следующему существу в очереди.
-    /// </summary>
     private void NextTurn()
     {
-        // Если очередь пуста — новый раунд
         if (turnQueue.Count == 0)
         {
             StartNewRound();
             return;
         }
 
-        // Берём следующее существо и делаем его активным
-        currentCreature = turnQueue.Dequeue();
-        CurrentCreature = currentCreature;
-        OnTurnStarted?.Invoke(currentCreature);
+        var creature = turnQueue.Dequeue();
 
-        Debug.Log($"[TurnOrder] Ходит: {currentCreature.name}");
+        // 1) Пропуск хода по Bravery (только для Living)
+        if (creature.Kind == CreatureKind.Living)
+        {
+            int bravery = creature.GetStat(CreatureStatusType.Bravery);
+            if (bravery < 0 && RollChance(GetBraveryChance(bravery)))
+            {
+                Debug.Log($"[Bravery] {creature.name} пропускает ход ({bravery})");
+                NextTurn(); // сразу переходим к следующему существу
+                return;
+            }
+        }
 
-        // Подсвечиваем всю зону передвижения активного существа
+        // 2) Стандартная активация хода
+        currentCreature = creature;
+        CurrentCreature = creature;
+        OnTurnStarted?.Invoke(creature);
+
+        // 3) Подсветка reachable
         HighlightActiveCreature();
     }
 
-    /// <summary>
-    /// Вызывается, когда текущее существо завершило своё действие.
-    /// </summary>
     private void OnCreatureActionComplete(Creature creature)
     {
         if (creature != currentCreature)
             return;
 
+        // Дополнительный ход по Bravery (только для Living)
+        if (creature.Kind == CreatureKind.Living)
+        {
+            int bravery = creature.GetStat(CreatureStatusType.Bravery);
+            if (bravery > 0 && RollChance(GetBraveryChance(bravery)))
+            {
+                Debug.Log($"[Bravery] {creature.name} получает доп. ход ({bravery})");
+                // Вставляем существо в начало очереди
+                turnQueue = new Queue<Creature>(new[] { creature }.Concat(turnQueue));
+            }
+        }
+
         NextTurn();
     }
 
-    /// <summary>
-    /// Подсвечивает reachable-клетки для currentCreature.
-    /// </summary>
     private void HighlightActiveCreature()
     {
         highlightController.ClearHighlights();
@@ -114,9 +125,22 @@ public class TurnOrderController : MonoBehaviour
         highlightController.HighlightReachable(reachable, startCell);
     }
 
-    /// <summary>
-    /// Проверить, чьё сейчас право хода.
-    /// </summary>
+    private int GetBraveryChance(int bravery)
+    {
+        switch (Mathf.Abs(bravery))
+        {
+            case 1: return 5;
+            case 2: return 10;
+            case 3: return 25;
+            default: return 0;
+        }
+    }
+
+    private bool RollChance(int percent)
+    {
+        return UnityEngine.Random.Range(0, 100) < percent;
+    }
+
     public bool IsCurrentTurn(Creature creature)
         => creature == currentCreature;
 }

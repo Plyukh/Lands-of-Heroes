@@ -20,6 +20,7 @@ public class Creature : MonoBehaviour
     public TargetSide targetSide = TargetSide.Any;
 
     public CreatureMover Mover => creatureMover;
+    public CreatureKind Kind => CreatureData.kind;
     public MovementType MovementType => CreatureData.movementType;
     public AttackType AttackType => CreatureData.attackType;
     public TargetSide Side => targetSide;
