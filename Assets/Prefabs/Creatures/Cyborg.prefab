@@ -192,6 +192,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1451851206542092485}
+  - component: {fileID: 173019126983518354}
   m_Layer: 15
   m_Name: Right Saw
   m_TagString: Untagged
@@ -207,7 +208,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1564139946711764049}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.024694834, y: 0.18735929, z: 0.06919611, w: 0.97954005}
+  m_LocalRotation: {x: 0.02469483, y: 0.1873593, z: 0.06919611, w: 0.9795401}
   m_LocalPosition: {x: -0.002898973, y: 0.09909952, z: 0.06340154}
   m_LocalScale: {x: 42.5, y: 42.500008, z: 42.499996}
   m_ConstrainProportionsScale: 0
@@ -217,6 +218,28 @@ Transform:
   - {fileID: 4261669319449162026}
   m_Father: {fileID: 3451625728564431792}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &173019126983518354
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564139946711764049}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d8a333b683afce9458bb1a15ce8a5632, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1642583222279675284
 GameObject:
   m_ObjectHideFlags: 0
@@ -1466,6 +1489,7 @@ MonoBehaviour:
       - {fileID: 2577389181137563313}
   CreatureData: {fileID: 11400000, guid: 45316748afb153d429ad2f08e967d054, type: 2}
   lvl: 0
+  targetSide: 2
 --- !u!114 &9018074083417549808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1775,6 +1799,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8224893524445577833}
+  - component: {fileID: 2640017330527374777}
   m_Layer: 15
   m_Name: Left Saw
   m_TagString: Untagged
@@ -1800,3 +1825,25 @@ Transform:
   - {fileID: 4508350572093838181}
   m_Father: {fileID: 1224550627324021177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2640017330527374777
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9027034247238227308}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9175832b503f60046b521256ef3c1384, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
