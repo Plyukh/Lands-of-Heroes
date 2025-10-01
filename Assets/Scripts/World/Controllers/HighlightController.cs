@@ -5,7 +5,7 @@ using UnityEngine;
 public class HighlightController : MonoBehaviour
 {
     [Header("Dependencies")]
-    [Tooltip("Менеджер сетки для доступа ко всем клеткам")]
+    [Tooltip("Менеджер сетки для доступа ко всем HexCell")]
     [SerializeField] private HexGridManager gridManager;
 
     private void Awake()
@@ -15,6 +15,14 @@ public class HighlightController : MonoBehaviour
     }
 
     public void ClearHighlights()
+    {
+        foreach (var cell in gridManager.Cells)
+        {
+            cell.ShowHighlight(false);
+        }
+    }
+
+    public void ClearHighlightsImmediate()
     {
         foreach (var cell in gridManager.Cells)
         {

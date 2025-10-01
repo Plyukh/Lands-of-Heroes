@@ -1,3 +1,4 @@
+п»їusing System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -12,28 +13,33 @@ public class HexCell : MonoBehaviour
     public int column;
 
     [Header("Cell State")]
-    [Tooltip("Можно ли ходить по этой клетке; обновляется автоматически при изменении occupants")]
+    [Tooltip("РњРѕР¶РЅРѕ Р»Рё С…РѕРґРёС‚СЊ РїРѕ СЌС‚РѕР№ РєР»РµС‚РєРµ; РѕР±РЅРѕРІР»СЏРµС‚СЃСЏ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё РїСЂРё РёР·РјРµРЅРµРЅРёРё occupants")]
     [SerializeField] private bool isWalkable = true;
     public bool IsWalkable => isWalkable;
 
     [Header("Occupants")]
-    [Tooltip("Список объектов, стоящих на этой клетке")]
+    [Tooltip("РЎРїРёСЃРѕРє РѕР±СЉРµРєС‚РѕРІ, СЃС‚РѕСЏС‰РёС… РЅР° СЌС‚РѕР№ РєР»РµС‚РєРµ")]
     [SerializeField] private List<CellOccupant> occupants = new List<CellOccupant>();
     public IReadOnlyList<CellOccupant> Occupants => occupants;
 
     [Header("Outline Objects")]
-    [Tooltip("Статичный контур")]
+    [SerializeField] private Animator outlineAnimator;
+    [Tooltip("РЎС‚Р°С‚РёС‡РЅС‹Р№ РєРѕРЅС‚СѓСЂ")]
     [SerializeField] private GameObject inactiveOutline;
-    [Tooltip("Активная подсветка")]
+    [Tooltip("РђРєС‚РёРІРЅР°СЏ РїРѕРґСЃРІРµС‚РєР°")]
     [SerializeField] private GameObject activeOutline;
-    [Tooltip("Эффект частицы для активной подсветки")]
+    [Tooltip("Р­С„С„РµРєС‚ С‡Р°СЃС‚РёС†С‹ РґР»СЏ Р°РєС‚РёРІРЅРѕР№ РїРѕРґСЃРІРµС‚РєРё")]
     [SerializeField] private ParticleSystem activeOutlineEffect;
 
     [Header("Visual")]
-    [Tooltip("Renderer для изменения материала клетки")]
+    [Tooltip("Renderer РґР»СЏ РёР·РјРµРЅРµРЅРёСЏ РјР°С‚РµСЂРёР°Р»Р° РєР»РµС‚РєРё")]
     [SerializeField] private Renderer cellRenderer;
 
     public string CellId => $"r{row}_c{column}";
+
+    private static readonly int EnableHash = Animator.StringToHash("Enable");
+    private static readonly int DisableHash = Animator.StringToHash("Disable");
+    private bool isDisabling;
 
     public void SetMaterial(Material mat)
     {
@@ -46,11 +52,9 @@ public class HexCell : MonoBehaviour
         if (instance == null || type == CellObjectType.None)
             return;
 
-        // Проверяем дубли
         if (occupants.Any(o => o.instance == instance))
             return;
 
-        // Привязываем объект к этой клетке
         instance.transform.SetParent(transform, false);
         instance.transform.position = transform.position;
 
@@ -60,7 +64,6 @@ public class HexCell : MonoBehaviour
             type = type
         });
 
-        // Если это существо или препятствие — клетка становится непроходимой
         if (type == CellObjectType.Creature || type == CellObjectType.Obstacle)
             RefreshWalkable();
     }
@@ -72,8 +75,6 @@ public class HexCell : MonoBehaviour
             return;
 
         occupants.Remove(occ);
-        // Не уничтожаем сам объект — если нужно, делайте это извне
-
         RefreshWalkable();
     }
 
@@ -85,7 +86,6 @@ public class HexCell : MonoBehaviour
 
     public void RefreshWalkable()
     {
-        // Сюда добавьте другие типы, которые должны блокировать клетку
         var blocking = new[]
         {
             CellObjectType.Creature,
@@ -98,23 +98,70 @@ public class HexCell : MonoBehaviour
 
     public void ShowHighlight(bool highlight)
     {
-        if (highlight && !isWalkable)
+        // Р•СЃР»Рё РїС‹С‚Р°СЋС‚СЃСЏ РІРєР»СЋС‡РёС‚СЊ, РЅРѕ РєР»РµС‚РєР° РЅРµ РїСЂРѕС…РѕРґРёРјР° вЂ” РІС‹С…РѕРґРёРј
+        if (highlight && !IsWalkable)
             return;
 
-        inactiveOutline?.SetActive(!highlight);
-        activeOutline?.SetActive(highlight);
-
-        if (activeOutlineEffect != null)
+        if (highlight)
         {
-            var main = activeOutlineEffect.main;
-            main.loop = highlight;
-            if (highlight) activeOutlineEffect.Play(true);
-            else activeOutlineEffect.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+            // Р’РєР»СЋС‡Р°РµРј С‚РѕР»СЊРєРѕ Р°РєС‚РёРІРЅС‹Р№ РєРѕРЅС‚СѓСЂ
+            inactiveOutline?.SetActive(false);
+            isDisabling = false;
+            activeOutline?.SetActive(true);
+
+            outlineAnimator.ResetTrigger(DisableHash);
+            outlineAnimator.SetTrigger(EnableHash);
+
+            if (activeOutlineEffect != null)
+            {
+                var main = activeOutlineEffect.main;
+                main.loop = true;
+                activeOutlineEffect.Play(true);
+            }
+        }
+        else
+        {
+            // Р—Р°РїСѓСЃРєР°РµРј Р°РЅРёРјР°С†РёСЋ РІС‹РєР»СЋС‡РµРЅРёСЏ
+            isDisabling = true;
+            outlineAnimator.ResetTrigger(EnableHash);
+            outlineAnimator.SetTrigger(DisableHash);
+
+            if (activeOutlineEffect != null)
+            {
+                var main = activeOutlineEffect.main;
+                main.loop = false;
+                activeOutlineEffect.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+            }
+
+            StartCoroutine(DisableAfterAnimation());
+        }
+    }
+
+    private IEnumerator DisableAfterAnimation()
+    {
+        // Р–РґС‘Рј С„СЂРµР№Рј, С‡С‚РѕР±С‹ Animator СѓСЃРїРµР» РїРµСЂРµР№С‚Рё РІ Disabled-СЃС‚РµР№С‚
+        yield return null;
+
+        // Р‘РµСЂС‘Рј РґР»РёРЅСѓ С‚РµРєСѓС‰РµРіРѕ РєР»РёРїР° (РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ Disabled)
+        var info = outlineAnimator.GetCurrentAnimatorStateInfo(0);
+        yield return new WaitForSeconds(info.length);
+
+        if (isDisabling)
+        {
+            // РЎРєСЂС‹РІР°РµРј РѕР±Р° РєРѕРЅС‚СѓСЂР° СЃСЂР°Р·Сѓ РїРѕ РѕРєРѕРЅС‡Р°РЅРёРё Р°РЅРёРјР°С†РёРё
+            activeOutline?.SetActive(false);
+            inactiveOutline?.SetActive(false);
         }
     }
 
     public void ResetHighlight()
     {
-        ShowHighlight(false);
+        StopAllCoroutines();
+        outlineAnimator.ResetTrigger(EnableHash);
+        outlineAnimator.ResetTrigger(DisableHash);
+        activeOutline?.SetActive(false);
+        inactiveOutline?.SetActive(false);
+        if (activeOutlineEffect != null)
+            activeOutlineEffect.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
     }
 }

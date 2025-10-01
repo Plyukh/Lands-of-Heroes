@@ -18,8 +18,6 @@ public class MovementController : MonoBehaviour
     {
         if (creature == null || targetCell == null)
             return;
-
-        // Это не ход этого существа?
         if (!TurnOrderController.Instance.IsCurrentTurn(creature))
             return;
 
@@ -28,25 +26,27 @@ public class MovementController : MonoBehaviour
         int speed = creature.GetStat(CreatureStatusType.Speed);
         var moveType = creature.MovementType;
 
-        // 1) Вычисляем все reachable клетки
+        // 1) Считаем reachable
         List<HexCell> reachable = pathfindingManager
             .GetReachableCells(oldCell, speed, moveType);
 
-        // 2) Целевой клетке должно быть доступно движение и она в зоне
         if (!targetCell.IsWalkable || !reachable.Contains(targetCell))
             return;
 
-        // 3) Подсвечиваем зону и выбранную клетку
+        // 2) Показываем новую зону и выделяем цель
         highlightController.ClearHighlights();
         highlightController.HighlightReachable(reachable, oldCell);
         targetCell.ShowHighlight(true);
 
-        // 4) Перемещаем или телепортируем
+        // 3) СРАЗУ ЖЕ прячем все outline (без анимации), 
+        //    чтобы в момент старта перемещения на поле 
+        //    ничего не горело
+        highlightController.ClearHighlightsImmediate();
+
+        // 4) Двигаем/телепортируем
         bool moved = false;
         if (moveType == MovementType.Teleport)
-        {
             moved = await mover.TeleportToCell(targetCell);
-        }
         else
         {
             var path = pathfindingManager.FindPath(oldCell, targetCell, moveType);
@@ -57,18 +57,16 @@ public class MovementController : MonoBehaviour
         if (!moved)
             return;
 
-        // 5) Обновляем occupants в клетках
+        // 5) Обновляем occupants
         oldCell.RemoveOccupant(creature.gameObject);
         targetCell.AddOccupant(creature.gameObject, CellObjectType.Creature);
 
-        // 6) Пересчитываем и подсвечиваем новую зону
+        // 6) Перерисовываем подсветку после перемещения
         var newReachable = pathfindingManager
             .GetReachableCells(targetCell, speed, moveType);
-
-        highlightController.ClearHighlights();
+        highlightController.ClearHighlightsImmediate();
         highlightController.HighlightReachable(newReachable, targetCell);
 
-        // 7) Уведомляем, что ход существо завершён 
         OnMovementComplete?.Invoke(creature);
     }
 }

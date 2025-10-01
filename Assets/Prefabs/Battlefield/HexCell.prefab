@@ -4721,6 +4721,7 @@ GameObject:
   - component: {fileID: 3422049973331850052}
   - component: {fileID: 6637574359341286894}
   - component: {fileID: 4621374360089583387}
+  - component: {fileID: 8045239706670333326}
   m_Layer: 14
   m_Name: HexCell
   m_TagString: Untagged
@@ -4762,6 +4763,7 @@ MonoBehaviour:
   column: 0
   isWalkable: 0
   occupants: []
+  outlineAnimator: {fileID: 8045239706670333326}
   inactiveOutline: {fileID: 5760497150973320613}
   activeOutline: {fileID: 2665983238847398680}
   activeOutlineEffect: {fileID: 5562153724702234243}
@@ -4788,6 +4790,28 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -2124705421725058983, guid: 8ad6f1609db80d84788b536cebcdd4b9, type: 3}
+--- !u!95 &8045239706670333326
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601121995446580247}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d0454c0914b951a4287cc9ac8a2ff770, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2412714437417793479
 GameObject:
   m_ObjectHideFlags: 0
