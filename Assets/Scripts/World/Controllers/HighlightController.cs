@@ -19,9 +19,7 @@ public class HighlightController : MonoBehaviour
     public void ClearHighlightsImmediate()
     {
         foreach (var cell in gridManager.Cells)
-        {
-            cell.ResetHighlight();
-        }
+            cell.ShowHighlight(false);   // сразу выключаем активные outlines
     }
 
     public void HighlightReachable(IEnumerable<HexCell> reachable, HexCell startCell)
@@ -44,7 +42,6 @@ public class HighlightController : MonoBehaviour
         foreach (var cell in path)
             cell.ShowHighlight(true);
     }
-
 
     public void HighlightTeleportTarget(HexCell target)
     {

@@ -23,21 +23,20 @@ public class MovementController : MonoBehaviour
         var startCell = mover.CurrentCell;
         var moveType = creature.MovementType;
 
-        // —— ТЕЛЕПОРТ ——
         if (moveType == MovementType.Teleport)
         {
-            // 1) анимированно гасим всё, подсвечиваем только цель
+            // 1) Сразу гасим все подсветки и включаем только цель
             highlightController.HighlightTeleportTarget(targetCell);
 
-            // 2) ждём конца анимации телепорта (PlayStartTeleport → OnTeleportMove → OnTeleportEnd)
+            // 2) Телепорт
             bool teleported = await mover.TeleportToCell(targetCell);
 
             if (teleported)
             {
-                // 3) гасим её контур
+                // 3) Сразу гасим и её
                 targetCell.ShowHighlight(false);
 
-                // 4) переносим Occupant и завершаем ход
+                // 4) Обновляем Occupant и завершаем ход
                 startCell.RemoveOccupant(creature.gameObject);
                 targetCell.AddOccupant(creature.gameObject, CellObjectType.Creature);
                 OnMovementComplete?.Invoke(creature);
