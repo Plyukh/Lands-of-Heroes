@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -7,7 +8,7 @@ using UnityEngine;
 public class CreatureMover : MonoBehaviour
 {
     [Header("Animator")]
-    [SerializeField] CreatureAnimatorController animatorController;
+    [SerializeField] private CreatureAnimatorController animatorController;
 
     [Header("Movement Settings")]
     [Tooltip("Скорость движения (единиц Unity в секунду)")]
@@ -23,8 +24,7 @@ public class CreatureMover : MonoBehaviour
     public CreatureAnimatorController AnimatorController => animatorController;
     public HexCell CurrentCell => currentCell;
 
-    private TaskCompletionSource<bool> teleportTcs;
-    private HexCell teleportTarget;
+    public event Action<HexCell> OnCellEntered;
 
     public void SetCurrentCell(HexCell cell)
     {
@@ -33,64 +33,71 @@ public class CreatureMover : MonoBehaviour
         transform.position = cell.transform.position;
     }
 
-    public Task<bool> MoveAlongPath(List<HexCell> path)
+    public async Task<bool> MoveAlongPath(IReadOnlyList<HexCell> path)
     {
-        var tcs = new TaskCompletionSource<bool>();
         if (path == null || path.Count == 0)
-        {
-            tcs.SetResult(false);
-            return tcs.Task;
-        }
+            return false;
 
-        StartCoroutine(PerformMovement(path, tcs));
-        return tcs.Task;
-    }
-
-    private IEnumerator PerformMovement(List<HexCell> path, TaskCompletionSource<bool> tcs)
-    {
         animatorController.PlayWalk(true);
 
         foreach (var cell in path)
         {
-            Vector3 endPos = cell.transform.position;
+            // плавно поворачиваем к следующей клетке
+            await RotateTowardsAsync(cell.transform.position);
 
-            // 1) Плавно поворачиваем к следующей клетке
-            yield return StartCoroutine(RotateTowardsSmooth(endPos));
+            // перемещаемся к ней
+            await MoveToPositionAsync(cell.transform.position);
 
-            // 2) Затем двигаемся по прямой
-            Vector3 startPos = transform.position;
-            float dist = Vector3.Distance(startPos, endPos);
-            float duration = dist / moveSpeed;
-            float elapsed = 0f;
-
-            while (elapsed < duration)
-            {
-                elapsed += Time.deltaTime;
-                transform.position = Vector3.Lerp(startPos, endPos, elapsed / duration);
-                yield return null;
-            }
-
-            transform.position = endPos;
+            // обновляем текущее состояние
             currentCell = cell;
+            OnCellEntered?.Invoke(cell);
         }
 
         animatorController.PlayWalk(false);
-        tcs.SetResult(true);
+        return true;
+    }
+    private Task MoveToPositionAsync(Vector3 destination)
+    {
+        var tcs = new TaskCompletionSource<bool>();
+        StartCoroutine(MoveCoroutine(destination, tcs));
+        return tcs.Task;
     }
 
-    private IEnumerator RotateTowardsSmooth(Vector3 targetPos)
+    private IEnumerator MoveCoroutine(Vector3 destination, TaskCompletionSource<bool> tcs)
     {
-        // Вычисляем целевую ориентацию
-        Vector3 dir = (targetPos - transform.position).normalized;
-        if (dir.sqrMagnitude < 0.001f) yield break;
+        Vector3 startPos = transform.position;
+        float distance = Vector3.Distance(startPos, destination);
 
-        // Целевая ротация
+        if (distance <= stopThreshold)
+        {
+            transform.position = destination;
+            tcs.TrySetResult(true);
+            yield break;
+        }
+
+        float duration = distance / moveSpeed;
+        float elapsed = 0f;
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            transform.position = Vector3.Lerp(startPos, destination, elapsed / duration);
+            yield return null;
+        }
+
+        transform.position = destination;
+        tcs.TrySetResult(true);
+    }
+
+    public async Task RotateTowardsAsync(Vector3 point)
+    {
+        Vector3 dir = (point - transform.position).normalized;
+        if (dir.sqrMagnitude < 0.0001f)
+            return;
+
         Quaternion startRot = transform.rotation;
         Quaternion targetRot = Quaternion.LookRotation(dir, Vector3.up);
-
-        // Угол между текущей и целевой ориентациями
         float angle = Quaternion.Angle(startRot, targetRot);
-        // Время на поворот по заданной скорости
         float duration = angle / rotationSpeed;
         float elapsed = 0f;
 
@@ -99,40 +106,28 @@ public class CreatureMover : MonoBehaviour
             elapsed += Time.deltaTime;
             float t = Mathf.Clamp01(elapsed / duration);
             transform.rotation = Quaternion.Slerp(startRot, targetRot, t);
-            yield return null;
+            await Task.Yield();
         }
 
         transform.rotation = targetRot;
     }
 
-    public Task RotateTowardsAsync(Vector3 point)
-    {
-        var tcs = new TaskCompletionSource<bool>();
-        StartCoroutine(RotateTowardsSmoothCallback(point, tcs));
-        return tcs.Task;
-    }
+    // -------------------------------------------------------------------
+    //                    Teleport support
+    // -------------------------------------------------------------------
 
-    // Корутинка использует ваш private RotateTowardsSmooth
-    private IEnumerator RotateTowardsSmoothCallback(
-        Vector3 targetPos,
-        TaskCompletionSource<bool> tcs)
-    {
-        // дождаться окончания плавного поворота
-        yield return RotateTowardsSmooth(targetPos);
-        tcs.SetResult(true);
-    }
+    private TaskCompletionSource<bool> teleportTcs;
+    private HexCell teleportTarget;
 
     public Task<bool> TeleportToCell(HexCell targetCell)
     {
-        // Если уже телепортируется — сбрасываем предыдущую
-        teleportTcs?.SetResult(false);
+        // если уже был незавершённый телепорт
+        teleportTcs?.TrySetResult(false);
 
-        teleportTcs = new TaskCompletionSource<bool>();
         teleportTarget = targetCell;
+        teleportTcs = new TaskCompletionSource<bool>();
 
-        // Запустить анимацию старта
         animatorController.PlayStartTeleport();
-
         return teleportTcs.Task;
     }
 
@@ -140,19 +135,15 @@ public class CreatureMover : MonoBehaviour
     {
         if (teleportTarget == null) return;
 
-        // Мгновенно ставим существо на цель
         currentCell = teleportTarget;
         transform.position = currentCell.transform.position;
+        OnCellEntered?.Invoke(currentCell);
     }
 
-    // Вызывается через Animation Event в EndTeleport (в момент полного появления)
     public void OnTeleportEnd()
     {
-        // Запустить анимацию конца, если нужно
         animatorController.PlayEndTeleport();
-
-        // Завершаем Task, чтобы BattlefieldManager продолжил логику
-        teleportTcs?.SetResult(true);
+        teleportTcs?.TrySetResult(true);
         teleportTcs = null;
         teleportTarget = null;
     }

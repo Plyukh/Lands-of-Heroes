@@ -27,52 +27,44 @@ public class CombatController : MonoBehaviour
         int speed = attacker.GetStat(CreatureStatusType.Speed);
         var moveType = attacker.MovementType;
 
-        // Дальний бой
+        // 1) Дальний бой — сразу запускаем анимацию скрытия через Disable
         if (attacker.AttackType == AttackType.Ranged)
         {
-            highlightController.ClearHighlights();
+            highlightController.ClearHighlights();   // ← анимированно гасим
             await PlayAttackSequence(attacker, target);
             return;
         }
 
-        // Ближний бой: ищем соседние
+        // 2) Ближний бой: ищем свободные соседи цели
         var neighborCells = pathfindingManager
             .GetReachableCells(targetCell, 1, MovementType.Teleport)
             .Where(c => c.IsWalkable)
             .ToList();
 
-        // Если уже рядом
+        // если уже рядом — всё то же самое
         if (neighborCells.Contains(startCell))
         {
-            highlightController.ClearHighlights();
+            highlightController.ClearHighlights();   // ← анимированно гасим
             await PlayAttackSequence(attacker, target);
             return;
         }
 
-        // Вычисляем зону подхода
+        // 3) Куда подойти
         var reachable = pathfindingManager
             .GetReachableCells(startCell, speed, moveType);
 
         var candidates = neighborCells.Intersect(reachable).ToList();
         if (candidates.Count == 0)
-        {
-            Debug.Log($"[CombatController] Нельзя подойти к {target.name}");
             return;
-        }
 
         var attackPos = candidates
             .OrderBy(c => Vector3.Distance(startCell.transform.position, c.transform.position))
             .First();
 
-        // Подсвечиваем зону подхода
-        highlightController.ClearHighlights();
-        highlightController.HighlightReachable(reachable, startCell);
-        attackPos.ShowHighlight(true);
+        // 4) Прежде чем двигаться — гасим все outline через анимацию Disable
+        highlightController.ClearHighlights();       // ← именно это
 
-        // Убираем сразу
-        highlightController.ClearHighlights();
-
-        // Двигаемся
+        // 5) Двигаемся
         bool moved = false;
         if (moveType == MovementType.Teleport)
             moved = await attacker.Mover.TeleportToCell(attackPos);
@@ -86,19 +78,14 @@ public class CombatController : MonoBehaviour
         if (!moved)
             return;
 
-        // Обновляем occupants
+        // 6) Обновляем occupants
         startCell.RemoveOccupant(attacker.gameObject);
         attackPos.AddOccupant(attacker.gameObject, CellObjectType.Creature);
 
-        // Перерисовываем новую зону (опционально)
-        var newReachable = pathfindingManager
-            .GetReachableCells(attackPos, speed, moveType);
-        highlightController.ClearHighlights();
-        highlightController.HighlightReachable(newReachable, attackPos);
-
-        // Атакуем
+        // ни одной новой подсветки — сразу в атаку
         await PlayAttackSequence(attacker, target);
     }
+
 
     private async Task PlayAttackSequence(Creature attacker, Creature target)
     {
@@ -108,7 +95,6 @@ public class CombatController : MonoBehaviour
         bool isRanged = attacker.AttackType == AttackType.Ranged;
 
         await mover.RotateTowardsAsync(target.transform.position);
-
         anim.SetAttackTarget(target, attacker);
 
         Action onHit = null;

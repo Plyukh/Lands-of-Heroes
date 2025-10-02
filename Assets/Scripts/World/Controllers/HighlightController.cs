@@ -8,12 +8,6 @@ public class HighlightController : MonoBehaviour
     [Tooltip("Менеджер сетки для доступа ко всем HexCell")]
     [SerializeField] private HexGridManager gridManager;
 
-    private void Awake()
-    {
-        if (gridManager == null)
-            Debug.LogError("[HighlightController] HexGridManager is not assigned!");
-    }
-
     public void ClearHighlights()
     {
         foreach (var cell in gridManager.Cells)
@@ -39,5 +33,23 @@ public class HighlightController : MonoBehaviour
                 cell.ShowHighlight(true);
             }
         }
+    }
+
+    public void HighlightPath(IReadOnlyList<HexCell> path)
+    {
+        // 1) Гасим _анимацией_ все контуры
+        ClearHighlights();
+
+        // 2) Включаем _анимацией_ только клетки маршрута
+        foreach (var cell in path)
+            cell.ShowHighlight(true);
+    }
+
+
+    public void HighlightTeleportTarget(HexCell target)
+    {
+        ClearHighlightsImmediate();    // мгновенно выключить все
+        target.ShowHighlight(true);    // включить только эту
+
     }
 }
