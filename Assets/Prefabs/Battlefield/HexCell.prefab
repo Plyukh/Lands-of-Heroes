@@ -53,9 +53,8 @@ MonoBehaviour:
   isWalkable: 0
   occupants: []
   outlineAnimator: {fileID: 8045239706670333326}
-  inactiveOutline: {fileID: 5760497150973320613}
+  inactiveOutline: {fileID: 0}
   activeOutline: {fileID: 2665983238847398680}
-  activeOutlineEffect: {fileID: 0}
   cellRenderer: {fileID: 3544146931412758347}
 --- !u!64 &4621374360089583387
 MeshCollider:

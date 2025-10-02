@@ -22,10 +22,8 @@ public class HexCell : MonoBehaviour
     [SerializeField] private List<CellOccupant> occupants = new List<CellOccupant>();
     public IReadOnlyList<CellOccupant> Occupants => occupants;
 
-    [Header("Outline Objects")]
+    [Header("Outline Object")]
     [SerializeField] private Animator outlineAnimator;
-    [Tooltip("Статичный контур")]
-    [SerializeField] private GameObject inactiveOutline;
     [Tooltip("Активная подсветка")]
     [SerializeField] private GameObject activeOutline;
 
@@ -35,7 +33,6 @@ public class HexCell : MonoBehaviour
 
     public string CellId => $"r{row}_c{column}";
 
-    public GameObject InactiveOutline => inactiveOutline;
     public GameObject ActiveOutline => activeOutline;
 
     private static readonly int EnableHash = Animator.StringToHash("Enable");
@@ -113,23 +110,6 @@ public class HexCell : MonoBehaviour
         {
             outlineAnimator.ResetTrigger(EnableHash);
             outlineAnimator.SetTrigger(DisableHash);
-        }
-    }
-
-    private IEnumerator DisableAfterAnimation()
-    {
-        // Ждём фрейм, чтобы Animator успел перейти в Disabled-стейт
-        yield return null;
-
-        // Берём длину текущего клипа (должен быть Disabled)
-        var info = outlineAnimator.GetCurrentAnimatorStateInfo(0);
-        yield return new WaitForSeconds(info.length);
-
-        if (isDisabling)
-        {
-            // Скрываем оба контура сразу по окончании анимации
-            activeOutline?.SetActive(false);
-            inactiveOutline?.SetActive(false);
         }
     }
 

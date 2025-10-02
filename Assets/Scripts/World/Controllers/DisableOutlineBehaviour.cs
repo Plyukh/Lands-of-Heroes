@@ -13,6 +13,5 @@ public class DisableOutlineBehaviour : StateMachineBehaviour
         // ѕо выходу из Disabled стейта полностью скрываем контур
         var cell = animator.GetComponentInParent<HexCell>();
         cell.ActiveOutline?.SetActive(false);
-        cell.InactiveOutline?.SetActive(false);
     }
 }

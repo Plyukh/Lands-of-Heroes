@@ -7,7 +7,6 @@ public class EnableOutlineBehaviour : StateMachineBehaviour
         // Этот скрипт висит на стейте Enabled
         // Включаем active и выключаем inactive
         var cell = animator.GetComponentInParent<HexCell>();
-        cell.InactiveOutline?.SetActive(false);
         cell.ActiveOutline?.SetActive(true);
     }
 }
