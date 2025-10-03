@@ -27,18 +27,27 @@ public class CreatureAnimatorController: MonoBehaviour
             return;
 
         var prefab = attackerCreature.Projectile;
-        if (prefab == null) return;
+        if (prefab == null)
+            return;
 
-        var projObj = Instantiate(prefab,
-                                  projectileSpawnPoint.position,
-                                  projectileSpawnPoint.rotation);
+        var projObj = Instantiate(
+            prefab,
+            projectileSpawnPoint.position,
+            projectileSpawnPoint.rotation);
+
         var proj = projObj.GetComponent<ProjectileController>();
-        if (proj == null) return;
+        if (proj == null)
+            return;
+
+        // 0f Ч в ноги; 0.5f Ч в центр; 1f Ч в голову
+        const float heightNormalized = 1f;
 
         proj.Initialize(
             currentTarget.transform,
+            heightNormalized,
             () => currentTarget.Mover.AnimatorController.PlayImpact());
     }
+
 
     public void HandleAttackHitEvent()
     {
