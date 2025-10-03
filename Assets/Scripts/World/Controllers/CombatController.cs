@@ -8,9 +8,7 @@ using UnityEngine;
 public class CombatController : MonoBehaviour
 {
     [Header("Dependencies")]
-    [Tooltip("Менеджер поиска пути и зоны досягаемости")]
     [SerializeField] private PathfindingManager pathfindingManager;
-    [Tooltip("Контроллер подсветки клеток")]
     [SerializeField] private HighlightController highlightController;
 
     public event Action<Creature> OnCombatComplete;
@@ -22,79 +20,102 @@ public class CombatController : MonoBehaviour
         if (!TurnOrderController.Instance.IsCurrentTurn(attacker))
             return;
 
-        var startCell = attacker.Mover.CurrentCell;
+        var mover = attacker.Mover;
+        var startCell = mover.CurrentCell;
         var targetCell = target.Mover.CurrentCell;
         int speed = attacker.GetStat(CreatureStatusType.Speed);
         var moveType = attacker.MovementType;
 
-        // 1) Дальний бой — сразу запускаем анимацию скрытия через Disable
+        // 1) Дальний бой — гасим всё и атакуем сразу
         if (attacker.AttackType == AttackType.Ranged)
         {
-            highlightController.ClearHighlights();   // ← анимированно гасим
+            highlightController.ClearHighlights();
             await PlayAttackSequence(attacker, target);
             return;
         }
 
-        // 2) Ближний бой: ищем свободные соседи цели
+        // 2) Ближний — собираем соседние свободные
         var neighborCells = pathfindingManager
             .GetReachableCells(targetCell, 1, MovementType.Teleport)
             .Where(c => c.IsWalkable)
             .ToList();
 
-        // если уже рядом — всё то же самое
+        // 2a) Если уже в соседней клетке — сразу в атаку
         if (neighborCells.Contains(startCell))
         {
-            highlightController.ClearHighlights();   // ← анимированно гасим
+            highlightController.ClearHighlights();
             await PlayAttackSequence(attacker, target);
             return;
         }
 
-        // 3) Куда подойти
-        var reachable = pathfindingManager
-            .GetReachableCells(startCell, speed, moveType);
-
+        // 3) Ищем, куда подойти
+        var reachable = pathfindingManager.GetReachableCells(startCell, speed, moveType);
         var candidates = neighborCells.Intersect(reachable).ToList();
         if (candidates.Count == 0)
             return;
 
+        // Выбираем ближайшую к startCell
         var attackPos = candidates
             .OrderBy(c => Vector3.Distance(startCell.transform.position, c.transform.position))
             .First();
 
-        // 4) Прежде чем двигаться — гасим все outline через анимацию Disable
-        highlightController.ClearHighlights();       // ← именно это
-
-        // 5) Двигаемся
         bool moved = false;
+
+        // 4) Логика перемещения с подсветкой
         if (moveType == MovementType.Teleport)
-            moved = await attacker.Mover.TeleportToCell(attackPos);
+        {
+            // для телепорта: сразу гасим всё, подсвечиваем только цель
+            highlightController.HighlightTeleportTarget(attackPos);
+
+            moved = await mover.TeleportToCell(attackPos);
+
+            if (moved)
+            {
+                // гасим её контур
+                attackPos.ShowHighlight(false);
+            }
+        }
         else
         {
+            // строим путь
             var path = pathfindingManager.FindPath(startCell, attackPos, moveType);
-            if (path != null && path.Count > 0)
-                moved = await attacker.Mover.MoveAlongPath(path);
+            if (path == null || path.Count == 0)
+                return;
+
+            // подсвечиваем весь маршрут
+            highlightController.HighlightPath(path);
+
+            // поэтапно гася контур через событие
+            void OnStep(HexCell cell) => cell.ShowHighlight(false);
+            mover.OnCellEntered += OnStep;
+
+            moved = await mover.MoveAlongPath(path);
+
+            mover.OnCellEntered -= OnStep;
         }
 
         if (!moved)
             return;
 
-        // 6) Обновляем occupants
+        // 5) Переносим Occupant и собираемся в атаку
         startCell.RemoveOccupant(attacker.gameObject);
         attackPos.AddOccupant(attacker.gameObject, CellObjectType.Creature);
 
-        // ни одной новой подсветки — сразу в атаку
+        // 6) Убираем остатки подсветки перед атакой
+        highlightController.ClearHighlights();
+
+        // 7) Запускаем анимацию атаки
         await PlayAttackSequence(attacker, target);
     }
 
 
     private async Task PlayAttackSequence(Creature attacker, Creature target)
     {
-        var mover = attacker.Mover;
-        var anim = mover.AnimatorController;
+        var anim = attacker.Mover.AnimatorController;
         var hitTcs = new TaskCompletionSource<bool>();
         bool isRanged = attacker.AttackType == AttackType.Ranged;
 
-        await mover.RotateTowardsAsync(target.transform.position);
+        await attacker.Mover.RotateTowardsAsync(target.transform.position);
         anim.SetAttackTarget(target, attacker);
 
         Action onHit = null;
