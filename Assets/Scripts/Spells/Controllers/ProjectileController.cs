@@ -44,4 +44,3 @@ public class ProjectileController : MonoBehaviour
         Destroy(gameObject);
     }
 }
-
