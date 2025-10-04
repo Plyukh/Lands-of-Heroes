@@ -20,6 +20,7 @@ MonoBehaviour:
   attackType: 1
   movementType: 1
   prefab: {fileID: 8932558488307953852, guid: 7394aa04aa6d0d64d8e3f66a96e8d0b4, type: 3}
+  persistInPlayerData: 1
   statsPerLevel:
   - level: 1
     attack: 7
@@ -30,7 +31,7 @@ MonoBehaviour:
     speed: 5
     stackSize: 7
     shots: 20
-    projectilePrefab: {fileID: 0}
+    projectilePrefab: {fileID: 589733385956052986, guid: 0e130c6fe200a0b4d836f7403ccf4587, type: 3}
     texture: {fileID: 2800000, guid: d251d0770a00e52488bc0600f1c766d1, type: 3}
     visualizations:
     - type: 0
@@ -44,7 +45,7 @@ MonoBehaviour:
     speed: 5
     stackSize: 7
     shots: 20
-    projectilePrefab: {fileID: 0}
+    projectilePrefab: {fileID: 589733385956052986, guid: 0e130c6fe200a0b4d836f7403ccf4587, type: 3}
     texture: {fileID: 2800000, guid: 9f1d097818c336140a188213614a5801, type: 3}
     visualizations:
     - type: 0
@@ -58,7 +59,7 @@ MonoBehaviour:
     speed: 6
     stackSize: 7
     shots: 20
-    projectilePrefab: {fileID: 0}
+    projectilePrefab: {fileID: 589733385956052986, guid: 0e130c6fe200a0b4d836f7403ccf4587, type: 3}
     texture: {fileID: 2800000, guid: e9cb66a193aab314dab845ab4b3f0b31, type: 3}
     visualizations:
     - type: 0
@@ -72,7 +73,7 @@ MonoBehaviour:
     speed: 6
     stackSize: 7
     shots: 20
-    projectilePrefab: {fileID: 0}
+    projectilePrefab: {fileID: 589733385956052986, guid: 0e130c6fe200a0b4d836f7403ccf4587, type: 3}
     texture: {fileID: 2800000, guid: fa56b2892c1cc864cafe7314a562eb28, type: 3}
     visualizations:
     - type: 0
@@ -86,7 +87,7 @@ MonoBehaviour:
     speed: 6
     stackSize: 7
     shots: 20
-    projectilePrefab: {fileID: 0}
+    projectilePrefab: {fileID: 589733385956052986, guid: 194482e07d0f5834aadc11ab4595cd49, type: 3}
     texture: {fileID: 2800000, guid: fa56b2892c1cc864cafe7314a562eb28, type: 3}
     visualizations:
     - type: 0
@@ -100,7 +101,7 @@ MonoBehaviour:
     speed: 6
     stackSize: 7
     shots: 20
-    projectilePrefab: {fileID: 0}
+    projectilePrefab: {fileID: 589733385956052986, guid: 194482e07d0f5834aadc11ab4595cd49, type: 3}
     texture: {fileID: 2800000, guid: 2e889c793cb66fc4b9b918918cd6cf52, type: 3}
     visualizations:
     - type: 0
@@ -114,7 +115,7 @@ MonoBehaviour:
     speed: 7
     stackSize: 7
     shots: 20
-    projectilePrefab: {fileID: 0}
+    projectilePrefab: {fileID: 589733385956052986, guid: 194482e07d0f5834aadc11ab4595cd49, type: 3}
     texture: {fileID: 2800000, guid: 6d003d3e46f8ff247806c0220eac7d8f, type: 3}
     visualizations:
     - type: 0
@@ -128,7 +129,7 @@ MonoBehaviour:
     speed: 7
     stackSize: 7
     shots: 20
-    projectilePrefab: {fileID: 0}
+    projectilePrefab: {fileID: 589733385956052986, guid: 194482e07d0f5834aadc11ab4595cd49, type: 3}
     texture: {fileID: 2800000, guid: 54331139955042e4fa9aaae9c2c95b0b, type: 3}
     visualizations:
     - type: 0
@@ -142,7 +143,7 @@ MonoBehaviour:
     speed: 7
     stackSize: 7
     shots: 20
-    projectilePrefab: {fileID: 0}
+    projectilePrefab: {fileID: 589733385956052986, guid: 194482e07d0f5834aadc11ab4595cd49, type: 3}
     texture: {fileID: 2800000, guid: 70c4baddaf066a64dbd47620ac273774, type: 3}
     visualizations:
     - type: 0
@@ -156,7 +157,7 @@ MonoBehaviour:
     speed: 7
     stackSize: 7
     shots: 20
-    projectilePrefab: {fileID: 0}
+    projectilePrefab: {fileID: 589733385956052986, guid: 40d008eaa847f70469007a2b545a8233, type: 3}
     texture: {fileID: 2800000, guid: 70c4baddaf066a64dbd47620ac273774, type: 3}
     visualizations:
     - type: 0
