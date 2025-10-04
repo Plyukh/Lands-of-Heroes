@@ -126,6 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7.5
+  impactEffectPrefab: {fileID: 4897697124242156510, guid: 066c596f7b0ae484b959d2b8f424f592, type: 3}
 --- !u!95 &3734694937487287867
 Animator:
   serializedVersion: 7
