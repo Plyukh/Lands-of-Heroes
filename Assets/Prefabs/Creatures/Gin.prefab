@@ -31755,6 +31755,7 @@ MonoBehaviour:
       - {fileID: 1604615018689473706}
   CreatureData: {fileID: 11400000, guid: 89f9c18b28eaab6438449b12297c9929, type: 2}
   lvl: 0
+  targetSide: 2
 --- !u!114 &4912664606730468202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31781,7 +31782,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7685c31ca14ae344bb8f943b9bedc848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animatorController: {fileID: 0}
+  animatorController: {fileID: 4912664606730468202}
   moveSpeed: 3
   stopThreshold: 0
   rotationSpeed: 720
@@ -31805,8 +31806,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.4
-  m_Height: 1
+  m_Radius: 0.35
+  m_Height: 0.5
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5230456623766478060

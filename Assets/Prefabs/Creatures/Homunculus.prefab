@@ -588,6 +588,7 @@ MonoBehaviour:
   visualGroups: []
   CreatureData: {fileID: 11400000, guid: 815d3bfe3192500479211700b103a4b7, type: 2}
   lvl: 0
+  targetSide: 2
 --- !u!114 &3169550239644812196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -638,8 +639,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.4
-  m_Height: 1
+  m_Radius: 0.35
+  m_Height: 0.5
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1672247883225286688

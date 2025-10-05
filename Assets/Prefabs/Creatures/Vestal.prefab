@@ -17405,6 +17405,7 @@ MonoBehaviour:
       - {fileID: 5872907578112557656}
   CreatureData: {fileID: 11400000, guid: e56c250a29447cb448869608a484058a, type: 2}
   lvl: 0
+  targetSide: 2
 --- !u!114 &-5845362713565013096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17432,7 +17433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animatorController: {fileID: -5845362713565013096}
-  moveSpeed: 2
+  moveSpeed: 1
   stopThreshold: 0
   rotationSpeed: 360
   currentCell: {fileID: 0}
@@ -17455,8 +17456,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.4
-  m_Height: 1
+  m_Radius: 0.35
+  m_Height: 0.5
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6620911477270408257
