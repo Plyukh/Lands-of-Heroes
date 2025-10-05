@@ -24,12 +24,6 @@ public class BattlefieldController : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        // Подготовка поля перед первым ходом
-        initializerManager.InitializeField();
-    }
-
     public void OnCellClicked(HexCell cell)
     {
         var active = TurnOrderController.Instance.CurrentCreature;
