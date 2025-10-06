@@ -13,7 +13,8 @@ public class ProjectileController : MonoBehaviour
     [SerializeField] private GameObject impactEffectPrefab;
 
     private Transform target;
-    private Action onHitCallback;
+    private Action onHitCallback;         // эффект у цели, например PlayImpact
+    private Action onCompleteCallback;    // завершающий хук, например уведомить атакующего
     private Vector3 aimPosition;
     private bool useDynamicAim;
     private float heightNormalized;
@@ -21,22 +22,24 @@ public class ProjectileController : MonoBehaviour
     /// <summary>
     /// »нициализирует с жЄсткой мировой точкой попадани€.
     /// </summary>
-    public void Initialize(Vector3 worldAimPos, Action onHit)
+    public void Initialize(Vector3 worldAimPos, Action onHit, Action onComplete = null)
     {
         this.target = null;
         this.useDynamicAim = false;
         this.aimPosition = worldAimPos;
         this.onHitCallback = onHit;
+        this.onCompleteCallback = onComplete;
     }
 
     /// <summary>
     /// »нициализирует с Transform цели и Y-смещением:
     /// heightNormalized в диапазоне [0,1] (0 Ч ноги, 0.5 Ч центр, 1 Ч голова).
     /// </summary>
-    public void Initialize(Transform target, float heightNormalized, Action onHit)
+    public void Initialize(Transform target, float heightNormalized, Action onHit, Action onComplete = null)
     {
         this.target = target;
         this.onHitCallback = onHit;
+        this.onCompleteCallback = onComplete;
         this.useDynamicAim = true;
         this.heightNormalized = Mathf.Clamp01(heightNormalized);
 
@@ -71,13 +74,13 @@ public class ProjectileController : MonoBehaviour
     /// </summary>
     private void UpdateAimPosition()
     {
-        if (target.TryGetComponent<Collider>(out var col))
+        if (target != null && target.TryGetComponent<Collider>(out var col))
         {
             var bounds = col.bounds;
             float y = Mathf.Lerp(bounds.min.y, bounds.max.y, heightNormalized);
             aimPosition = new Vector3(bounds.center.x, y, bounds.center.z);
         }
-        else
+        else if (target != null)
         {
             // fallback: центр + смещение по высоте
             aimPosition = target.position + Vector3.up * heightNormalized;
@@ -86,14 +89,19 @@ public class ProjectileController : MonoBehaviour
 
     private void HitTarget()
     {
-        // 1) —павним опциональный эффект попадани€
+        // 1) —павним опциональный эффект попадани€ (до callback'ов или после Ч по желанию)
         if (impactEffectPrefab != null)
             Instantiate(impactEffectPrefab, transform.position, Quaternion.identity);
 
-        // 2) ¬ызываем callback (например, PlayImpact)
-        onHitCallback?.Invoke();
+        // 2) ѕервый callback: эффект у цели (например, PlayImpact)
+        try { onHitCallback?.Invoke(); }
+        catch (Exception ex) { Debug.LogException(ex); }
 
-        // 3) ”дал€ем снар€д
+        // 3) ¬торой callback: завершающий хук (например, уведомить аниматор атакующего -> он вызовет OnAttackHit)
+        try { onCompleteCallback?.Invoke(); }
+        catch (Exception ex) { Debug.LogException(ex); }
+
+        // 4) ”дал€ем снар€д
         Destroy(gameObject);
     }
 }

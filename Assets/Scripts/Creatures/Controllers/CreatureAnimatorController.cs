@@ -42,12 +42,15 @@ public class CreatureAnimatorController: MonoBehaviour
         // 0f Ч в ноги; 0.5f Ч в центр; 1f Ч в голову
         const float heightNormalized = 1f;
 
-        proj.Initialize(
-            currentTarget.transform,
-            heightNormalized,
-            () => currentTarget.Mover.AnimatorController.PlayImpact());
-    }
+        // ѕервый callback Ч эффект у цели.
+        Action onHit = () => currentTarget?.Mover?.AnimatorController?.PlayImpact();
 
+        // ¬торой callback Ч уведомление о завершении попадани€,
+        // чтобы атакующее существо получило событие OnAttackHit и ход завершилс€.
+        Action onComplete = () => attackerCreature?.Mover?.AnimatorController?.HandleAttackHit();
+
+        proj.Initialize(currentTarget.transform, heightNormalized, onHit, onComplete);
+    }
 
     public void HandleAttackHitEvent()
     {

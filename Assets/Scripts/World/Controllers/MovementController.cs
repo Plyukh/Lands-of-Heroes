@@ -22,6 +22,12 @@ public class MovementController : MonoBehaviour
         var mover = creature.Mover;
         var startCell = mover.CurrentCell;
         var moveType = creature.MovementType;
+        int speed = creature.GetStat(CreatureStatusType.Speed);
+
+        // Проверяем, находится ли targetCell в зоне досягаемости
+        var reachable = pathfindingManager.GetReachableCells(startCell, speed, moveType);
+        if (!reachable.Contains(targetCell))
+            return; // цель вне досягаемости — игнорируем клик
 
         if (moveType == MovementType.Teleport)
         {
