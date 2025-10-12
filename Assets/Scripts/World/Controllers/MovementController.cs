@@ -29,6 +29,7 @@ public class MovementController : MonoBehaviour
         int speed = creature.GetStat(CreatureStatusType.Speed);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         // 1) Получаем зону досягаемости
         var reachable = pathfindingManager.GetReachableCells(startCell, speed, moveType);
         if (!reachable.Contains(targetCell))
@@ -87,6 +88,26 @@ public class MovementController : MonoBehaviour
                 // 3) Сразу гасим и её
                 targetCell.ShowHighlight(false);
 
+=======
+        // Проверяем, находится ли targetCell в зоне досягаемости
+        var reachable = pathfindingManager.GetReachableCells(startCell, speed, moveType);
+        if (!reachable.Contains(targetCell))
+            return; // цель вне досягаемости — игнорируем клик
+
+        if (moveType == MovementType.Teleport)
+        {
+            // 1) Сразу гасим все подсветки и включаем только цель
+            highlightController.HighlightTeleportTarget(targetCell);
+
+            // 2) Телепорт
+            bool teleported = await mover.TeleportToCell(targetCell);
+
+            if (teleported)
+            {
+                // 3) Сразу гасим и её
+                targetCell.ShowHighlight(false);
+
+>>>>>>> parent of 5c41c94 (Fixed movement bug)
                 // 4) Обновляем Occupant и завершаем ход
                 startCell.RemoveOccupant(creature.gameObject);
                 targetCell.AddOccupant(creature.gameObject, CellObjectType.Creature);
@@ -105,6 +126,12 @@ public class MovementController : MonoBehaviour
         mover.OnCellEntered += OnStep;
 
         bool moved = await mover.MoveAlongPath(fullPath);
+<<<<<<< HEAD
+=======
+
+        mover.OnCellEntered -= OnStep;
+        if (!moved) return;
+>>>>>>> parent of 5c41c94 (Fixed movement bug)
 
         mover.OnCellEntered -= OnStep;
         if (!moved) return;
