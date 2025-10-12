@@ -1,123 +1,89 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-[DisallowMultipleComponent]
 public class HexCell : MonoBehaviour
 {
     [Header("Grid Position")]
-    [Tooltip("Row index in the grid")]
     public int row;
-    [Tooltip("Column index in the grid")]
     public int column;
 
-    [Header("Cell State")]
-    [Tooltip("Можно ли ходить по этой клетке; обновляется автоматически при изменении occupants")]
+    [Header("Walkability")]
     [SerializeField] private bool isWalkable = true;
     public bool IsWalkable => isWalkable;
 
     [Header("Occupants")]
-    [Tooltip("Список объектов, стоящих на этой клетке")]
     [SerializeField] private List<CellOccupant> occupants = new List<CellOccupant>();
-    public IReadOnlyList<CellOccupant> Occupants => occupants;
-
-    [Header("Outline Object")]
-    [SerializeField] private Animator outlineAnimator;
-    [Tooltip("Активная подсветка")]
-    [SerializeField] private GameObject activeOutline;
 
     [Header("Visual")]
-    [Tooltip("Renderer для изменения материала клетки")]
     [SerializeField] private Renderer cellRenderer;
 
-    public string CellId => $"r{row}_c{column}";
+    [Header("Outlines & Animator")]
+    [SerializeField] private Animator outlineAnimator;
+    [SerializeField] private GameObject inactiveHexOutline;
+    [SerializeField] private GameObject activeHexOutline;
+    [SerializeField] private GameObject previewHexOutline;
 
-    public GameObject ActiveOutline => activeOutline;
+    private static readonly CellObjectType[] blockingTypes =
+        { CellObjectType.Creature, CellObjectType.Obstacle, CellObjectType.ForceField };
 
     private static readonly int EnableHash = Animator.StringToHash("Enable");
     private static readonly int DisableHash = Animator.StringToHash("Disable");
-    private bool isDisabling;
 
-    public void SetMaterial(Material mat)
+    public string CellId => $"r{row}_c{column}";
+
+    private static readonly int TrigEnable = Animator.StringToHash("Enable");
+    private static readonly int TrigDisable = Animator.StringToHash("Disable");
+
+    // теперь public
+    public void RefreshWalkable()
     {
-        if (cellRenderer != null && mat != null)
-            cellRenderer.material = mat;
+        isWalkable = !occupants.Any(o => blockingTypes.Contains(o.type));
     }
 
-    public void AddOccupant(GameObject instance, CellObjectType type)
+    public void AddOccupant(GameObject go, CellObjectType type)
     {
-        if (instance == null || type == CellObjectType.None)
-            return;
+        if (go == null || type == CellObjectType.None) return;
+        if (occupants.Any(o => o.instance == go)) return;
 
-        if (occupants.Any(o => o.instance == instance))
-            return;
+        go.transform.SetParent(transform, false);
+        go.transform.position = transform.position;
+        occupants.Add(new CellOccupant { instance = go, type = type });
 
-        instance.transform.SetParent(transform, false);
-        instance.transform.position = transform.position;
-
-        occupants.Add(new CellOccupant
-        {
-            instance = instance,
-            type = type
-        });
-
-        if (type == CellObjectType.Creature || type == CellObjectType.Obstacle)
+        if (blockingTypes.Contains(type))
             RefreshWalkable();
     }
 
-    public void RemoveOccupant(GameObject instance)
+    public void RemoveOccupant(GameObject go)
     {
-        var occ = occupants.FirstOrDefault(o => o.instance == instance);
-        if (occ == null)
-            return;
+        var occ = occupants.FirstOrDefault(o => o.instance == go);
+        if (occ == null) return;
 
         occupants.Remove(occ);
         RefreshWalkable();
     }
 
-    public void ClearAllOccupants()
+    public void SetOutlineState(OutlineState state)
     {
-        occupants.Clear();
-        RefreshWalkable();
-    }
+        // Сбрасываем все ожидающие триггеры
+        outlineAnimator.ResetTrigger(TrigEnable);
+        outlineAnimator.ResetTrigger(TrigDisable);
 
-    public void RefreshWalkable()
-    {
-        var blocking = new[]
+        // Устанавливаем нужный триггер
+        switch (state)
         {
-            CellObjectType.Creature,
-            CellObjectType.Obstacle,
-            CellObjectType.ForceField
-        };
-
-        isWalkable = !occupants.Any(o => blocking.Contains(o.type));
-    }
-
-    public void ShowHighlight(bool highlight)
-    {
-        // Игнорируем попытку включить там, где не проходимо
-        if (highlight && !IsWalkable)
-            return;
-
-        // Сбрасываем противоположный триггер и ставим нужный
-        if (highlight)
-        {
-            outlineAnimator.ResetTrigger(DisableHash);
-            outlineAnimator.SetTrigger(EnableHash);
-        }
-        else
-        {
-            outlineAnimator.ResetTrigger(EnableHash);
-            outlineAnimator.SetTrigger(DisableHash);
+            case OutlineState.Active:
+                outlineAnimator.SetTrigger(TrigEnable);
+                break;
+            case OutlineState.Inactive:
+                outlineAnimator.SetTrigger(TrigDisable);
+                break;
         }
     }
 
-    public void ResetHighlight()
+    public void SetCellMaterial(Material mat)
     {
-        outlineAnimator.ResetTrigger(EnableHash);
-        outlineAnimator.ResetTrigger(DisableHash);
-        // При помощи StateMachineBehaviour или AnimationEvent сразу спрячем
-        // activeOutline и inactiveOutline (ниже).
+        if (cellRenderer != null && mat != null)
+            cellRenderer.material = mat;
     }
 }

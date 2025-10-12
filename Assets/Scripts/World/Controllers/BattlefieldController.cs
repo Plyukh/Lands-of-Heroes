@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 [DisallowMultipleComponent]
@@ -7,7 +8,7 @@ public class BattlefieldController : MonoBehaviour
     [Tooltip("Обрабатывает логику перемещения")]
     [SerializeField] private MovementController movementController;
 
-    [Tooltip("Обрабатывает логику боя")]
+    [Tooltip("Обрабатывает логику боя (движение + атака)")]
     [SerializeField] private CombatController combatController;
 
     [Tooltip("Инициализирует поле (фракции, препятствия, декор, начальную подсветку)")]
@@ -15,7 +16,6 @@ public class BattlefieldController : MonoBehaviour
 
     private void Awake()
     {
-        // Валидация обязательных зависимостей
         if (movementController == null ||
             combatController == null ||
             initializerManager == null)
@@ -29,8 +29,6 @@ public class BattlefieldController : MonoBehaviour
         var active = TurnOrderController.Instance.CurrentCreature;
         if (active == null || cell == null)
             return;
-
-        // Блокируем ходы не по очереди
         if (!TurnOrderController.Instance.IsCurrentTurn(active))
             return;
 
@@ -39,14 +37,27 @@ public class BattlefieldController : MonoBehaviour
 
     public void OnCreatureClicked(Creature target)
     {
-        var active = TurnOrderController.Instance.CurrentCreature;
-        if (active == null || target == null || active == target)
+        var attacker = TurnOrderController.Instance.CurrentCreature;
+        if (attacker == null || target == null || attacker == target)
+            return;
+        if (!TurnOrderController.Instance.IsCurrentTurn(attacker))
             return;
 
-        // Блокируем ходы не по очереди
-        if (!TurnOrderController.Instance.IsCurrentTurn(active))
-            return;
-
-        combatController.OnCreatureClicked(active, target);
+        if (attacker.AttackType == AttackType.Ranged)
+        {
+            // Немедленная атака по цели без движения
+            StartCoroutine(RangedAttackCoroutine(attacker, target));
+        }
+        // else — melee-атака обрабатывается DragAttackInputController
+    }
+    private IEnumerator RangedAttackCoroutine(Creature attacker, Creature target)
+    {
+        // Для ranged ExecuteCombat проигнорирует перемещение и сразу вызовет PlayAttackSequence
+        var task = combatController.ExecuteCombat(
+            attacker,
+            target,
+            attacker.Mover.CurrentCell   // attackCell не важна для ranged
+        );
+        yield return new WaitUntil(() => task.IsCompleted);
     }
 }
