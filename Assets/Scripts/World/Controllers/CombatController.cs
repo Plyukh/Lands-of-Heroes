@@ -29,7 +29,11 @@ public class CombatController : MonoBehaviour
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         // дальний бой — без перемещения
+=======
+        // 1) Дальний бой — гасим всё и атакуем сразу
+>>>>>>> parent of 5c41c94 (Fixed movement bug)
 =======
         // 1) Дальний бой — гасим всё и атакуем сразу
 >>>>>>> parent of 5c41c94 (Fixed movement bug)
@@ -44,10 +48,13 @@ public class CombatController : MonoBehaviour
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         // проверяем, что выбранная melee-клетка допустима
         int speed = attacker.GetStat(CreatureStatusType.Speed);
         var moveType = attacker.MovementType;
 =======
+=======
+>>>>>>> parent of 5c41c94 (Fixed movement bug)
 =======
 >>>>>>> parent of 5c41c94 (Fixed movement bug)
         // 2) Ближний — собираем соседние свободные
@@ -66,6 +73,9 @@ public class CombatController : MonoBehaviour
 
         // 3) Ищем, куда подойти
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 5c41c94 (Fixed movement bug)
+=======
 >>>>>>> parent of 5c41c94 (Fixed movement bug)
 =======
 >>>>>>> parent of 5c41c94 (Fixed movement bug)
@@ -73,6 +83,7 @@ public class CombatController : MonoBehaviour
         if (!reachable.Contains(attackCell) || !attackCell.IsWalkable)
             return;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         // находим маршрут
@@ -89,6 +100,8 @@ public class CombatController : MonoBehaviour
         // возвращаем к активному материалу
         highlightController.ResetPreview();
 =======
+=======
+>>>>>>> parent of 5c41c94 (Fixed movement bug)
 =======
 >>>>>>> parent of 5c41c94 (Fixed movement bug)
         // Выбираем ближайшую к startCell
@@ -137,7 +150,11 @@ public class CombatController : MonoBehaviour
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         // обновляем Occupant
+=======
+        // 5) Переносим Occupant и собираемся в атаку
+>>>>>>> parent of 5c41c94 (Fixed movement bug)
 =======
         // 5) Переносим Occupant и собираемся в атаку
 >>>>>>> parent of 5c41c94 (Fixed movement bug)
@@ -147,6 +164,7 @@ public class CombatController : MonoBehaviour
         startCell.RemoveOccupant(attacker.gameObject);
         attackCell.AddOccupant(attacker.gameObject, CellObjectType.Creature);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         // атака
@@ -162,6 +180,15 @@ public class CombatController : MonoBehaviour
         await PlayAttackSequence(attacker, target);
     }
 
+=======
+        // 6) Убираем остатки подсветки перед атакой
+        highlightController.ClearHighlights();
+
+        // 7) Запускаем анимацию атаки
+        await PlayAttackSequence(attacker, target);
+    }
+
+>>>>>>> parent of 5c41c94 (Fixed movement bug)
 =======
         // 6) Убираем остатки подсветки перед атакой
         highlightController.ClearHighlights();
