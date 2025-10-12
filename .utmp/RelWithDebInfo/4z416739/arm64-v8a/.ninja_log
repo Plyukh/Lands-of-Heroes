@@ -1,0 +1,12 @@
+# ninja log v5
+73	520	7819929477227094	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	b214938d28de43dd
+522	698	7819929479057349	D:/Unity/Lands of Heroes/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/4z416739/obj/arm64-v8a/libswappywrapper.so	6f0f08e85809753d
+45	1856	7819929490505483	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	ac49549b6194e7b4
+30	1875	7819929490716139	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	1e765b679d0e6b3c
+21	1899	7819929490970192	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	499dac6b0112a7c8
+54	1913	7819929491106997	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	ee2d152da3617c5
+13	1966	7819929491654880	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	7667cc6b5e52b4d6
+63	2173	7819929493771348	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	4bf78fdeaf55475f
+38	2220	7819929494241783	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	d4920f70d5441dab
+1	2294	7819929495009743	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	6399b8828e892c95
+2294	2388	7819929495992179	D:/Unity/Lands of Heroes/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/4z416739/obj/arm64-v8a/libgame.so	b4a60e5fad8d43cb
