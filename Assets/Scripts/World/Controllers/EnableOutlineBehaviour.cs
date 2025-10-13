@@ -1,12 +1,17 @@
 using UnityEngine;
 
+/// <summary>
+/// StateMachineBehaviour для состояния «Enabled» в аниматоре.
+/// При входе в стейт включает Active-обводку.
+/// </summary>
 public class EnableOutlineBehaviour : StateMachineBehaviour
 {
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        // Этот скрипт висит на стейте Enabled
-        // Включаем active и выключаем inactive
         var cell = animator.GetComponentInParent<HexCell>();
-        cell.ActiveOutline?.SetActive(true);
+        if (cell != null)
+        {
+            cell.SetOutlineState(OutlineState.Active);
+        }
     }
 }

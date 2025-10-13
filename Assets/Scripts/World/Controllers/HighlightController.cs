@@ -1,52 +1,82 @@
 using System.Collections.Generic;
+using System.Linq;
+using UnityEditor.VersionControl;
 using UnityEngine;
 
 [DisallowMultipleComponent]
 public class HighlightController : MonoBehaviour
 {
-    [Header("Dependencies")]
-    [Tooltip("Менеджер сетки для доступа ко всем HexCell")]
+    [Header("Grid Reference")]
     [SerializeField] private HexGridManager gridManager;
 
-    public void ClearHighlights()
+    // Клетки, окрашенные как active
+    private HashSet<HexCell> activeCells = new HashSet<HexCell>();
+
+    /// <summary>
+    /// Подсвечивает зону досягаемости активным Outline,
+    /// все остальные переводит в Inactive.
+    /// </summary>
+    public void HighlightReachable(IEnumerable<HexCell> reachable, HexCell startCell)
     {
+        activeCells.Clear();
+
         foreach (var cell in gridManager.Cells)
         {
-            cell.ShowHighlight(false);
+            bool isActive = cell != startCell && reachable.Contains(cell);
+            cell.SetOutlineState(isActive
+                ? OutlineState.Active
+                : OutlineState.Inactive);
+
+            if (isActive)
+                activeCells.Add(cell);
         }
     }
 
-    public void ClearHighlightsImmediate()
+    /// <summary>
+    /// Накладывает Preview-обводку на клетки пути,
+    /// не трогая остальных: activeCells останутся Active,
+    /// все прочие — Inactive.
+    /// </summary>
+    public void PreviewPath(IReadOnlyList<HexCell> path)
     {
         foreach (var cell in gridManager.Cells)
-            cell.ShowHighlight(false);   // сразу выключаем активные outlines
-    }
-
-    public void HighlightReachable(IEnumerable<HexCell> reachable, HexCell startCell)
-    {
-        foreach (var cell in reachable)
         {
-            if (cell != startCell && cell.IsWalkable)
+            if (path.Contains(cell))
             {
-                cell.ShowHighlight(true);
+                cell.SetOutlineState(OutlineState.Preview);
+            }
+            else if (activeCells.Contains(cell))
+            {
+                cell.SetOutlineState(OutlineState.Active);
+            }
+            else
+            {
+                cell.SetOutlineState(OutlineState.Inactive);
             }
         }
     }
 
-    public void HighlightPath(IReadOnlyList<HexCell> path)
+    /// <summary>
+    /// Отменяет превью, возвращая всем activeCells состояние Active,
+    /// остальным — Inactive.
+    /// </summary>
+    public void ResetPreview()
     {
-        // 1) Гасим _анимацией_ все контуры
-        ClearHighlights();
-
-        // 2) Включаем _анимацией_ только клетки маршрута
-        foreach (var cell in path)
-            cell.ShowHighlight(true);
+        foreach (var cell in gridManager.Cells)
+        {
+            cell.SetOutlineState(activeCells.Contains(cell)
+                ? OutlineState.Active
+                : OutlineState.Inactive);
+        }
     }
 
-    public void HighlightTeleportTarget(HexCell target)
+    /// <summary>
+    /// Полностью сбрасывает все обводки в Inactive.
+    /// </summary>
+    public void ClearHighlights()
     {
-        ClearHighlightsImmediate();    // мгновенно выключить все
-        target.ShowHighlight(true);    // включить только эту
-
+        activeCells.Clear();
+        foreach (var cell in gridManager.Cells)
+            cell.SetOutlineState(OutlineState.Inactive);
     }
 }

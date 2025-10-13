@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using UnityEngine;
 
@@ -13,7 +12,12 @@ public class CombatController : MonoBehaviour
 
     public event Action<Creature> OnCombatComplete;
 
-    public async void OnCreatureClicked(Creature attacker, Creature target)
+    /// <summary>
+    /// Запускает полный цикл: (move → attack) для melee, или сразу (attack) для ranged.
+    /// Путь и зона остаются подсвеченными активным материалом, а маршрут
+    /// превью подкрашивается previewMaterial.
+    /// </summary>
+    public async Task ExecuteCombat(Creature attacker, Creature target, HexCell attackCell)
     {
         if (attacker == null || target == null || attacker == target)
             return;
@@ -22,25 +26,51 @@ public class CombatController : MonoBehaviour
 
         var mover = attacker.Mover;
         var startCell = mover.CurrentCell;
-        var targetCell = target.Mover.CurrentCell;
-        int speed = attacker.GetStat(CreatureStatusType.Speed);
-        var moveType = attacker.MovementType;
 
-        // 1) Дальний бой — сразу атакуем
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        // дальний бой — без перемещения
+=======
+        // 1) Дальний бой — гасим всё и атакуем сразу
+>>>>>>> parent of 5c41c94 (Fixed movement bug)
+=======
+        // 1) Дальний бой — гасим всё и атакуем сразу
+>>>>>>> parent of 5c41c94 (Fixed movement bug)
+=======
+        // 1) Дальний бой — гасим всё и атакуем сразу
+>>>>>>> parent of 5c41c94 (Fixed movement bug)
+=======
+        // 1) Дальний бой — гасим всё и атакуем сразу
+>>>>>>> parent of 5c41c94 (Fixed movement bug)
         if (attacker.AttackType == AttackType.Ranged)
         {
-            highlightController.ClearHighlights();
             await PlayAttackSequence(attacker, target);
             return;
         }
 
-        // 2) Ближний бой — ищем свободные соседние клетки у цели
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        // проверяем, что выбранная melee-клетка допустима
+        int speed = attacker.GetStat(CreatureStatusType.Speed);
+        var moveType = attacker.MovementType;
+=======
+=======
+>>>>>>> parent of 5c41c94 (Fixed movement bug)
+=======
+>>>>>>> parent of 5c41c94 (Fixed movement bug)
+=======
+>>>>>>> parent of 5c41c94 (Fixed movement bug)
+        // 2) Ближний — собираем соседние свободные
         var neighborCells = pathfindingManager
             .GetReachableCells(targetCell, 1, MovementType.Teleport)
             .Where(c => c.IsWalkable)
             .ToList();
 
-        // 2a) Если уже в соседней клетке — сразу атакуем
+        // 2a) Если уже в соседней клетке — сразу в атаку
         if (neighborCells.Contains(startCell))
         {
             highlightController.ClearHighlights();
@@ -48,60 +78,156 @@ public class CombatController : MonoBehaviour
             return;
         }
 
-        // 3) Находим пересечение reachable и свободных соседних клеток
+        // 3) Ищем, куда подойти
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 5c41c94 (Fixed movement bug)
+=======
+>>>>>>> parent of 5c41c94 (Fixed movement bug)
+=======
+>>>>>>> parent of 5c41c94 (Fixed movement bug)
+=======
+>>>>>>> parent of 5c41c94 (Fixed movement bug)
         var reachable = pathfindingManager.GetReachableCells(startCell, speed, moveType);
-        var candidates = neighborCells.Intersect(reachable).ToList();
-        if (candidates.Count == 0)
+        if (!reachable.Contains(attackCell) || !attackCell.IsWalkable)
             return;
 
-        // 4) Выбираем ближайшую к стартовой клетку
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        // находим маршрут
+        var path = pathfindingManager.FindPath(startCell, attackCell, moveType);
+        if (path == null || path.Count == 0)
+            return;
+
+        // показываем превью маршрута поверх активной зоны
+        highlightController.PreviewPath(path);
+
+        // выполняем движение
+        bool moved = await mover.MoveAlongPath(path);
+
+        // возвращаем к активному материалу
+        highlightController.ResetPreview();
+=======
+=======
+>>>>>>> parent of 5c41c94 (Fixed movement bug)
+=======
+>>>>>>> parent of 5c41c94 (Fixed movement bug)
+=======
+>>>>>>> parent of 5c41c94 (Fixed movement bug)
+        // Выбираем ближайшую к startCell
         var attackPos = candidates
             .OrderBy(c => Vector3.Distance(startCell.transform.position, c.transform.position))
             .First();
 
-        // 5) Запрещаем телепорт/полёт на занятую клетку
-        if ((moveType == MovementType.Teleport || moveType == MovementType.Flying)
-            && !attackPos.IsWalkable)
-        {
-            return;
-        }
-
         bool moved = false;
 
-        // 6) Логика перемещения
+        // 4) Логика перемещения с подсветкой
         if (moveType == MovementType.Teleport)
         {
+            // для телепорта: сразу гасим всё, подсвечиваем только цель
             highlightController.HighlightTeleportTarget(attackPos);
+
             moved = await mover.TeleportToCell(attackPos);
+
             if (moved)
+            {
+                // гасим её контур
                 attackPos.ShowHighlight(false);
+            }
         }
         else
         {
+            // строим путь
             var path = pathfindingManager.FindPath(startCell, attackPos, moveType);
             if (path == null || path.Count == 0)
                 return;
 
+            // подсвечиваем весь маршрут
             highlightController.HighlightPath(path);
+
+            // поэтапно гася контур через событие
             void OnStep(HexCell cell) => cell.ShowHighlight(false);
             mover.OnCellEntered += OnStep;
 
             moved = await mover.MoveAlongPath(path);
+
             mover.OnCellEntered -= OnStep;
         }
+>>>>>>> parent of 5c41c94 (Fixed movement bug)
 
         if (!moved)
             return;
 
-        // 7) Переносим существо и очищаем подсветку перед атакой
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        // обновляем Occupant
+=======
+        // 5) Переносим Occupant и собираемся в атаку
+>>>>>>> parent of 5c41c94 (Fixed movement bug)
+=======
+        // 5) Переносим Occupant и собираемся в атаку
+>>>>>>> parent of 5c41c94 (Fixed movement bug)
+=======
+        // 5) Переносим Occupant и собираемся в атаку
+>>>>>>> parent of 5c41c94 (Fixed movement bug)
+=======
+        // 5) Переносим Occupant и собираемся в атаку
+>>>>>>> parent of 5c41c94 (Fixed movement bug)
         startCell.RemoveOccupant(attacker.gameObject);
-        attackPos.AddOccupant(attacker.gameObject, CellObjectType.Creature);
+        attackCell.AddOccupant(attacker.gameObject, CellObjectType.Creature);
 
-        highlightController.ClearHighlights();
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        // атака
         await PlayAttackSequence(attacker, target);
     }
 
+    public async Task PlayAttackSequence(Creature attacker, Creature target)
+=======
+        // 6) Убираем остатки подсветки перед атакой
+        highlightController.ClearHighlights();
+
+        // 7) Запускаем анимацию атаки
+        await PlayAttackSequence(attacker, target);
+    }
+
+=======
+        // 6) Убираем остатки подсветки перед атакой
+        highlightController.ClearHighlights();
+
+        // 7) Запускаем анимацию атаки
+        await PlayAttackSequence(attacker, target);
+    }
+
+>>>>>>> parent of 5c41c94 (Fixed movement bug)
+=======
+        // 6) Убираем остатки подсветки перед атакой
+        highlightController.ClearHighlights();
+
+        // 7) Запускаем анимацию атаки
+        await PlayAttackSequence(attacker, target);
+    }
+
+>>>>>>> parent of 5c41c94 (Fixed movement bug)
+=======
+        // 6) Убираем остатки подсветки перед атакой
+        highlightController.ClearHighlights();
+
+        // 7) Запускаем анимацию атаки
+        await PlayAttackSequence(attacker, target);
+    }
+
+>>>>>>> parent of 5c41c94 (Fixed movement bug)
+
     private async Task PlayAttackSequence(Creature attacker, Creature target)
+>>>>>>> parent of 5c41c94 (Fixed movement bug)
     {
         var anim = attacker.Mover.AnimatorController;
         var hitTcs = new TaskCompletionSource<bool>();
