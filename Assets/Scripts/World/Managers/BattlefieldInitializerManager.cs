@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 [DisallowMultipleComponent]
@@ -71,24 +70,27 @@ public class BattlefieldInitializerManager : MonoBehaviour
     private void ApplyFactionMaterial()
     {
         var fm = factionMaterials.Find(m => m.faction == currentFaction);
-        if (fm == null || fm.variants.Count < 3)
-            return;
+        if (fm == null || fm.variants.Count < 3) return;
 
         foreach (var cell in gridManager.Cells)
         {
-            if (cell == null)
-                continue;
+            if (cell == null) continue;
 
-            int offset = cell.row % 2;
-            int matIndex = (cell.column + offset) % fm.variants.Count;
-            cell.SetCellMaterial(fm.variants[matIndex]);
+            // Здесь rowIndex % 2 чередует смещение между 0 и 1
+            int rowIndex = cell.row;
+            int offset = rowIndex % 2;
+            int matIndex = (cell.column + offset) % 3;
+
+            cell.SetMaterial(fm.variants[matIndex]);
         }
 
-        foreach (var deco in decorativeCells)
+        for (int i = 0; i < decorativeCells.Count; i++)
         {
-            // decorativeCells — судя по типу, это тоже HexCell
-            if (deco != null)
-                deco.SetCellMaterial(fm.variants[1]);
+            var deco = decorativeCells[i];
+            if (deco == null)
+                continue;
+
+            deco.SetMaterial(fm.variants[1]);
         }
     }
 
@@ -100,7 +102,8 @@ public class BattlefieldInitializerManager : MonoBehaviour
             return;
         }
 
-        currentTemplate = templates[UnityEngine.Random.Range(0, templates.Count)];
+        currentTemplate = templates
+            [UnityEngine.Random.Range(0, templates.Count)];
         Debug.Log($"[Initializer] Шаблон: {currentTemplate.templateName}");
     }
 
@@ -112,7 +115,8 @@ public class BattlefieldInitializerManager : MonoBehaviour
             return;
         }
 
-        var obstacleData = factionObstacles.Find(o => o.faction == currentFaction);
+        var obstacleData = factionObstacles
+            .Find(o => o.faction == currentFaction);
         if (obstacleData == null || obstacleData.obstaclePrefabs.Count == 0)
         {
             Debug.Log($"[Initializer] Препятствий нет для {currentFaction}");
@@ -125,11 +129,10 @@ public class BattlefieldInitializerManager : MonoBehaviour
             if (!gridManager.CellMap.TryGetValue(id, out var cell))
                 continue;
 
-            var prefab = obstacleData.obstaclePrefabs[
-                UnityEngine.Random.Range(0, obstacleData.obstaclePrefabs.Count)];
+            var prefab = obstacleData.obstaclePrefabs
+                [UnityEngine.Random.Range(0, obstacleData.obstaclePrefabs.Count)];
             var obstacle = Instantiate(prefab, cell.transform, false);
-            obstacle.transform.localRotation =
-                Quaternion.Euler(0, 0, UnityEngine.Random.Range(0f, 360f));
+            obstacle.transform.localRotation = Quaternion.Euler(0, 0, UnityEngine.Random.Range(0f, 360f));
 
             cell.AddOccupant(obstacle, CellObjectType.Obstacle);
         }
@@ -145,27 +148,17 @@ public class BattlefieldInitializerManager : MonoBehaviour
             factionDecorations[idx]?.SetActive(true);
     }
 
-    /// <summary>
-    /// При начале хода активного существа подсвечивает зону досягаемости
-    /// с использованием activeMaterial.
-    /// </summary>
     private void OnTurnStarted(Creature active)
     {
-        if (active == null)
-            return;
+        if (active == null) return;
 
-        // Сбрасываем любые preview-подсветки
-        highlightController.ResetPreview();
-
-        // Вычисляем зону досягаемости
         var start = active.Mover.CurrentCell;
         int speed = active.GetStat(CreatureStatusType.Speed);
         var moveType = active.MovementType;
-        var reachable = pathfindingManager
-            .GetReachableCells(start, speed, moveType)
-            .Where(c => c.IsWalkable);
 
-        // Сбрасываем старые Active-Outline и выставляем новые
+        var reachable = pathfindingManager
+            .GetReachableCells(start, speed, moveType);
+
         highlightController.ClearHighlights();
         highlightController.HighlightReachable(reachable, start);
     }
