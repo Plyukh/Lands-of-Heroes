@@ -34,10 +34,6 @@ public class CombatController : MonoBehaviour
         OnCombatComplete?.Invoke(attacker);
     }
 
-    /// <summary>
-    /// Поворачивает (если нужно) и запускает анимацию атаки,
-    /// дожидаясь события попадания (OnAttackHit / OnMeleeAttackHit).
-    /// </summary>
     private async Task PlayAttackSequence(Creature attacker, Creature target)
     {
         var anim = attacker.Mover.AnimatorController;

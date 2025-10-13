@@ -35,7 +35,6 @@ public class HighlightController : MonoBehaviour
 
     public void HighlightPath(IReadOnlyList<HexCell> path)
     {
-        print("!");
         ClearHighlights();
 
         // 2) ¬ключаем _анимацией_ только клетки маршрута
