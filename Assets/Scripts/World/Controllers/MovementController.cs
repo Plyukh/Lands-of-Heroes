@@ -77,4 +77,36 @@ public class MovementController : MonoBehaviour
         targetCell.AddOccupant(creature.gameObject, CellObjectType.Creature);
         OnMovementComplete?.Invoke(creature);
     }
+
+    public async void MoveAlongPath(Creature creature, List<HexCell> path)
+    {
+        if (creature == null || path == null || path.Count == 0)
+            return;
+
+        var mover = creature.Mover;
+        var startCell = mover.CurrentCell;
+
+        // 1) Показываем весь путь
+        highlightController.HighlightPath(path);
+
+        // 2) Подписываемся на событие входа в клетку, чтобы гасить её highlight
+        void OnStep(HexCell cell) => cell.ShowHighlight(false);
+        mover.OnCellEntered += OnStep;
+
+        // 3) Ждём завершения анимации движения
+        bool moved = await mover.MoveAlongPath(path);
+
+        // 4) Убираем подписку
+        mover.OnCellEntered -= OnStep;
+
+        if (!moved)
+            return;
+
+        // 5) Обновляем Occupant на клетках
+        startCell.RemoveOccupant(creature.gameObject);
+        var targetCell = path[path.Count - 1];
+        targetCell.AddOccupant(creature.gameObject, CellObjectType.Creature);
+
+        OnMovementComplete?.Invoke(creature);
+    }
 }
