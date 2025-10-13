@@ -190,7 +190,6 @@ public class JoystickInputController : MonoBehaviour,
         switch (currentType)
         {
             case JoystickActionType.Move:
-                highlightController.ClearHighlights();
                 movementController.MoveAlongPath(attacker, selectedPath);
                 ClearInputState();
                 break;
@@ -201,7 +200,6 @@ public class JoystickInputController : MonoBehaviour,
                 break;
 
             case JoystickActionType.Melee:
-                highlightController.ClearHighlights();
                 isMeleeMoving = true;
                 movementController.MoveAlongPath(attacker, selectedPath);
                 // attack will trigger on movement complete

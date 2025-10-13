@@ -1,3 +1,4 @@
+п»ї// CreatureMover.cs
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,19 +12,15 @@ public class CreatureMover : MonoBehaviour
     [SerializeField] private CreatureAnimatorController animatorController;
 
     [Header("Movement Settings")]
-    [Tooltip("Скорость движения (единиц Unity в секунду)")]
     [SerializeField] private float moveSpeed = 2f;
-    [Tooltip("Порог останова (расстояние до цели)")]
     [SerializeField] private float stopThreshold = 0.01f;
-    [Tooltip("Скорость поворота (градусы/с)")]
     [SerializeField] private float rotationSpeed = 360f;
 
-    [Header("Current Cell (assign manually)")]
+    [Header("Current Cell (assign in inspector or on spawn)")]
     [SerializeField] private HexCell currentCell;
 
     public CreatureAnimatorController AnimatorController => animatorController;
     public HexCell CurrentCell => currentCell;
-
     public event Action<HexCell> OnCellEntered;
 
     public void SetCurrentCell(HexCell cell)
@@ -42,13 +39,9 @@ public class CreatureMover : MonoBehaviour
 
         foreach (var cell in path)
         {
-            // плавно поворачиваем к следующей клетке
             await RotateTowardsAsync(cell.transform.position);
-
-            // перемещаемся к ней
             await MoveToPositionAsync(cell.transform.position);
 
-            // обновляем текущее состояние
             currentCell = cell;
             OnCellEntered?.Invoke(cell);
         }
@@ -56,6 +49,7 @@ public class CreatureMover : MonoBehaviour
         animatorController.PlayWalk(false);
         return true;
     }
+
     private Task MoveToPositionAsync(Vector3 destination)
     {
         var tcs = new TaskCompletionSource<bool>();
@@ -66,16 +60,16 @@ public class CreatureMover : MonoBehaviour
     private IEnumerator MoveCoroutine(Vector3 destination, TaskCompletionSource<bool> tcs)
     {
         Vector3 startPos = transform.position;
-        float distance = Vector3.Distance(startPos, destination);
+        float dist = Vector3.Distance(startPos, destination);
 
-        if (distance <= stopThreshold)
+        if (dist <= stopThreshold)
         {
             transform.position = destination;
             tcs.TrySetResult(true);
             yield break;
         }
 
-        float duration = distance / moveSpeed;
+        float duration = dist / moveSpeed;
         float elapsed = 0f;
 
         while (elapsed < duration)
@@ -95,9 +89,9 @@ public class CreatureMover : MonoBehaviour
         if (dir.sqrMagnitude < 0.0001f)
             return;
 
-        Quaternion startRot = transform.rotation;
-        Quaternion targetRot = Quaternion.LookRotation(dir, Vector3.up);
-        float angle = Quaternion.Angle(startRot, targetRot);
+        Quaternion from = transform.rotation;
+        Quaternion to = Quaternion.LookRotation(dir, Vector3.up);
+        float angle = Quaternion.Angle(from, to);
         float duration = angle / rotationSpeed;
         float elapsed = 0f;
 
@@ -105,25 +99,19 @@ public class CreatureMover : MonoBehaviour
         {
             elapsed += Time.deltaTime;
             float t = Mathf.Clamp01(elapsed / duration);
-            transform.rotation = Quaternion.Slerp(startRot, targetRot, t);
+            transform.rotation = Quaternion.Slerp(from, to, t);
             await Task.Yield();
         }
 
-        transform.rotation = targetRot;
+        transform.rotation = to;
     }
-
-    // -------------------------------------------------------------------
-    //                    Teleport support
-    // -------------------------------------------------------------------
 
     private TaskCompletionSource<bool> teleportTcs;
     private HexCell teleportTarget;
 
     public Task<bool> TeleportToCell(HexCell targetCell)
     {
-        // если уже был незавершённый телепорт
         teleportTcs?.TrySetResult(false);
-
         teleportTarget = targetCell;
         teleportTcs = new TaskCompletionSource<bool>();
 
@@ -136,13 +124,16 @@ public class CreatureMover : MonoBehaviour
         if (teleportTarget == null) return;
 
         currentCell = teleportTarget;
-        transform.position = currentCell.transform.position;
-        OnCellEntered?.Invoke(currentCell);
+        transform.position = teleportTarget.transform.position;
+        OnCellEntered?.Invoke(teleportTarget);
     }
 
     public void OnTeleportEnd()
     {
+        // Р·Р°РїСѓСЃРєР°РµРј Р°РЅРёРјР°С†РёСЋ В«РІС‹С…РѕРґР°В» РёР· С‚РµР»РµРїРѕСЂС‚Р°
         animatorController.PlayEndTeleport();
+
+        // Р·Р°РІРµСЂС€Р°РµРј РѕР¶РёРґР°РЅРёРµ TeleportToCell
         teleportTcs?.TrySetResult(true);
         teleportTcs = null;
         teleportTarget = null;
