@@ -13,13 +13,6 @@ public class MovementController : MonoBehaviour
 
     public event Action<Creature> OnMovementComplete;
 
-    /// <summary>
-    /// Универсальный метод движения:
-    /// - Teleport: подсвечиваем только последнюю клетку, ждём OnTeleportEnd,
-    ///   обновляем Occupant, сбрасываем подсветку и кидаем OnMovementComplete.
-    /// - Walk/Fly: подсвечиваем весь путь, гасим по OnCellEntered, обновляем Occupant,
-    ///   сбрасываем подсветку и кидаем OnMovementComplete.
-    /// </summary>
     public async void MoveAlongPath(Creature creature, List<HexCell> path)
     {
         if (creature == null || path == null || path.Count == 0)
