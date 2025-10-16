@@ -24,6 +24,19 @@ public class JoystickUI : MonoBehaviour
     public Vector2 KnobPositionNormalized { get; private set; }
     public Vector2 KnobScreenPosition => knobRect.position;
 
+    private JoystickActionType[] actionTypes;
+    private JoystickActionType currentAction;
+    public JoystickActionType CurrentAction => currentAction;
+
+    public void SetActionType(JoystickActionType action, int index)
+    {
+        if(actionTypes == null)
+        {
+            actionTypes = new JoystickActionType[actionCount];
+        }
+        actionTypes[index] = action;
+    }
+
     public void Show(Vector2 screenPos)
     {
         // позиция UI и сброс состояния
@@ -83,10 +96,17 @@ public class JoystickUI : MonoBehaviour
         {
             bool isActive = IsReadyToConfirm && i == bestIdx;
             frameImages[i].color = isActive ? Color.green : Color.red;
+
+            if (actionCount > 1)
+            {
+                if (frameImages[i].color == Color.green)
+                {
+                    currentAction = actionTypes[i];
+                    print(currentAction);
+                }
+            }
         }
     }
-
-
 
     public void Hide()
     {

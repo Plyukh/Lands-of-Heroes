@@ -66,12 +66,6 @@ public class JoystickInputController : MonoBehaviour,
     {
         Vector2 screenPos = e.position;
 
-
-        //НУЖНО ОПРЕДЕЛИТЬСЯ СКОЛЬКО ДЕЙСТВИЙ БУДЕТ У ДЖОЙСТИКА
-        // После пишем:
-
-        currentJoystick = SelectJoystick(3);
-
         // --- Melee: clicked on enemy creature ---
         if (TryPickCreature(screenPos, out var creature)
             && creature != TurnOrderController.Instance.CurrentCreature)
@@ -79,7 +73,48 @@ public class JoystickInputController : MonoBehaviour,
             attacker = TurnOrderController.Instance.CurrentCreature;
             targetCreature = creature;
             startCell = attacker.Mover.CurrentCell;
-            currentType = JoystickActionType.Melee;
+            AttackType attackType = attacker.AttackType;
+
+            // пробуем найти путь к цели по вашему движению
+            var pathToTarget = pathfindingManager.FindPath(startCell, creature.Mover.CurrentCell, attacker.MovementType);
+
+            if (attackType == AttackType.Melee)
+            {
+                int speed = attacker.GetStat(CreatureStatusType.Speed);
+                bool reachable = pathToTarget != null && pathToTarget.Count - 1 <= speed;
+                if (!reachable)
+                {
+                    // не выделять существо, перейти к обработке клика по клетке
+                    return;
+                }
+            }
+
+            // проверяем, можем ли «дойти» до существа
+            bool canReachByMovement = false;
+            if(attackType == AttackType.Ranged)
+            {
+                if (attacker.GetStat(CreatureStatusType.Speed) >= pathToTarget.Count - 1)
+                {
+                    canReachByMovement = true;
+                }
+
+                if (canReachByMovement)
+                {
+                    currentJoystick = SelectJoystick(2);
+                    currentJoystick.SetActionType(JoystickActionType.Melee, 0);
+                    currentJoystick.SetActionType(JoystickActionType.Ranged, 1);
+                }
+                else
+                {
+                    currentJoystick = SelectJoystick(1);
+                    currentType = JoystickActionType.Ranged;
+                }
+            }
+            else
+            {
+                currentJoystick = SelectJoystick(1);
+                currentType = JoystickActionType.Melee;
+            }
 
             // collect all walkable neighbours of the target
             var neighbors = pathfindingManager
@@ -108,6 +143,9 @@ public class JoystickInputController : MonoBehaviour,
                 highlightController.HighlightPath(defaultMeleePath);
             }
 
+            Vector3 worldPos = targetCreature.Mover.CurrentCell.transform.position;
+            screenPos = mainCamera.WorldToScreenPoint(worldPos);
+
             currentJoystick.Show(screenPos);
             return;
         }
@@ -115,6 +153,8 @@ public class JoystickInputController : MonoBehaviour,
         // --- Move: clicked on a cell ---
         if (TryPickCell(screenPos, out var cell))
         {
+            currentJoystick = SelectJoystick(1);
+
             attacker = TurnOrderController.Instance.CurrentCreature;
             if (attacker == null) return;
 
@@ -131,6 +171,10 @@ public class JoystickInputController : MonoBehaviour,
             allowedCells = new HashSet<HexCell>(selectedPath);
 
             highlightController.HighlightPath(selectedPath);
+
+            Vector3 worldPos = selectedTargetCell.transform.position;
+            screenPos = mainCamera.WorldToScreenPoint(worldPos);
+
             currentJoystick.Show(screenPos);
         }
     }
@@ -193,6 +237,11 @@ public class JoystickInputController : MonoBehaviour,
         if (!currentJoystick.gameObject.activeSelf)
             return;
 
+        if(currentJoystick.ActionCount > 1)
+        {
+            currentType = currentJoystick.CurrentAction;
+        }
+
         currentJoystick.Hide();
 
         if (!currentJoystick.IsReadyToConfirm)
@@ -211,7 +260,7 @@ public class JoystickInputController : MonoBehaviour,
                 break;
 
             case JoystickActionType.Ranged:
-                battlefieldController.OnCreatureClicked(attacker);
+                battlefieldController.OnCreatureClicked(targetCreature);
                 ClearInputState();
                 break;
 

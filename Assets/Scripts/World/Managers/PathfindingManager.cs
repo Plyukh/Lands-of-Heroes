@@ -7,18 +7,19 @@ public class PathfindingManager : MonoBehaviour
     [Tooltip("Ссылки на HexGridManager для доступа к соседям и проходимости")]
     [SerializeField] private HexGridManager gridManager;
 
-    /// <summary>
-    /// Ищет кратчайший путь от start до target с учётом типа передвижения.
-    /// Возвращает список клеток (не включая start), или null, если путь не найден.
-    /// </summary>
     public List<HexCell> FindPath(
         HexCell start,
         HexCell target,
         MovementType moveType)
     {
+        // Если старт и цель совпадают, возвращаем пустой путь
+        if (start == target)
+            return new List<HexCell>();
+
         var queue = new Queue<HexCell>();
         var parent = new Dictionary<HexCell, HexCell>();
         var visited = new HashSet<HexCell> { start };
+
         queue.Enqueue(start);
 
         while (queue.Count > 0)
@@ -32,7 +33,9 @@ public class PathfindingManager : MonoBehaviour
                 if (visited.Contains(neighbour))
                     continue;
 
-                if (!CanTraverse(neighbour, moveType))
+                // Разрешаем заходить на target даже если CanTraverse == false
+                bool isTarget = neighbour == target;
+                if (!isTarget && !CanTraverse(neighbour, moveType))
                     continue;
 
                 visited.Add(neighbour);
@@ -41,13 +44,18 @@ public class PathfindingManager : MonoBehaviour
             }
         }
 
+        // Если target так и не встретился в parent, пути нет
         if (!parent.ContainsKey(target))
             return null;
 
-        // Восстанавливаем путь от target до start
+        // Восстанавливаем путь от target обратно к start
         var path = new List<HexCell>();
-        for (var cur = target; cur != start; cur = parent[cur])
+        var cur = target;
+        while (cur != start)
+        {
             path.Add(cur);
+            cur = parent[cur];
+        }
         path.Reverse();
         return path;
     }
