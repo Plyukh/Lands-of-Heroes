@@ -14,7 +14,7 @@ public class CombatController : MonoBehaviour
     /// Вызывается, когда нужно провести атаку: заранее 
     /// персонаж уже переместился в нужную клетку.
     /// </summary>
-    public async void OnCreatureClicked(Creature attacker, Creature target)
+    public async void OnCreatureClicked(Creature attacker, Creature target, AttackType selectedType)
     {
         if (attacker == null || target == null || attacker == target)
             return;
@@ -28,13 +28,13 @@ public class CombatController : MonoBehaviour
         await attacker.Mover.RotateTowardsAsync(target.transform.position);
 
         // Запускаем анимацию удара и ждём момента «попадания»
-        await PlayAttackSequence(attacker, target);
+        await PlayAttackSequence(attacker, target, selectedType);
 
         // Оповещаем, что атака завершилась
         OnCombatComplete?.Invoke(attacker);
     }
 
-    private async Task PlayAttackSequence(Creature attacker, Creature target)
+    private async Task PlayAttackSequence(Creature attacker, Creature target, AttackType type)
     {
         var anim = attacker.Mover.AnimatorController;
         var tcs = new TaskCompletionSource<bool>();
@@ -43,7 +43,7 @@ public class CombatController : MonoBehaviour
         anim.SetAttackTarget(target, attacker);
 
         Action onHit = null;
-        if (attacker.AttackType == AttackType.Ranged)
+        if (type == AttackType.Ranged)
         {
             onHit = () =>
             {

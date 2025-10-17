@@ -277,7 +277,13 @@ public class JoystickInputController : MonoBehaviour,
         if (isMeleeMoving && movedCreature == attacker)
         {
             isMeleeMoving = false;
-            combatController.OnCreatureClicked(attacker, targetCreature);
+                        // Конвертация: наш currentType (JoystickActionType) → AttackType
+            AttackType selectedAttackType = currentType == JoystickActionType.Melee
+                            ? AttackType.Melee
+                            : AttackType.Ranged;
+            
+                        // Передаём выбор игрока в CombatController
+            combatController.OnCreatureClicked(attacker, targetCreature, selectedAttackType);
             ClearInputState();
         }
     }

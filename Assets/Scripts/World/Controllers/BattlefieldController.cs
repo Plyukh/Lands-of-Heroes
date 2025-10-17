@@ -1,5 +1,7 @@
-using UnityEngine;
+using System.IO;
 using System.Linq;
+using UnityEngine;
+using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 
 [DisallowMultipleComponent]
 public class BattlefieldController : MonoBehaviour
@@ -72,6 +74,10 @@ public class BattlefieldController : MonoBehaviour
         if (!TurnOrderController.Instance.IsCurrentTurn(active))
             return;
 
-        combatController.OnCreatureClicked(active, target);
+           // 1) Берём тип атаки из данных существа
+        AttackType selected = active.AttackType;
+
+           // 3) Вызываем с учётом выбранного типа
+        combatController.OnCreatureClicked(active, target, selected);
     }
 }

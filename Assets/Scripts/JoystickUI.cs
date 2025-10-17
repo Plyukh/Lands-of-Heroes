@@ -24,13 +24,13 @@ public class JoystickUI : MonoBehaviour
     public Vector2 KnobPositionNormalized { get; private set; }
     public Vector2 KnobScreenPosition => knobRect.position;
 
-    private JoystickActionType[] actionTypes;
+    public JoystickActionType[] actionTypes;
     private JoystickActionType currentAction;
     public JoystickActionType CurrentAction => currentAction;
 
     public void SetActionType(JoystickActionType action, int index)
     {
-        if(actionTypes == null)
+        if (actionTypes == null || actionTypes.Length < 1)
         {
             actionTypes = new JoystickActionType[actionCount];
         }
