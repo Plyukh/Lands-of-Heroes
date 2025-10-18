@@ -107,13 +107,13 @@ public class JoystickInputController : MonoBehaviour,
                 else
                 {
                     currentJoystick = SelectJoystick(1);
-                    currentType = JoystickActionType.Ranged;
+                    currentJoystick.SetActionType(JoystickActionType.Ranged, 0);
                 }
             }
             else
             {
                 currentJoystick = SelectJoystick(1);
-                currentType = JoystickActionType.Melee;
+                currentJoystick.SetActionType(JoystickActionType.Melee, 0);
             }
 
             // collect all walkable neighbours of the target
@@ -159,7 +159,22 @@ public class JoystickInputController : MonoBehaviour,
             if (attacker == null) return;
 
             startCell = attacker.Mover.CurrentCell;
-            currentType = JoystickActionType.Move;
+
+            if(attacker.MovementType == MovementType.Ground)
+            {
+
+                currentJoystick.SetActionType(JoystickActionType.Move, 0);
+            }
+            else if(attacker.MovementType == MovementType.Flying)
+            {
+
+                currentJoystick.SetActionType(JoystickActionType.Fly, 0);
+            }
+            else if (attacker.MovementType == MovementType.Teleport)
+            {
+
+                currentJoystick.SetActionType(JoystickActionType.Teleport, 0);
+            }
 
             HighlightMoveZone();
 
@@ -185,6 +200,8 @@ public class JoystickInputController : MonoBehaviour,
             return;
 
         currentJoystick.UpdateDrag(e.position);
+
+        currentType = currentJoystick.CurrentAction;
 
         if (currentType != JoystickActionType.Melee)
             return;
@@ -237,10 +254,7 @@ public class JoystickInputController : MonoBehaviour,
         if (!currentJoystick.gameObject.activeSelf)
             return;
 
-        if(currentJoystick.ActionCount > 1)
-        {
-            currentType = currentJoystick.CurrentAction;
-        }
+        currentType = currentJoystick.CurrentAction;
 
         currentJoystick.Hide();
 
@@ -255,6 +269,8 @@ public class JoystickInputController : MonoBehaviour,
         switch (currentType)
         {
             case JoystickActionType.Move:
+            case JoystickActionType.Fly:
+            case JoystickActionType.Teleport:
                 movementController.MoveAlongPath(attacker, selectedPath);
                 ClearInputState();
                 break;

@@ -3,7 +3,9 @@ using UnityEngine;
 public enum JoystickActionType
 {
     Move,
-    Ranged,
+    Fly,
+    Teleport,
     Melee,
+    Ranged,
     Cast
 }

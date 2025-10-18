@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,27 +15,49 @@ public class JoystickUI : MonoBehaviour
     [Tooltip("Смещение 0°-угла (в градусах). 0° = вправо, 90° = вверх и т.д.")]
     [SerializeField] private float startAngle = 0f;
 
+    [Header("Animator")]
+    [SerializeField] private JoystickAnimatorController joystickAnimatorController;
+
     [Header("Knob & Frame")]
-    [Tooltip("Список изображений сегментов рамки, в порядке по часовой стрелке от правой стороны")]
+    [Tooltip("Список изображений сегментов рамки, в порядке по часовой стрелке")]
     [SerializeField] private List<Image> frameImages;
+    [Tooltip("Список изображений фона для каждого сегмента")]
+    [SerializeField] private List<Image> backgroundImages;
+    [Tooltip("Список изображений иконок для каждого сегмента")]
+    [SerializeField] private List<Image> iconImages;
     [SerializeField] private RectTransform frameRect;
     [SerializeField] private RectTransform knobRect;
+
+    [Header("Icons Config")]
+    [SerializeField] private List<ActionIconData> icons;
+
+    private JoystickActionType[] actionTypes;
+    private JoystickActionType currentAction;
+    private Dictionary<JoystickActionType, ActionIconData> iconMap;
+
     public int ActionCount => actionCount;
     public bool IsReadyToConfirm { get; private set; }
     public Vector2 KnobPositionNormalized { get; private set; }
     public Vector2 KnobScreenPosition => knobRect.position;
-
-    public JoystickActionType[] actionTypes;
-    private JoystickActionType currentAction;
     public JoystickActionType CurrentAction => currentAction;
 
     public void SetActionType(JoystickActionType action, int index)
     {
-        if (actionTypes == null || actionTypes.Length < 1)
+        if (actionTypes == null || actionTypes.Length != actionCount)
         {
             actionTypes = new JoystickActionType[actionCount];
+
+            // Создаем словарь для быстрого доступа к иконкам по типу действия
+            iconMap = icons.ToDictionary(data => data.actionType);
+            if (actionTypes == null || actionTypes.Length != actionCount)
+            {
+                actionTypes = new JoystickActionType[actionCount];
+            }
         }
-        actionTypes[index] = action;
+        if (index >= 0 && index < actionCount)
+        {
+            actionTypes[index] = action;
+        }
     }
 
     public void Show(Vector2 screenPos)
@@ -45,9 +68,29 @@ public class JoystickUI : MonoBehaviour
         KnobPositionNormalized = Vector2.zero;
         IsReadyToConfirm = false;
 
-        // все сегменты красные
-        foreach (var img in frameImages)
-            img.color = Color.red;
+        // Настраиваем видимость и внешний вид сегментов
+        for (int i = 0; i < frameImages.Count; i++)
+        {
+            bool isSegmentActive = i < actionCount;
+
+            frameImages[i].gameObject.SetActive(isSegmentActive);
+            backgroundImages[i].gameObject.SetActive(isSegmentActive);
+            iconImages[i].gameObject.SetActive(isSegmentActive);
+
+            if (isSegmentActive && i < actionTypes.Length)
+            {
+                JoystickActionType type = actionTypes[i];
+                if (iconMap.TryGetValue(type, out var iconData))
+                {
+                    iconImages[i].sprite = iconData.iconSprite;
+                    iconImages[i].rectTransform.anchoredPosition = iconData.rect.position;
+                    iconImages[i].rectTransform.sizeDelta = iconData.rect.size;
+                    // Устанавливаем цвет "выключено" для всех элементов сегмента
+                    frameImages[i].color = iconData.disabledColor;
+                    backgroundImages[i].color = iconData.disabledColor;
+                }
+            }
+        }
 
         gameObject.SetActive(true);
     }
@@ -76,13 +119,11 @@ public class JoystickUI : MonoBehaviour
         int segments = Mathf.Clamp(actionCount, 1, frameImages.Count);
         float slice = 360f / segments;
         float bestDelta = float.MaxValue;
-        int bestIdx = 0;
+        int bestIdx = -1;
 
         for (int i = 0; i < segments; i++)
         {
-            // центр i-го сегмента
             float center = (startAngle + slice * i + slice * 0.5f) % 360f;
-            // минимальное расстояние по кругу
             float delta = Mathf.Abs(Mathf.DeltaAngle(angle, center));
             if (delta < bestDelta)
             {
@@ -91,18 +132,23 @@ public class JoystickUI : MonoBehaviour
             }
         }
 
-        // 6) красим: если ready — активный сегмент в зеленый, остальные в красный
-        for (int i = 0; i < frameImages.Count; i++)
+        // 6) красим сегменты
+        for (int i = 0; i < segments; i++)
         {
-            bool isActive = IsReadyToConfirm && i == bestIdx;
-            frameImages[i].color = isActive ? Color.green : Color.red;
+            if (i >= actionTypes.Length) continue;
 
-            if (actionCount > 1)
+            JoystickActionType type = actionTypes[i];
+            if (iconMap.TryGetValue(type, out var iconData))
             {
-                if (frameImages[i].color == Color.green)
+                bool isSegmentSelected = IsReadyToConfirm && i == bestIdx;
+                Color targetColor = isSegmentSelected ? iconData.enabledColor : iconData.disabledColor;
+
+                frameImages[i].color = targetColor;
+                backgroundImages[i].color = targetColor;
+
+                if (isSegmentSelected)
                 {
                     currentAction = actionTypes[i];
-                    print(currentAction);
                 }
             }
         }
@@ -110,6 +156,6 @@ public class JoystickUI : MonoBehaviour
 
     public void Hide()
     {
-        gameObject.SetActive(false);
+        joystickAnimatorController.PlayJoystickClose();
     }
 }
