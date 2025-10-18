@@ -74,14 +74,14 @@ public class JoystickInputController : MonoBehaviour,
             targetCreature = creature;
             startCell = attacker.Mover.CurrentCell;
             AttackType attackType = attacker.AttackType;
+            int speed = attacker.GetStat(CreatureStatusType.Speed);
 
             // пробуем найти путь к цели по вашему движению
             var pathToTarget = pathfindingManager.FindPath(startCell, creature.Mover.CurrentCell, attacker.MovementType);
 
             if (attackType == AttackType.Melee)
             {
-                int speed = attacker.GetStat(CreatureStatusType.Speed);
-                bool reachable = pathToTarget != null && pathToTarget.Count - 1 <= speed;
+                bool reachable = pathToTarget != null && pathToTarget.Count - 1 <= speed - 1;
                 if (!reachable)
                 {
                     // не выделять существо, перейти к обработке клика по клетке
@@ -116,16 +116,32 @@ public class JoystickInputController : MonoBehaviour,
                 currentJoystick.SetActionType(JoystickActionType.Melee, 0);
             }
 
+            // --- NEW: Filter neighbors by reachability ---
+
             // collect all walkable neighbours of the target
             var neighbors = pathfindingManager
                 .GetReachableCells(creature.Mover.CurrentCell, 1, MovementType.Teleport)
                 .Where(c => c.IsWalkable)
                 .ToList();
 
-            meleeCells = new HashSet<HexCell>(neighbors);
+            meleeCells = neighbors
+                .Where(c =>
+                {
+                    var path = pathfindingManager.FindPath(startCell, c, attacker.MovementType);
+                    return path != null && path.Count - 1 <= speed - 1;
+                })
+                .ToHashSet();
 
-            // choose default melee cell by real path length
-            defaultMeleeCell = neighbors
+            // If there are no reachable cells to attack from, cancel the action.
+            if (meleeCells.Count == 0)
+            {
+                ClearInputState();
+                return;
+            }
+            // --- END NEW ---
+
+            // choose default melee cell by real path length from the filtered list
+            defaultMeleeCell = meleeCells
                 .OrderBy(c =>
                 {
                     var path = pathfindingManager.FindPath(startCell, c, attacker.MovementType);

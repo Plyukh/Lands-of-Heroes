@@ -1,3 +1,4 @@
+
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -30,6 +31,9 @@ public class HighlightController : MonoBehaviour
     public void HighlightPath(IReadOnlyList<HexCell> path)
     {
         ClearHighlights();
+
+        if (path == null)
+            return;
 
         // Animate the highlight for each cell in the path
         foreach (var cell in path)
