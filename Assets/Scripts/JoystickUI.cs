@@ -41,7 +41,7 @@ public class JoystickUI : MonoBehaviour
     public Vector2 KnobScreenPosition => knobRect.position;
     public JoystickActionType CurrentAction => currentAction;
 
-    public void SetActionType(JoystickActionType action, int index)
+    public void Initialize()
     {
         if (actionTypes == null || actionTypes.Length != actionCount)
         {
@@ -54,6 +54,10 @@ public class JoystickUI : MonoBehaviour
                 actionTypes = new JoystickActionType[actionCount];
             }
         }
+    }
+
+    public void SetActionType(JoystickActionType action, int index)
+    {
         if (index >= 0 && index < actionCount)
         {
             actionTypes[index] = action;

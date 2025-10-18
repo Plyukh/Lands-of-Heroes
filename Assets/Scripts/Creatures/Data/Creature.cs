@@ -11,32 +11,29 @@ public class Creature : MonoBehaviour
     [SerializeField] private List<VisualizationGroup> visualGroups;
 
     [Header("Stats")]
-    [SerializeField] CreatureData CreatureData;
+    [SerializeField] CreatureData creatureData;
     private CreatureStatsPerLevel currentStats;
     [SerializeField]int lvl;
 
     [Header("Battle Settings")]
     [Tooltip("— какими цел€ми может взаимодействовать это существо")]
-    public TargetSide targetSide = TargetSide.Any;
+    public TargetSide side = TargetSide.Any;
 
     public CreatureMover Mover => creatureMover;
-    public CreatureKind Kind => CreatureData.kind;
-    public MovementType MovementType => CreatureData.movementType;
-    public AttackType AttackType => CreatureData.attackType;
-    public TargetSide Side => targetSide;
+    public CreatureKind Kind => creatureData.kind;
+    public MovementType MovementType => creatureData.movementType;
+    public AttackType AttackType => creatureData.attackType;
+    public TargetSide Side => side;
     public GameObject Projectile => currentStats.projectilePrefab;
 
-    private void Awake()
+    public void Initialize(TargetSide side, int lvl)
     {
-        var stats = CreatureData.statsPerLevel[lvl];
-        Initialize(stats);
-    }
+        this.side = side;
+        this.lvl = lvl;
 
-    public void Initialize(CreatureStatsPerLevel stats)
-    {
-        currentStats = stats;
-        ApplyTexture(stats.texture);
-        ApplyVisuals(stats.visualizations);
+        currentStats = creatureData.statsPerLevel[lvl - 1];
+        ApplyTexture(currentStats.texture);
+        ApplyVisuals(currentStats.visualizations);
     }
 
     // Ќовый метод дл€ получени€ любого статуса

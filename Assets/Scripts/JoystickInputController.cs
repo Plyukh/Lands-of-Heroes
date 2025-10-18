@@ -40,6 +40,10 @@ public class JoystickInputController : MonoBehaviour,
 
     private void Awake()
     {
+        foreach (var joystick in joystickVariants)
+        {
+            joystick.Initialize();
+        }
         movementController.OnMovementComplete += HandleMovementComplete;
     }
 
@@ -81,7 +85,7 @@ public class JoystickInputController : MonoBehaviour,
 
             if (attackType == AttackType.Melee)
             {
-                bool reachable = pathToTarget != null && pathToTarget.Count - 1 <= speed - 1;
+                bool reachable = pathToTarget != null && pathToTarget.Count - 1 <= speed;
                 if (!reachable)
                 {
                     // не выделять существо, перейти к обработке клика по клетке
@@ -219,18 +223,18 @@ public class JoystickInputController : MonoBehaviour,
 
         currentType = currentJoystick.CurrentAction;
 
-        if (currentType != JoystickActionType.Melee)
-            return;
-
-        if (!currentJoystick.IsReadyToConfirm)
+        if (currentType == JoystickActionType.Melee && targetCreature != null)
         {
-            if (selectedTargetCell != defaultMeleeCell)
+            if (!currentJoystick.IsReadyToConfirm)
             {
-                selectedTargetCell = defaultMeleeCell;
-                selectedPath = defaultMeleePath;
-                highlightController.HighlightPath(defaultMeleePath);
+                if (selectedTargetCell != defaultMeleeCell)
+                {
+                    selectedTargetCell = defaultMeleeCell;
+                    selectedPath = defaultMeleePath;
+                    highlightController.HighlightPath(defaultMeleePath);
+                }
+                return;
             }
-            return;
         }
 
        Vector2 knobPos = currentJoystick.KnobScreenPosition;

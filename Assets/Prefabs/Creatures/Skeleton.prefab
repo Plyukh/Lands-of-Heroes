@@ -2755,7 +2755,7 @@ MonoBehaviour:
       - {fileID: 6843773877950670188}
       - {fileID: 6808315832923069684}
       - {fileID: 803288024163044595}
-  CreatureData: {fileID: 11400000, guid: c67132772003d3b48855e55806aa0f9a, type: 2}
+  creatureData: {fileID: 11400000, guid: c67132772003d3b48855e55806aa0f9a, type: 2}
   lvl: 0
   targetSide: 2
 --- !u!114 &-700529817317733893
@@ -2785,7 +2785,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animatorController: {fileID: -700529817317733893}
-  moveSpeed: 2
+  moveSpeed: 1
   stopThreshold: 0
   rotationSpeed: 360
   currentCell: {fileID: 0}

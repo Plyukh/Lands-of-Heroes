@@ -26050,7 +26050,7 @@ MonoBehaviour:
       - {fileID: 2530099519581577599}
       - {fileID: 2129615221406711484}
       - {fileID: 6905109240785529402}
-  CreatureData: {fileID: 11400000, guid: 0b5063d44faf9524fabedbd876c651a5, type: 2}
+  creatureData: {fileID: 11400000, guid: 0b5063d44faf9524fabedbd876c651a5, type: 2}
   lvl: 0
   targetSide: 2
 --- !u!114 &-8972635256329523972

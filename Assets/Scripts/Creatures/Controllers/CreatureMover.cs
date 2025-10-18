@@ -23,11 +23,21 @@ public class CreatureMover : MonoBehaviour
     public HexCell CurrentCell => currentCell;
     public event Action<HexCell> OnCellEntered;
 
-    public void SetCurrentCell(HexCell cell)
+    public void SetCurrentCell(HexCell cell, Quaternion rotation)
     {
         if (cell == null) return;
         currentCell = cell;
         transform.position = cell.transform.position;
+
+        transform.rotation = rotation;
+
+        // Корректируем локальный масштаб, чтобы компенсировать масштаб родительской ячейки
+        var parentScale = cell.transform.localScale;
+        transform.localScale = new Vector3(
+            transform.localScale.x / parentScale.x,
+            transform.localScale.y / parentScale.y,
+            transform.localScale.z / parentScale.z
+        );
     }
 
     public async Task<bool> MoveAlongPath(IReadOnlyList<HexCell> path)

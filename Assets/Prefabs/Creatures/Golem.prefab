@@ -806,7 +806,7 @@ MonoBehaviour:
   materials:
   - {fileID: 3484895595769914313}
   visualGroups: []
-  CreatureData: {fileID: 11400000, guid: 07cba07cb872dab40a9dc049235e29c7, type: 2}
+  creatureData: {fileID: 11400000, guid: 07cba07cb872dab40a9dc049235e29c7, type: 2}
   lvl: 0
   targetSide: 2
 --- !u!114 &9086128901960711500
@@ -835,8 +835,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7685c31ca14ae344bb8f943b9bedc848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animatorController: {fileID: 0}
-  moveSpeed: 2
+  animatorController: {fileID: 9086128901960711500}
+  moveSpeed: 1
   stopThreshold: 0
   rotationSpeed: 360
   currentCell: {fileID: 0}

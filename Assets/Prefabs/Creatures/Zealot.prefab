@@ -84649,7 +84649,7 @@ MonoBehaviour:
     - objects:
       - {fileID: 411964498458423324}
       - {fileID: 2476277104632480072}
-  CreatureData: {fileID: 11400000, guid: 6eb2f433b8d22a94eaf8473d03b241f4, type: 2}
+  creatureData: {fileID: 11400000, guid: 6eb2f433b8d22a94eaf8473d03b241f4, type: 2}
   lvl: 0
   targetSide: 2
 --- !u!114 &4553110648741228035

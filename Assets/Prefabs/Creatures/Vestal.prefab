@@ -17403,7 +17403,7 @@ MonoBehaviour:
     - objects:
       - {fileID: 4838866243791908276}
       - {fileID: 5872907578112557656}
-  CreatureData: {fileID: 11400000, guid: e56c250a29447cb448869608a484058a, type: 2}
+  creatureData: {fileID: 11400000, guid: e56c250a29447cb448869608a484058a, type: 2}
   lvl: 0
   targetSide: 2
 --- !u!114 &-5845362713565013096
