@@ -1,7 +1,5 @@
-using System.IO;
 using System.Linq;
 using UnityEngine;
-using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 
 [DisallowMultipleComponent]
 public class BattlefieldController : MonoBehaviour

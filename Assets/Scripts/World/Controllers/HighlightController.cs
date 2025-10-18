@@ -16,12 +16,6 @@ public class HighlightController : MonoBehaviour
         }
     }
 
-    public void ClearHighlightsImmediate()
-    {
-        foreach (var cell in gridManager.Cells)
-            cell.ShowHighlight(false);   // сразу выключаем активные outlines
-    }
-
     public void HighlightReachable(IEnumerable<HexCell> reachable, HexCell startCell)
     {
         foreach (var cell in reachable)
@@ -37,15 +31,14 @@ public class HighlightController : MonoBehaviour
     {
         ClearHighlights();
 
-        // 2) ¬ключаем _анимацией_ только клетки маршрута
+        // Animate the highlight for each cell in the path
         foreach (var cell in path)
             cell.ShowHighlight(true);
     }
 
     public void HighlightTeleportTarget(HexCell target)
     {
-        ClearHighlightsImmediate();    // мгновенно выключить все
-        target.ShowHighlight(true);    // включить только эту
-
+        ClearHighlights();          // Instantly turn off all other highlights
+        target.ShowHighlight(true); // Turn on the target highlight
     }
 }

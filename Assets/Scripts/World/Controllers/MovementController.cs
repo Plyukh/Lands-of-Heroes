@@ -18,36 +18,49 @@ public class MovementController : MonoBehaviour
         if (creature == null || path == null || path.Count == 0)
             return;
 
+        switch (creature.MovementType)
+        {
+            case MovementType.Teleport:
+                await HandleTeleportMovement(creature, path);
+                break;
+
+            case MovementType.Ground:
+            case MovementType.Flying:
+                await HandlePathMovement(creature, path);
+                break;
+        }
+    }
+
+    private async Task HandleTeleportMovement(Creature creature, List<HexCell> path)
+    {
         var mover = creature.Mover;
         var startCell = mover.CurrentCell;
-        var moveType = creature.MovementType;
+        HexCell targetCell = path.Last(); // For teleport, only the destination matters
 
-        // --- Teleport ---
-        if (moveType == MovementType.Teleport)
-        {
-            // берём последнюю клетку как цель
-            HexCell targetCell = path.Last();
+        // Highlight the single target cell
+        highlightController.ClearHighlights();
+        highlightController.HighlightTeleportTarget(targetCell);
 
-            // подсветка единственной целевой клетки
-            highlightController.ClearHighlights();
-            highlightController.HighlightTeleportTarget(targetCell);
-
-            // стартуем анимацию и ждём события OnTeleportEnd
-            bool ok = await mover.TeleportToCell(targetCell);
-            if (!ok)
-                return;
-
-            // обновляем Occupant
-            startCell.RemoveOccupant(creature.gameObject);
-            targetCell.AddOccupant(creature.gameObject, CellObjectType.Creature);
-
-            // сбрасываем подсветку и кидаем окончание
-            highlightController.ClearHighlights();
-            OnMovementComplete?.Invoke(creature);
+        // Start animation and wait for it to complete
+        bool teleported = await mover.TeleportToCell(targetCell);
+        if (!teleported)
             return;
-        }
 
-        // --- Walk or Fly ---
+        // Update cell occupants
+        startCell.RemoveOccupant(creature.gameObject);
+        targetCell.AddOccupant(creature.gameObject, CellObjectType.Creature);
+
+        // Clean up and signal completion
+        highlightController.ClearHighlights();
+        OnMovementComplete?.Invoke(creature);
+    }
+
+    private async Task HandlePathMovement(Creature creature, List<HexCell> path)
+    {
+        var mover = creature.Mover;
+        var startCell = mover.CurrentCell;
+
+        // Temporarily highlight path during movement
         void OnStep(HexCell cell) => cell.ShowHighlight(false);
         mover.OnCellEntered += OnStep;
 
@@ -57,10 +70,12 @@ public class MovementController : MonoBehaviour
         if (!moved)
             return;
 
+        // Update cell occupants
         var endCell = path.Last();
         startCell.RemoveOccupant(creature.gameObject);
         endCell.AddOccupant(creature.gameObject, CellObjectType.Creature);
 
+        // Clean up and signal completion
         highlightController.ClearHighlights();
         OnMovementComplete?.Invoke(creature);
     }
