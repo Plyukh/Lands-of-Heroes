@@ -12,6 +12,7 @@ public class JoystickInputController : MonoBehaviour,
     [SerializeField] private MovementController movementController;
     [SerializeField] private CombatController combatController;
     [SerializeField] private PathfindingManager pathfindingManager;
+    [SerializeField] private HexGridManager hexGridManager;
     [SerializeField] private HighlightController highlightController;
 
     [Header("Camera & Masks")]
@@ -108,21 +109,35 @@ public class JoystickInputController : MonoBehaviour,
             bool canReachByMovement = false;
             if(attackType == AttackType.Ranged)
             {
+                bool isEngagedInMelee = IsEnemyInMeleeRange(attacker);
+
                 if (attacker.GetStat(CreatureStatusType.Speed) >= pathToTarget.Count - 1)
                 {
                     canReachByMovement = true;
                 }
 
-                if (canReachByMovement)
-                {
-                    currentJoystick = SelectJoystick(2);
-                    currentJoystick.SetActionType(JoystickActionType.Melee, 0);
-                    currentJoystick.SetActionType(JoystickActionType.Ranged, 1);
-                }
-                else
+                if(!canReachByMovement && !isEngagedInMelee)
                 {
                     currentJoystick = SelectJoystick(1);
                     currentJoystick.SetActionType(JoystickActionType.Ranged, 0);
+                }
+                else if (canReachByMovement)
+                {
+                    if (isEngagedInMelee)
+                    {
+                        currentJoystick = SelectJoystick(1);
+                        currentJoystick.SetActionType(JoystickActionType.Melee, 0);
+                    }
+                    else
+                    {
+                        currentJoystick = SelectJoystick(2);
+                        currentJoystick.SetActionType(JoystickActionType.Melee, 0);
+                        currentJoystick.SetActionType(JoystickActionType.Ranged, 1);
+                    }
+                }
+                else
+                {
+                    return;
                 }
             }
             else
@@ -428,6 +443,20 @@ public class JoystickInputController : MonoBehaviour,
             return true;
         }
         return false;
+    }
+
+    private bool IsEnemyInMeleeRange(Creature creature)
+    {
+        HexCell currentCell = creature.Mover.CurrentCell;
+        foreach (var neighbor in hexGridManager.GetNeighbors(currentCell))
+        {
+            var occupantCreature = neighbor.GetOccupantCreature();
+            if (occupantCreature != null && occupantCreature.Side != creature.Side)
+            {
+                return true; // Найден враг в соседней клетке
+            }
+        }
+        return false; // Врагов рядом нет
     }
 
     private bool TryPickCreature(Vector2 pos, out Creature creature)

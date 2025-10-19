@@ -14600,8 +14600,6 @@ MonoBehaviour:
       - {fileID: 4009119847325783061}
       - {fileID: 8554593011106366417}
   creatureData: {fileID: 11400000, guid: fe83dd7578d304a45bcf92ba2d68ef3b, type: 2}
-  lvl: 0
-  targetSide: 2
 --- !u!114 &388319656119646446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14653,7 +14651,7 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.3
-  m_Height: 0.8
+  m_Height: 0.75
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1890601381923782011
