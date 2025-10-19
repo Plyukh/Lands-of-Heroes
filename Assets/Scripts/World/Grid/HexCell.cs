@@ -21,6 +21,17 @@ public class HexCell : MonoBehaviour
     [Tooltip("Список объектов, стоящих на этой клетке")]
     [SerializeField] private List<CellOccupant> occupants = new List<CellOccupant>();
     public IReadOnlyList<CellOccupant> Occupants => occupants;
+    public Creature GetOccupantCreature()
+    {
+        foreach (var item in occupants)
+        {
+            if(item.type == CellObjectType.Creature)
+            {
+                return item.instance.GetComponent<Creature>();
+            }
+        }
+        return null;
+    }
 
     [Header("Outline Object")]
     [SerializeField] private Animator outlineAnimator;

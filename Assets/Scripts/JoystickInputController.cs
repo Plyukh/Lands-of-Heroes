@@ -147,6 +147,12 @@ public class JoystickInputController : MonoBehaviour,
                 })
                 .ToHashSet();
 
+            // Если с текущей клетки можно атаковать, добавим её в список
+            if (IsAttackPossibleFrom(startCell, targetCreature))
+            {
+                meleeCells.Add(startCell);
+            }
+
             // If there are no reachable cells to attack from, cancel the action.
             if (meleeCells.Count == 0 && attackType == AttackType.Melee)
             {
@@ -191,12 +197,12 @@ public class JoystickInputController : MonoBehaviour,
 
             startCell = attacker.Mover.CurrentCell;
 
-            if(attacker.MovementType == MovementType.Ground)
+            if (attacker.MovementType == MovementType.Ground)
             {
 
                 currentJoystick.SetActionType(JoystickActionType.Move, 0);
             }
-            else if(attacker.MovementType == MovementType.Flying)
+            else if (attacker.MovementType == MovementType.Flying)
             {
 
                 currentJoystick.SetActionType(JoystickActionType.Fly, 0);
@@ -281,11 +287,22 @@ public class JoystickInputController : MonoBehaviour,
         if (newTarget != null && newTarget != selectedTargetCell)
         {
             selectedTargetCell = newTarget;
-            var path = pathfindingManager.FindPath(startCell, newTarget, attacker.MovementType);
-            if (path != null && path.Count > 0)
+
+            // Если выбрана атака с места, путь будет пустым
+            if (selectedTargetCell == startCell)
             {
-                selectedPath = path;
-                highlightController.HighlightPath(path);
+                selectedPath = new List<HexCell>();
+                highlightController.ClearHighlights();
+                highlightController.HighlightReachable(new List<HexCell> { startCell }, startCell);
+            }
+            else
+            {
+                var path = pathfindingManager.FindPath(startCell, newTarget, attacker.MovementType);
+                if (path != null && path.Count > 0)
+                {
+                    selectedPath = path;
+                    highlightController.HighlightPath(path);
+                }
             }
         }
     }
@@ -335,9 +352,21 @@ public class JoystickInputController : MonoBehaviour,
                 break;
 
             case JoystickActionType.Melee:
-                isMeleeMoving = true;
-                movementController.MoveAlongPath(attacker, selectedPath);
-                // attack will trigger on movement complete
+                // Если путь пустой, атакуем сразу. Иначе - сначала идем.
+                if (selectedPath == null || selectedPath.Count == 0)
+                {
+                    AttackType selectedAttackType = currentType == JoystickActionType.Melee
+                        ? AttackType.Melee
+                        : AttackType.Ranged;
+                    combatController.OnCreatureClicked(attacker, targetCreature, selectedAttackType);
+                    ClearInputState();
+                }
+                else
+                {
+                    isMeleeMoving = true;
+                    movementController.MoveAlongPath(attacker, selectedPath);
+                    // атака произойдет после завершения движения
+                }
                 break;
         }
     }
@@ -394,7 +423,7 @@ public class JoystickInputController : MonoBehaviour,
 
     private bool IsTargetValid(Creature attacker, Creature target)
     {
-        if(attacker.Side != target.Side)
+        if (attacker.Side != target.Side)
         {
             return true;
         }
@@ -421,5 +450,16 @@ public class JoystickInputController : MonoBehaviour,
 
         cell = null;
         return false;
+    }
+
+    private bool IsAttackPossibleFrom(HexCell fromCell, Creature targetCreature)
+    {
+        // Проверяем, может ли атакующий атаковать цель с указанной клетки
+        var path = pathfindingManager.FindPath(fromCell, targetCreature.Mover.CurrentCell, attacker.MovementType);
+        if (path == null) return false;
+
+        int distance = path.Count - 1;
+        int speed = attacker.GetStat(CreatureStatusType.Speed);
+        return distance <= speed - 1; // Учитываем, что одна клетка уже занята для атаки
     }
 }
