@@ -12,12 +12,9 @@ public class Creature : MonoBehaviour
 
     [Header("Stats")]
     [SerializeField] CreatureData creatureData;
-    private CreatureStatsPerLevel currentStats;
-    [SerializeField]int lvl;
 
-    [Header("Battle Settings")]
-    [Tooltip("С какими целями может взаимодействовать это существо")]
-    public TargetSide side = TargetSide.Any;
+    private CreatureStatsPerLevel currentStats;
+    private TargetSide side;
 
     public CreatureMover Mover => creatureMover;
     public CreatureKind Kind => creatureData.kind;
@@ -29,7 +26,6 @@ public class Creature : MonoBehaviour
     public void Initialize(TargetSide side, int lvl)
     {
         this.side = side;
-        this.lvl = lvl;
 
         currentStats = creatureData.statsPerLevel[lvl - 1];
         ApplyTexture(currentStats.texture);

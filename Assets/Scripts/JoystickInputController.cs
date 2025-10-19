@@ -80,6 +80,15 @@ public class JoystickInputController : MonoBehaviour,
             AttackType attackType = attacker.AttackType;
             int speed = attacker.GetStat(CreatureStatusType.Speed);
 
+            if (attacker == null || attacker == creature) return;
+
+            // Проверяем, можно ли атаковать эту цель
+            if (!IsTargetValid(attacker, creature))
+            {
+                // Если цель невалидна (например, союзник для обычной атаки), ничего не делаем
+                return;
+            }
+
             // пробуем найти путь к цели по вашему движению
             var pathToTarget = pathfindingManager.FindPath(startCell, creature.Mover.CurrentCell, attacker.MovementType);
 
@@ -137,7 +146,7 @@ public class JoystickInputController : MonoBehaviour,
                 .ToHashSet();
 
             // If there are no reachable cells to attack from, cancel the action.
-            if (meleeCells.Count == 0)
+            if (meleeCells.Count == 0 && attackType == AttackType.Melee)
             {
                 ClearInputState();
                 return;
@@ -355,6 +364,15 @@ public class JoystickInputController : MonoBehaviour,
         defaultMeleePath = null;
 
         isMeleeMoving = false;
+    }
+
+    private bool IsTargetValid(Creature attacker, Creature target)
+    {
+        if(attacker.Side != target.Side)
+        {
+            return true;
+        }
+        return false;
     }
 
     private bool TryPickCreature(Vector2 pos, out Creature creature)
