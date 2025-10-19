@@ -64,6 +64,24 @@ public class JoystickUI : MonoBehaviour
         }
     }
 
+    public void SetAllSegmentsToAction(JoystickActionType action)
+    {
+        for (int i = 0; i < actionTypes.Length; i++)
+        {
+            actionTypes[i] = action;
+        }
+        // Обновляем текущее действие, так как все сегменты теперь одинаковы
+        currentAction = action;
+    }
+
+    public void SetAnimatorForActionCount(int count, bool value)
+    {
+        if (joystickAnimatorController != null)
+        {
+            joystickAnimatorController.SetAction(count, value);
+        }
+    }
+
     public void Show(Vector2 screenPos)
     {
         // позиция UI и сброс состояния
@@ -136,7 +154,31 @@ public class JoystickUI : MonoBehaviour
             }
         }
 
-        // 6) красим сегменты
+        // 6) Перерисовываем все активные сегменты
+        // Проверяем, одинаковы ли все actionTypes в диапазоне [0..segments)
+        bool allSame = true;
+        if (segments > 1 && actionTypes.Length >= segments)
+        {
+            var first = actionTypes[0];
+            for (int i = 1; i < segments; i++)
+            {
+                if (actionTypes[i] != first)
+                {
+                    allSame = false;
+                    break;
+                }
+            }
+        }
+        else if (segments <= 1)
+        {
+            allSame = false;
+        }
+
+        if (allSame)
+        {
+            if (allSame && IsReadyToConfirm)
+                currentAction = actionTypes[0];
+        }
         for (int i = 0; i < segments; i++)
         {
             if (i >= actionTypes.Length) continue;
@@ -146,6 +188,11 @@ public class JoystickUI : MonoBehaviour
             {
                 bool isSegmentSelected = IsReadyToConfirm && i == bestIdx;
                 Color targetColor = isSegmentSelected ? iconData.enabledColor : iconData.disabledColor;
+
+                if (allSame)
+                {
+                    targetColor = iconData.enabledColor;
+                }
 
                 frameImages[i].color = targetColor;
                 backgroundImages[i].color = targetColor;

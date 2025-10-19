@@ -37,6 +37,8 @@ public class JoystickInputController : MonoBehaviour,
 
     // Flag: melee move in progress
     private bool isMeleeMoving = false;
+    // Flag: melee aiming mode for joystick
+    private bool isMeleeAimingMode = false;
 
     private void Awake()
     {
@@ -232,22 +234,32 @@ public class JoystickInputController : MonoBehaviour,
 
         currentType = currentJoystick.CurrentAction;
 
-        if (currentType == JoystickActionType.Melee && targetCreature != null)
+        // --- Новая логика для переключения режима джойстика ---
+        if (targetCreature != null && currentJoystick.ActionCount > 1)
         {
-            if (!currentJoystick.IsReadyToConfirm)
+            bool wantsMelee = currentJoystick.CurrentAction == JoystickActionType.Melee;
+            bool isAtEdge = currentJoystick.IsReadyToConfirm;
+
+            // Вход в режим прицеливания ближней атакой
+            if (wantsMelee && isAtEdge && !isMeleeAimingMode)
             {
-                if (selectedTargetCell != defaultMeleeCell)
-                {
-                    selectedTargetCell = defaultMeleeCell;
-                    selectedPath = defaultMeleePath;
-                    highlightController.HighlightPath(defaultMeleePath);
-                }
-                return;
+                isMeleeAimingMode = true;
+                currentJoystick.SetAnimatorForActionCount(1, isMeleeAimingMode); // Анимация на 1 сегмент (зеленый)
+                currentJoystick.SetAllSegmentsToAction(JoystickActionType.Melee);
+            }
+            // Выход из режима прицеливания
+            else if (!isAtEdge && isMeleeAimingMode)
+            {
+                isMeleeAimingMode = false;
+                currentJoystick.SetAnimatorForActionCount(1, isMeleeAimingMode); // Возвращаем анимацию на 2 сегмента
+                // Восстанавливаем исходные типы действий
+                currentJoystick.SetActionType(JoystickActionType.Melee, 0);
+                currentJoystick.SetActionType(JoystickActionType.Ranged, 1);
             }
         }
 
-       Vector2 knobPos = currentJoystick.KnobScreenPosition;
-       HexCell newTarget = null;
+        Vector2 knobPos = currentJoystick.KnobScreenPosition;
+        HexCell newTarget = null;
 
         if (TryPickCell(knobPos, out var overCell) && meleeCells.Contains(overCell))
         {
@@ -282,6 +294,19 @@ public class JoystickInputController : MonoBehaviour,
     {
         if (!currentJoystick.gameObject.activeSelf)
             return;
+
+        // Сбрасываем флаг режима прицеливания при отпускании
+        if (isMeleeAimingMode)
+        {
+            isMeleeAimingMode = false;
+            // Восстанавливаем исходные типы действий для следующего раза
+            if (currentJoystick.ActionCount == 2)
+            {
+                currentJoystick.SetAnimatorForActionCount(1, isMeleeAimingMode);
+                currentJoystick.SetActionType(JoystickActionType.Melee, 0);
+                currentJoystick.SetActionType(JoystickActionType.Ranged, 1);
+            }
+        }
 
         currentType = currentJoystick.CurrentAction;
 
@@ -322,12 +347,12 @@ public class JoystickInputController : MonoBehaviour,
         if (isMeleeMoving && movedCreature == attacker)
         {
             isMeleeMoving = false;
-                        // Конвертация: наш currentType (JoystickActionType) → AttackType
+            // Конвертация: наш currentType (JoystickActionType) → AttackType
             AttackType selectedAttackType = currentType == JoystickActionType.Melee
                             ? AttackType.Melee
                             : AttackType.Ranged;
-            
-                        // Передаём выбор игрока в CombatController
+
+            // Передаём выбор игрока в CombatController
             combatController.OnCreatureClicked(attacker, targetCreature, selectedAttackType);
             ClearInputState();
         }
@@ -364,6 +389,7 @@ public class JoystickInputController : MonoBehaviour,
         defaultMeleePath = null;
 
         isMeleeMoving = false;
+        isMeleeAimingMode = false;
     }
 
     private bool IsTargetValid(Creature attacker, Creature target)
