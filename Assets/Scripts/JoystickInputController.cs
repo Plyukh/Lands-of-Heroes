@@ -2,12 +2,13 @@
 using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 public class JoystickInputController : MonoBehaviour,
     IPointerDownHandler, IDragHandler, IPointerUpHandler
 {
     [Header("UI & Core")]
-    [SerializeField] private List<JoystickUI> joystickVariants;
+    [SerializeField] private JoystickUI joystickUI;
     [SerializeField] private BattlefieldController battlefieldController;
     [SerializeField] private MovementController movementController;
     [SerializeField] private CombatController combatController;
@@ -20,7 +21,6 @@ public class JoystickInputController : MonoBehaviour,
     [SerializeField] private LayerMask hexLayerMask;
     [SerializeField] private LayerMask creatureLayerMask;
 
-    private JoystickUI currentJoystick;
     private JoystickActionType currentType;
     private Creature attacker;
     private Creature targetCreature;
@@ -43,10 +43,7 @@ public class JoystickInputController : MonoBehaviour,
 
     private void Awake()
     {
-        foreach (var joystick in joystickVariants)
-        {
-            joystick.Initialize();
-        }
+        joystickUI.Initialize();
         movementController.OnMovementComplete += HandleMovementComplete;
     }
 
@@ -55,23 +52,11 @@ public class JoystickInputController : MonoBehaviour,
         movementController.OnMovementComplete -= HandleMovementComplete;
     }
 
-    private JoystickUI SelectJoystick(int count)
-    {
-        foreach (var js in joystickVariants)
-            if (js.ActionCount == count)
-                return js;
-
-        // fallback
-        if (joystickVariants.Count > 0)
-            return joystickVariants[0];
-
-        Debug.LogError($"[JoystickInputController] Не задан ни один JoystickUI for count={count}");
-        return null;
-    }
-
     public void OnPointerDown(PointerEventData e)
     {
         Vector2 screenPos = e.position;
+        Vector3 worldPos = e.position;
+        int actionCount = 1;
 
         // --- Melee: clicked on enemy creature ---
         if (TryPickCreature(screenPos, out var creature)
@@ -118,21 +103,19 @@ public class JoystickInputController : MonoBehaviour,
 
                 if(!canReachByMovement && !isEngagedInMelee)
                 {
-                    currentJoystick = SelectJoystick(1);
-                    currentJoystick.SetActionType(JoystickActionType.Ranged, 0);
+                    joystickUI.SetActionType(JoystickActionType.Ranged, 0);
                 }
                 else if (canReachByMovement)
                 {
                     if (isEngagedInMelee)
                     {
-                        currentJoystick = SelectJoystick(1);
-                        currentJoystick.SetActionType(JoystickActionType.Melee, 0);
+                        joystickUI.SetActionType(JoystickActionType.Melee, 0);
                     }
                     else
                     {
-                        currentJoystick = SelectJoystick(2);
-                        currentJoystick.SetActionType(JoystickActionType.Melee, 0);
-                        currentJoystick.SetActionType(JoystickActionType.Ranged, 1);
+                        actionCount = 2;
+                        joystickUI.SetActionType(JoystickActionType.Melee, 0);
+                        joystickUI.SetActionType(JoystickActionType.Ranged, 1);
                     }
                 }
                 else
@@ -142,11 +125,8 @@ public class JoystickInputController : MonoBehaviour,
             }
             else
             {
-                currentJoystick = SelectJoystick(1);
-                currentJoystick.SetActionType(JoystickActionType.Melee, 0);
+                joystickUI.SetActionType(JoystickActionType.Melee, 0);
             }
-
-            // --- NEW: Filter neighbors by reachability ---
 
             // collect all walkable neighbours of the target
             var neighbors = pathfindingManager
@@ -174,7 +154,6 @@ public class JoystickInputController : MonoBehaviour,
                 ClearInputState();
                 return;
             }
-            // --- END NEW ---
 
             // choose default melee cell by real path length from the filtered list
             defaultMeleeCell = meleeCells
@@ -195,18 +174,11 @@ public class JoystickInputController : MonoBehaviour,
                 highlightController.HighlightPath(defaultMeleePath);
             }
 
-            Vector3 worldPos = targetCreature.Mover.CurrentCell.transform.position;
-            screenPos = mainCamera.WorldToScreenPoint(worldPos);
-
-            currentJoystick.Show(screenPos);
-            return;
+            worldPos = targetCreature.Mover.CurrentCell.transform.position;
         }
-
         // --- Move: clicked on a cell ---
-        if (TryPickCell(screenPos, out var cell))
+        else if (TryPickCell(screenPos, out var cell))
         {
-            currentJoystick = SelectJoystick(1);
-
             attacker = TurnOrderController.Instance.CurrentCreature;
             if (attacker == null) return;
 
@@ -215,17 +187,17 @@ public class JoystickInputController : MonoBehaviour,
             if (attacker.MovementType == MovementType.Ground)
             {
 
-                currentJoystick.SetActionType(JoystickActionType.Move, 0);
+                joystickUI.SetActionType(JoystickActionType.Move, 0);
             }
             else if (attacker.MovementType == MovementType.Flying)
             {
 
-                currentJoystick.SetActionType(JoystickActionType.Fly, 0);
+                joystickUI.SetActionType(JoystickActionType.Fly, 0);
             }
             else if (attacker.MovementType == MovementType.Teleport)
             {
 
-                currentJoystick.SetActionType(JoystickActionType.Teleport, 0);
+                joystickUI.SetActionType(JoystickActionType.Teleport, 0);
             }
 
             HighlightMoveZone();
@@ -239,47 +211,47 @@ public class JoystickInputController : MonoBehaviour,
 
             highlightController.HighlightPath(selectedPath);
 
-            Vector3 worldPos = selectedTargetCell.transform.position;
-            screenPos = mainCamera.WorldToScreenPoint(worldPos);
-
-            currentJoystick.Show(screenPos);
+            worldPos = selectedTargetCell.transform.position;
         }
+
+        screenPos = mainCamera.WorldToScreenPoint(worldPos);
+        joystickUI.Show(screenPos, actionCount);
     }
 
     public void OnDrag(PointerEventData e)
     {
-        if (!currentJoystick.gameObject.activeSelf)
+        if (!joystickUI.gameObject.activeSelf)
             return;
 
-        currentJoystick.UpdateDrag(e.position);
+        joystickUI.UpdateDrag(e.position);
 
-        currentType = currentJoystick.CurrentAction;
+        currentType = joystickUI.CurrentAction;
 
         // --- Новая логика для переключения режима джойстика ---
-        if (targetCreature != null && currentJoystick.ActionCount > 1)
+        if (targetCreature != null && attacker.AttackType == AttackType.Ranged)
         {
-            bool wantsMelee = currentJoystick.CurrentAction == JoystickActionType.Melee;
-            bool isAtEdge = currentJoystick.IsReadyToConfirm;
+            bool wantsMelee = joystickUI.CurrentAction == JoystickActionType.Melee;
+            bool isAtEdge = joystickUI.IsReadyToConfirm;
 
             // Вход в режим прицеливания ближней атакой
             if (wantsMelee && isAtEdge && !isMeleeAimingMode)
             {
                 isMeleeAimingMode = true;
-                currentJoystick.SetAnimatorForActionCount(1, isMeleeAimingMode); // Анимация на 1 сегмент (зеленый)
-                currentJoystick.SetAllSegmentsToAction(JoystickActionType.Melee);
+                joystickUI.SetAnimatorForActionCount(1, isMeleeAimingMode); // Анимация на 1 сегмент (зеленый)
+                joystickUI.SetAllSegmentsToAction(JoystickActionType.Melee);
             }
             // Выход из режима прицеливания
             else if (!isAtEdge && isMeleeAimingMode)
             {
                 isMeleeAimingMode = false;
-                currentJoystick.SetAnimatorForActionCount(1, isMeleeAimingMode); // Возвращаем анимацию на 2 сегмента
+                joystickUI.SetAnimatorForActionCount(1, isMeleeAimingMode); // Возвращаем анимацию на 2 сегмента
                 // Восстанавливаем исходные типы действий
-                currentJoystick.SetActionType(JoystickActionType.Melee, 0);
-                currentJoystick.SetActionType(JoystickActionType.Ranged, 1);
+                joystickUI.SetActionType(JoystickActionType.Melee, 0);
+                joystickUI.SetActionType(JoystickActionType.Ranged, 1);
             }
         }
 
-        Vector2 knobPos = currentJoystick.KnobScreenPosition;
+        Vector2 knobPos = joystickUI.KnobScreenPosition;
         HexCell newTarget = null;
 
         if (TryPickCell(knobPos, out var overCell) && meleeCells.Contains(overCell))
@@ -288,7 +260,7 @@ public class JoystickInputController : MonoBehaviour,
         }
         else
         {
-            var dragDir = currentJoystick.KnobPositionNormalized.normalized;
+            var dragDir = joystickUI.KnobPositionNormalized.normalized;
             newTarget = meleeCells
                 .OrderBy(c =>
                 {
@@ -324,7 +296,7 @@ public class JoystickInputController : MonoBehaviour,
 
     public void OnPointerUp(PointerEventData e)
     {
-        if (!currentJoystick.gameObject.activeSelf)
+        if (!joystickUI.gameObject.activeSelf)
             return;
 
         // Сбрасываем флаг режима прицеливания при отпускании
@@ -332,19 +304,19 @@ public class JoystickInputController : MonoBehaviour,
         {
             isMeleeAimingMode = false;
             // Восстанавливаем исходные типы действий для следующего раза
-            if (currentJoystick.ActionCount == 2)
+            if (joystickUI.GetActionCount() == 2)
             {
-                currentJoystick.SetAnimatorForActionCount(1, isMeleeAimingMode);
-                currentJoystick.SetActionType(JoystickActionType.Melee, 0);
-                currentJoystick.SetActionType(JoystickActionType.Ranged, 1);
+                joystickUI.SetAnimatorForActionCount(1, isMeleeAimingMode);
+                joystickUI.SetActionType(JoystickActionType.Melee, 0);
+                joystickUI.SetActionType(JoystickActionType.Ranged, 1);
             }
         }
 
-        currentType = currentJoystick.CurrentAction;
+        currentType = joystickUI.CurrentAction;
 
-        currentJoystick.Hide();
+        joystickUI.Hide();
 
-        if (!currentJoystick.IsReadyToConfirm)
+        if (!joystickUI.IsReadyToConfirm)
         {
             highlightController.ClearHighlights();
             // show movement zone again for both Move and Melee
