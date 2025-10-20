@@ -7,5 +7,7 @@ public enum JoystickActionType
     Teleport,
     Melee,
     Ranged,
-    Cast
+    Cast,
+    Defend,
+    Wait
 }
