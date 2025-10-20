@@ -197,7 +197,7 @@ public class JoystickUI : MonoBehaviour
             backgroundImages[i].color = targetColor;
 
             // Назначаем currentAction только один раз
-            if (isHighlighted && (highlightSingle || (highlightAll && i == 0)))
+            if (isHighlighted && (highlightSingle || (highlightAll)))
             {
                 currentAction = type;
             }

@@ -23,6 +23,8 @@ public class Creature : MonoBehaviour
     public TargetSide Side => side;
     public GameObject Projectile => currentStats.projectilePrefab;
 
+    public bool IsDefending { get; set; } = false;
+
     public void Initialize(TargetSide side, int lvl)
     {
         this.side = side;

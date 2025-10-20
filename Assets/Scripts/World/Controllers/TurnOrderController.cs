@@ -14,6 +14,7 @@ public class TurnOrderController : MonoBehaviour
     [SerializeField] private MovementController movementController;
     [SerializeField] private CombatController combatController;
     [SerializeField] private HighlightController highlightController;
+    [SerializeField] private BattlefieldController battlefieldController;
 
     private readonly System.Random rng = new System.Random();
     private Queue<Creature> turnQueue;
@@ -38,6 +39,17 @@ public class TurnOrderController : MonoBehaviour
         // Подписываемся на события конца действия
         movementController.OnMovementComplete += OnCreatureActionComplete;
         combatController.OnCombatComplete += OnCreatureActionComplete;
+        battlefieldController.OnActionComplete += OnCreatureActionComplete;
+    }
+
+    private void OnDestroy() // Хорошая практика - отписываться от событий
+    {
+        if (movementController != null)
+            movementController.OnMovementComplete -= OnCreatureActionComplete;
+        if (combatController != null)
+            combatController.OnCombatComplete -= OnCreatureActionComplete;
+        if (battlefieldController != null)
+            battlefieldController.OnActionComplete -= OnCreatureActionComplete;
     }
 
     private void Start()
@@ -69,6 +81,12 @@ public class TurnOrderController : MonoBehaviour
         }
 
         var creature = turnQueue.Dequeue();
+
+        // Снимаем статус защиты в начале нового хода
+        if (creature.IsDefending)
+        {
+            creature.IsDefending = false;
+        }
 
         // 1) Пропуск хода по Bravery (только для Living)
         if (creature.Kind == CreatureKind.Living)

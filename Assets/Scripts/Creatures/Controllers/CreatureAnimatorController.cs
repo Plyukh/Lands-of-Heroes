@@ -43,7 +43,15 @@ public class CreatureAnimatorController: MonoBehaviour
         const float heightNormalized = 1f;
 
         // ѕервый callback Ч эффект у цели.
-        Action onHit = () => currentTarget?.Mover?.AnimatorController?.PlayImpact();
+        Action onHit = null;
+        if (!currentTarget.IsDefending)
+        {
+            onHit = () => currentTarget?.Mover?.AnimatorController?.PlayImpact();
+        }
+        else
+        {
+            onHit = () => currentTarget?.Mover?.AnimatorController?.PlayBlockImpact();
+        }
 
         // ¬торой callback Ч уведомление о завершении попадани€,
         // чтобы атакующее существо получило событие OnAttackHit и ход завершилс€.
@@ -64,13 +72,24 @@ public class CreatureAnimatorController: MonoBehaviour
         else
             OnMeleeAttackHit?.Invoke();
 
-        currentTarget.Mover.AnimatorController.PlayImpact();
+        if (currentTarget.IsDefending)
+        {
+            currentTarget.Mover.AnimatorController.PlayBlockImpact();
+        }
+        else
+        {
+            currentTarget.Mover.AnimatorController.PlayImpact();
+        }
     }
 
     public void RotateToAttackerEvent()
     {
         currentTarget.Mover.RotateTowardsAsync(
             attackerCreature.transform.position);
+        if (currentTarget.IsDefending)
+        {
+            currentTarget.Mover.AnimatorController.PlayBlock();
+        }
     }
 
     public void PlayWalk(bool isWalking)

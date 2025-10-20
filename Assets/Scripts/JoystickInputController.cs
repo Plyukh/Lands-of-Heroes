@@ -59,8 +59,7 @@ public class JoystickInputController : MonoBehaviour,
         int actionCount = 1;
 
         // --- Melee: clicked on enemy creature ---
-        if (TryPickCreature(screenPos, out var creature)
-            && creature != TurnOrderController.Instance.CurrentCreature)
+        if (TryPickCreature(screenPos, out var creature))
         {
             attacker = TurnOrderController.Instance.CurrentCreature;
             targetCreature = creature;
@@ -68,110 +67,119 @@ public class JoystickInputController : MonoBehaviour,
             AttackType attackType = attacker.AttackType;
             int speed = attacker.GetStat(CreatureStatusType.Speed);
 
-            if (attacker == null || attacker == creature) return;
+            if (attacker == null) return;
 
-            // Проверяем, можно ли атаковать эту цель
-            if (!IsTargetValid(attacker, creature))
+            if (creature == TurnOrderController.Instance.CurrentCreature)
             {
-                // Если цель невалидна (например, союзник для обычной атаки), ничего не делаем
-                return;
+                actionCount = 2;
+                joystickUI.SetActionType(JoystickActionType.Defend, 0);
+                joystickUI.SetActionType(JoystickActionType.Wait, 1);
             }
-
-            // пробуем найти путь к цели по вашему движению
-            var pathToTarget = pathfindingManager.FindPath(startCell, creature.Mover.CurrentCell, attacker.MovementType);
-
-            if (attackType == AttackType.Melee)
+            else
             {
-                bool reachable = pathToTarget != null && pathToTarget.Count - 1 <= speed;
-                if (!reachable)
+                // Проверяем, можно ли атаковать эту цель
+                if (!IsTargetValid(attacker, creature))
                 {
-                    // не выделять существо, перейти к обработке клика по клетке
+                    // Если цель невалидна (например, союзник для обычной атаки), ничего не делаем
                     return;
                 }
-            }
 
-            // проверяем, можем ли «дойти» до существа
-            bool canReachByMovement = false;
-            if(attackType == AttackType.Ranged)
-            {
-                bool isEngagedInMelee = IsEnemyInMeleeRange(attacker);
+                // пробуем найти путь к цели по вашему движению
+                var pathToTarget = pathfindingManager.FindPath(startCell, creature.Mover.CurrentCell, attacker.MovementType);
 
-                if (attacker.GetStat(CreatureStatusType.Speed) >= pathToTarget.Count - 1)
+                if (attackType == AttackType.Melee)
                 {
-                    canReachByMovement = true;
-                }
-
-                if(!canReachByMovement && !isEngagedInMelee)
-                {
-                    joystickUI.SetActionType(JoystickActionType.Ranged, 0);
-                }
-                else if (canReachByMovement)
-                {
-                    if (isEngagedInMelee)
+                    bool reachable = pathToTarget != null && pathToTarget.Count - 1 <= speed;
+                    if (!reachable)
                     {
-                        joystickUI.SetActionType(JoystickActionType.Melee, 0);
+                        // не выделять существо, перейти к обработке клика по клетке
+                        return;
+                    }
+                }
+
+                // проверяем, можем ли «дойти» до существа
+                bool canReachByMovement = false;
+                if (attackType == AttackType.Ranged)
+                {
+                    bool isEngagedInMelee = IsEnemyInMeleeRange(attacker);
+
+                    if (attacker.GetStat(CreatureStatusType.Speed) >= pathToTarget.Count - 1)
+                    {
+                        canReachByMovement = true;
+                    }
+
+                    if (!canReachByMovement && !isEngagedInMelee)
+                    {
+                        joystickUI.SetActionType(JoystickActionType.Ranged, 0);
+                    }
+                    else if (canReachByMovement)
+                    {
+                        if (isEngagedInMelee)
+                        {
+                            joystickUI.SetActionType(JoystickActionType.Melee, 0);
+                        }
+                        else
+                        {
+                            actionCount = 2;
+                            joystickUI.SetActionType(JoystickActionType.Melee, 0);
+                            joystickUI.SetActionType(JoystickActionType.Ranged, 1);
+                        }
                     }
                     else
                     {
-                        actionCount = 2;
-                        joystickUI.SetActionType(JoystickActionType.Melee, 0);
-                        joystickUI.SetActionType(JoystickActionType.Ranged, 1);
+                        return;
                     }
                 }
                 else
                 {
+                    joystickUI.SetActionType(JoystickActionType.Melee, 0);
+                }
+
+                // collect all walkable neighbours of the target
+                var neighbors = pathfindingManager
+                    .GetReachableCells(creature.Mover.CurrentCell, 1, MovementType.Teleport)
+                    .Where(c => c.IsWalkable)
+                    .ToList();
+
+                meleeCells = neighbors
+                    .Where(c =>
+                    {
+                        var path = pathfindingManager.FindPath(startCell, c, attacker.MovementType);
+                        return path != null && path.Count - 1 <= speed - 1;
+                    })
+                    .ToHashSet();
+
+                // Если с текущей клетки можно атаковать, добавим её в список
+                if (IsAttackPossibleFrom(startCell, targetCreature))
+                {
+                    meleeCells.Add(startCell);
+                }
+
+                // If there are no reachable cells to attack from, cancel the action.
+                if (meleeCells.Count == 0 && attackType == AttackType.Melee)
+                {
+                    ClearInputState();
                     return;
                 }
-            }
-            else
-            {
-                joystickUI.SetActionType(JoystickActionType.Melee, 0);
-            }
 
-            // collect all walkable neighbours of the target
-            var neighbors = pathfindingManager
-                .GetReachableCells(creature.Mover.CurrentCell, 1, MovementType.Teleport)
-                .Where(c => c.IsWalkable)
-                .ToList();
+                // choose default melee cell by real path length from the filtered list
+                defaultMeleeCell = meleeCells
+                    .OrderBy(c =>
+                    {
+                        var path = pathfindingManager.FindPath(startCell, c, attacker.MovementType);
+                        return path?.Count ?? int.MaxValue;
+                    })
+                    .FirstOrDefault();
 
-            meleeCells = neighbors
-                .Where(c =>
+                if (defaultMeleeCell != null)
                 {
-                    var path = pathfindingManager.FindPath(startCell, c, attacker.MovementType);
-                    return path != null && path.Count - 1 <= speed - 1;
-                })
-                .ToHashSet();
+                    defaultMeleePath = pathfindingManager
+                        .FindPath(startCell, defaultMeleeCell, attacker.MovementType);
 
-            // Если с текущей клетки можно атаковать, добавим её в список
-            if (IsAttackPossibleFrom(startCell, targetCreature))
-            {
-                meleeCells.Add(startCell);
-            }
-
-            // If there are no reachable cells to attack from, cancel the action.
-            if (meleeCells.Count == 0 && attackType == AttackType.Melee)
-            {
-                ClearInputState();
-                return;
-            }
-
-            // choose default melee cell by real path length from the filtered list
-            defaultMeleeCell = meleeCells
-                .OrderBy(c =>
-                {
-                    var path = pathfindingManager.FindPath(startCell, c, attacker.MovementType);
-                    return path?.Count ?? int.MaxValue;
-                })
-                .FirstOrDefault();
-
-            if (defaultMeleeCell != null)
-            {
-                defaultMeleePath = pathfindingManager
-                    .FindPath(startCell, defaultMeleeCell, attacker.MovementType);
-
-                selectedTargetCell = defaultMeleeCell;
-                selectedPath = defaultMeleePath;
-                highlightController.HighlightPath(defaultMeleePath);
+                    selectedTargetCell = defaultMeleeCell;
+                    selectedPath = defaultMeleePath;
+                    highlightController.HighlightPath(defaultMeleePath);
+                }
             }
 
             worldPos = targetCreature.Mover.CurrentCell.transform.position;
@@ -227,8 +235,11 @@ public class JoystickInputController : MonoBehaviour,
 
         currentType = joystickUI.CurrentAction;
 
-        // --- Новая логика для переключения режима джойстика ---
-        if (targetCreature != null && attacker.AttackType == AttackType.Ranged)
+        if (currentType == JoystickActionType.Defend || currentType == JoystickActionType.Wait)
+        {
+            return;
+        }
+        else if (targetCreature != null && attacker.AttackType == AttackType.Ranged)
         {
             bool wantsMelee = joystickUI.CurrentAction == JoystickActionType.Melee;
             bool isAtEdge = joystickUI.IsReadyToConfirm;
@@ -299,19 +310,6 @@ public class JoystickInputController : MonoBehaviour,
         if (!joystickUI.gameObject.activeSelf)
             return;
 
-        // Сбрасываем флаг режима прицеливания при отпускании
-        if (isMeleeAimingMode)
-        {
-            isMeleeAimingMode = false;
-            // Восстанавливаем исходные типы действий для следующего раза
-            if (joystickUI.GetActionCount() == 2)
-            {
-                joystickUI.SetAnimatorForActionCount(1, isMeleeAimingMode);
-                joystickUI.SetActionType(JoystickActionType.Melee, 0);
-                joystickUI.SetActionType(JoystickActionType.Ranged, 1);
-            }
-        }
-
         currentType = joystickUI.CurrentAction;
 
         joystickUI.Hide();
@@ -354,6 +352,16 @@ public class JoystickInputController : MonoBehaviour,
                     movementController.MoveAlongPath(attacker, selectedPath);
                     // атака произойдет после завершения движения
                 }
+                break;
+
+            case JoystickActionType.Defend:
+                battlefieldController.OnDefendAction(attacker);
+                ClearInputState();
+                break;
+
+            case JoystickActionType.Wait:
+                battlefieldController.OnWaitAction(attacker);
+                ClearInputState();
                 break;
         }
     }

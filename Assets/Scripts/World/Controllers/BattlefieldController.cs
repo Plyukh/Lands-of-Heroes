@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using UnityEngine;
 
@@ -14,21 +15,8 @@ public class BattlefieldController : MonoBehaviour
     [Tooltip("Инициализирует поле (фракции, препятствия, декор, начальную подсветку)")]
     [SerializeField] private BattlefieldInitializerManager initializerManager;
 
-    private void Awake()
-    {
-        if (movementController == null ||
-            combatController == null ||
-            pathfindingManager == null ||
-            initializerManager == null)
-        {
-            Debug.LogError("[BattlefieldController] Не все зависимости назначены в инспекторе!");
-        }
-    }
+    public event Action<Creature> OnActionComplete;
 
-    /// <summary>
-    /// Вызывается при клике по пустой клетке.
-    /// Собирает путь и запускает перемещение activeCreature.
-    /// </summary>
     public void OnCellClicked(HexCell cell)
     {
         var active = TurnOrderController.Instance.CurrentCreature;
@@ -77,5 +65,16 @@ public class BattlefieldController : MonoBehaviour
 
            // 3) Вызываем с учётом выбранного типа
         combatController.OnCreatureClicked(active, target, selected);
+    }
+
+    public void OnDefendAction(Creature creature)
+    {
+        creature.IsDefending = true;
+        OnActionComplete?.Invoke(creature);
+    }
+
+    public void OnWaitAction(Creature creature)
+    {
+        OnActionComplete?.Invoke(creature);
     }
 }
