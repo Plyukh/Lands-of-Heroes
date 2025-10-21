@@ -55,12 +55,26 @@ public class CombatController : MonoBehaviour
         }
         else
         {
-            onHit = () =>
+            // Для ближнего боя дальников используем OnAttackHit, так как HandleAttackHitEvent 
+            // всегда вызывает OnAttackHit для дальников независимо от типа атаки
+            if (attacker.AttackType == AttackType.Ranged)
             {
-                anim.OnMeleeAttackHit -= onHit;
-                tcs.TrySetResult(true);
-            };
-            anim.OnMeleeAttackHit += onHit;
+                onHit = () =>
+                {
+                    anim.OnAttackHit -= onHit;
+                    tcs.TrySetResult(true);
+                };
+                anim.OnAttackHit += onHit;
+            }
+            else
+            {
+                onHit = () =>
+                {
+                    anim.OnMeleeAttackHit -= onHit;
+                    tcs.TrySetResult(true);
+                };
+                anim.OnMeleeAttackHit += onHit;
+            }
             anim.PlayMeleeAttack();
         }
 
