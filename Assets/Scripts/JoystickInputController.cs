@@ -145,14 +145,36 @@ public class JoystickInputController : MonoBehaviour,
                     .Where(c =>
                     {
                         var path = pathfindingManager.FindPath(startCell, c, attacker.MovementType);
-                        return path != null && path.Count - 1 <= speed - 1;
+                        if (path == null || path.Count - 1 > speed - 1)
+                            return false;
+                        
+                        // Проверяем, что клетка не занята дружественным существом
+                        var occupantCreature = c.GetOccupantCreature();
+                        if (occupantCreature != null && occupantCreature.Side == attacker.Side)
+                            return false;
+                            
+                        return true;
                     })
                     .ToHashSet();
 
                 // Если с текущей клетки можно атаковать, добавим её в список
+                // Но только если это ближний бой и мы находимся рядом с врагом
                 if (IsAttackPossibleFrom(startCell, targetCreature))
                 {
-                    meleeCells.Add(startCell);
+                    // Для ближнего боя проверяем, что мы находимся рядом с врагом
+                    if (attackType == AttackType.Melee)
+                    {
+                        bool isInMeleeRange = IsInMeleeRange(startCell, targetCreature);
+                        if (isInMeleeRange)
+                        {
+                            meleeCells.Add(startCell);
+                        }
+                    }
+                    else
+                    {
+                        // Для дальнего боя всегда можно атаковать с места
+                        meleeCells.Add(startCell);
+                    }
                 }
 
                 // If there are no reachable cells to attack from, cancel the action.
@@ -470,5 +492,12 @@ public class JoystickInputController : MonoBehaviour,
         int distance = path.Count - 1;
         int speed = attacker.GetStat(CreatureStatusType.Speed);
         return distance <= speed - 1; // Учитываем, что одна клетка уже занята для атаки
+    }
+
+    private bool IsInMeleeRange(HexCell fromCell, Creature targetCreature)
+    {
+        // Проверяем, что клетки находятся рядом (соседние)
+        var neighbors = hexGridManager.GetNeighbors(fromCell);
+        return neighbors.Contains(targetCreature.Mover.CurrentCell);
     }
 }
