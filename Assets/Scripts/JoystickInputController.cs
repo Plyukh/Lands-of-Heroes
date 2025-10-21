@@ -117,6 +117,7 @@ public class JoystickInputController : MonoBehaviour,
                         if (isEngagedInMelee)
                         {
                             joystickUI.SetActionType(JoystickActionType.Melee, 0);
+                            joystickUI.SetActionType(JoystickActionType.Melee, 1); // Устанавливаем одинаковые значения для одного действия
                         }
                         else
                         {
@@ -263,24 +264,28 @@ public class JoystickInputController : MonoBehaviour,
         }
         else if (targetCreature != null && attacker.AttackType == AttackType.Ranged)
         {
-            bool wantsMelee = joystickUI.CurrentAction == JoystickActionType.Melee;
-            bool isAtEdge = joystickUI.IsReadyToConfirm;
+            // Переключение режимов прицеливания только если у дальника есть два действия
+            if (joystickUI.GetActionCount() == 2)
+            {
+                bool wantsMelee = joystickUI.CurrentAction == JoystickActionType.Melee;
+                bool isAtEdge = joystickUI.IsReadyToConfirm;
 
-            // Вход в режим прицеливания ближней атакой
-            if (wantsMelee && isAtEdge && !isMeleeAimingMode)
-            {
-                isMeleeAimingMode = true;
-                joystickUI.SetAnimatorForActionCount(1, isMeleeAimingMode); // Анимация на 1 сегмент (зеленый)
-                joystickUI.SetAllSegmentsToAction(JoystickActionType.Melee);
-            }
-            // Выход из режима прицеливания
-            else if (!isAtEdge && isMeleeAimingMode)
-            {
-                isMeleeAimingMode = false;
-                joystickUI.SetAnimatorForActionCount(1, isMeleeAimingMode); // Возвращаем анимацию на 2 сегмента
-                // Восстанавливаем исходные типы действий
-                joystickUI.SetActionType(JoystickActionType.Melee, 0);
-                joystickUI.SetActionType(JoystickActionType.Ranged, 1);
+                // Вход в режим прицеливания ближней атакой
+                if (wantsMelee && isAtEdge && !isMeleeAimingMode)
+                {
+                    isMeleeAimingMode = true;
+                    joystickUI.SetAnimatorForActionCount(1, isMeleeAimingMode); // Анимация на 1 сегмент (зеленый)
+                    joystickUI.SetAllSegmentsToAction(JoystickActionType.Melee);
+                }
+                // Выход из режима прицеливания
+                else if (!isAtEdge && isMeleeAimingMode)
+                {
+                    isMeleeAimingMode = false;
+                    joystickUI.SetAnimatorForActionCount(1, isMeleeAimingMode); // Возвращаем анимацию на 2 сегмента
+                    // Восстанавливаем исходные типы действий
+                    joystickUI.SetActionType(JoystickActionType.Melee, 0);
+                    joystickUI.SetActionType(JoystickActionType.Ranged, 1);
+                }
             }
         }
 
