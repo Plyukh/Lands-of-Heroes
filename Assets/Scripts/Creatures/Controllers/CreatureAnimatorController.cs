@@ -6,7 +6,7 @@ public class CreatureAnimatorController: MonoBehaviour
     [SerializeField] private Animator animator;
 
     [Header("Projectile Settings")]
-    [Tooltip("Откуда должен появляться снаряд при стрельбе")]
+    [Tooltip("пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ")]
     [SerializeField] private Transform projectileSpawnPoint;
 
     private Creature attackerCreature;
@@ -39,10 +39,10 @@ public class CreatureAnimatorController: MonoBehaviour
         if (proj == null)
             return;
 
-        // 0f — в ноги; 0.5f — в центр; 1f — в голову
+        // 0f пїЅ пїЅ пїЅпїЅпїЅпїЅ; 0.5f пїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ; 1f пїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         const float heightNormalized = 1f;
 
-        // Первый callback — эффект у цели.
+        // пїЅпїЅпїЅпїЅпїЅпїЅ callback пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅ.
         Action onHit = null;
         if (!currentTarget.IsDefending)
         {
@@ -53,8 +53,8 @@ public class CreatureAnimatorController: MonoBehaviour
             onHit = () => currentTarget?.Mover?.AnimatorController?.PlayBlockImpact();
         }
 
-        // Второй callback — уведомление о завершении попадания,
-        // чтобы атакующее существо получило событие OnAttackHit и ход завершился.
+        // пїЅпїЅпїЅпїЅпїЅпїЅ callback пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ,
+        // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ OnAttackHit пїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
         Action onComplete = () => attackerCreature?.Mover?.AnimatorController?.HandleAttackHit();
 
         proj.Initialize(currentTarget.transform, heightNormalized, onHit, onComplete);
