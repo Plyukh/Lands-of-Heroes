@@ -6947,6 +6947,7 @@ GameObject:
   - component: {fileID: 3367180663819795819}
   - component: {fileID: 4814008575388961779}
   - component: {fileID: 8234638679476797877}
+  - component: {fileID: -2567566660135955833}
   - component: {fileID: 5931051361340548065}
   m_Layer: 15
   m_Name: Vampire
@@ -7038,8 +7039,7 @@ MonoBehaviour:
       - {fileID: 406783133660265429}
       - {fileID: 8073715466653389992}
   creatureData: {fileID: 11400000, guid: 3fe883cc096ad694abb43e071ec01fbc, type: 2}
-  lvl: 0
-  targetSide: 2
+  effectManager: {fileID: -2567566660135955833}
 --- !u!114 &4814008575388961779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7071,6 +7071,18 @@ MonoBehaviour:
   stopThreshold: 0
   rotationSpeed: 360
   currentCell: {fileID: 0}
+--- !u!114 &-2567566660135955833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044828225184557604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca1e1894f5b18a94792990326fba411a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &5931051361340548065
 CapsuleCollider:
   m_ObjectHideFlags: 0

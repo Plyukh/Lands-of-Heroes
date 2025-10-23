@@ -299,6 +299,7 @@ GameObject:
   - component: {fileID: 1244670176303975975}
   - component: {fileID: 3001999009996880821}
   - component: {fileID: -1811419393468301219}
+  - component: {fileID: -5822886842812840038}
   - component: {fileID: 7607833661172872880}
   m_Layer: 15
   m_Name: Spider
@@ -371,8 +372,7 @@ MonoBehaviour:
   - {fileID: 3033609737711451101}
   visualGroups: []
   creatureData: {fileID: 11400000, guid: 3d55dfd4a775a4f4e9894752d2ab62d1, type: 2}
-  lvl: 0
-  targetSide: 2
+  effectManager: {fileID: -5822886842812840038}
 --- !u!114 &3001999009996880821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -404,6 +404,18 @@ MonoBehaviour:
   stopThreshold: 0
   rotationSpeed: 360
   currentCell: {fileID: 0}
+--- !u!114 &-5822886842812840038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829898805368708769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca1e1894f5b18a94792990326fba411a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &7607833661172872880
 CapsuleCollider:
   m_ObjectHideFlags: 0

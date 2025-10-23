@@ -14515,6 +14515,7 @@ GameObject:
   - component: {fileID: 8542141676434195287}
   - component: {fileID: 388319656119646446}
   - component: {fileID: -5662173077852344858}
+  - component: {fileID: 2940611265948981888}
   - component: {fileID: 871772385165350243}
   m_Layer: 15
   m_Name: Juggernaut
@@ -14600,6 +14601,7 @@ MonoBehaviour:
       - {fileID: 4009119847325783061}
       - {fileID: 8554593011106366417}
   creatureData: {fileID: 11400000, guid: fe83dd7578d304a45bcf92ba2d68ef3b, type: 2}
+  effectManager: {fileID: 2940611265948981888}
 --- !u!114 &388319656119646446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14631,6 +14633,18 @@ MonoBehaviour:
   stopThreshold: 0
   rotationSpeed: 360
   currentCell: {fileID: 0}
+--- !u!114 &2940611265948981888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543268438074428410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca1e1894f5b18a94792990326fba411a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &871772385165350243
 CapsuleCollider:
   m_ObjectHideFlags: 0

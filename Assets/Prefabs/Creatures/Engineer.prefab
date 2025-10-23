@@ -20265,6 +20265,7 @@ GameObject:
   - component: {fileID: 1744186325634545672}
   - component: {fileID: 2471720244621181416}
   - component: {fileID: 1613585796213863261}
+  - component: {fileID: -3327477851326634770}
   - component: {fileID: 6207830573675005919}
   m_Layer: 15
   m_Name: Engineer
@@ -20336,8 +20337,7 @@ MonoBehaviour:
       - {fileID: 3665567832711068546}
       - {fileID: 8200860470544958432}
   creatureData: {fileID: 11400000, guid: 617cccd29ec201542b9ef0618904e72c, type: 2}
-  lvl: 0
-  targetSide: 2
+  effectManager: {fileID: -3327477851326634770}
 --- !u!114 &2471720244621181416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20369,6 +20369,18 @@ MonoBehaviour:
   stopThreshold: 0
   rotationSpeed: 360
   currentCell: {fileID: 0}
+--- !u!114 &-3327477851326634770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3789000096346864500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca1e1894f5b18a94792990326fba411a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &6207830573675005919
 CapsuleCollider:
   m_ObjectHideFlags: 0

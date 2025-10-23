@@ -20859,6 +20859,7 @@ GameObject:
   - component: {fileID: 2339720532597203439}
   - component: {fileID: 5010639118492278116}
   - component: {fileID: 6096288628032370276}
+  - component: {fileID: 249367762385453237}
   - component: {fileID: 2472971170211973950}
   m_Layer: 15
   m_Name: Bear
@@ -20920,8 +20921,7 @@ MonoBehaviour:
       - {fileID: 877837462910170628}
       - {fileID: 7955747464640571695}
   creatureData: {fileID: 11400000, guid: c8da6eafcbe11524e8a34373b65b89b4, type: 2}
-  lvl: 0
-  targetSide: 2
+  effectManager: {fileID: 249367762385453237}
 --- !u!114 &5010639118492278116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20953,6 +20953,18 @@ MonoBehaviour:
   stopThreshold: 0
   rotationSpeed: 360
   currentCell: {fileID: 0}
+--- !u!114 &249367762385453237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4265295091810051079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca1e1894f5b18a94792990326fba411a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &2472971170211973950
 CapsuleCollider:
   m_ObjectHideFlags: 0

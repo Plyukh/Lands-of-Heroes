@@ -29889,6 +29889,7 @@ GameObject:
   - component: {fileID: 15691740465000822}
   - component: {fileID: -8333052879575787943}
   - component: {fileID: -5222098358121470057}
+  - component: {fileID: 1141288584682140497}
   - component: {fileID: -6917847849801502258}
   m_Layer: 15
   m_Name: Ghost
@@ -29973,6 +29974,7 @@ MonoBehaviour:
       - {fileID: 599437575046827752}
       - {fileID: 390338082174511002}
   creatureData: {fileID: 11400000, guid: 4710224baa020f045a86e8eb77ba51e2, type: 2}
+  effectManager: {fileID: 1141288584682140497}
 --- !u!114 &-8333052879575787943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30004,6 +30006,18 @@ MonoBehaviour:
   stopThreshold: 0
   rotationSpeed: 720
   currentCell: {fileID: 0}
+--- !u!114 &1141288584682140497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3916717225994286917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca1e1894f5b18a94792990326fba411a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &-6917847849801502258
 CapsuleCollider:
   m_ObjectHideFlags: 0

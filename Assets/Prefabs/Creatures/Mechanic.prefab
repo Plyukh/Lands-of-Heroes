@@ -39469,6 +39469,7 @@ GameObject:
   - component: {fileID: 2568320719464134630}
   - component: {fileID: 1453438878590296639}
   - component: {fileID: -3857982669326239906}
+  - component: {fileID: -5792633864292755419}
   - component: {fileID: 1182940123931113407}
   m_Layer: 15
   m_Name: Mechanic
@@ -39541,8 +39542,7 @@ MonoBehaviour:
       - {fileID: 2347544309309340116}
       - {fileID: 302619089570875701}
   creatureData: {fileID: 11400000, guid: 4fc99a2a308764d4e93c67a7034b09c6, type: 2}
-  lvl: 0
-  targetSide: 2
+  effectManager: {fileID: -5792633864292755419}
 --- !u!114 &1453438878590296639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39574,6 +39574,18 @@ MonoBehaviour:
   stopThreshold: 0
   rotationSpeed: 360
   currentCell: {fileID: 0}
+--- !u!114 &-5792633864292755419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6763763945855848100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca1e1894f5b18a94792990326fba411a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &1182940123931113407
 CapsuleCollider:
   m_ObjectHideFlags: 0

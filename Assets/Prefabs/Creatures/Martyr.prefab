@@ -11813,6 +11813,7 @@ GameObject:
   - component: {fileID: 7093772079167200913}
   - component: {fileID: 1202723117304212171}
   - component: {fileID: -3269694906889674705}
+  - component: {fileID: -1018990532769862663}
   - component: {fileID: -6797986701756536946}
   m_Layer: 15
   m_Name: Martyr
@@ -11884,8 +11885,7 @@ MonoBehaviour:
       - {fileID: 4191381557741652933}
       - {fileID: 7344481651731643619}
   creatureData: {fileID: 11400000, guid: 82ffebc26bb8db34fa7c09e400fa84e6, type: 2}
-  lvl: 0
-  targetSide: 2
+  effectManager: {fileID: -1018990532769862663}
 --- !u!114 &1202723117304212171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11917,6 +11917,18 @@ MonoBehaviour:
   stopThreshold: 0
   rotationSpeed: 360
   currentCell: {fileID: 0}
+--- !u!114 &-1018990532769862663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8145973300008170521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca1e1894f5b18a94792990326fba411a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &-6797986701756536946
 CapsuleCollider:
   m_ObjectHideFlags: 0

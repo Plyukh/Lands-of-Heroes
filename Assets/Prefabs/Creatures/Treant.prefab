@@ -12415,6 +12415,7 @@ GameObject:
   - component: {fileID: 3560228298344038853}
   - component: {fileID: 4872564739116643167}
   - component: {fileID: -4750375266479541814}
+  - component: {fileID: -3471597257875772836}
   - component: {fileID: -9109931180114211182}
   m_Layer: 15
   m_Name: Treant
@@ -12476,7 +12477,7 @@ MonoBehaviour:
       - {fileID: 6757793485043615713}
       - {fileID: 4308684039007869029}
   creatureData: {fileID: 11400000, guid: 81347ea3a9ce6314c8760c76cdc3dfc8, type: 2}
-  effectManager: {fileID: 0}
+  effectManager: {fileID: -3471597257875772836}
 --- !u!114 &4872564739116643167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12508,6 +12509,18 @@ MonoBehaviour:
   stopThreshold: 0
   rotationSpeed: 360
   currentCell: {fileID: 0}
+--- !u!114 &-3471597257875772836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394185602052762142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca1e1894f5b18a94792990326fba411a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &-9109931180114211182
 CapsuleCollider:
   m_ObjectHideFlags: 0

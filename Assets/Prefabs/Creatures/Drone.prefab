@@ -9664,6 +9664,7 @@ GameObject:
   - component: {fileID: 7286970559631672838}
   - component: {fileID: -8895855129655582656}
   - component: {fileID: 5993834650901835155}
+  - component: {fileID: 8144665714886098162}
   - component: {fileID: 2345297041185294624}
   m_Layer: 15
   m_Name: Drone
@@ -9744,6 +9745,7 @@ MonoBehaviour:
       - {fileID: 2231400243286646304}
       - {fileID: 4312385844460782163}
   creatureData: {fileID: 11400000, guid: 848394b070773b047b78b3ba4496f5b1, type: 2}
+  effectManager: {fileID: 8144665714886098162}
 --- !u!114 &-8895855129655582656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9775,6 +9777,18 @@ MonoBehaviour:
   stopThreshold: 0
   rotationSpeed: 720
   currentCell: {fileID: 0}
+--- !u!114 &8144665714886098162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2735890230616602876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca1e1894f5b18a94792990326fba411a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &2345297041185294624
 CapsuleCollider:
   m_ObjectHideFlags: 0

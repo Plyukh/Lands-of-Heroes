@@ -1414,6 +1414,7 @@ GameObject:
   - component: {fileID: 8917197048615091137}
   - component: {fileID: 9018074083417549808}
   - component: {fileID: 7866003316065661171}
+  - component: {fileID: 6635635792879498947}
   - component: {fileID: 5430886375859102781}
   m_Layer: 15
   m_Name: Cyborg
@@ -1488,8 +1489,7 @@ MonoBehaviour:
       - {fileID: 8581249566827164064}
       - {fileID: 2577389181137563313}
   creatureData: {fileID: 11400000, guid: 45316748afb153d429ad2f08e967d054, type: 2}
-  lvl: 0
-  targetSide: 2
+  effectManager: {fileID: 6635635792879498947}
 --- !u!114 &9018074083417549808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1521,6 +1521,18 @@ MonoBehaviour:
   stopThreshold: 0
   rotationSpeed: 360
   currentCell: {fileID: 0}
+--- !u!114 &6635635792879498947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6688488365573098034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca1e1894f5b18a94792990326fba411a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &5430886375859102781
 CapsuleCollider:
   m_ObjectHideFlags: 0

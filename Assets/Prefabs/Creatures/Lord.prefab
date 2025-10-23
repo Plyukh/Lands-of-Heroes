@@ -25961,6 +25961,7 @@ GameObject:
   - component: {fileID: 8353847064971096004}
   - component: {fileID: -8972635256329523972}
   - component: {fileID: 1062503822758300741}
+  - component: {fileID: 3880242024260480401}
   - component: {fileID: 7343921145767211937}
   m_Layer: 15
   m_Name: Lord
@@ -26051,6 +26052,7 @@ MonoBehaviour:
       - {fileID: 2129615221406711484}
       - {fileID: 6905109240785529402}
   creatureData: {fileID: 11400000, guid: 0b5063d44faf9524fabedbd876c651a5, type: 2}
+  effectManager: {fileID: 3880242024260480401}
 --- !u!114 &-8972635256329523972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26082,6 +26084,18 @@ MonoBehaviour:
   stopThreshold: 0
   rotationSpeed: 360
   currentCell: {fileID: 0}
+--- !u!114 &3880242024260480401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3729834663124437788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca1e1894f5b18a94792990326fba411a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &7343921145767211937
 CapsuleCollider:
   m_ObjectHideFlags: 0

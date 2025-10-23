@@ -6289,6 +6289,7 @@ GameObject:
   - component: {fileID: 4045382937057313898}
   - component: {fileID: 1578018793148914461}
   - component: {fileID: 6438840999407033262}
+  - component: {fileID: -7254172077011270539}
   - component: {fileID: -7418015509096711503}
   m_Layer: 15
   m_Name: Potions Master
@@ -6374,8 +6375,7 @@ MonoBehaviour:
       - {fileID: 1122429821571872669}
       - {fileID: 8514387661334034762}
   creatureData: {fileID: 11400000, guid: c2173c8a30c8ae14bb66bfba43dbd140, type: 2}
-  lvl: 0
-  targetSide: 2
+  effectManager: {fileID: -7254172077011270539}
 --- !u!114 &1578018793148914461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6407,6 +6407,18 @@ MonoBehaviour:
   stopThreshold: 0
   rotationSpeed: 360
   currentCell: {fileID: 0}
+--- !u!114 &-7254172077011270539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2480826730947194847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca1e1894f5b18a94792990326fba411a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &-7418015509096711503
 CapsuleCollider:
   m_ObjectHideFlags: 0

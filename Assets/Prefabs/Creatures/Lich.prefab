@@ -73954,6 +73954,7 @@ GameObject:
   - component: {fileID: 6295851487209963046}
   - component: {fileID: 3109629008685655547}
   - component: {fileID: -7385688486482704236}
+  - component: {fileID: -5625252907532610482}
   - component: {fileID: 7905871121753073806}
   m_Layer: 15
   m_Name: Lich
@@ -74045,8 +74046,7 @@ MonoBehaviour:
       - {fileID: 1041974938361443844}
       - {fileID: 5689651602247413365}
   creatureData: {fileID: 11400000, guid: ef4d6988ff53fe54bbc5eed6aac1d9a7, type: 2}
-  lvl: 0
-  targetSide: 2
+  effectManager: {fileID: -5625252907532610482}
 --- !u!114 &3109629008685655547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74078,6 +74078,18 @@ MonoBehaviour:
   stopThreshold: 0
   rotationSpeed: 360
   currentCell: {fileID: 0}
+--- !u!114 &-5625252907532610482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6294460643649747306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca1e1894f5b18a94792990326fba411a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &7905871121753073806
 CapsuleCollider:
   m_ObjectHideFlags: 0

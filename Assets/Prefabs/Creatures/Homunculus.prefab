@@ -523,6 +523,7 @@ GameObject:
   - component: {fileID: 2221029021408196423}
   - component: {fileID: 3169550239644812196}
   - component: {fileID: -4340851722488359529}
+  - component: {fileID: 941831970335833809}
   - component: {fileID: -4595648664676896307}
   m_Layer: 15
   m_Name: Homunculus
@@ -587,8 +588,7 @@ MonoBehaviour:
   - {fileID: 4817257764926986774}
   visualGroups: []
   creatureData: {fileID: 11400000, guid: 815d3bfe3192500479211700b103a4b7, type: 2}
-  lvl: 0
-  targetSide: 2
+  effectManager: {fileID: 941831970335833809}
 --- !u!114 &3169550239644812196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -620,6 +620,18 @@ MonoBehaviour:
   stopThreshold: 0
   rotationSpeed: 360
   currentCell: {fileID: 0}
+--- !u!114 &941831970335833809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433910928622188734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca1e1894f5b18a94792990326fba411a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &-4595648664676896307
 CapsuleCollider:
   m_ObjectHideFlags: 0

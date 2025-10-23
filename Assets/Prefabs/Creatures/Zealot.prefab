@@ -84561,6 +84561,7 @@ GameObject:
   - component: {fileID: 1132069018733605298}
   - component: {fileID: 4553110648741228035}
   - component: {fileID: -5269844639786820792}
+  - component: {fileID: -8291129117682827970}
   - component: {fileID: 8510502227930829885}
   m_Layer: 15
   m_Name: Zealot
@@ -84650,8 +84651,7 @@ MonoBehaviour:
       - {fileID: 411964498458423324}
       - {fileID: 2476277104632480072}
   creatureData: {fileID: 11400000, guid: 6eb2f433b8d22a94eaf8473d03b241f4, type: 2}
-  lvl: 0
-  targetSide: 2
+  effectManager: {fileID: -8291129117682827970}
 --- !u!114 &4553110648741228035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84683,6 +84683,18 @@ MonoBehaviour:
   stopThreshold: 0
   rotationSpeed: 360
   currentCell: {fileID: 0}
+--- !u!114 &-8291129117682827970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8050200541716987125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca1e1894f5b18a94792990326fba411a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &8510502227930829885
 CapsuleCollider:
   m_ObjectHideFlags: 0

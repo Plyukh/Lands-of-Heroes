@@ -17323,6 +17323,7 @@ GameObject:
   - component: {fileID: 4214188637896251339}
   - component: {fileID: -5845362713565013096}
   - component: {fileID: -6192137969496957206}
+  - component: {fileID: -1419839055861308083}
   - component: {fileID: 312116910138450514}
   m_Layer: 15
   m_Name: Vestal
@@ -17404,8 +17405,7 @@ MonoBehaviour:
       - {fileID: 4838866243791908276}
       - {fileID: 5872907578112557656}
   creatureData: {fileID: 11400000, guid: e56c250a29447cb448869608a484058a, type: 2}
-  lvl: 0
-  targetSide: 2
+  effectManager: {fileID: -1419839055861308083}
 --- !u!114 &-5845362713565013096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17437,6 +17437,18 @@ MonoBehaviour:
   stopThreshold: 0
   rotationSpeed: 360
   currentCell: {fileID: 0}
+--- !u!114 &-1419839055861308083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6601487982505579756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca1e1894f5b18a94792990326fba411a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &312116910138450514
 CapsuleCollider:
   m_ObjectHideFlags: 0
