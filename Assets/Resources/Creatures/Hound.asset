@@ -19,7 +19,9 @@ MonoBehaviour:
   kind: 0
   attackType: 0
   movementType: 0
+  sprite: {fileID: 0}
   prefab: {fileID: 8176261053319612160, guid: 06921a9ab7f2b074ea4c0b7e1a037f63, type: 3}
+  persistInPlayerData: 1
   statsPerLevel:
   - level: 1
     attack: 6
@@ -31,6 +33,7 @@ MonoBehaviour:
     stackSize: 9
     shots: 0
     projectilePrefab: {fileID: 0}
+    passiveEffects: []
     texture: {fileID: 2800000, guid: ef559d0287174034099f572fb4a9c977, type: 3}
     visualizations:
     - type: 0
@@ -49,6 +52,7 @@ MonoBehaviour:
     stackSize: 9
     shots: 0
     projectilePrefab: {fileID: 0}
+    passiveEffects: []
     texture: {fileID: 2800000, guid: f96a1162240dcfd46af88ee933cb58f2, type: 3}
     visualizations:
     - type: 0
@@ -67,6 +71,7 @@ MonoBehaviour:
     stackSize: 9
     shots: 0
     projectilePrefab: {fileID: 0}
+    passiveEffects: []
     texture: {fileID: 2800000, guid: f96a1162240dcfd46af88ee933cb58f2, type: 3}
     visualizations:
     - type: 0
@@ -85,6 +90,7 @@ MonoBehaviour:
     stackSize: 9
     shots: 0
     projectilePrefab: {fileID: 0}
+    passiveEffects: []
     texture: {fileID: 2800000, guid: 7a214152085709c43a41913020ed1933, type: 3}
     visualizations:
     - type: 0
@@ -103,6 +109,9 @@ MonoBehaviour:
     stackSize: 9
     shots: 0
     projectilePrefab: {fileID: 0}
+    passiveEffects:
+    - effectData: {fileID: 11400000, guid: ab23674b20bb7c94a828a8f51a9b5a7a, type: 2}
+      level: 1
     texture: {fileID: 2800000, guid: 7a214152085709c43a41913020ed1933, type: 3}
     visualizations:
     - type: 0
@@ -121,6 +130,9 @@ MonoBehaviour:
     stackSize: 9
     shots: 0
     projectilePrefab: {fileID: 0}
+    passiveEffects:
+    - effectData: {fileID: 11400000, guid: ab23674b20bb7c94a828a8f51a9b5a7a, type: 2}
+      level: 1
     texture: {fileID: 2800000, guid: 7a214152085709c43a41913020ed1933, type: 3}
     visualizations:
     - type: 0
@@ -139,6 +151,9 @@ MonoBehaviour:
     stackSize: 9
     shots: 0
     projectilePrefab: {fileID: 0}
+    passiveEffects:
+    - effectData: {fileID: 11400000, guid: ab23674b20bb7c94a828a8f51a9b5a7a, type: 2}
+      level: 1
     texture: {fileID: 2800000, guid: 7a214152085709c43a41913020ed1933, type: 3}
     visualizations:
     - type: 0
@@ -157,6 +172,9 @@ MonoBehaviour:
     stackSize: 9
     shots: 0
     projectilePrefab: {fileID: 0}
+    passiveEffects:
+    - effectData: {fileID: 11400000, guid: ab23674b20bb7c94a828a8f51a9b5a7a, type: 2}
+      level: 1
     texture: {fileID: 2800000, guid: 5fd01a55fa8ec6541b0f816fac00a310, type: 3}
     visualizations:
     - type: 0
@@ -175,6 +193,9 @@ MonoBehaviour:
     stackSize: 9
     shots: 0
     projectilePrefab: {fileID: 0}
+    passiveEffects:
+    - effectData: {fileID: 11400000, guid: ab23674b20bb7c94a828a8f51a9b5a7a, type: 2}
+      level: 1
     texture: {fileID: 2800000, guid: 5fd01a55fa8ec6541b0f816fac00a310, type: 3}
     visualizations:
     - type: 0
@@ -193,6 +214,9 @@ MonoBehaviour:
     stackSize: 9
     shots: 0
     projectilePrefab: {fileID: 0}
+    passiveEffects:
+    - effectData: {fileID: 11400000, guid: ab23674b20bb7c94a828a8f51a9b5a7a, type: 2}
+      level: 1
     texture: {fileID: 2800000, guid: 5fd01a55fa8ec6541b0f816fac00a310, type: 3}
     visualizations:
     - type: 0
