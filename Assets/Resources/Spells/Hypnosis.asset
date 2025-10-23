@@ -29,19 +29,22 @@ MonoBehaviour:
     areaRadius: 0
     power: 25
     damage: 10
+    summonSettings:
+      creatureData: {fileID: 0}
+      creatureLevel: 0
+    cloneSettings:
+      maxCloneTargetLevel: 0
+    zoneSettings:
+      cellObjectType: 0
+      objectCount: 0
+      isRandomPlacement: 0
+      isBlockingCell: 0
+      disappearOnTrigger: 0
+      skipTurnOnTrigger: 0
+    clearanceSettings:
+      removableTypes: 
     statusEffects:
-    - effectName: Hypnosis
-      effectType: 12
-      statusTarget: 
-      valueType: 0
-      value: 0
-      duration: 0
-      isStackable: 0
-      isDispellable: 1
-      protectedElement: 5
-      magicProtectionPercent: 0
-      protectionType: 2
-      physicalProtectionPercent: 0
+    - {fileID: 11400000, guid: 2cc201b959709364aa7fec41b9b301d1, type: 2}
   - level: 2
     manaCost: 18
     targetSide: 0
@@ -50,19 +53,22 @@ MonoBehaviour:
     areaRadius: 0
     power: 25
     damage: 20
+    summonSettings:
+      creatureData: {fileID: 0}
+      creatureLevel: 0
+    cloneSettings:
+      maxCloneTargetLevel: 0
+    zoneSettings:
+      cellObjectType: 0
+      objectCount: 0
+      isRandomPlacement: 0
+      isBlockingCell: 0
+      disappearOnTrigger: 0
+      skipTurnOnTrigger: 0
+    clearanceSettings:
+      removableTypes: 
     statusEffects:
-    - effectName: Hypnosis
-      effectType: 12
-      statusTarget: 
-      valueType: 0
-      value: 0
-      duration: 0
-      isStackable: 0
-      isDispellable: 1
-      protectedElement: 5
-      magicProtectionPercent: 0
-      protectionType: 2
-      physicalProtectionPercent: 0
+    - {fileID: 11400000, guid: 2cc201b959709364aa7fec41b9b301d1, type: 2}
   - level: 3
     manaCost: 15
     targetSide: 0
@@ -71,19 +77,22 @@ MonoBehaviour:
     areaRadius: 0
     power: 25
     damage: 30
+    summonSettings:
+      creatureData: {fileID: 0}
+      creatureLevel: 0
+    cloneSettings:
+      maxCloneTargetLevel: 0
+    zoneSettings:
+      cellObjectType: 0
+      objectCount: 0
+      isRandomPlacement: 0
+      isBlockingCell: 0
+      disappearOnTrigger: 0
+      skipTurnOnTrigger: 0
+    clearanceSettings:
+      removableTypes: 
     statusEffects:
-    - effectName: Hypnosis
-      effectType: 12
-      statusTarget: 
-      valueType: 0
-      value: 0
-      duration: 0
-      isStackable: 0
-      isDispellable: 1
-      protectedElement: 5
-      magicProtectionPercent: 0
-      protectionType: 2
-      physicalProtectionPercent: 0
+    - {fileID: 11400000, guid: 2cc201b959709364aa7fec41b9b301d1, type: 2}
   - level: 4
     manaCost: 15
     targetSide: 0
@@ -92,19 +101,22 @@ MonoBehaviour:
     areaRadius: 0
     power: 25
     damage: 40
+    summonSettings:
+      creatureData: {fileID: 0}
+      creatureLevel: 0
+    cloneSettings:
+      maxCloneTargetLevel: 0
+    zoneSettings:
+      cellObjectType: 0
+      objectCount: 0
+      isRandomPlacement: 0
+      isBlockingCell: 0
+      disappearOnTrigger: 0
+      skipTurnOnTrigger: 0
+    clearanceSettings:
+      removableTypes: 
     statusEffects:
-    - effectName: Hypnosis
-      effectType: 12
-      statusTarget: 
-      valueType: 0
-      value: 0
-      duration: 0
-      isStackable: 0
-      isDispellable: 1
-      protectedElement: 5
-      magicProtectionPercent: 0
-      protectionType: 2
-      physicalProtectionPercent: 0
+    - {fileID: 11400000, guid: 2cc201b959709364aa7fec41b9b301d1, type: 2}
   - level: 5
     manaCost: 15
     targetSide: 0
@@ -113,16 +125,19 @@ MonoBehaviour:
     areaRadius: 0
     power: 25
     damage: 50
+    summonSettings:
+      creatureData: {fileID: 0}
+      creatureLevel: 0
+    cloneSettings:
+      maxCloneTargetLevel: 0
+    zoneSettings:
+      cellObjectType: 0
+      objectCount: 0
+      isRandomPlacement: 0
+      isBlockingCell: 0
+      disappearOnTrigger: 0
+      skipTurnOnTrigger: 0
+    clearanceSettings:
+      removableTypes: 
     statusEffects:
-    - effectName: Hypnosis
-      effectType: 12
-      statusTarget: 
-      valueType: 0
-      value: 0
-      duration: 0
-      isStackable: 0
-      isDispellable: 1
-      protectedElement: 5
-      magicProtectionPercent: 0
-      protectionType: 2
-      physicalProtectionPercent: 0
+    - {fileID: 11400000, guid: 2cc201b959709364aa7fec41b9b301d1, type: 2}

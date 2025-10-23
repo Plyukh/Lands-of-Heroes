@@ -34,5 +34,5 @@ public class SpellStatsPerLevel
     public ClearanceSettings clearanceSettings;
 
     [Header("Effects")]
-    public List<StatusEffectData> statusEffects;
+    public List<EffectData> statusEffects;
 }

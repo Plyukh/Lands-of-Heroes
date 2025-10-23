@@ -2,17 +2,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class StatusEffectData
+public class EffectStatsPerLevel
 {
     [Header("Main")]
-    public string effectName;
-    public EffectType effectType;
+    public int level;
 
     [Header("Status Modification")]
     public List<CreatureStatusType> statusTarget;
     public ValueInterpretationType valueType;
     public float value;
-    public int duration;
 
     [Header("Stacking & Dispel")]
     public bool isStackable;
