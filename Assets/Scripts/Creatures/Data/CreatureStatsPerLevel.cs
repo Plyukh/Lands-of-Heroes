@@ -23,6 +23,9 @@ public class CreatureStatsPerLevel
     [Tooltip("It only works if the type of attack is ranged combat")]
     public GameObject projectilePrefab;
 
+    [Header("Passive Skills")]
+    public List<PassiveEffect> passiveEffects;
+
     [Header("Visualization")]
     public Texture texture;
     public List<Visualization> visualizations;

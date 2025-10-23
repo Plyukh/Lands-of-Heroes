@@ -20662,6 +20662,7 @@ GameObject:
   - component: {fileID: 4108233779133102265}
   - component: {fileID: -7278720255297853579}
   - component: {fileID: 2796559755307072531}
+  - component: {fileID: 236564934367564591}
   - component: {fileID: -3389775111068661160}
   m_Layer: 15
   m_Name: Paladin
@@ -20738,8 +20739,7 @@ MonoBehaviour:
       - {fileID: 8935261774322053141}
       - {fileID: 1290402967628761559}
   creatureData: {fileID: 11400000, guid: 7412d81501864514da2483a50bd59afd, type: 2}
-  lvl: 0
-  targetSide: 2
+  effectManager: {fileID: 236564934367564591}
 --- !u!114 &-7278720255297853579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20771,6 +20771,18 @@ MonoBehaviour:
   stopThreshold: 0
   rotationSpeed: 360
   currentCell: {fileID: 0}
+--- !u!114 &236564934367564591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6929662776832082436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca1e1894f5b18a94792990326fba411a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &-3389775111068661160
 CapsuleCollider:
   m_ObjectHideFlags: 0

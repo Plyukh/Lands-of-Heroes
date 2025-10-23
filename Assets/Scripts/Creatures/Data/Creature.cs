@@ -1,3 +1,4 @@
+using NUnit.Framework.Internal;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,7 +17,11 @@ public class Creature : MonoBehaviour
     private CreatureStatsPerLevel currentStats;
     private TargetSide side;
 
+    [Header("Effect Manager")]
+    [SerializeField] private CreatureEffectManager effectManager;
+
     public CreatureMover Mover => creatureMover;
+    public CreatureEffectManager EffectManager => effectManager;
     public CreatureKind Kind => creatureData.kind;
     public MovementType MovementType => creatureData.movementType;
     public AttackType AttackType => creatureData.attackType;
@@ -29,7 +34,8 @@ public class Creature : MonoBehaviour
     {
         this.side = side;
 
-        currentStats = creatureData.statsPerLevel[lvl - 1];
+        ApplyStats(lvl);
+        ApplyPassiveEffects();
         ApplyTexture(currentStats.texture);
         ApplyVisuals(currentStats.visualizations);
     }
@@ -40,6 +46,21 @@ public class Creature : MonoBehaviour
         return currentStats != null
             ? currentStats.GetStat(type)
             : 0;
+    }
+
+    public void ApplyStats(int lvl)
+    {
+        currentStats = creatureData.statsPerLevel[lvl - 1];
+    }
+
+    public void ApplyPassiveEffects()
+    {
+        foreach (var p in currentStats.passiveEffects)
+        {
+            if (p.effectData == null) continue;
+            var effect = EffectFactory.CreatePassiveEffect(this, p.effectData, p.level);
+            effectManager.AddEffect(effect);
+        }
     }
 
     private void ApplyTexture(Texture texture)

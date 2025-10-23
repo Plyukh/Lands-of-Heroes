@@ -119,12 +119,12 @@ public class CreatureAnimatorController: MonoBehaviour
 
     public void PlayDoubleShot()
     {
-        animator.SetTrigger("DoubleShot");
+        animator.SetBool("DoubleShot", true);
     }
 
     public void PlayDoubleBlow()
     {
-        animator.SetTrigger("DoubleBlow"); 
+        animator.SetBool("DoubleBlow", true);
     }
 
     public void PlayImpact()
