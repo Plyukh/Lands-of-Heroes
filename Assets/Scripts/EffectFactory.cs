@@ -21,6 +21,10 @@ public static class EffectFactory
                 effect = new StatModifierEffect();
                 break;
 
+            case EffectType.AreaStrike:
+                effect = new AreaStrikeEffect();
+                break;
+
             // Добавь специализированные типы эффектов сюда по мере необходимости:
             // case EffectType.Regeneration: effect = new RegenerationEffect(); break;
             // case EffectType.Vampirism:    effect = new VampirismEffect();    break;

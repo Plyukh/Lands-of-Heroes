@@ -13,5 +13,6 @@ public enum EffectType
     Petrify,
     Forgetfulness,
     Hypnosis,
-    Bloodlust
+    Bloodlust,
+    AreaStrike
 }
