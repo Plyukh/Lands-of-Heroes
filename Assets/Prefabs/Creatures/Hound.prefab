@@ -102896,11 +102896,17 @@ GameObject:
   m_Component:
   - component: {fileID: 8153014692792629197}
   - component: {fileID: 2343561024168714948}
+<<<<<<< Updated upstream
   - component: {fileID: 6527525861207268064}
   - component: {fileID: 3294828560338224440}
   - component: {fileID: 8634277841222880760}
   - component: {fileID: -2738941207355527479}
   m_Layer: 15
+=======
+  - component: {fileID: 2017764825405804150}
+  - component: {fileID: -487708106192246524}
+  m_Layer: 0
+>>>>>>> Stashed changes
   m_Name: Hound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102935,7 +102941,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e0cd1440066a54bba9607dfb7b57e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   creatureMover: {fileID: 3294828560338224440}
+=======
+  mover: {fileID: -487708106192246524}
+  animatorController: {fileID: 2017764825405804150}
+>>>>>>> Stashed changes
   materials:
   - {fileID: 2891866844663487144}
   - {fileID: 2898519316348143158}
@@ -102974,9 +102985,15 @@ MonoBehaviour:
       - {fileID: 7472445940192184242}
       - {fileID: 3614348247651035109}
       - {fileID: 6975232779109629479}
+<<<<<<< Updated upstream
   creatureData: {fileID: 11400000, guid: 94740604042bf0944bb818e92010f8b6, type: 2}
   effectManager: {fileID: 8634277841222880760}
 --- !u!114 &6527525861207268064
+=======
+  CreatureData: {fileID: 11400000, guid: 94740604042bf0944bb818e92010f8b6, type: 2}
+  index: 0
+--- !u!114 &2017764825405804150
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -102989,8 +103006,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 6787589927881824805}
+<<<<<<< Updated upstream
   projectileSpawnPoint: {fileID: 0}
 --- !u!114 &3294828560338224440
+=======
+--- !u!114 &-487708106192246524
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -102999,9 +103020,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8176261053319612160}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7685c31ca14ae344bb8f943b9bedc848, type: 3}
+  m_Script: {fileID: 11500000, guid: 140bda1d4e7e7dd41a7cf75c8b1ef7ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   animatorController: {fileID: 6527525861207268064}
   moveSpeed: 1
   stopThreshold: 0
@@ -103042,6 +103064,10 @@ CapsuleCollider:
   m_Height: 1.25
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+=======
+  defaultMoveSpeed: 2
+  stopThreshold: 0.01
+>>>>>>> Stashed changes
 --- !u!1 &8198193295993826278
 GameObject:
   m_ObjectHideFlags: 0
