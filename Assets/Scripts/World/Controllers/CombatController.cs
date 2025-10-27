@@ -7,6 +7,7 @@ public class CombatController : MonoBehaviour
 {
     [Header("Dependencies")]
     [SerializeField] private HighlightController highlightController;
+    [SerializeField] private HexGridManager hexGridManager;
 
     public event Action<Creature> OnCombatComplete;
 
@@ -29,6 +30,12 @@ public class CombatController : MonoBehaviour
 
         // Запускаем анимацию удара и ждём момента «попадания»
         await PlayAttackSequence(attacker, target, selectedType);
+
+        // Проверяем, есть ли эффект Area Strike (атака по площади)
+        if (attacker.EffectManager.HasEffectOfType(EffectType.AreaStrike))
+        {
+            PerformAreaStrike(attacker, target);
+        }
 
         // Оповещаем, что атака завершилась
         OnCombatComplete?.Invoke(attacker);
@@ -106,5 +113,47 @@ public class CombatController : MonoBehaviour
         }
 
         await tcs.Task;
+    }
+
+    /// <summary>
+    /// Выполняет атаку по площади - все враги вокруг атакующего получают урон
+    /// </summary>
+    private void PerformAreaStrike(Creature attacker, Creature mainTarget)
+    {
+        var attackerCell = attacker.Mover.CurrentCell;
+        if (attackerCell == null)
+            return;
+
+        // Находим всех врагов в соседних клетках
+        var neighbors = hexGridManager.GetNeighbors(attackerCell);
+        var enemiesAround = new System.Collections.Generic.List<Creature>();
+
+        foreach (var neighborCell in neighbors)
+        {
+            var creature = neighborCell.GetOccupantCreature();
+            
+            // Проверяем: существо есть, это враг, и это не главная цель (её мы уже атаковали)
+            if (creature != null && 
+                creature.Side != attacker.Side && 
+                creature != mainTarget)
+            {
+                enemiesAround.Add(creature);
+            }
+        }
+
+        // Все враги вокруг получают урон (без поворота)
+        foreach (var enemy in enemiesAround)
+        {
+            // Враг защищается или получает удар
+            if (enemy.IsDefending)
+            {
+                enemy.Mover.AnimatorController.PlayBlock();
+                enemy.Mover.AnimatorController.PlayBlockImpact();
+            }
+            else
+            {
+                enemy.Mover.AnimatorController.PlayImpact();
+            }
+        }
     }
 }

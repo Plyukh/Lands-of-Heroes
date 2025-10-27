@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Area Strike
   m_EditorClassIdentifier: 
   effectName: Area Strike
-  effectType: 0
+  effectType: 14
   icon: {fileID: 0}
   levelsData:
   - level: 1
