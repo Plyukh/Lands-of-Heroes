@@ -64,4 +64,12 @@ public class CreatureEffectManager : MonoBehaviour
         effect.Remove(effect.Owner);
         activeEffects.Remove(effect);
     }
+
+    /// <summary>
+    /// Проверяет, есть ли у существа эффект указанного типа
+    /// </summary>
+    public bool HasEffectOfType(EffectType effectType)
+    {
+        return activeEffects.Any(e => e.Data?.effectType == effectType);
+    }
 }

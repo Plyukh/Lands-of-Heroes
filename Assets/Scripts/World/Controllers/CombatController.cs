@@ -37,18 +37,37 @@ public class CombatController : MonoBehaviour
     private async Task PlayAttackSequence(Creature attacker, Creature target, AttackType type)
     {
         var anim = attacker.Mover.AnimatorController;
-        var tcs = new TaskCompletionSource<bool>();
+        
+        // Проверяем, есть ли эффект двойной атаки
+        bool hasDoubleAttack = false;
+        if (type == AttackType.Ranged)
+        {
+            hasDoubleAttack = attacker.EffectManager.HasEffectOfType(EffectType.DoubleShot);
+        }
+        else
+        {
+            hasDoubleAttack = attacker.EffectManager.HasEffectOfType(EffectType.DoubleBlow);
+        }
 
         // Устанавливаем цель анимации
         anim.SetAttackTarget(target, attacker);
+
+        // Счетчик ударов (нужно дождаться 1 или 2 ударов)
+        int expectedHits = hasDoubleAttack ? 2 : 1;
+        int hitCount = 0;
+        var tcs = new TaskCompletionSource<bool>();
 
         Action onHit = null;
         if (type == AttackType.Ranged)
         {
             onHit = () =>
             {
-                anim.OnAttackHit -= onHit;
-                tcs.TrySetResult(true);
+                hitCount++;
+                if (hitCount >= expectedHits)
+                {
+                    anim.OnAttackHit -= onHit;
+                    tcs.TrySetResult(true);
+                }
             };
             anim.OnAttackHit += onHit;
             anim.PlayAttack();
@@ -61,8 +80,12 @@ public class CombatController : MonoBehaviour
             {
                 onHit = () =>
                 {
-                    anim.OnAttackHit -= onHit;
-                    tcs.TrySetResult(true);
+                    hitCount++;
+                    if (hitCount >= expectedHits)
+                    {
+                        anim.OnAttackHit -= onHit;
+                        tcs.TrySetResult(true);
+                    }
                 };
                 anim.OnAttackHit += onHit;
             }
@@ -70,8 +93,12 @@ public class CombatController : MonoBehaviour
             {
                 onHit = () =>
                 {
-                    anim.OnMeleeAttackHit -= onHit;
-                    tcs.TrySetResult(true);
+                    hitCount++;
+                    if (hitCount >= expectedHits)
+                    {
+                        anim.OnMeleeAttackHit -= onHit;
+                        tcs.TrySetResult(true);
+                    }
                 };
                 anim.OnMeleeAttackHit += onHit;
             }
