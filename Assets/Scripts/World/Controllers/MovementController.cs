@@ -13,6 +13,22 @@ public class MovementController : MonoBehaviour
 
     public event Action<Creature> OnMovementComplete;
 
+    // Флаг: если true, то после движения будет атака (не завершать ход)
+    private bool isMovementForAttack = false;
+
+    /// <summary>
+    /// Устанавливает, что текущее движение - это подготовка к атаке
+    /// </summary>
+    public void SetMovementForAttack(bool value)
+    {
+        isMovementForAttack = value;
+    }
+
+    /// <summary>
+    /// Проверяет, было ли движение частью атаки
+    /// </summary>
+    public bool IsMovementForAttack => isMovementForAttack;
+
     public async void MoveAlongPath(Creature creature, List<HexCell> path)
     {
         if (creature == null || path == null || path.Count == 0)
@@ -53,6 +69,9 @@ public class MovementController : MonoBehaviour
         // Clean up and signal completion
         highlightController.ClearHighlights();
         OnMovementComplete?.Invoke(creature);
+        
+        // Сбрасываем флаг после вызова события
+        isMovementForAttack = false;
     }
 
     private async Task HandlePathMovement(Creature creature, List<HexCell> path)
@@ -78,5 +97,8 @@ public class MovementController : MonoBehaviour
         // Clean up and signal completion
         highlightController.ClearHighlights();
         OnMovementComplete?.Invoke(creature);
+        
+        // Сбрасываем флаг после вызова события
+        isMovementForAttack = false;
     }
 }

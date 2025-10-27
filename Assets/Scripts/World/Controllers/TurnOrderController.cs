@@ -20,15 +20,15 @@ public class TurnOrderController : MonoBehaviour
     private Queue<Creature> turnQueue;
     private Creature currentCreature;
 
-    /// <summary>Текущее активное существо.</summary>
+    /// <summary>пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.</summary>
     public Creature CurrentCreature { get; private set; }
 
-    /// <summary>Вызывается при начале хода нового существа.</summary>
+    /// <summary>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.</summary>
     public event Action<Creature> OnTurnStarted;
 
     private void Awake()
     {
-        // Синглтон
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         if (Instance == null) Instance = this;
         else
         {
@@ -36,13 +36,13 @@ public class TurnOrderController : MonoBehaviour
             return;
         }
 
-        // Подписываемся на события конца действия
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         movementController.OnMovementComplete += OnCreatureActionComplete;
         combatController.OnCombatComplete += OnCreatureActionComplete;
         battlefieldController.OnActionComplete += OnCreatureActionComplete;
     }
 
-    private void OnDestroy() // Хорошая практика - отписываться от событий
+    private void OnDestroy() // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     {
         if (movementController != null)
             movementController.OnMovementComplete -= OnCreatureActionComplete;
@@ -59,10 +59,10 @@ public class TurnOrderController : MonoBehaviour
 
     private void StartNewRound()
     {
-        // Все существа на поле (включая союзников и врагов)
+        // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ)
         var all = creatureManager.GetBySide(TargetSide.Any);
 
-        // Сортируем по скорости (убывание), при равной — по рандому
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ), пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         var ordered = all
             .OrderByDescending(c => c.GetStat(CreatureStatusType.Speed))
             .ThenBy(_ => rng.Next())
@@ -82,30 +82,30 @@ public class TurnOrderController : MonoBehaviour
 
         var creature = turnQueue.Dequeue();
 
-        // Снимаем статус защиты в начале нового хода
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
         if (creature.IsDefending)
         {
             creature.IsDefending = false;
         }
 
-        // 1) Пропуск хода по Bravery (только для Living)
+        // 1) пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ Bravery (пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ Living)
         if (creature.Kind == CreatureKind.Living)
         {
             int bravery = creature.GetStat(CreatureStatusType.Bravery);
             if (bravery < 0 && RollChance(GetBraveryChance(bravery)))
             {
-                Debug.Log($"[Bravery] {creature.name} пропускает ход ({bravery})");
-                NextTurn(); // сразу переходим к следующему существу
+                Debug.Log($"[Bravery] {creature.name} пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ ({bravery})");
+                NextTurn(); // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
                 return;
             }
         }
 
-        // 2) Стандартная активация хода
+        // 2) пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
         currentCreature = creature;
         CurrentCreature = creature;
         OnTurnStarted?.Invoke(creature);
 
-        // 3) Подсветка reachable
+        // 3) пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ reachable
         HighlightActiveCreature();
     }
 
@@ -114,14 +114,20 @@ public class TurnOrderController : MonoBehaviour
         if (creature != currentCreature)
             return;
 
-        // Дополнительный ход по Bravery (только для Living)
+        // Р•СЃР»Рё РґРІРёР¶РµРЅРёРµ Р±С‹Р»Рѕ РґР»СЏ Р°С‚Р°РєРё, РЅРµ Р·Р°РІРµСЂС€Р°РµРј С…РѕРґ (Р°С‚Р°РєР° РµС‰С‘ РЅРµ РїСЂРѕРёР·РѕС€Р»Р°)
+        if (movementController.IsMovementForAttack)
+        {
+            return;
+        }
+
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅ Bravery (пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ Living)
         if (creature.Kind == CreatureKind.Living)
         {
             int bravery = creature.GetStat(CreatureStatusType.Bravery);
             if (bravery > 0 && RollChance(GetBraveryChance(bravery)))
             {
-                Debug.Log($"[Bravery] {creature.name} получает доп. ход ({bravery})");
-                // Вставляем существо в начало очереди
+                Debug.Log($"[Bravery] {creature.name} пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ. пїЅпїЅпїЅ ({bravery})");
+                // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
                 turnQueue = new Queue<Creature>(new[] { creature }.Concat(turnQueue));
             }
         }

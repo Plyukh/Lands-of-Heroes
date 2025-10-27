@@ -376,6 +376,8 @@ public class JoystickInputController : MonoBehaviour,
                 else
                 {
                     isMeleeMoving = true;
+                    // Устанавливаем флаг, что это движение для атаки (не завершать ход после движения)
+                    movementController.SetMovementForAttack(true);
                     movementController.MoveAlongPath(attacker, selectedPath);
                     // атака произойдет после завершения движения
                 }
