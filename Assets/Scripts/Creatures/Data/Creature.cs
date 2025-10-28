@@ -40,8 +40,25 @@ public class Creature : MonoBehaviour
         ApplyVisuals(currentStats.visualizations);
     }
 
-    // ����� ����� ��� ��������� ������ �������
+    /// <summary>
+    /// Получает итоговое значение характеристики с учетом всех эффектов
+    /// </summary>
     public int GetStat(CreatureStatusType type)
+    {
+        if (currentStats == null)
+            return 0;
+
+        // Получаем базовое значение
+        int baseValue = currentStats.GetStat(type);
+        
+        // Применяем модификаторы от эффектов
+        return effectManager.GetModifiedStat(type, baseValue);
+    }
+
+    /// <summary>
+    /// Получает базовое значение характеристики БЕЗ учета эффектов
+    /// </summary>
+    public int GetBaseStat(CreatureStatusType type)
     {
         return currentStats != null
             ? currentStats.GetStat(type)

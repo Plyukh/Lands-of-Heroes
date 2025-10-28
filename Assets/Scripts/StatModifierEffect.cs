@@ -1,9 +1,9 @@
 using UnityEngine;
 
 /// <summary>
-/// Effect который модифицирует статы как в процентах (Percent) так и плоско (Flat).
-/// Создаётся через parameterless ctor + Initialize(...). Apply/Remove используют CreatureEffectManager
-/// для регистрации мультипликаторов, чтобы удаление происходило по ссылке на эффект.
+/// Effect пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ (Percent) пїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ (Flat).
+/// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ parameterless ctor + Initialize(...). Apply/Remove пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ CreatureEffectManager
+/// пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ.
 /// </summary>
 public class StatModifierEffect : Effect
 {
@@ -20,18 +20,18 @@ public class StatModifierEffect : Effect
             switch (Stats.valueType)
             {
                 case ValueInterpretationType.Percent:
-                    // value = 20 -> +20% (бафф) или -20% (дебафф)
+                    // value = 20 -> +20% (пїЅпїЅпїЅпїЅ) пїЅпїЅпїЅ -20% (пїЅпїЅпїЅпїЅпїЅпїЅ)
                     multiplier = ComputePercentMultiplier(Stats.value, EffectType);
                     break;
 
                 case ValueInterpretationType.Flat:
-                    // value = +5 -> плоское увеличение на 5 единиц.
-                    // Конвертируем в мультипликатор относительно базового статa.
-                    float baseValue = target.GetStat(stat);
+                    // value = +5 -> пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ 5 пїЅпїЅпїЅпїЅпїЅпїЅ.
+                    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅa.
+                    float baseValue = target.GetBaseStat(stat);
                     if (baseValue != 0)
                         multiplier = (baseValue + Stats.value) / baseValue;
                     else
-                        // если базовый 0 — fallback: интерпретируем flat как +value percent (safe)
+                        // пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ 0 пїЅ fallback: пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ flat пїЅпїЅпїЅ +value percent (safe)
                         multiplier = 1f + (Stats.value / 100f);
                     break;
             }

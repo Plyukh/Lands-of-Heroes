@@ -19,7 +19,9 @@ MonoBehaviour:
   kind: 0
   attackType: 0
   movementType: 0
+  sprite: {fileID: 0}
   prefab: {fileID: 2563246363043108085, guid: 99352a2bd37424746a88125759deeeb2, type: 3}
+  persistInPlayerData: 1
   statsPerLevel:
   - level: 1
     attack: 10
@@ -31,6 +33,9 @@ MonoBehaviour:
     stackSize: 3
     shots: 0
     projectilePrefab: {fileID: 0}
+    passiveEffects:
+    - effectData: {fileID: 11400000, guid: c193d0d0ba26aff45874a3ee59525beb, type: 2}
+      level: 1
     texture: {fileID: 2800000, guid: 51fce3b19ee84ee4c8096f7170c7f717, type: 3}
     visualizations:
     - type: 0
@@ -45,6 +50,9 @@ MonoBehaviour:
     stackSize: 3
     shots: 0
     projectilePrefab: {fileID: 0}
+    passiveEffects:
+    - effectData: {fileID: 11400000, guid: c193d0d0ba26aff45874a3ee59525beb, type: 2}
+      level: 1
     texture: {fileID: 2800000, guid: 74dd3816a537bef418f29e2160252d73, type: 3}
     visualizations:
     - type: 0
@@ -59,6 +67,11 @@ MonoBehaviour:
     stackSize: 3
     shots: 0
     projectilePrefab: {fileID: 0}
+    passiveEffects:
+    - effectData: {fileID: 11400000, guid: c193d0d0ba26aff45874a3ee59525beb, type: 2}
+      level: 1
+    - effectData: {fileID: 11400000, guid: 4adc05aef5071684c804d32fee56e4d5, type: 2}
+      level: 1
     texture: {fileID: 2800000, guid: 74dd3816a537bef418f29e2160252d73, type: 3}
     visualizations:
     - type: 0
@@ -73,6 +86,11 @@ MonoBehaviour:
     stackSize: 3
     shots: 0
     projectilePrefab: {fileID: 0}
+    passiveEffects:
+    - effectData: {fileID: 11400000, guid: c193d0d0ba26aff45874a3ee59525beb, type: 2}
+      level: 1
+    - effectData: {fileID: 11400000, guid: 4adc05aef5071684c804d32fee56e4d5, type: 2}
+      level: 1
     texture: {fileID: 2800000, guid: b961f6ae74f304a4794a5afa4b1c0d51, type: 3}
     visualizations:
     - type: 0
@@ -87,6 +105,11 @@ MonoBehaviour:
     stackSize: 3
     shots: 0
     projectilePrefab: {fileID: 0}
+    passiveEffects:
+    - effectData: {fileID: 11400000, guid: c193d0d0ba26aff45874a3ee59525beb, type: 2}
+      level: 2
+    - effectData: {fileID: 11400000, guid: 4adc05aef5071684c804d32fee56e4d5, type: 2}
+      level: 1
     texture: {fileID: 2800000, guid: b961f6ae74f304a4794a5afa4b1c0d51, type: 3}
     visualizations:
     - type: 0
@@ -101,6 +124,11 @@ MonoBehaviour:
     stackSize: 3
     shots: 0
     projectilePrefab: {fileID: 0}
+    passiveEffects:
+    - effectData: {fileID: 11400000, guid: c193d0d0ba26aff45874a3ee59525beb, type: 2}
+      level: 2
+    - effectData: {fileID: 11400000, guid: 4adc05aef5071684c804d32fee56e4d5, type: 2}
+      level: 1
     texture: {fileID: 2800000, guid: 5d442542221ea6f4a87926088152904c, type: 3}
     visualizations:
     - type: 0
@@ -115,6 +143,11 @@ MonoBehaviour:
     stackSize: 3
     shots: 0
     projectilePrefab: {fileID: 0}
+    passiveEffects:
+    - effectData: {fileID: 11400000, guid: c193d0d0ba26aff45874a3ee59525beb, type: 2}
+      level: 2
+    - effectData: {fileID: 11400000, guid: 4adc05aef5071684c804d32fee56e4d5, type: 2}
+      level: 2
     texture: {fileID: 2800000, guid: 5d442542221ea6f4a87926088152904c, type: 3}
     visualizations:
     - type: 0
@@ -129,6 +162,11 @@ MonoBehaviour:
     stackSize: 3
     shots: 0
     projectilePrefab: {fileID: 0}
+    passiveEffects:
+    - effectData: {fileID: 11400000, guid: c193d0d0ba26aff45874a3ee59525beb, type: 2}
+      level: 2
+    - effectData: {fileID: 11400000, guid: 4adc05aef5071684c804d32fee56e4d5, type: 2}
+      level: 2
     texture: {fileID: 2800000, guid: db7c6b517c1446a40afc5dba3bb0161d, type: 3}
     visualizations:
     - type: 0
@@ -143,6 +181,11 @@ MonoBehaviour:
     stackSize: 3
     shots: 0
     projectilePrefab: {fileID: 0}
+    passiveEffects:
+    - effectData: {fileID: 11400000, guid: c193d0d0ba26aff45874a3ee59525beb, type: 2}
+      level: 2
+    - effectData: {fileID: 11400000, guid: 4adc05aef5071684c804d32fee56e4d5, type: 2}
+      level: 3
     texture: {fileID: 2800000, guid: db7c6b517c1446a40afc5dba3bb0161d, type: 3}
     visualizations:
     - type: 0
@@ -157,6 +200,11 @@ MonoBehaviour:
     stackSize: 3
     shots: 0
     projectilePrefab: {fileID: 0}
+    passiveEffects:
+    - effectData: {fileID: 11400000, guid: c193d0d0ba26aff45874a3ee59525beb, type: 2}
+      level: 3
+    - effectData: {fileID: 11400000, guid: 4adc05aef5071684c804d32fee56e4d5, type: 2}
+      level: 3
     texture: {fileID: 2800000, guid: db7c6b517c1446a40afc5dba3bb0161d, type: 3}
     visualizations:
     - type: 0
