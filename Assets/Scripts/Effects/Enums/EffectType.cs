@@ -15,5 +15,6 @@ public enum EffectType
     Hypnosis,
     Bloodlust,
     AreaStrike,
-    PiercingStrike
+    PiercingStrike,
+    UnansweredStrike
 }

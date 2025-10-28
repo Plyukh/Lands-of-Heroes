@@ -29,10 +29,10 @@ public class CombatController : MonoBehaviour
         // Поворачиваемся лицом к цели
         await attacker.Mover.RotateTowardsAsync(target.transform.position);
 
-        // Запускаем анимацию удара и ждём момента «попадания»
+        // Запускаем последовательность атак (с контратаками между ударами)
         await PlayAttackSequence(attacker, target, selectedType);
 
-        // Проверяем специальные эффекты ударов
+        // Проверяем специальные эффекты ударов (после всех атак и контратак)
         if (attacker.EffectManager.HasEffectOfType(EffectType.AreaStrike))
         {
             PerformAreaStrike(attacker, target);
@@ -65,9 +65,29 @@ public class CombatController : MonoBehaviour
         // Устанавливаем цель анимации
         anim.SetAttackTarget(target, attacker);
 
-        // Счетчик ударов (нужно дождаться 1 или 2 ударов)
-        int expectedHits = hasDoubleAttack ? 2 : 1;
-        int hitCount = 0;
+        // Количество атак (1 или 2)
+        int attackCount = hasDoubleAttack ? 2 : 1;
+
+        // Выполняем атаку нужное количество раз
+        for (int i = 0; i < attackCount; i++)
+        {
+            // Выполняем атаку
+            await PlaySingleAttack(attacker, type);
+
+            // После каждого удара - контратака (только для ближнего боя)
+            if (type == AttackType.Melee)
+            {
+                await PerformCounterattack(attacker, target);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Выполняет одну атаку и ждет её завершения
+    /// </summary>
+    private async Task PlaySingleAttack(Creature attacker, AttackType type)
+    {
+        var anim = attacker.Mover.AnimatorController;
         var tcs = new TaskCompletionSource<bool>();
 
         Action onHit = null;
@@ -75,12 +95,8 @@ public class CombatController : MonoBehaviour
         {
             onHit = () =>
             {
-                hitCount++;
-                if (hitCount >= expectedHits)
-                {
-                    anim.OnAttackHit -= onHit;
-                    tcs.TrySetResult(true);
-                }
+                anim.OnAttackHit -= onHit;
+                tcs.TrySetResult(true);
             };
             anim.OnAttackHit += onHit;
             anim.PlayAttack();
@@ -93,12 +109,8 @@ public class CombatController : MonoBehaviour
             {
                 onHit = () =>
                 {
-                    hitCount++;
-                    if (hitCount >= expectedHits)
-                    {
-                        anim.OnAttackHit -= onHit;
-                        tcs.TrySetResult(true);
-                    }
+                    anim.OnAttackHit -= onHit;
+                    tcs.TrySetResult(true);
                 };
                 anim.OnAttackHit += onHit;
             }
@@ -106,12 +118,8 @@ public class CombatController : MonoBehaviour
             {
                 onHit = () =>
                 {
-                    hitCount++;
-                    if (hitCount >= expectedHits)
-                    {
-                        anim.OnMeleeAttackHit -= onHit;
-                        tcs.TrySetResult(true);
-                    }
+                    anim.OnMeleeAttackHit -= onHit;
+                    tcs.TrySetResult(true);
                 };
                 anim.OnMeleeAttackHit += onHit;
             }
@@ -239,5 +247,30 @@ public class CombatController : MonoBehaviour
                 }
             }
         }
+    }
+
+    /// <summary>
+    /// Выполняет контратаку - цель отвечает на атаку ближнего боя
+    /// Counterattack = количество АТАК, на которые можно ответить (не количество ударов)
+    /// ВАЖНО: Контратака - это простой одиночный удар БЕЗ контратаки в ответ!
+    /// </summary>
+    private async Task PerformCounterattack(Creature attacker, Creature defender)
+    {
+        // Если у атакующего есть Unanswered Strike - контратак не будет
+        if (attacker.EffectManager.HasEffectOfType(EffectType.UnansweredStrike))
+            return;
+
+        // Проверяем, может ли защищающийся контратаковать эту атаку
+        if (!defender.UseCounterattack())
+            return;
+
+        // Защищающийся поворачивается к атакующему
+        await defender.Mover.RotateTowardsAsync(attacker.transform.position);
+
+        // Защищающийся контратакует ОДИН РАЗ - простая одиночная атака
+        // БЕЗ рекурсивного вызова контратак!
+        var anim = defender.Mover.AnimatorController;
+        anim.SetAttackTarget(attacker, defender);
+        await PlaySingleAttack(defender, defender.AttackType);
     }
 }

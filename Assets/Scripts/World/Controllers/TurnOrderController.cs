@@ -62,6 +62,12 @@ public class TurnOrderController : MonoBehaviour
         // ��� �������� �� ���� (������� ��������� � ������)
         var all = creatureManager.GetBySide(TargetSide.Any);
 
+        // Восстанавливаем контратаки у всех существ в начале раунда
+        foreach (var creature in all)
+        {
+            creature.RefreshCounterattacks();
+        }
+
         // ��������� �� �������� (��������), ��� ������ � �� �������
         var ordered = all
             .OrderByDescending(c => c.GetStat(CreatureStatusType.Speed))

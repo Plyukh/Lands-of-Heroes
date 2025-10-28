@@ -15,6 +15,7 @@ public class CreatureStatsPerLevel
     public int health;
     public int speed;
     public int stackSize;
+    public int counterattack = 1;
 
     [Header("Range Combat")]
 
@@ -42,6 +43,7 @@ public class CreatureStatsPerLevel
             case CreatureStatusType.Speed: return speed;
             case CreatureStatusType.StackSize: return stackSize;
             case CreatureStatusType.Shots: return shots;
+            case CreatureStatusType.Counterattack: return counterattack;
             default: return 0;
         }
     }

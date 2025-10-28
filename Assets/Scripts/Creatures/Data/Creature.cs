@@ -29,6 +29,10 @@ public class Creature : MonoBehaviour
     public GameObject Projectile => currentStats.projectilePrefab;
 
     public bool IsDefending { get; set; } = false;
+    
+    // Система контратак - количество оставшихся контратак в текущем ходу
+    private int remainingCounterattacks;
+    public int RemainingCounterattacks => remainingCounterattacks;
 
     public void Initialize(TargetSide side, int lvl)
     {
@@ -63,6 +67,35 @@ public class Creature : MonoBehaviour
         return currentStats != null
             ? currentStats.GetStat(type)
             : 0;
+    }
+
+    /// <summary>
+    /// Восстанавливает контратаки в начале хода существа
+    /// </summary>
+    public void RefreshCounterattacks()
+    {
+        remainingCounterattacks = GetStat(CreatureStatusType.Counterattack);
+    }
+
+    /// <summary>
+    /// Использует одну контратаку. Возвращает true если контратака доступна
+    /// </summary>
+    public bool UseCounterattack()
+    {
+        if (remainingCounterattacks > 0)
+        {
+            remainingCounterattacks--;
+            return true;
+        }
+        return false;
+    }
+
+    /// <summary>
+    /// Проверяет, может ли существо контратаковать
+    /// </summary>
+    public bool CanCounterattack()
+    {
+        return remainingCounterattacks > 0;
     }
 
     public void ApplyStats(int lvl)
