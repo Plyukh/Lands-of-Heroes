@@ -22,10 +22,11 @@ public static class EffectFactory
                 break;
 
             case EffectType.AreaStrike:
-                effect = new AreaStrikeEffect();
+            case EffectType.PiercingStrike:
+                effect = new StrikeEffect();
                 break;
 
-            // Добавь специализированные типы эффектов сюда по мере необходимости:
+            // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
             // case EffectType.Regeneration: effect = new RegenerationEffect(); break;
             // case EffectType.Vampirism:    effect = new VampirismEffect();    break;
 

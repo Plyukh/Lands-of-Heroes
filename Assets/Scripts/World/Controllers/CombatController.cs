@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using UnityEngine;
 
@@ -31,10 +32,15 @@ public class CombatController : MonoBehaviour
         // Запускаем анимацию удара и ждём момента «попадания»
         await PlayAttackSequence(attacker, target, selectedType);
 
-        // Проверяем, есть ли эффект Area Strike (атака по площади)
+        // Проверяем специальные эффекты ударов
         if (attacker.EffectManager.HasEffectOfType(EffectType.AreaStrike))
         {
             PerformAreaStrike(attacker, target);
+        }
+        
+        if (attacker.EffectManager.HasEffectOfType(EffectType.PiercingStrike))
+        {
+            PerformPiercingStrike(attacker, target);
         }
 
         // Оповещаем, что атака завершилась
@@ -153,6 +159,84 @@ public class CombatController : MonoBehaviour
             else
             {
                 enemy.Mover.AnimatorController.PlayImpact();
+            }
+        }
+    }
+
+    /// <summary>
+    /// Выполняет пробивающий удар - атакует существо ЗА целью (в том же направлении)
+    /// </summary>
+    private void PerformPiercingStrike(Creature attacker, Creature mainTarget)
+    {
+        var attackerCell = attacker.Mover.CurrentCell;
+        var targetCell = mainTarget.Mover.CurrentCell;
+        
+        if (attackerCell == null || targetCell == null)
+            return;
+
+        // Находим направление через соседей цели
+        var targetNeighbors = hexGridManager.GetNeighbors(targetCell).ToList();
+        var attackerNeighbors = hexGridManager.GetNeighbors(attackerCell).ToList();
+        
+        // Ищем в каком направлении от атакующего находится цель
+        int directionIndex = attackerNeighbors.IndexOf(targetCell);
+        
+        HexCell behindCell = null;
+        
+        if (directionIndex != -1)
+        {
+            // Цель - соседняя клетка, используем тот же индекс для поиска клетки за целью
+            if (directionIndex < targetNeighbors.Count)
+            {
+                behindCell = targetNeighbors[directionIndex];
+            }
+        }
+        else
+        {
+            // Цель не соседняя - используем позиционный вектор
+            // Находим ближайшего соседа атакующего в направлении цели
+            float minAngle = float.MaxValue;
+            int bestDirIndex = -1;
+            
+            UnityEngine.Vector3 targetDir = (targetCell.transform.position - attackerCell.transform.position).normalized;
+            
+            for (int i = 0; i < attackerNeighbors.Count; i++)
+            {
+                UnityEngine.Vector3 neighborDir = (attackerNeighbors[i].transform.position - attackerCell.transform.position).normalized;
+                float angle = UnityEngine.Vector3.Angle(targetDir, neighborDir);
+                
+                if (angle < minAngle)
+                {
+                    minAngle = angle;
+                    bestDirIndex = i;
+                }
+            }
+            
+            // Используем найденное направление для поиска клетки за целью
+            if (bestDirIndex != -1 && bestDirIndex < targetNeighbors.Count)
+            {
+                behindCell = targetNeighbors[bestDirIndex];
+            }
+        }
+
+        // Если нашли клетку ЗА целью
+        if (behindCell != null)
+        {
+            var creature = behindCell.GetOccupantCreature();
+            
+            // Проверяем: существо есть и это враг
+            if (creature != null && creature.Side != attacker.Side)
+            {
+                // Существо ЗА целью получает урон
+                if (creature.IsDefending)
+                {
+                    creature.Mover.AnimatorController.PlayBlock();
+                    creature.Mover.AnimatorController.PlayBlockImpact();
+                }
+                else
+                {
+                    creature.Mover.AnimatorController.PlayImpact();
+                }
             }
         }
     }
