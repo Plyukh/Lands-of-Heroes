@@ -30,6 +30,11 @@ public static class EffectFactory
                 effect = new UnansweredStrikeEffect();
                 break;
 
+            case EffectType.ExplosiveShot:
+            case EffectType.ExplosiveShotLiving:
+                effect = new ExplosiveShotEffect();
+                break;
+
             // ������ ������������������ ���� �������� ���� �� ���� �������������:
             // case EffectType.Regeneration: effect = new RegenerationEffect(); break;
             // case EffectType.Vampirism:    effect = new VampirismEffect();    break;

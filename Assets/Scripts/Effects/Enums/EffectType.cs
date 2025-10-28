@@ -16,5 +16,7 @@ public enum EffectType
     Bloodlust,
     AreaStrike,
     PiercingStrike,
-    UnansweredStrike
+    UnansweredStrike,
+    ExplosiveShot,
+    ExplosiveShotLiving
 }

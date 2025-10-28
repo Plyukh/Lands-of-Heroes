@@ -51,6 +51,19 @@ public class CombatController : MonoBehaviour
             PerformPiercingStrike(attacker, target);
         }
 
+        // Проверяем эффекты взрывных выстрелов (только для дальнего боя)
+        if (selectedType == AttackType.Ranged)
+        {
+            if (attacker.EffectManager.HasEffectOfType(EffectType.ExplosiveShot))
+            {
+                PerformExplosiveShot(attacker, target, filterByCreatureKind: false);
+            }
+            else if (attacker.EffectManager.HasEffectOfType(EffectType.ExplosiveShotLiving))
+            {
+                PerformExplosiveShot(attacker, target, filterByCreatureKind: true);
+            }
+        }
+
         // Оповещаем, что атака завершилась
         OnCombatComplete?.Invoke(attacker);
     }
@@ -293,5 +306,46 @@ public class CombatController : MonoBehaviour
         var anim = defender.Mover.AnimatorController;
         anim.SetAttackTarget(attacker, defender);
         await PlaySingleAttack(defender, defender.AttackType);
+    }
+
+    /// <summary>
+    /// Выполняет взрывной выстрел - наносит урон всем существам вокруг целевой клетки
+    /// </summary>
+    /// <param name="attacker">Атакующий</param>
+    /// <param name="target">Основная цель</param>
+    /// <param name="filterByCreatureKind">Если true, наносит урон только живым существам (Living)</param>
+    private void PerformExplosiveShot(Creature attacker, Creature target, bool filterByCreatureKind)
+    {
+        HexCell targetCell = target.Mover.CurrentCell;
+        
+        // Получаем все соседние клетки вокруг цели
+        var neighbors = hexGridManager.GetNeighbors(targetCell);
+        
+        foreach (var neighborCell in neighbors)
+        {
+            var creature = neighborCell.GetOccupantCreature();
+            
+            if (creature == null)
+                continue;
+            
+            // Пропускаем атакующего
+            if (creature == attacker)
+                continue;
+            
+            // Фильтруем по типу существа, если нужно
+            if (filterByCreatureKind && creature.Kind != CreatureKind.Living)
+                continue;
+            
+            // Наносим урон существу
+            if (creature.IsDefending)
+            {
+                creature.Mover.AnimatorController.PlayBlock();
+                creature.Mover.AnimatorController.PlayBlockImpact();
+            }
+            else
+            {
+                creature.Mover.AnimatorController.PlayImpact();
+            }
+        }
     }
 }
