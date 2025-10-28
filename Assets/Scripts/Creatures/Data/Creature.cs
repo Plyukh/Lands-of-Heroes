@@ -34,6 +34,12 @@ public class Creature : MonoBehaviour
     private int remainingCounterattacks;
     public int RemainingCounterattacks => remainingCounterattacks;
 
+    // Система боеприпасов для дальнего боя
+    private int remainingShots;
+    private int maxShots;
+    public int RemainingShots => remainingShots;
+    public int MaxShots => maxShots;
+
     public void Initialize(TargetSide side, int lvl)
     {
         this.side = side;
@@ -42,6 +48,18 @@ public class Creature : MonoBehaviour
         ApplyPassiveEffects();
         ApplyTexture(currentStats.texture);
         ApplyVisuals(currentStats.visualizations);
+
+        // Инициализация боеприпасов для дальников
+        if (AttackType == AttackType.Ranged)
+        {
+            maxShots = GetStat(CreatureStatusType.Shots);
+            remainingShots = maxShots;
+        }
+        else
+        {
+            maxShots = 0;
+            remainingShots = 0;
+        }
     }
 
     /// <summary>
@@ -96,6 +114,46 @@ public class Creature : MonoBehaviour
     public bool CanCounterattack()
     {
         return remainingCounterattacks > 0;
+    }
+
+    /// <summary>
+    /// Проверяет, может ли существо стрелять (есть ли боеприпасы)
+    /// </summary>
+    public bool CanShoot()
+    {
+        // Существа ближнего боя всегда могут атаковать
+        if (AttackType == AttackType.Melee)
+            return true;
+        
+        return remainingShots > 0;
+    }
+
+    /// <summary>
+    /// Использует один выстрел. Возвращает true если выстрел доступен
+    /// </summary>
+    public bool UseShot()
+    {
+        // Существа ближнего боя не тратят выстрелы
+        if (AttackType == AttackType.Melee)
+            return true;
+
+        if (remainingShots > 0)
+        {
+            remainingShots--;
+            return true;
+        }
+        return false;
+    }
+
+    /// <summary>
+    /// Восстанавливает боеприпасы в начале нового раунда
+    /// </summary>
+    public void RefreshShots()
+    {
+        if (AttackType == AttackType.Ranged)
+        {
+            remainingShots = maxShots;
+        }
     }
 
     public void ApplyStats(int lvl)

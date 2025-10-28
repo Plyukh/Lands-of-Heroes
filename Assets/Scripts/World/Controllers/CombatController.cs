@@ -23,6 +23,14 @@ public class CombatController : MonoBehaviour
         if (!TurnOrderController.Instance.IsCurrentTurn(attacker))
             return;
 
+        // Проверка боеприпасов для дальнего боя
+        if (selectedType == AttackType.Ranged && !attacker.CanShoot())
+        {
+            Debug.Log($"{attacker.Kind} не может стрелять - закончились выстрелы!");
+            OnCombatComplete?.Invoke(attacker); // Заканчиваем ход
+            return;
+        }
+
         // Убираем все подсветки перед атакой
         highlightController.ClearHighlights();
 
@@ -71,6 +79,19 @@ public class CombatController : MonoBehaviour
         // Выполняем атаку нужное количество раз
         for (int i = 0; i < attackCount; i++)
         {
+            // Проверяем боеприпасы перед каждым выстрелом
+            if (type == AttackType.Ranged && !attacker.CanShoot())
+            {
+                Debug.Log($"{attacker.Kind} закончились выстрелы после {i} атак!");
+                break; // Прерываем атаку, если кончились выстрелы
+            }
+
+            // Расходуем выстрел для дальнего боя
+            if (type == AttackType.Ranged)
+            {
+                attacker.UseShot();
+            }
+
             // Выполняем атаку
             await PlaySingleAttack(attacker, type);
 

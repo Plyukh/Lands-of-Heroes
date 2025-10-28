@@ -63,6 +63,7 @@ public class TurnOrderController : MonoBehaviour
         var all = creatureManager.GetBySide(TargetSide.Any);
 
         // Восстанавливаем контратаки у всех существ в начале раунда
+        // Боеприпасы НЕ восстанавливаются - это ресурс на всю игровую сессию!
         foreach (var creature in all)
         {
             creature.RefreshCounterattacks();

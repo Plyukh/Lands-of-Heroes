@@ -102,6 +102,7 @@ public class JoystickInputController : MonoBehaviour,
                 if (attackType == AttackType.Ranged)
                 {
                     bool isEngagedInMelee = IsEnemyInMeleeRange(attacker);
+                    bool hasAmmo = attacker.CanShoot();
 
                     if (attacker.GetStat(CreatureStatusType.Speed) >= pathToTarget.Count - 1)
                     {
@@ -110,20 +111,41 @@ public class JoystickInputController : MonoBehaviour,
 
                     if (!canReachByMovement && !isEngagedInMelee)
                     {
-                        joystickUI.SetActionType(JoystickActionType.Ranged, 0);
+                        // Дальняя атака без возможности дойти
+                        if (hasAmmo)
+                        {
+                            joystickUI.SetActionType(JoystickActionType.Ranged, 0);
+                        }
+                        else
+                        {
+                            // Нет боеприпасов и не может дойти - ничего не делаем
+                            Debug.Log($"{attacker.Kind} не может стрелять (нет выстрелов) и не может дойти для ближнего боя!");
+                            return;
+                        }
                     }
                     else if (canReachByMovement)
                     {
                         if (isEngagedInMelee)
                         {
+                            // В ближнем бою - только ближняя атака
                             joystickUI.SetActionType(JoystickActionType.Melee, 0);
-                            joystickUI.SetActionType(JoystickActionType.Melee, 1); // Устанавливаем одинаковые значения для одного действия
+                            joystickUI.SetActionType(JoystickActionType.Melee, 1);
                         }
                         else
                         {
-                            actionCount = 2;
-                            joystickUI.SetActionType(JoystickActionType.Melee, 0);
-                            joystickUI.SetActionType(JoystickActionType.Ranged, 1);
+                            // Может дойти - показываем варианты атаки
+                            if (hasAmmo)
+                            {
+                                // Есть боеприпасы - показываем оба варианта
+                                actionCount = 2;
+                                joystickUI.SetActionType(JoystickActionType.Melee, 0);
+                                joystickUI.SetActionType(JoystickActionType.Ranged, 1);
+                            }
+                            else
+                            {
+                                // Нет боеприпасов - только ближний бой
+                                joystickUI.SetActionType(JoystickActionType.Melee, 0);
+                            }
                         }
                     }
                     else
@@ -447,11 +469,13 @@ public class JoystickInputController : MonoBehaviour,
 
     private bool IsTargetValid(Creature attacker, Creature target)
     {
-        if (attacker.Side != target.Side)
+        // Проверяем, что цель - враг
+        if (attacker.Side == target.Side)
         {
-            return true;
+            return false;
         }
-        return false;
+
+        return true;
     }
 
     private bool IsEnemyInMeleeRange(Creature creature)
