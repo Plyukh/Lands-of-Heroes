@@ -12505,7 +12505,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animatorController: {fileID: 4872564739116643167}
-  moveSpeed: 0.75
+  moveSpeed: 0.5
   stopThreshold: 0
   rotationSpeed: 360
   currentCell: {fileID: 0}
