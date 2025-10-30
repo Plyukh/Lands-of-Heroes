@@ -23,8 +23,14 @@ public class TurnOrderController : MonoBehaviour
     /// <summary>������� �������� ��������.</summary>
     public Creature CurrentCreature { get; private set; }
 
+    /// <summary>������� ������� �����. ������ ��� ������.</summary>
+    public Queue<Creature> TurnQueue => turnQueue;
+
     /// <summary>���������� ��� ������ ���� ������ ��������.</summary>
     public event Action<Creature> OnTurnStarted;
+    
+    /// <summary>���������� ��� ������ ���� ������ ���� (��� ��������� ����������� �� �������)</summary>
+    public event Action<Creature> OnTurnStart;
 
     private void Awake()
     {
@@ -111,6 +117,7 @@ public class TurnOrderController : MonoBehaviour
         currentCreature = creature;
         CurrentCreature = creature;
         OnTurnStarted?.Invoke(creature);
+        OnTurnStart?.Invoke(creature);
 
         // 3) ��������� reachable
         HighlightActiveCreature();

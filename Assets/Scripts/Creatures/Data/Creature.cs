@@ -22,6 +22,7 @@ public class Creature : MonoBehaviour
 
     public CreatureMover Mover => creatureMover;
     public CreatureEffectManager EffectManager => effectManager;
+    public CreatureData Data => creatureData;
     public CreatureKind Kind => creatureData.kind;
     public MovementType MovementType => creatureData.movementType;
     public AttackType AttackType => creatureData.attackType;
