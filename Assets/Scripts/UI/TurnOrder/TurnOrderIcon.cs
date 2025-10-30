@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -50,6 +51,22 @@ public class TurnOrderIcon : MonoBehaviour
     // ========== Данные ==========
     private Creature creature;
     private bool isActive;
+    private RectTransform rectTransform;
+    private CanvasGroup canvasGroup; // Для управления прозрачностью
+
+    // ========== Unity Callbacks ==========
+    private void Awake()
+    {
+        rectTransform = GetComponent<RectTransform>();
+        canvasGroup = GetComponent<CanvasGroup>();
+        if (canvasGroup == null)
+            canvasGroup = gameObject.AddComponent<CanvasGroup>();
+        
+        // Добавляем LayoutElement для возможности игнорировать Layout во время анимации
+        var layoutElement = GetComponent<UnityEngine.UI.LayoutElement>();
+        if (layoutElement == null)
+            layoutElement = gameObject.AddComponent<UnityEngine.UI.LayoutElement>();
+    }
 
     // ========== Инициализация ==========
     /// <summary>
@@ -63,9 +80,18 @@ public class TurnOrderIcon : MonoBehaviour
         this.isActive = isActive;
 
         SetCreatureIcon();
+        SetBackgroundSprite();
         SetFrameColor();
         SetSize();
         SetOutline();
+        
+        // Устанавливаем полную непрозрачность при создании
+        if (canvasGroup != null)
+        {
+            canvasGroup.alpha = 1f;
+            canvasGroup.interactable = true;
+            canvasGroup.blocksRaycasts = true;
+        }
     }
 
     // ========== Настройка визуала ==========
@@ -74,9 +100,33 @@ public class TurnOrderIcon : MonoBehaviour
         if (creature == null || creatureImage == null)
             return;
 
-        // Получаем спрайт из CreatureData
+        // Получаем спрайт существа из CreatureData и устанавливаем в creatureImage
         if (creature.Data != null && creature.Data.sprite != null)
+        {
             creatureImage.sprite = creature.Data.sprite;
+            creatureImage.enabled = true;
+        }
+    }
+
+    private void SetBackgroundSprite()
+    {
+        if (creature == null || backgroundImage == null)
+            return;
+
+        // Устанавливаем фоновый спрайт из CreatureData в backgroundImage
+        if (creature.Data != null)
+        {
+            if (creature.Data.backgroundSprite != null)
+            {
+                backgroundImage.sprite = creature.Data.backgroundSprite;
+                backgroundImage.enabled = true;
+            }
+            else
+            {
+                // Если фоновый спрайт не задан, отключаем фон
+                backgroundImage.enabled = false;
+            }
+        }
     }
 
     private void SetFrameColor()
@@ -153,6 +203,229 @@ public class TurnOrderIcon : MonoBehaviour
     public Creature GetCreature()
     {
         return creature;
+    }
+
+    /// <summary>
+    /// Проверяет, является ли эта иконка активной.
+    /// </summary>
+    public bool IsActive()
+    {
+        return isActive;
+    }
+
+    // ========== Анимация удаления ==========
+    /// <summary>
+    /// Запускает анимацию удаления иконки: улет влево с уменьшением прозрачности.
+    /// </summary>
+    /// <param name="duration">Длительность анимации в секундах</param>
+    /// <param name="distance">Расстояние улета влево в пикселях</param>
+    /// <param name="onComplete">Callback вызываемый после завершения анимации</param>
+    public void AnimateRemove(float duration = 0.5f, float distance = 300f, System.Action onComplete = null)
+    {
+        if (rectTransform == null)
+        {
+            onComplete?.Invoke();
+            return;
+        }
+
+        StartCoroutine(RemoveAnimationCoroutine(duration, distance, onComplete));
+    }
+
+    private System.Collections.IEnumerator RemoveAnimationCoroutine(float duration, float distance, System.Action onComplete)
+    {
+        if (rectTransform == null)
+        {
+            onComplete?.Invoke();
+            yield break;
+        }
+
+        // Отключаем Layout Element, чтобы Layout Group не влиял на позицию во время анимации
+        var layoutElement = GetComponent<UnityEngine.UI.LayoutElement>();
+        if (layoutElement != null)
+            layoutElement.ignoreLayout = true;
+
+        Vector2 startPosition = rectTransform.anchoredPosition;
+        // Улетаем влево на заданное расстояние
+        Vector2 endPosition = startPosition - new Vector2(distance, 0f);
+        
+        // Сохраняем начальные альфа-каналы для всех Image компонентов
+        float startAlphaFrame = frameImage != null ? frameImage.color.a : 1f;
+        float startAlphaBackground = backgroundImage != null ? backgroundImage.color.a : 1f;
+        float startAlphaCreature = creatureImage != null ? creatureImage.color.a : 1f;
+        
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+            float t = elapsedTime / duration;
+
+            // Движение влево
+            rectTransform.anchoredPosition = Vector2.Lerp(startPosition, endPosition, t);
+
+            // Уменьшение прозрачности для всех элементов одновременно
+            float currentAlpha = Mathf.Lerp(1f, 0f, t);
+            
+            // Рамка
+            if (frameImage != null)
+            {
+                Color frameColor = frameImage.color;
+                frameColor.a = currentAlpha;
+                frameImage.color = frameColor;
+            }
+            
+            // Фон
+            if (backgroundImage != null)
+            {
+                Color bgColor = backgroundImage.color;
+                bgColor.a = currentAlpha;
+                backgroundImage.color = bgColor;
+            }
+            
+            // Портрет существа
+            if (creatureImage != null)
+            {
+                Color creatureColor = creatureImage.color;
+                creatureColor.a = currentAlpha;
+                creatureImage.color = creatureColor;
+            }
+
+            yield return null;
+        }
+
+        // Убеждаемся, что финальные значения установлены
+        rectTransform.anchoredPosition = endPosition;
+        
+        // Устанавливаем полную прозрачность для всех элементов
+        if (frameImage != null)
+        {
+            Color frameColor = frameImage.color;
+            frameColor.a = 0f;
+            frameImage.color = frameColor;
+        }
+        
+        if (backgroundImage != null)
+        {
+            Color bgColor = backgroundImage.color;
+            bgColor.a = 0f;
+            backgroundImage.color = bgColor;
+        }
+        
+        if (creatureImage != null)
+        {
+            Color creatureColor = creatureImage.color;
+            creatureColor.a = 0f;
+            creatureImage.color = creatureColor;
+        }
+
+        // Вызываем callback (объект будет уничтожен в TurnOrderUI)
+        onComplete?.Invoke();
+    }
+
+    // ========== Анимация сдвига ==========
+    /// <summary>
+    /// Анимирует сдвиг иконки влево от текущей позиции к новой.
+    /// </summary>
+    /// <param name="targetPosition">Целевая позиция для сдвига</param>
+    /// <param name="duration">Длительность анимации в секундах</param>
+    /// <param name="animateToActive">Если true, также анимирует увеличение размера и изменение цвета на желтый</param>
+    /// <param name="onComplete">Callback вызываемый после завершения анимации</param>
+    public void AnimateSlide(Vector2 targetPosition, float duration = 0.3f, bool animateToActive = false, System.Action onComplete = null)
+    {
+        if (rectTransform == null)
+        {
+            onComplete?.Invoke();
+            return;
+        }
+
+        StartCoroutine(SlideAnimationCoroutine(targetPosition, duration, animateToActive, onComplete));
+    }
+
+    private System.Collections.IEnumerator SlideAnimationCoroutine(Vector2 targetPosition, float duration, bool animateToActive, System.Action onComplete)
+    {
+        if (rectTransform == null)
+        {
+            onComplete?.Invoke();
+            yield break;
+        }
+
+        // Отключаем Layout Element во время анимации
+        var layoutElement = GetComponent<UnityEngine.UI.LayoutElement>();
+        if (layoutElement != null)
+            layoutElement.ignoreLayout = true;
+
+        Vector2 startPosition = rectTransform.anchoredPosition;
+        
+        // Начальные значения для размера и цвета (если анимируем к активному состоянию)
+        Vector2 startFrameSize = frameRect != null ? frameRect.sizeDelta : Vector2.zero;
+        Vector2 startCreatureSize = creatureRect != null ? creatureRect.sizeDelta : Vector2.zero;
+        Color startFrameColor = frameImage != null ? frameImage.color : Color.white;
+        
+        // Целевые значения для активного состояния
+        Vector2 targetFrameSize = startFrameSize * ACTIVE_SIZE_MULTIPLIER;
+        Vector2 targetCreatureSize = startCreatureSize * ACTIVE_SIZE_MULTIPLIER;
+        Color targetFrameColor = activeFrameColor;
+        
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+            float t = elapsedTime / duration;
+            // Используем плавную кривую для более естественного движения
+            t = t * t * (3f - 2f * t); // SmoothStep для плавности
+
+            // Сдвиг влево
+            rectTransform.anchoredPosition = Vector2.Lerp(startPosition, targetPosition, t);
+
+            // Если анимируем к активному состоянию, меняем размер и цвет
+            if (animateToActive)
+            {
+                // Анимация размера рамки
+                if (frameRect != null)
+                {
+                    frameRect.sizeDelta = Vector2.Lerp(startFrameSize, targetFrameSize, t);
+                }
+                
+                // Анимация размера портрета существа
+                if (creatureRect != null)
+                {
+                    creatureRect.sizeDelta = Vector2.Lerp(startCreatureSize, targetCreatureSize, t);
+                }
+                
+                // Анимация цвета рамки
+                if (frameImage != null)
+                {
+                    frameImage.color = Color.Lerp(startFrameColor, targetFrameColor, t);
+                }
+            }
+
+            yield return null;
+        }
+
+        // Убеждаемся, что финальные значения установлены
+        rectTransform.anchoredPosition = targetPosition;
+        
+        // Устанавливаем финальные размеры и цвет для активного состояния
+        if (animateToActive)
+        {
+            if (frameRect != null)
+                frameRect.sizeDelta = targetFrameSize;
+            if (creatureRect != null)
+                creatureRect.sizeDelta = targetCreatureSize;
+            if (frameImage != null)
+                frameImage.color = targetFrameColor;
+            
+            // Обновляем статус
+            isActive = true;
+        }
+
+        // Включаем Layout Element обратно
+        if (layoutElement != null)
+            layoutElement.ignoreLayout = false;
+
+        // Вызываем callback
+        onComplete?.Invoke();
     }
 }
 

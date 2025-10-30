@@ -19,7 +19,9 @@ MonoBehaviour:
   kind: 2
   attackType: 0
   movementType: 0
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 26ac85aae0792b344884e711dd1e7fbf, type: 3}
+  backgroundSprite: {fileID: 21300000, guid: 26ac85aae0792b344884e711dd1e7fbf, type: 3}
+  outlineIconSize: {x: 0, y: 0}
   prefab: {fileID: 1543268438074428410, guid: 4e1dfb37695b085478d1f3fb6942621d, type: 3}
   persistInPlayerData: 1
   statsPerLevel:

@@ -20,6 +20,8 @@ MonoBehaviour:
   attackType: 1
   movementType: 0
   sprite: {fileID: 21300000, guid: f979ad4c5b3c28c4893ae9c563bf4998, type: 3}
+  backgroundSprite: {fileID: 21300000, guid: 7bf9b43111a9a1d4a89f0ae678d250c1, type: 3}
+  outlineIconSize: {x: 0, y: 0}
   prefab: {fileID: 6238185349841105266, guid: 7d0e51d844366b447af43cb3f0977cb3, type: 3}
   persistInPlayerData: 1
   statsPerLevel:
@@ -31,6 +33,7 @@ MonoBehaviour:
     health: 6
     speed: 4
     stackSize: 9
+    counterattack: 1
     shots: 30
     projectilePrefab: {fileID: 7751362054840725111, guid: e0b081dca69536f4ea9c474702d4a9c9, type: 3}
     passiveEffects: []
@@ -46,6 +49,7 @@ MonoBehaviour:
     health: 7
     speed: 4
     stackSize: 9
+    counterattack: 1
     shots: 30
     projectilePrefab: {fileID: 7751362054840725111, guid: e0b081dca69536f4ea9c474702d4a9c9, type: 3}
     passiveEffects: []
@@ -61,6 +65,7 @@ MonoBehaviour:
     health: 7
     speed: 4
     stackSize: 9
+    counterattack: 1
     shots: 30
     projectilePrefab: {fileID: 7751362054840725111, guid: e0b081dca69536f4ea9c474702d4a9c9, type: 3}
     passiveEffects: []
@@ -76,6 +81,7 @@ MonoBehaviour:
     health: 8
     speed: 4
     stackSize: 9
+    counterattack: 1
     shots: 30
     projectilePrefab: {fileID: 7751362054840725111, guid: e0b081dca69536f4ea9c474702d4a9c9, type: 3}
     passiveEffects: []
@@ -91,6 +97,7 @@ MonoBehaviour:
     health: 8
     speed: 4
     stackSize: 9
+    counterattack: 1
     shots: 30
     projectilePrefab: {fileID: 7751362054840725111, guid: e0b081dca69536f4ea9c474702d4a9c9, type: 3}
     passiveEffects:
@@ -108,6 +115,7 @@ MonoBehaviour:
     health: 8
     speed: 5
     stackSize: 9
+    counterattack: 1
     shots: 30
     projectilePrefab: {fileID: 7751362054840725111, guid: e0b081dca69536f4ea9c474702d4a9c9, type: 3}
     passiveEffects:
@@ -125,6 +133,7 @@ MonoBehaviour:
     health: 9
     speed: 5
     stackSize: 9
+    counterattack: 1
     shots: 30
     projectilePrefab: {fileID: 7751362054840725111, guid: e0b081dca69536f4ea9c474702d4a9c9, type: 3}
     passiveEffects:
@@ -142,6 +151,7 @@ MonoBehaviour:
     health: 9
     speed: 5
     stackSize: 9
+    counterattack: 1
     shots: 30
     projectilePrefab: {fileID: 7751362054840725111, guid: e0b081dca69536f4ea9c474702d4a9c9, type: 3}
     passiveEffects:
@@ -159,6 +169,7 @@ MonoBehaviour:
     health: 10
     speed: 5
     stackSize: 9
+    counterattack: 1
     shots: 30
     projectilePrefab: {fileID: 7751362054840725111, guid: e0b081dca69536f4ea9c474702d4a9c9, type: 3}
     passiveEffects:
@@ -176,6 +187,7 @@ MonoBehaviour:
     health: 10
     speed: 6
     stackSize: 9
+    counterattack: 1
     shots: 30
     projectilePrefab: {fileID: 7751362054840725111, guid: e0b081dca69536f4ea9c474702d4a9c9, type: 3}
     passiveEffects:

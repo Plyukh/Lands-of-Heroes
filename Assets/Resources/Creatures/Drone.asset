@@ -19,7 +19,9 @@ MonoBehaviour:
   kind: 2
   attackType: 0
   movementType: 1
-  sprite: {fileID: 21300000, guid: 228bef4adb0bbdf4bb3eeb1630047f8e, type: 3}
+  sprite: {fileID: 21300000, guid: 26ac85aae0792b344884e711dd1e7fbf, type: 3}
+  backgroundSprite: {fileID: 21300000, guid: 26ac85aae0792b344884e711dd1e7fbf, type: 3}
+  outlineIconSize: {x: 0, y: 0}
   prefab: {fileID: 2735890230616602876, guid: 0fd01ae252f9a8b4ca170af91228b396, type: 3}
   persistInPlayerData: 1
   statsPerLevel:
@@ -31,8 +33,10 @@ MonoBehaviour:
     health: 2
     speed: 5
     stackSize: 15
+    counterattack: 1
     shots: 0
     projectilePrefab: {fileID: 0}
+    passiveEffects: []
     texture: {fileID: 2800000, guid: fa58cdaeaf976f04ba998cccd284f99e, type: 3}
     visualizations:
     - type: 2
@@ -45,8 +49,10 @@ MonoBehaviour:
     health: 3
     speed: 5
     stackSize: 15
+    counterattack: 1
     shots: 0
     projectilePrefab: {fileID: 0}
+    passiveEffects: []
     texture: {fileID: 2800000, guid: a1664c0499507134397c1c373c3868f7, type: 3}
     visualizations:
     - type: 2
@@ -59,8 +65,10 @@ MonoBehaviour:
     health: 3
     speed: 5
     stackSize: 15
+    counterattack: 1
     shots: 0
     projectilePrefab: {fileID: 0}
+    passiveEffects: []
     texture: {fileID: 2800000, guid: cb7278c0dd31f7c449259796fc1c235c, type: 3}
     visualizations:
     - type: 2
@@ -73,8 +81,10 @@ MonoBehaviour:
     health: 3
     speed: 6
     stackSize: 15
+    counterattack: 1
     shots: 0
     projectilePrefab: {fileID: 0}
+    passiveEffects: []
     texture: {fileID: 2800000, guid: cb7278c0dd31f7c449259796fc1c235c, type: 3}
     visualizations:
     - type: 2
@@ -87,8 +97,10 @@ MonoBehaviour:
     health: 3
     speed: 6
     stackSize: 15
+    counterattack: 1
     shots: 0
     projectilePrefab: {fileID: 0}
+    passiveEffects: []
     texture: {fileID: 2800000, guid: c21d0e3def867704c98139485c9b956c, type: 3}
     visualizations:
     - type: 2
@@ -101,8 +113,10 @@ MonoBehaviour:
     health: 4
     speed: 6
     stackSize: 15
+    counterattack: 1
     shots: 0
     projectilePrefab: {fileID: 0}
+    passiveEffects: []
     texture: {fileID: 2800000, guid: 9b5c7e41df8270b4fab94527269d3f8a, type: 3}
     visualizations:
     - type: 2
@@ -115,8 +129,10 @@ MonoBehaviour:
     health: 4
     speed: 6
     stackSize: 15
+    counterattack: 1
     shots: 0
     projectilePrefab: {fileID: 0}
+    passiveEffects: []
     texture: {fileID: 2800000, guid: 8b7d8f792dd990044a887f0572634b6c, type: 3}
     visualizations:
     - type: 2
@@ -129,8 +145,10 @@ MonoBehaviour:
     health: 5
     speed: 6
     stackSize: 15
+    counterattack: 1
     shots: 0
     projectilePrefab: {fileID: 0}
+    passiveEffects: []
     texture: {fileID: 2800000, guid: 368eeca55c2046642b43e9587a46eb18, type: 3}
     visualizations:
     - type: 2
@@ -143,8 +161,10 @@ MonoBehaviour:
     health: 5
     speed: 6
     stackSize: 15
+    counterattack: 1
     shots: 0
     projectilePrefab: {fileID: 0}
+    passiveEffects: []
     texture: {fileID: 2800000, guid: 8d6c0907265ead647966cc392f3deff9, type: 3}
     visualizations:
     - type: 2
@@ -157,8 +177,10 @@ MonoBehaviour:
     health: 5
     speed: 6
     stackSize: 15
+    counterattack: 1
     shots: 0
     projectilePrefab: {fileID: 0}
+    passiveEffects: []
     texture: {fileID: 2800000, guid: 1d94593c9ca5c3640b8d738eb9da20aa, type: 3}
     visualizations:
     - type: 2

@@ -13,6 +13,8 @@ public class CreatureData : ScriptableObject
     public AttackType attackType;
     public MovementType movementType;
     public Sprite sprite;
+    public Sprite backgroundSprite;
+    public Vector2 outlineIconSize;
     public GameObject prefab;
 
     [Header("Persistence")]

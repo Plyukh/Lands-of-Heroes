@@ -19,7 +19,9 @@ MonoBehaviour:
   kind: 0
   attackType: 0
   movementType: 0
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 9e4dae899cf661349b4496840f51e126, type: 3}
+  backgroundSprite: {fileID: 21300000, guid: 9e4dae899cf661349b4496840f51e126, type: 3}
+  outlineIconSize: {x: 0, y: 0}
   prefab: {fileID: 2563246363043108085, guid: 99352a2bd37424746a88125759deeeb2, type: 3}
   persistInPlayerData: 1
   statsPerLevel:
@@ -31,6 +33,7 @@ MonoBehaviour:
     health: 35
     speed: 5
     stackSize: 3
+    counterattack: 1
     shots: 0
     projectilePrefab: {fileID: 0}
     passiveEffects:
@@ -48,6 +51,7 @@ MonoBehaviour:
     health: 40
     speed: 5
     stackSize: 3
+    counterattack: 1
     shots: 0
     projectilePrefab: {fileID: 0}
     passiveEffects:
@@ -65,6 +69,7 @@ MonoBehaviour:
     health: 40
     speed: 5
     stackSize: 3
+    counterattack: 1
     shots: 0
     projectilePrefab: {fileID: 0}
     passiveEffects:
@@ -84,6 +89,7 @@ MonoBehaviour:
     health: 40
     speed: 6
     stackSize: 3
+    counterattack: 1
     shots: 0
     projectilePrefab: {fileID: 0}
     passiveEffects:
@@ -103,6 +109,7 @@ MonoBehaviour:
     health: 40
     speed: 6
     stackSize: 3
+    counterattack: 1
     shots: 0
     projectilePrefab: {fileID: 0}
     passiveEffects:
@@ -122,6 +129,7 @@ MonoBehaviour:
     health: 40
     speed: 7
     stackSize: 3
+    counterattack: 1
     shots: 0
     projectilePrefab: {fileID: 0}
     passiveEffects:
@@ -141,6 +149,7 @@ MonoBehaviour:
     health: 40
     speed: 7
     stackSize: 3
+    counterattack: 1
     shots: 0
     projectilePrefab: {fileID: 0}
     passiveEffects:
@@ -160,6 +169,7 @@ MonoBehaviour:
     health: 45
     speed: 7
     stackSize: 3
+    counterattack: 1
     shots: 0
     projectilePrefab: {fileID: 0}
     passiveEffects:
@@ -179,6 +189,7 @@ MonoBehaviour:
     health: 45
     speed: 7
     stackSize: 3
+    counterattack: 1
     shots: 0
     projectilePrefab: {fileID: 0}
     passiveEffects:
@@ -198,6 +209,7 @@ MonoBehaviour:
     health: 45
     speed: 7
     stackSize: 3
+    counterattack: 1
     shots: 0
     projectilePrefab: {fileID: 0}
     passiveEffects:
