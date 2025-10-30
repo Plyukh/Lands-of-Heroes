@@ -287,6 +287,7 @@ public class CombatController : MonoBehaviour
     /// Выполняет контратаку - цель отвечает на атаку ближнего боя
     /// Counterattack = количество АТАК, на которые можно ответить (не количество ударов)
     /// ВАЖНО: Контратака - это простой одиночный удар БЕЗ контратаки в ответ!
+    /// ВАЖНО: Контратака ВСЕГДА ближняя, даже если защитник - дальник!
     /// </summary>
     private async Task PerformCounterattack(Creature attacker, Creature defender)
     {
@@ -301,11 +302,12 @@ public class CombatController : MonoBehaviour
         // Защищающийся поворачивается к атакующему
         await defender.Mover.RotateTowardsAsync(attacker.transform.position);
 
-        // Защищающийся контратакует ОДИН РАЗ - простая одиночная атака
+        // Защищающийся контратакует ОДИН РАЗ - простая одиночная БЛИЖНЯЯ атака
         // БЕЗ рекурсивного вызова контратак!
+        // ВАЖНО: Контратака ВСЕГДА ближняя (AttackType.Melee), даже для лучников
         var anim = defender.Mover.AnimatorController;
         anim.SetAttackTarget(attacker, defender);
-        await PlaySingleAttack(defender, defender.AttackType);
+        await PlaySingleAttack(defender, AttackType.Melee);
     }
 
     /// <summary>
