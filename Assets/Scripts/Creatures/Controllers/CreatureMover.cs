@@ -19,9 +19,45 @@ public class CreatureMover : MonoBehaviour
     [Header("Current Cell (assign in inspector or on spawn)")]
     [SerializeField] private HexCell currentCell;
 
+    // Множитель скорости из настроек
+    private int currentSpeedMultiplier = 1;
+
     public CreatureAnimatorController AnimatorController => animatorController;
     public HexCell CurrentCell => currentCell;
     public event Action<HexCell> OnCellEntered;
+
+    private void Start()
+    {
+        // Подписываемся на изменение настроек скорости
+        if (GameSpeedSettings.Instance != null)
+        {
+            currentSpeedMultiplier = GameSpeedSettings.Instance.SpeedMultiplier;
+            GameSpeedSettings.Instance.OnSpeedMultiplierChanged += UpdateSpeedMultiplier;
+        }
+    }
+
+    private void OnDestroy()
+    {
+        // Отписываемся при уничтожении
+        if (GameSpeedSettings.Instance != null)
+        {
+            GameSpeedSettings.Instance.OnSpeedMultiplierChanged -= UpdateSpeedMultiplier;
+        }
+    }
+
+    /// <summary>
+    /// Обновляет множитель скорости для передвижения и анимаций
+    /// </summary>
+    public void UpdateSpeedMultiplier(int multiplier)
+    {
+        currentSpeedMultiplier = Mathf.Clamp(multiplier, 1, 3);
+        
+        // Применяем к анимациям
+        if (animatorController != null)
+        {
+            animatorController.SetAnimationSpeed(currentSpeedMultiplier);
+        }
+    }
 
     public void SetCurrentCell(HexCell cell, Quaternion rotation)
     {
@@ -79,7 +115,9 @@ public class CreatureMover : MonoBehaviour
             yield break;
         }
 
-        float duration = dist / moveSpeed;
+        // Применяем множитель скорости к базовой скорости передвижения
+        float effectiveSpeed = moveSpeed * currentSpeedMultiplier;
+        float duration = dist / effectiveSpeed;
         float elapsed = 0f;
 
         while (elapsed < duration)
@@ -102,7 +140,10 @@ public class CreatureMover : MonoBehaviour
         Quaternion from = transform.rotation;
         Quaternion to = Quaternion.LookRotation(dir, Vector3.up);
         float angle = Quaternion.Angle(from, to);
-        float duration = angle / rotationSpeed;
+        
+        // Применяем множитель скорости к скорости поворота
+        float effectiveRotationSpeed = rotationSpeed * currentSpeedMultiplier;
+        float duration = angle / effectiveRotationSpeed;
         float elapsed = 0f;
 
         while (elapsed < duration)
