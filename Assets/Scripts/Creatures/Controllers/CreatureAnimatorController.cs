@@ -12,23 +12,24 @@ public class CreatureAnimatorController: MonoBehaviour
     private Creature attackerCreature;
     private Creature currentTarget;
     
-    // Множитель скорости анимаций
-    private int animationSpeedMultiplier = 1;
+    // Множитель скорости анимаций (1x, 2x или 3x)
+    private int animationSpeed = 1;
 
     public event Action OnAttackHit;
     public event Action OnMeleeAttackHit;
 
+    // ========== Настройки скорости ==========
     /// <summary>
-    /// Устанавливает множитель скорости для всех анимаций
+    /// Устанавливает скорость всех анимаций существа.
+    /// Вызывается из CreatureMover при изменении GameSpeedSettings.
     /// </summary>
+    /// <param name="multiplier">Множитель скорости (1, 2 или 3)</param>
     public void SetAnimationSpeed(int multiplier)
     {
-        animationSpeedMultiplier = Mathf.Clamp(multiplier, 1, 3);
+        animationSpeed = Mathf.Clamp(multiplier, 1, 3);
         
         if (animator != null)
-        {
-            animator.speed = animationSpeedMultiplier;
-        }
+            animator.speed = animationSpeed;
     }
 
     public void SetAttackTarget(Creature target, Creature attacker)

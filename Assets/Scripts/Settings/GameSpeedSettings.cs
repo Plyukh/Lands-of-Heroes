@@ -2,101 +2,122 @@ using System;
 using UnityEngine;
 
 /// <summary>
-/// Глобальные настройки скорости игры (передвижение + анимации)
-/// Синглтон для доступа из любого места
+/// Управляет глобальной скоростью игры.
+/// Влияет на скорость передвижения существ и их анимации.
+/// Значения: 1x (нормально), 2x (быстрее), 3x (самое быстрое).
 /// </summary>
 public class GameSpeedSettings : MonoBehaviour
 {
+    // ========== Константы ==========
+    private const int MIN_SPEED = 1;
+    private const int MAX_SPEED = 3;
+    private const int DEFAULT_SPEED = 1;
+
+    // ========== Синглтон ==========
     private static GameSpeedSettings instance;
+    
     public static GameSpeedSettings Instance
     {
         get
         {
             if (instance == null)
-            {
                 instance = FindObjectOfType<GameSpeedSettings>();
-            }
+            
             return instance;
         }
     }
 
-    [Header("Speed Multiplier Settings")]
+    // ========== Настройки ==========
+    [Header("Настройки скорости")]
     [SerializeField]
-    [Range(1, 3)]
-    [Tooltip("Множитель скорости: 1 = нормально, 2 = вдвое быстрее, 3 = втрое быстрее")]
-    private int speedMultiplier = 1;
+    [Range(MIN_SPEED, MAX_SPEED)]
+    [Tooltip("1 = нормально, 2 = вдвое быстрее, 3 = втрое быстрее")]
+    private int speedMultiplier = DEFAULT_SPEED;
 
+    // ========== События ==========
     /// <summary>
-    /// Событие, вызываемое при изменении множителя скорости
+    /// Вызывается при изменении скорости.
+    /// Параметр: новое значение множителя (1-3).
     /// </summary>
     public event Action<int> OnSpeedMultiplierChanged;
 
+    // ========== Свойства ==========
     /// <summary>
-    /// Текущий множитель скорости (1 - 3)
+    /// Текущий множитель скорости (1, 2 или 3).
+    /// При изменении автоматически применяется ко всем существам.
     /// </summary>
     public int SpeedMultiplier
     {
         get => speedMultiplier;
         set
         {
-            int clampedValue = Mathf.Clamp(value, 1, 3);
-            if (speedMultiplier != clampedValue)
-            {
-                speedMultiplier = clampedValue;
-                OnSpeedMultiplierChanged?.Invoke(speedMultiplier);
-                
-                // Применяем ко всем существующим существам
-                ApplyToAllCreatures();
-            }
+            int newValue = Mathf.Clamp(value, MIN_SPEED, MAX_SPEED);
+            
+            if (speedMultiplier == newValue)
+                return; // Значение не изменилось
+            
+            speedMultiplier = newValue;
+            OnSpeedMultiplierChanged?.Invoke(speedMultiplier);
+            ApplySpeedToAllCreatures();
         }
     }
 
+    // ========== Unity Callbacks ==========
     private void Awake()
     {
+        InitializeSingleton();
+    }
+
+    private void Start()
+    {
+        ApplySpeedToAllCreatures();
+    }
+
+    private void OnDestroy()
+    {
+        CleanupSingleton();
+    }
+
+    // ========== Инициализация ==========
+    private void InitializeSingleton()
+    {
+        // Если уже есть другой экземпляр - уничтожаем этот
         if (instance != null && instance != this)
         {
             Destroy(gameObject);
             return;
         }
+        
         instance = this;
     }
-    
-    private void OnDestroy()
+
+    private void CleanupSingleton()
     {
-        // Очищаем синглтон при уничтожении
         if (instance == this)
-        {
             instance = null;
-        }
     }
 
-    private void Start()
-    {
-        // Применяем начальное значение
-        ApplyToAllCreatures();
-    }
-
+    // ========== Применение скорости ==========
     /// <summary>
-    /// Применяет текущий множитель ко всем существующим существам
+    /// Применяет текущую скорость ко всем существам на сцене.
     /// </summary>
-    private void ApplyToAllCreatures()
+    private void ApplySpeedToAllCreatures()
     {
-        var allCreatures = FindObjectsOfType<Creature>();
-        foreach (var creature in allCreatures)
+        Creature[] allCreatures = FindObjectsOfType<Creature>();
+        
+        foreach (Creature creature in allCreatures)
         {
             if (creature.Mover != null)
-            {
                 creature.Mover.UpdateSpeedMultiplier(speedMultiplier);
-            }
         }
     }
 
+    // ========== Публичные методы ==========
     /// <summary>
-    /// Сбросить скорость к базовому значению (1x)
+    /// Сбрасывает скорость к нормальной (1x).
     /// </summary>
     public void ResetSpeed()
     {
-        SpeedMultiplier = 1;
+        SpeedMultiplier = DEFAULT_SPEED;
     }
 }
-

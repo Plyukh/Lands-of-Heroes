@@ -19,44 +19,54 @@ public class CreatureMover : MonoBehaviour
     [Header("Current Cell (assign in inspector or on spawn)")]
     [SerializeField] private HexCell currentCell;
 
-    // Множитель скорости из настроек
-    private int currentSpeedMultiplier = 1;
+    // Множитель скорости из GameSpeedSettings (1x, 2x или 3x)
+    private int speedMultiplier = 1;
 
     public CreatureAnimatorController AnimatorController => animatorController;
     public HexCell CurrentCell => currentCell;
     public event Action<HexCell> OnCellEntered;
 
+    // ========== Unity Callbacks ==========
     private void Start()
     {
-        // Подписываемся на изменение настроек скорости
-        if (GameSpeedSettings.Instance != null)
-        {
-            currentSpeedMultiplier = GameSpeedSettings.Instance.SpeedMultiplier;
-            GameSpeedSettings.Instance.OnSpeedMultiplierChanged += UpdateSpeedMultiplier;
-        }
+        SubscribeToSpeedSettings();
     }
 
     private void OnDestroy()
     {
-        // Отписываемся при уничтожении
+        UnsubscribeFromSpeedSettings();
+    }
+
+    // ========== Настройки скорости ==========
+    private void SubscribeToSpeedSettings()
+    {
+        if (GameSpeedSettings.Instance == null)
+            return;
+        
+        // Применяем текущую скорость
+        speedMultiplier = GameSpeedSettings.Instance.SpeedMultiplier;
+        
+        // Подписываемся на изменения
+        GameSpeedSettings.Instance.OnSpeedMultiplierChanged += UpdateSpeedMultiplier;
+    }
+
+    private void UnsubscribeFromSpeedSettings()
+    {
         if (GameSpeedSettings.Instance != null)
-        {
             GameSpeedSettings.Instance.OnSpeedMultiplierChanged -= UpdateSpeedMultiplier;
-        }
     }
 
     /// <summary>
-    /// Обновляет множитель скорости для передвижения и анимаций
+    /// Обновляет множитель скорости передвижения и анимаций.
+    /// Вызывается автоматически при изменении GameSpeedSettings.
     /// </summary>
-    public void UpdateSpeedMultiplier(int multiplier)
+    public void UpdateSpeedMultiplier(int newMultiplier)
     {
-        currentSpeedMultiplier = Mathf.Clamp(multiplier, 1, 3);
+        speedMultiplier = Mathf.Clamp(newMultiplier, 1, 3);
         
         // Применяем к анимациям
         if (animatorController != null)
-        {
-            animatorController.SetAnimationSpeed(currentSpeedMultiplier);
-        }
+            animatorController.SetAnimationSpeed(speedMultiplier);
     }
 
     public void SetCurrentCell(HexCell cell, Quaternion rotation)
@@ -106,55 +116,63 @@ public class CreatureMover : MonoBehaviour
     private IEnumerator MoveCoroutine(Vector3 destination, TaskCompletionSource<bool> tcs)
     {
         Vector3 startPos = transform.position;
-        float dist = Vector3.Distance(startPos, destination);
+        float distance = Vector3.Distance(startPos, destination);
 
-        if (dist <= stopThreshold)
+        // Если уже на месте
+        if (distance <= stopThreshold)
         {
             transform.position = destination;
             tcs.TrySetResult(true);
             yield break;
         }
 
-        // Применяем множитель скорости к базовой скорости передвижения
-        float effectiveSpeed = moveSpeed * currentSpeedMultiplier;
-        float duration = dist / effectiveSpeed;
+        // Применяем множитель скорости (1x, 2x или 3x)
+        float actualSpeed = moveSpeed * speedMultiplier;
+        float duration = distance / actualSpeed;
         float elapsed = 0f;
 
+        // Плавное перемещение
         while (elapsed < duration)
         {
             elapsed += Time.deltaTime;
-            transform.position = Vector3.Lerp(startPos, destination, elapsed / duration);
+            float progress = elapsed / duration;
+            transform.position = Vector3.Lerp(startPos, destination, progress);
             yield return null;
         }
 
+        // Точно устанавливаем финальную позицию
         transform.position = destination;
         tcs.TrySetResult(true);
     }
 
     public async Task RotateTowardsAsync(Vector3 point)
     {
-        Vector3 dir = (point - transform.position).normalized;
-        if (dir.sqrMagnitude < 0.0001f)
+        Vector3 direction = (point - transform.position).normalized;
+        
+        // Если направление слишком короткое - не поворачиваемся
+        if (direction.sqrMagnitude < 0.0001f)
             return;
 
-        Quaternion from = transform.rotation;
-        Quaternion to = Quaternion.LookRotation(dir, Vector3.up);
-        float angle = Quaternion.Angle(from, to);
+        Quaternion startRotation = transform.rotation;
+        Quaternion targetRotation = Quaternion.LookRotation(direction, Vector3.up);
+        float totalAngle = Quaternion.Angle(startRotation, targetRotation);
         
-        // Применяем множитель скорости к скорости поворота
-        float effectiveRotationSpeed = rotationSpeed * currentSpeedMultiplier;
-        float duration = angle / effectiveRotationSpeed;
+        // Применяем множитель скорости (1x, 2x или 3x)
+        float actualRotationSpeed = rotationSpeed * speedMultiplier;
+        float duration = totalAngle / actualRotationSpeed;
         float elapsed = 0f;
 
+        // Плавный поворот
         while (elapsed < duration)
         {
             elapsed += Time.deltaTime;
-            float t = Mathf.Clamp01(elapsed / duration);
-            transform.rotation = Quaternion.Slerp(from, to, t);
+            float progress = Mathf.Clamp01(elapsed / duration);
+            transform.rotation = Quaternion.Slerp(startRotation, targetRotation, progress);
             await Task.Yield();
         }
 
-        transform.rotation = to;
+        // Точно устанавливаем финальный поворот
+        transform.rotation = targetRotation;
     }
 
     private TaskCompletionSource<bool> teleportTcs;
