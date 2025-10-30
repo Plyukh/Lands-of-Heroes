@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -48,6 +49,16 @@ public class TurnOrderUI : MonoBehaviour
     {
         SetupLayout();
         SubscribeToEvents();
+        // Сразу обновляем UI при старте, чтобы отобразить очередь с первого хода
+        // Используем корутину с небольшой задержкой, чтобы TurnOrderController успел инициализироваться
+        StartCoroutine(DelayedInitialUpdate());
+    }
+
+    private System.Collections.IEnumerator DelayedInitialUpdate()
+    {
+        // Ждем один кадр, чтобы все Start() методы успели выполниться
+        yield return null;
+        UpdateIcons();
     }
 
     private void OnDestroy()
